@@ -135,3 +135,25 @@ footer {
   color: #800020;
   margin-top: 1rem;
 }
+/* ICONOS - Social media & footer */
+.social-icon img,
+.footer-social-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Para que el texto debajo del icono no se vea aplastado */
+.social-icon-label {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #800020;
+}
+
+.footer-social-icon {
+  margin: 0 10px;
+}
