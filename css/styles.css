@@ -413,3 +413,14 @@ footer {
   line-height: 1.5;
   color: #4a4a4a;
 }
+/* Estilos elegantes para enlaces en el footer */
+footer a {
+  color: #ffd6e8; /* rosado clarito */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
