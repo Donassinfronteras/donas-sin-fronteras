@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  /* Ajusta la ruta de la imagen según la ubicación real de tu archivo */
+  background: url("../assets/fondoportalmagico.png") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Overlay turquesa oscuro sobre la imagen */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 102, 102, 0.6); /* Turquesa oscuro con opacidad */
+  z-index: 0;
+}
+
+header {
+  text-align: center;
+  background: rgba(0, 102, 102, 0.8);
+  padding: 1rem;
+  position: relative;
+  z-index: 1; /* Por encima del overlay */
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Contenido principal */
+main {
+  position: relative;
+  z-index: 1; /* Para que quede por encima del overlay */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sección de introducción */
+.intro {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 102, 102, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Títulos y párrafos */
+.intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Sección de portales (enlaces a Canciones, Audioaventuras y Oráculo) */
+.portales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Botones de portal */
+.btn-portal {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #00cccc; /* Un turquesa más claro para resaltar */
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-portal:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 204, 204, 0.8);
+}
+
+/* Sección de retorno */
+.return {
+  margin-top: 1rem;
+}
+
+.return a {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0, 102, 102, 0.8);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.return a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 102, 102, 0.8);
+}

@@ -1,0 +1,214 @@
+/* Estilos para la página de Canciones */
+
+:root {
+  --terracota-oscuro: #8B3E2F;
+  --terracota-medio: #A0522D; 
+  --terracota-claro: #CD5C5C;
+  --beige-claro: #F5F0E1;
+  --marron-oscuro: #3B2F2F;
+  --dorado: #D4AF37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  background-color: var(--beige-claro);
+  color: var(--marron-oscuro);
+  background-image: url('../assets/music-bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+header {
+  background-color: var(--terracota-oscuro);
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, var(--terracota-oscuro), var(--dorado), var(--terracota-oscuro));
+}
+
+header h1 {
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+}
+
+/* Sección de perfil de artista */
+.artist-profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.artist-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.artist-info {
+  flex: 2;
+  min-width: 300px;
+}
+
+.artist-info h2 {
+  color: var(--terracota-oscuro);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.artist-info h3 {
+  color: var(--terracota-medio);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.artist-info p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.artist-info h4 {
+  color: var(--terracota-oscuro);
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--terracota-claro);
+}
+
+.artist-info a {
+  color: var(--terracota-medio);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-wrap: break-word;
+}
+
+.artist-info a:hover {
+  color: var(--terracota-oscuro);
+  text-decoration: underline;
+}
+
+.iframe-container {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.apple-music-iframe {
+  margin-top: 2rem;
+}
+
+/* Listado de canciones */
+.song-list {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.song-list h2 {
+  color: var(--terracota-oscuro);
+  font-size: 1.8rem;
+  margin: 2rem 0 0.5rem;
+  position: relative;
+}
+
+.song-list h2:first-child {
+  margin-top: 0;
+}
+
+.song-list p {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.song-list .iframe-container {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.song-list .iframe-container:last-child {
+  margin-bottom: 0;
+}
+
+/* Botón para volver */
+.return {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.return a {
+  display: inline-block;
+  background-color: var(--terracota-medio);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.return a:hover {
+  background-color: var(--terracota-oscuro);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .artist-profile {
+    flex-direction: column;
+  }
+  
+  .artist-image {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+  
+  .iframe-container {
+    width: 100%;
+  }
+}

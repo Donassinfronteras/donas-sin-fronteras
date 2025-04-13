@@ -1,0 +1,443 @@
+/* Estilos para la página del Oráculo Prisma del Alma */
+
+:root {
+  --purpura-oscuro: #4A0D67;
+  --purpura-medio: #7E349E;
+  --purpura-claro: #A56DC7;
+  --azul-mistico: #26408B;
+  --azul-claro: #8BA5E8;
+  --rosa-mistico: #B168D9;
+  --beige-claro: #F5F0E1;
+  --dorado: #D4AF37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  background-color: #F8F3E2;
+  color: #333;
+  background-image: url('../assets/oraculo-bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Subnavegación */
+.subnavegacion {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0.5rem 2rem;
+}
+
+.subnavegacion ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.subnavegacion li {
+  margin-right: 0.5rem;
+}
+
+.subnavegacion a {
+  color: var(--purpura-oscuro);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.subnavegacion a:hover {
+  color: var(--rosa-mistico);
+  text-decoration: underline;
+}
+
+.subnavegacion a.active {
+  font-weight: bold;
+  color: var(--rosa-mistico);
+}
+
+.subnavegacion span {
+  color: var(--purpura-oscuro);
+  margin: 0 0.3rem;
+}
+
+/* Contenedor principal del oráculo */
+.oraculo-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(177, 104, 217, 0.3);
+}
+
+/* Encabezado del oráculo */
+.oraculo-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.oraculo-header h2 {
+  font-size: 2.8rem;
+  color: var(--rosa-mistico);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(177, 104, 217, 0.5);
+  position: relative;
+  display: inline-block;
+}
+
+.oraculo-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(to right, var(--purpura-oscuro), var(--rosa-mistico), var(--purpura-oscuro));
+}
+
+.oraculo-imagen {
+  max-width: 500px;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(177, 104, 217, 0.5);
+}
+
+.oraculo-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(74, 13, 103, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.coming-soon-overlay span {
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 1rem 2rem;
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(177, 104, 217, 0.8);
+}
+
+.oraculo-intro {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.oraculo-intro p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--beige-claro);
+}
+
+/* Sección de próximamente */
+.oraculo-coming {
+  background: linear-gradient(135deg, rgba(74, 13, 103, 0.8), rgba(38, 64, 139, 0.8));
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(177, 104, 217, 0.3);
+}
+
+.coming-soon h3 {
+  font-size: 2rem;
+  color: var(--dorado);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.coming-soon p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.oraculo-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(177, 104, 217, 0.3);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-color: rgba(177, 104, 217, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon i {
+  font-size: 2.5rem;
+  color: var(--dorado);
+}
+
+.icon-card::before {
+  content: "🔮";
+  font-size: 2.5rem;
+}
+
+.icon-reading::before {
+  content: "📖";
+  font-size: 2.5rem;
+}
+
+.icon-journal::before {
+  content: "✨";
+  font-size: 2.5rem;
+}
+
+.feature h4 {
+  color: var(--rosa-mistico);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.feature p {
+  color: var(--beige-claro);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Sección de suscripción */
+.subscribe-section {
+  background: linear-gradient(135deg, rgba(38, 64, 139, 0.8), rgba(74, 13, 103, 0.8));
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(139, 165, 232, 0.3);
+}
+
+.subscribe-section h3 {
+  font-size: 1.8rem;
+  color: var(--dorado);
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.waitlist-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.waitlist-form input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.waitlist-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.waitlist-form input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(177, 104, 217, 0.5);
+}
+
+.submit-btn {
+  background: linear-gradient(to right, var(--purpura-medio), var(--rosa-mistico));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(177, 104, 217, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(177, 104, 217, 0.5);
+}
+
+/* Sección de vista previa */
+.preview-section {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.preview-section h3 {
+  font-size: 1.8rem;
+  color: var(--rosa-mistico);
+  margin-bottom: 2rem;
+}
+
+.preview-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  perspective: 1000px;
+}
+
+.card-preview {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-preview:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(177, 104, 217, 0.3);
+}
+
+.card-front {
+  background-image: url('../assets/card-back.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-back {
+  background: linear-gradient(135deg, var(--purpura-oscuro), var(--azul-mistico));
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-back h4 {
+  color: var(--dorado);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.card-back p {
+  color: var(--beige-claro);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Botón para volver */
+.return {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.return a {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--beige-claro);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 1px solid var(--rosa-mistico);
+}
+
+.return a:hover {
+  background-color: var(--purpura-medio);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(177, 104, 217, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .oraculo-header h2 {
+    font-size: 2rem;
+  }
+  
+  .coming-soon-overlay span {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .oraculo-features {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature {
+    width: 100%;
+  }
+  
+  .card-preview {
+    width: 150px;
+    height: 225px;
+  }
+}
