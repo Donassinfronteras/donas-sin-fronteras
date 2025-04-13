@@ -119,52 +119,35 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
   <section id="comentarios">
     <h2>Comparte tu opinión</h2>
     <div class="comentarios-container">
-      <div class="comentarios-form">
-        <h3>Deja tu comentario</h3>
-        <form id="form-comentarios">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="comentario">Tu mensaje</label>
-            <textarea id="comentario" name="comentario" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="glow-button">Enviar comentario</button>
-        </form>
+  <div class="comentarios-form">
+    <h3>Deja tu comentario</h3>
+    <form id="form-comentarios">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
       </div>
-      
-      <div class="comentarios-recientes">
-        <h3>Comentarios recientes</h3>
-        <div class="comentario">
-          <div class="comentario-header">
-            <h4>María Rodriguez</h4>
-            <span class="comentario-fecha">10 de abril, 2025</span>
-          </div>
-          <p>Me encanta este podcast. Las tres tienen personalidades tan diferentes pero complementarias. Siento que son amigas que nunca he conocido pero siempre he tenido. ¡Sigan así!</p>
-        </div>
-        
-        <div class="comentario">
-          <div class="comentario-header">
-            <h4>Carlos Mendoza</h4>
-            <span class="comentario-fecha">5 de abril, 2025</span>
-          </div>
-          <p>El episodio sobre el duelo me ayudó mucho en un momento difícil. Su honestidad y perspectivas diferentes me dieron consuelo y herramientas para procesar mis propias emociones. Gracias Doñas.</p>
-        </div>
-        
-        <div class="comentario">
-          <div class="comentario-header">
-            <h4>Laura Giménez</h4>
-            <span class="comentario-fecha">28 de marzo, 2025</span>
-          </div>
-          <p>Las canciones de Bruxa son increíbles. Tienen tanto sentimiento y profundidad. Me encantaría escuchar más sobre su proceso creativo en futuros episodios.</p>
-        </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="comentario">Tu mensaje</label>
+        <textarea id="comentario" name="comentario" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="glow-button">Enviar comentario</button>
+    </form>
+  </div>
+
+  <!-- 🧩 Comentarios reales (cargados desde Firestore) -->
+  <div class="comentarios-recientes">
+    <h3>Comentarios recientes</h3>
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
+  </div>
+</div>
+          
   </section>
 
   <section id="redes">
@@ -241,8 +224,8 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="js/script.js"></script>
- <script type="module">
+ <script src="js/script.js"></script>
+<script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
   import {
     getFirestore,
@@ -250,8 +233,7 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
     addDoc,
     getDocs,
     query,
-    orderBy,
-    limit
+    orderBy
   } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
   const firebaseConfig = {
@@ -267,8 +249,11 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  // Enviar comentario al dar submit
+  // Envío de comentario
   const form = document.getElementById("form-comentarios");
+  let offset = 0;
+  const comentariosPorPagina = 4;
+
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -287,6 +272,9 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
 
         alert("✨ ¡Comentario enviado con éxito!");
         form.reset();
+        offset = 0;
+        document.getElementById("verMasBtn").style.display = "block";
+        mostrarComentarios();
       } catch (error) {
         console.error("❌ Error al guardar el comentario:", error);
         alert("Ocurrió un error. Inténtalo de nuevo.");
@@ -294,20 +282,22 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
     });
   }
 
-  // MOSTRAR comentarios recientes
-  async function mostrarComentarios() {
+  // Mostrar comentarios
+  async function mostrarComentarios(mas = false) {
     const comentariosRef = collection(db, "comentarios");
-    const q = query(comentariosRef, orderBy("fecha", "desc"), limit(4));
+    const q = query(comentariosRef, orderBy("fecha", "desc"));
 
     try {
       const querySnapshot = await getDocs(q);
       const contenedor = document.querySelector(".comentarios-recientes");
 
-      contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
-<div style="text-align: center; margin-top: 2rem;">
-  <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
-</div>
-      querySnapshot.forEach((doc) => {
+      if (!mas) {
+        contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
+      }
+
+      const docs = querySnapshot.docs.slice(offset, offset + comentariosPorPagina);
+
+      docs.forEach((doc) => {
         const data = doc.data();
         const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
           day: "numeric",
@@ -327,11 +317,24 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
 
         contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
       });
+
+      offset += comentariosPorPagina;
+
+      if (offset >= querySnapshot.size) {
+        document.getElementById("verMasBtn").style.display = "none";
+      }
     } catch (error) {
       console.error("❌ Error al mostrar comentarios:", error);
     }
   }
 
+  // Botón ver más
+  const boton = document.getElementById("verMasBtn");
+  if (boton) {
+    boton.addEventListener("click", () => mostrarComentarios(true));
+  }
+
+  // Cargar primeros comentarios
   mostrarComentarios();
 </script>
 </body>
