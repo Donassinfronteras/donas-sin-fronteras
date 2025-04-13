@@ -13,3 +13,15 @@
     }
   });
 });
+document.getElementById("welcomeBtn").addEventListener("click", function() {
+  const audio = document.getElementById("podcastIntro");
+  audio.play();
+});
+
+document.getElementById("podcastPageBtn").addEventListener("click", function() {
+  window.location.href = "podcast.html";
+});
+
+document.getElementById("portalMagicoBtn").addEventListener("click", function() {
+  window.location.href = "portal-magico.html";
+});
