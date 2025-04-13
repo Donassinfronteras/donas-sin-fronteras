@@ -244,7 +244,15 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
   <script src="js/script.js"></script>
  <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    orderBy,
+    limit
+  } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyB5C6vZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
@@ -259,6 +267,7 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
+  // Enviar comentario al dar submit
   const form = document.getElementById("form-comentarios");
   if (form) {
     form.addEventListener("submit", async (e) => {
@@ -284,6 +293,44 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
       }
     });
   }
+
+  // MOSTRAR comentarios recientes
+  async function mostrarComentarios() {
+    const comentariosRef = collection(db, "comentarios");
+    const q = query(comentariosRef, orderBy("fecha", "desc"), limit(4));
+
+    try {
+      const querySnapshot = await getDocs(q);
+      const contenedor = document.querySelector(".comentarios-recientes");
+
+      contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
+
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+
+        const comentarioHTML = `
+          <div class="comentario">
+            <div class="comentario-header">
+              <h4>${data.nombre}</h4>
+              <span class="comentario-fecha">${fecha}</span>
+            </div>
+            <p>${data.mensaje}</p>
+          </div>
+        `;
+
+        contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
+      });
+    } catch (error) {
+      console.error("❌ Error al mostrar comentarios:", error);
+    }
+  }
+
+  mostrarComentarios();
 </script>
 </body>
 </html>
