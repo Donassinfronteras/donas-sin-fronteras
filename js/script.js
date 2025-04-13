@@ -26,9 +26,19 @@ document.getElementById("portalMagicoBtn").addEventListener("click", function() 
   window.location.href = "portal-magico.html";
 });
 <script type="module">
-  // Tu configuración de Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    orderBy,
+    limit
+  } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
   const firebaseConfig = {
-    apiKey: "AIzaSyB56CvZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
+    apiKey: "AIzaSyB5C6vZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
     authDomain: "donas-sin-fronteras.firebaseapp.com",
     projectId: "donas-sin-fronteras",
     storageBucket: "donas-sin-fronteras.appspot.com",
@@ -37,80 +47,95 @@ document.getElementById("portalMagicoBtn").addEventListener("click", function() 
     measurementId: "G-E1QGHCJ945"
   };
 
-  // Inicializar Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-  // Capturar el formulario
+  // Enviar comentario
   const form = document.getElementById("form-comentarios");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("comentario").value.trim();
 
-    const nombre = document.getElementById("nombre").value;
-    const email = document.getElementById("email").value;
-    const mensaje = document.getElementById("comentario").value;
+      try {
+        await addDoc(collection(db, "comentarios"), {
+          nombre,
+          email,
+          mensaje,
+          fecha: new Date().toISOString()
+        });
 
-    // Guardar en Firestore
-    db.collection("comentarios").add({
-      nombre: nombre,
-      email: email,
-      mensaje: mensaje,
-      fecha: new Date()
-    })
-    .then(() => {
-      alert("✨ ¡Gracias por tu comentario!");
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Error al guardar el comentario: ", error);
+        alert("✨ ¡Comentario enviado con éxito!");
+        form.reset();
+
+        // Reiniciar offset y volver a cargar desde 0
+        offset = 0;
+        document.getElementById("verMasBtn").style.display = "block";
+        mostrarComentarios();
+      } catch (error) {
+        console.error("❌ Error al guardar el comentario:", error);
+        alert("Ocurrió un error. Inténtalo de nuevo.");
+      }
     });
-  });
-import {
-  getDocs,
-  query,
-  orderBy,
-  limit,
-  collection
-} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+  }
 
-// Mostrar los últimos 4 comentarios
-async function mostrarComentarios() {
-  const comentariosRef = collection(db, "comentarios");
-  const q = query(comentariosRef, orderBy("fecha", "desc"), limit(4));
+  // Mostrar comentarios por partes
+  let offset = 0;
+  const comentariosPorPagina = 4;
 
-  try {
-    const querySnapshot = await getDocs(q);
-    const contenedor = document.querySelector(".comentarios-recientes");
+  async function mostrarComentarios(mas = false) {
+    const comentariosRef = collection(db, "comentarios");
+    const q = query(comentariosRef, orderBy("fecha", "desc"));
 
-    // Limpiar por si ya hay comentarios ficticios
-    contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
+    try {
+      const querySnapshot = await getDocs(q);
+      const contenedor = document.querySelector(".comentarios-recientes");
 
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
+      if (!mas) {
+        contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
+      }
+
+      const docs = querySnapshot.docs.slice(offset, offset + comentariosPorPagina);
+
+      docs.forEach((doc) => {
+        const data = doc.data();
+        const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+
+        const comentarioHTML = `
+          <div class="comentario">
+            <div class="comentario-header">
+              <h4>${data.nombre}</h4>
+              <span class="comentario-fecha">${fecha}</span>
+            </div>
+            <p>${data.mensaje}</p>
+          </div>
+        `;
+
+        contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
       });
 
-      const comentarioHTML = `
-        <div class="comentario">
-          <div class="comentario-header">
-            <h4>${data.nombre}</h4>
-            <span class="comentario-fecha">${fecha}</span>
-          </div>
-          <p>${data.mensaje}</p>
-        </div>
-      `;
+      offset += comentariosPorPagina;
 
-      contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
-    });
-  } catch (error) {
-    console.error("❌ Error al mostrar comentarios:", error);
+      if (offset >= querySnapshot.size) {
+        document.getElementById("verMasBtn").style.display = "none";
+      }
+    } catch (error) {
+      console.error("❌ Error al mostrar comentarios:", error);
+    }
   }
-}
 
-// Ejecutar al cargar la página
-mostrarComentarios();
+  // Evento del botón mágico
+  document.getElementById("verMasBtn").addEventListener("click", () => {
+    mostrarComentarios(true);
+  });
+
+  // Mostrar primeros comentarios al cargar
+  mostrarComentarios();
 </script>
