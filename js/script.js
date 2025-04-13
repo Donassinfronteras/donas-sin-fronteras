@@ -66,4 +66,51 @@ document.getElementById("portalMagicoBtn").addEventListener("click", function() 
       console.error("Error al guardar el comentario: ", error);
     });
   });
+import {
+  getDocs,
+  query,
+  orderBy,
+  limit,
+  collection
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+// Mostrar los últimos 4 comentarios
+async function mostrarComentarios() {
+  const comentariosRef = collection(db, "comentarios");
+  const q = query(comentariosRef, orderBy("fecha", "desc"), limit(4));
+
+  try {
+    const querySnapshot = await getDocs(q);
+    const contenedor = document.querySelector(".comentarios-recientes");
+
+    // Limpiar por si ya hay comentarios ficticios
+    contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
+
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      });
+
+      const comentarioHTML = `
+        <div class="comentario">
+          <div class="comentario-header">
+            <h4>${data.nombre}</h4>
+            <span class="comentario-fecha">${fecha}</span>
+          </div>
+          <p>${data.mensaje}</p>
+        </div>
+      `;
+
+      contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
+    });
+  } catch (error) {
+    console.error("❌ Error al mostrar comentarios:", error);
+  }
+}
+
+// Ejecutar al cargar la página
+mostrarComentarios();
 </script>
