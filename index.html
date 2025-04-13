@@ -304,7 +304,9 @@ Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien 
       const contenedor = document.querySelector(".comentarios-recientes");
 
       contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
-
+<div style="text-align: center; margin-top: 2rem;">
+  <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
+</div>
       querySnapshot.forEach((doc) => {
         const data = doc.data();
         const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
