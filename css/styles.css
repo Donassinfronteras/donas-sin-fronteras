@@ -287,3 +287,6 @@ footer {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+#comentarios {
+  background-color: lavenderblush !important;
+}
