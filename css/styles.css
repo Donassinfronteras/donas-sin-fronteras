@@ -157,3 +157,28 @@ footer {
 .footer-social-icon {
   margin: 0 10px;
 }
+/* Social icons - alineados horizontalmente */
+.social-icons,
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.social-icon,
+.footer-social-icon {
+  text-align: center;
+  width: 60px;
+}
+
+.social-icon img,
+.footer-social-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
