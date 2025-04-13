@@ -1,31 +1,34 @@
-/* script.js */document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const welcomeBtn = document.getElementById('welcomeBtn');
   const audioClip = document.getElementById('podcastIntro');
+  const podcastBtn = document.getElementById('podcastPageBtn');
+  const portalBtn = document.getElementById('portalMagicoBtn');
 
-  welcomeBtn.addEventListener('click', function () {
-    if (audioClip) {
+  // Reproduce el audio al dar clic en "Bienvenidos"
+  if (welcomeBtn && audioClip) {
+    welcomeBtn.addEventListener('click', function () {
       audioClip.currentTime = 0;
       audioClip.play().catch(error => {
         console.error('No se pudo reproducir el audio:', error);
       });
-    } else {
-      console.error('No se encontró el audio con ID podcastIntro');
-    }
-  });
-});
-document.getElementById("welcomeBtn").addEventListener("click", function() {
-  const audio = document.getElementById("podcastIntro");
-  audio.play();
+    });
+  }
+
+  // Ir a la página del podcast
+  if (podcastBtn) {
+    podcastBtn.addEventListener('click', function () {
+      window.location.href = "podcast.html";
+    });
+  }
+
+  // Ir a la página del portal mágico
+  if (portalBtn) {
+    portalBtn.addEventListener('click', function () {
+      window.location.href = "portal-magico.html";
+    });
+  }
 });
 
-document.getElementById("podcastPageBtn").addEventListener("click", function() {
-  window.location.href = "podcast.html";
-});
-
-document.getElementById("portalMagicoBtn").addEventListener("click", function() {
-  window.location.href = "portal-magico.html";
-});
-<script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
   import {
     getFirestore,
