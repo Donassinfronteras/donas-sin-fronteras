@@ -182,3 +182,108 @@ footer {
   display: block;
   margin: 0 auto;
 }
+/* Casita para la sección de comentarios */
+#comentarios {
+  background-color: #fff5f7;
+  border: 2px solid #ffd6e8;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(128, 0, 32, 0.1);
+}
+
+#comentarios h2 {
+  text-align: center;
+  color: #800020;
+  margin-bottom: 2rem;
+}
+
+.comentarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.comentarios-form,
+.comentarios-recientes {
+  flex: 1 1 45%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(128, 0, 32, 0.08);
+}
+
+/* Formulario */
+.comentarios-form h3 {
+  margin-bottom: 1rem;
+  color: #800020;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* Botón */
+.comentarios-form button {
+  background-color: #800020;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #ffd6e8;
+  transition: transform 0.2s ease;
+}
+
+.comentarios-form button:hover {
+  background-color: #a00028;
+  transform: scale(1.03);
+}
+
+/* Comentarios recientes */
+.comentarios-recientes h3 {
+  color: #800020;
+  margin-bottom: 1rem;
+}
+
+.comentario {
+  background-color: #fceef0;
+  border-left: 5px solid #800020;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #800020;
+}
+
+.comentario p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
