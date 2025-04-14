@@ -5,18 +5,14 @@
   box-sizing: border-box;
 }
 
+b/* Fondo general */
 body {
   font-family: 'Georgia', serif;
-  background-color: #1f1712; /* Color de fondo completo */
-  background-image: url("../assets/microfono.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
-  background-attachment: fixed;
-  color: #fef8f6;
-  padding-top: 15rem; /* espacio para mostrar bien el micrófono */
+  color: #fff;
+  background: url("../assets/microfono.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
   min-height: 100vh;
-}
 
 header {
   text-align: center;
