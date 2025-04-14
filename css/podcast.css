@@ -131,31 +131,27 @@ main {
 }
 /* --- FOOTER ESTILIZADO --- */
 .site-footer {
-  background-color: rgba(31, 23, 18, 0.92);
-  color: #fef8f6;
-  padding: 2.5rem 1rem;
+  background: rgba(60, 30, 20, 0.85);
+  color: #fceadf;
   text-align: center;
+  padding: 2rem 1rem;
   font-family: 'Georgia', serif;
-  margin-top: 4rem;
-  border-top: 1px solid rgba(255, 204, 188, 0.2);
-  backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 1;
 }
 
-.site-footer h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.4rem;
-  color: #ffccbc;
+.site-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .site-footer p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: #d8c3b8;
 }
 
-.site-footer h4 {
+.site-footer h3 {
   font-size: 1.3rem;
-  color: #fcd8c3;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -163,42 +159,38 @@ main {
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.footer-links li {
-  margin: 0.3rem 0;
-}
-
-.footer-links a {
-  color: #ffccbc;
+.footer-links li a {
+  color: #fdd1b6;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.footer-links a:hover {
-  color: #fff8e8;
-  text-shadow: 0 0 6px rgba(255, 204, 188, 0.5);
+.footer-links li a:hover {
+  color: #ffdcb3;
+  text-shadow: 0 0 5px rgba(255, 204, 188, 0.8);
 }
 
-/* --- ICONOS DE REDES SOCIALES --- */
-.social-icons {
+.footer-socials {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
-.social-icon img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(90%);
+.footer-socials img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
 }
 
-.social-icon img:hover {
+.footer-socials img:hover {
   transform: scale(1.2);
-  filter: brightness(110%);
 }
