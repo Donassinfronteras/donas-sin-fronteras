@@ -5,120 +5,11 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #fff;
-  /* Imagen de fondo ocupando toda la pantalla */
-  background: url("assets/podcast.jpeg") no-repeat center center fixed;
-  background-size: cover;
-  position: relative; /* Para el overlay */
-  min-height: 100vh;
-}
-
-/* Overlay para oscurecer un poco la imagen de fondo 
-   y resaltar el texto */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(96, 56, 43, 0.6); /* Tonalidad terracota semitransparente */
-  z-index: 0;
-}
-
-header {
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(96, 56, 43, 0.7); /* Terracota semitransparente */
-  position: relative;
-  z-index: 1;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-/* Main content */
-main {
-  position: relative; /* Para sobreponerse al overlay */
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-}
-
-/* Sección de introducción */
-.intro {
-  max-width: 700px;
-  text-align: center;
-  background-color: rgba(203, 153, 126, 0.8); /* Tonalidad terracota clara */
-  border-radius: 10px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-.intro h2 {
-  margin-bottom: 1rem;
-}
-
-.intro p {
-  line-height: 1.5;
-}
-
-/* Sección de enlaces a temporadas y debates */
-.secciones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-/* Estilo de los botones/enlaces */
-.btn {
-  text-decoration: none;
-  color: #333;
-  background-color: #ffccbc;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 204, 188, 0.8);
-}
-
-/* Botón "Volver al Inicio" */
-.volver-inicio {
-  margin-top: 1rem;
-}
-
-.return-link {
-  display: inline-block;
-  background-color: #ffccbc;
-  color: #333;
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.return-link:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 204, 188, 0.8);
-}
 /* Fondo general */
 body {
   font-family: 'Georgia', serif;
   color: #fff;
-  background: url("../assets/podcast.jpeg") no-repeat center center fixed;
+  background: url("../assets/microfono.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative;
   min-height: 100vh;
@@ -133,14 +24,32 @@ body::before {
   z-index: 0;
 }
 
-/* Contenedor principal */
-.podcast-wrapper {
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(96, 56, 43, 0.7);
   position: relative;
   z-index: 1;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Contenedor principal */
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.podcast-wrapper {
   max-width: 900px;
   margin: auto;
   text-align: center;
-  padding: 3rem 1rem;
 }
 
 /* Título del podcast */
@@ -152,56 +61,13 @@ body::before {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* Descripción */
 .podcast-wrapper p {
   font-size: 1.1rem;
   color: #fff4ed;
   margin-bottom: 2rem;
 }
 
-/* Imagen micrófono */
-.mic-frame {
-  border: 4px solid rgba(242, 201, 159, 0.8);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(242, 201, 159, 0.4);
-  margin: 2rem auto;
-  overflow: hidden;
-  width: 90%;
-  max-width: 500px;
-}
-
-.mic-frame img {
-  width: 100%;
-  display: block;
-}
-
-/* Botones generales */
-.boton-temporada {
-  font-size: 18px;
-  font-family: 'Caveat', cursive;
-  width: 170px;
-  height: 50px;
-  margin: 0.6rem;
-  border: 1px solid rgba(150, 112, 78, 1);
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 0px 2px rgba(242, 201, 159, 1);
-  text-shadow: 0px 1px 0px rgba(102, 69, 40, 1);
-  background: linear-gradient(rgba(128, 76, 40, 1), rgba(108, 48, 14, 1));
-  text-decoration: none;
-  display: inline-block;
-  line-height: 50px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  min-width: 200px; 
-  text-align: center;
-}
-
-.boton-temporada:hover {
-  background: linear-gradient(rgba(108, 48, 14, 1), rgba(128, 76, 40, 1));
-  transform: scale(1.05);
-}
-/* Efecto brillante al pasar el mouse sobre el marco */
+/* Imagen del micrófono */
 .mic-frame {
   border: 4px solid rgba(242, 201, 159, 0.8);
   border-radius: 15px;
@@ -213,8 +79,45 @@ body::before {
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
+.mic-frame img {
+  width: 100%;
+  display: block;
+}
+
 .mic-frame:hover {
   box-shadow: 0 0 30px 10px rgba(255, 215, 160, 0.8),
               0 0 10px 5px rgba(255, 200, 120, 0.6) inset;
   transform: scale(1.02);
+}
+
+/* Botones */
+.botones-secciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.boton-temporada {
+  font-size: 18px;
+  font-family: 'Caveat', cursive;
+  width: 170px;
+  height: 50px;
+  border: 1px solid rgba(150, 112, 78, 1);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px rgba(242, 201, 159, 1);
+  text-shadow: 0px 1px 0px rgba(102, 69, 40, 1);
+  background: linear-gradient(rgba(128, 76, 40, 1), rgba(108, 48, 14, 1));
+  text-decoration: none;
+  display: inline-block;
+  line-height: 50px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.boton-temporada:hover {
+  background: linear-gradient(rgba(108, 48, 14, 1), rgba(128, 76, 40, 1));
+  transform: scale(1.05);
 }
