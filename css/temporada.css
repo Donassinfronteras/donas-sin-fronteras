@@ -5,36 +5,20 @@
   box-sizing: border-box;
 }
 
-/* Fondo general con imagen del micrófono */
 body {
   font-family: 'Georgia', serif;
-  color: #fef8f6;
   background: url("../assets/microfono.jpg") no-repeat center center fixed;
   background-size: cover;
-  position: relative;
-  min-height: 100vh;
+  background-color: #1f1712; /* Tono oscuro parecido al fondo del micro */
+  color: #fef8f6;
   padding: 1rem;
+  min-height: 100vh;
 }
 
-/* Overlay para oscurecer el fondo y que resalte el contenido */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(31, 23, 18, 0.75); /* tono marrón oscuro con opacidad */
-  z-index: 0;
-}
-
-main, header {
-  position: relative;
-  z-index: 1;
-}
-
-/* Encabezado */
+/* Cabecera */
 header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 header h1 {
@@ -43,7 +27,40 @@ header h1 {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
+/* Botones de navegación entre temporadas y debates */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.nav-btn {
+  text-decoration: none;
+  background: transparent;
+  color: #ffccbc;
+  border: 2px solid #ffccbc;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.nav-btn:hover {
+  background: #ffccbc;
+  color: #1f1712;
+  box-shadow: 0 0 15px rgba(255, 204, 188, 0.8);
+  transform: scale(1.05);
+}
+
 /* Sección de episodios */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .episodes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -57,7 +74,7 @@ header h1 {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.4s ease;
-  border-bottom: 1px solid rgba(255, 215, 160, 0.3);
+  border-bottom: 1px solid rgba(255, 215, 160, 0.3); /* línea dorada */
   position: relative;
   z-index: 1;
 }
@@ -102,30 +119,7 @@ header h1 {
   box-shadow: 0 0 10px rgba(255, 204, 188, 0.8);
 }
 
-/* Botones de navegación entre secciones */
-.navigation-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.nav-btn {
-  text-decoration: none;
-  background: #ffccbc;
-  color: #333;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.nav-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 204, 188, 0.8);
-}
-
-/* Botón para volver al portal */
+/* Botón de volver al podcast principal */
 .return {
   text-align: center;
   margin-top: 2rem;
