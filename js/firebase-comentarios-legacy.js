@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  console.log("🧪 Formulario listo");
+  console.log("✅ DOM completamente cargado");
 
   // 🔐 Inicializar Firebase sin imports
   const firebaseConfig = {
@@ -18,15 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
   let offset = 0;
   const comentariosPorPagina = 4;
 
-  // Enviar comentario
   const form = document.getElementById("form-comentarios");
+  console.log("🧪 Formulario detectado:", form);
+
   if (form) {
+    console.log("✅ Agregando listener al formulario...");
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const nombre = document.getElementById("nombre").value.trim();
       const email = document.getElementById("email").value.trim();
       const mensaje = document.getElementById("comentario").value.trim();
+
+      console.log("📤 Enviando comentario:", { nombre, email, mensaje });
 
       try {
         await db.collection("comentarios").add({
@@ -42,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("verMasBtn").style.display = "block";
         mostrarComentarios();
       } catch (error) {
-        console.error("❌ Error al guardar el comentario:", error.message);
-alert("Ocurrió un error: " + error.message);
+        console.error("❌ Error al guardar el comentario:", error);
+        alert("Ocurrió un error. Inténtalo de nuevo.");
       }
     });
   }
