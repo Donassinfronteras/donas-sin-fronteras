@@ -124,6 +124,6 @@ main {
   right: -5px;
   bottom: -5px;
   border-radius: 10px;
-  background: radial-gradient(rgba(255, 215, 160, 0.2), transparent);
+  background: radial-gradient(rgba(255, 215, 160, 0.15), transparent);
   z-index: -1;
 }
