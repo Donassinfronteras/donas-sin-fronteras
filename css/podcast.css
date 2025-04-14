@@ -67,20 +67,23 @@ main {
   margin-bottom: 2rem;
 }
 
-/* Imagen del micrófono */
+
+/* 🔥 Ajuste de tamaño y marco del micrófono */
 .mic-frame {
+  max-width: 500px;
+  max-height: 300px;
+  overflow: hidden;
   border: 4px solid rgba(242, 201, 159, 0.8);
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(242, 201, 159, 0.4);
-  margin: 2rem auto;
-  overflow: hidden;
-  width: 60%;
-  max-width: 300px;
+  margin: 1.5rem auto;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 .mic-frame img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
   display: block;
 }
 
@@ -88,6 +91,11 @@ main {
   box-shadow: 0 0 30px 10px rgba(255, 215, 160, 0.8),
               0 0 10px 5px rgba(255, 200, 120, 0.6) inset;
   transform: scale(1.02);
+}
+
+/* 🧹 Menos espacio en el main para evitar tanto scroll */
+main {
+  padding: 1.2rem;
 }
 
 /* Botones */
