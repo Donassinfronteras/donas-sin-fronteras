@@ -129,6 +129,27 @@ main {
   background: linear-gradient(rgba(108, 48, 14, 1), rgba(128, 76, 40, 1));
   transform: scale(1.05);
 }
+.return-link {
+  display: inline-block;
+  background: transparent;
+  color: #ffccbc;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #ffccbc;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  margin-top: 2rem;
+}
+
+.return-link:hover {
+  background: #ffccbc;
+  color: #1f1712;
+  box-shadow: 0 0 15px rgba(255, 204, 188, 0.8);
+  transform: scale(1.05);
+}
 /* --- FOOTER ESTILIZADO --- */
 .site-footer {
   background: rgba(60, 30, 20, 0.85);
