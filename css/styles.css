@@ -260,143 +260,19 @@ footer {
   transform: scale(1.03);
 }
 
-/* Comentarios recientes */
-.comentarios-recientes h3 {
-  color: #800020;
-  margin-bottom: 1rem;
-}
-
-.comentario {
-  background-color: #fceef0;
-  border-left: 5px solid #800020;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-}
-
-.comentario-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #800020;
-}
-
-.comentario p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-#comentarios {
-  background-color: lavenderblush !important;
-}
-#comentarios {
-  background: linear-gradient(145deg, #fff5f7, #ffeef3); /* fondo pastel romántico */
-  border: 2px solid #ffd6e8;
-  border-radius: 25px;
-  padding: 2.5rem;
-  margin: 4rem auto;
-  max-width: 1000px;
-  box-shadow: 0 10px 25px rgba(128, 0, 32, 0.1);
-  transition: transform 0.4s ease;
-}
-
-#comentarios:hover {
-  transform: scale(1.01);
-}
-
-#comentarios h2 {
-  text-align: center;
-  color: #800020;
-  font-family: 'Caveat', cursive;
-  font-size: 2.3rem;
-  margin-bottom: 2rem;
-}
-
-.comentarios-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-/* Formulario encantado */
-.comentarios-form,
-.comentarios-recientes {
-  flex: 1 1 45%;
-  background-color: #ffffffd9;
-  padding: 1.8rem;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(128, 0, 32, 0.05);
-  transition: box-shadow 0.3s ease;
-}
-
-.comentarios-form:hover,
-.comentarios-recientes:hover {
-  box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
-}
-
-.comentarios-form h3,
-.comentarios-recientes h3 {
-  font-family: 'Caveat', cursive;
-  font-size: 1.8rem;
-  color: #a00028;
-  text-align: center;
-  margin-bottom: 1.2rem;
-}
-
-/* Campos suaves */
-.form-group label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  color: #800020;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ffc2d9;
-  border-radius: 12px;
-  font-size: 1rem;
-  background-color: #fffafc;
-  transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #800020;
-  outline: none;
-}
-
-/* Botón glam */
-.comentarios-form button {
-  background-color: #800020;
-  color: #fff;
-  border: none;
-  padding: 0.9rem 1.7rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 0 12px #ffd6e8;
-  transition: all 0.3s ease;
-  display: block;
-  margin: 1.5rem auto 0 auto;
-}
-
-.comentarios-form button:hover {
-  background-color: #a00028;
-  transform: scale(1.05);
-}
-
-/* Comentarios encantados */
+/* 🎇 Comentarios encantados con efecto fade */
 .comentario {
   background-color: #fff1f5;
   border-left: 5px solid #ffb6c1;
   padding: 1.2rem;
   margin-bottom: 1.2rem;
   border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .comentario-header {
@@ -409,28 +285,9 @@ footer {
 
 .comentario p {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-}
-/* Estilos elegantes para enlaces en el footer */
-footer a {
-  color: #ffd6e8; /* rosado clarito */
-  text-decoration: none;
-  font-weight: bold;
 }
 
-footer a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-/* 🎇 Efecto de fade-in para comentarios nuevos */
-.comentario {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
-}
-
+/* ✨ Animación mágica */
 @keyframes fadeInUp {
   to {
     opacity: 1;
