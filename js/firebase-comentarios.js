@@ -103,5 +103,9 @@ const boton = document.getElementById("verMasBtn");
 if (boton) {
   boton.addEventListener("click", () => mostrarComentarios(true));
 }
+const boton = document.getElementById("verMasBtn");
+if (boton) {
+  boton.addEventListener("click", () => mostrarComentarios(true));
+}
 
 mostrarComentarios();
