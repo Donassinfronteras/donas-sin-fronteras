@@ -129,3 +129,76 @@ main {
   background: linear-gradient(rgba(108, 48, 14, 1), rgba(128, 76, 40, 1));
   transform: scale(1.05);
 }
+/* --- FOOTER ESTILIZADO --- */
+.site-footer {
+  background-color: rgba(31, 23, 18, 0.92);
+  color: #fef8f6;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 204, 188, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.site-footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+  color: #ffccbc;
+}
+
+.site-footer p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #d8c3b8;
+}
+
+.site-footer h4 {
+  font-size: 1.3rem;
+  color: #fcd8c3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.footer-links li {
+  margin: 0.3rem 0;
+}
+
+.footer-links a {
+  color: #ffccbc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff8e8;
+  text-shadow: 0 0 6px rgba(255, 204, 188, 0.5);
+}
+
+/* --- ICONOS DE REDES SOCIALES --- */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(90%);
+}
+
+.social-icon img:hover {
+  transform: scale(1.2);
+  filter: brightness(110%);
+}
