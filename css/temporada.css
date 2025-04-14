@@ -69,14 +69,19 @@ main {
 }
 
 .episode {
-  background: #2b1c17;
+  background: linear-gradient(
+    145deg,
+    rgba(43, 28, 23, 0.85),
+    rgba(60, 40, 30, 0.8)
+  );
   padding: 1rem 1.2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.4s ease;
   border-bottom: 1px solid rgba(255, 215, 160, 0.3); /* línea dorada */
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(4px);
 }
 
 .episode:hover {
