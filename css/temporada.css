@@ -89,11 +89,12 @@ main {
 }
 
 .episode {
-  background: #FFE5D9;
+  background: #d6a98c; /* Terracota media más oscura */
   padding: 1rem 1.2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
+  color: #fffaf6;
 }
 
 .episode:hover {
@@ -103,23 +104,23 @@ main {
 .episode h2 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #5a2e1d;
+  color: #fffaf6; /* Título clarito */
 }
 
 .episode a {
   display: inline-block;
   text-decoration: none;
-  background: #FFCCBC;
-  color: #333;
+  background: #fffaf6; /* Botón claro */
+  color: #5a2e1d;
   padding: 0.5rem 1rem;
-  border-radius: 3px;
+  border-radius: 5px;
   font-weight: bold;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .episode a:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 204, 188, 0.8);
+  box-shadow: 0 0 10px rgba(255, 230, 200, 0.9);
 }
 
 /* Regreso */
