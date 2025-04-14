@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  console.log("🧪 Formulario listo");
+
   // 🔐 Inicializar Firebase sin imports
   const firebaseConfig = {
     apiKey: "AIzaSyB5C6vZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
@@ -16,89 +18,88 @@ document.addEventListener('DOMContentLoaded', function () {
   let offset = 0;
   const comentariosPorPagina = 4;
 
-  // ... el resto de tu código completo ...
-});
-// Enviar comentario
-const form = document.getElementById("form-comentarios");
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  // Enviar comentario
+  const form = document.getElementById("form-comentarios");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mensaje = document.getElementById("comentario").value.trim();
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("comentario").value.trim();
+
+      try {
+        await db.collection("comentarios").add({
+          nombre,
+          email,
+          mensaje,
+          fecha: new Date().toISOString()
+        });
+
+        alert("✨ ¡Comentario enviado con éxito!");
+        form.reset();
+        offset = 0;
+        document.getElementById("verMasBtn").style.display = "block";
+        mostrarComentarios();
+      } catch (error) {
+        console.error("❌ Error al guardar el comentario:", error);
+        alert("Ocurrió un error. Inténtalo de nuevo.");
+      }
+    });
+  }
+
+  // Mostrar comentarios con fade
+  async function mostrarComentarios(mas = false) {
+    const contenedor = document.querySelector(".comentarios-recientes");
+
+    if (!mas) {
+      contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
+    }
 
     try {
-      await db.collection("comentarios").add({
-        nombre,
-        email,
-        mensaje,
-        fecha: new Date().toISOString()
-      });
+      const snapshot = await db.collection("comentarios")
+        .orderBy("fecha", "desc")
+        .get();
 
-      alert("✨ ¡Comentario enviado con éxito!");
-      form.reset();
-      offset = 0;
-      document.getElementById("verMasBtn").style.display = "block";
-      mostrarComentarios();
-    } catch (error) {
-      console.error("❌ Error al guardar el comentario:", error);
-      alert("Ocurrió un error. Inténtalo de nuevo.");
-    }
-  });
-}
+      const docs = snapshot.docs.slice(offset, offset + comentariosPorPagina);
 
-// Mostrar comentarios con fade
-async function mostrarComentarios(mas = false) {
-  const contenedor = document.querySelector(".comentarios-recientes");
+      docs.forEach((doc, i) => {
+        const data = doc.data();
+        const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
 
-  if (!mas) {
-    contenedor.innerHTML = '<h3>Comentarios recientes</h3>';
-  }
-
-  try {
-    const snapshot = await db.collection("comentarios")
-      .orderBy("fecha", "desc")
-      .get();
-
-    const docs = snapshot.docs.slice(offset, offset + comentariosPorPagina);
-
-    docs.forEach((doc, i) => {
-      const data = doc.data();
-      const fecha = new Date(data.fecha).toLocaleDateString("es-ES", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-      });
-
-      const comentarioHTML = `
-        <div class="comentario" style="animation-delay: ${i * 0.1}s">
-          <div class="comentario-header">
-            <h4>${data.nombre}</h4>
-            <span class="comentario-fecha">${fecha}</span>
+        const comentarioHTML = `
+          <div class="comentario" style="animation-delay: ${i * 0.1}s">
+            <div class="comentario-header">
+              <h4>${data.nombre}</h4>
+              <span class="comentario-fecha">${fecha}</span>
+            </div>
+            <p>${data.mensaje}</p>
           </div>
-          <p>${data.mensaje}</p>
-        </div>
-      `;
+        `;
 
-      contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
-    });
+        contenedor.insertAdjacentHTML("beforeend", comentarioHTML);
+      });
 
-    offset += comentariosPorPagina;
+      offset += comentariosPorPagina;
 
-    if (offset >= snapshot.size) {
-      document.getElementById("verMasBtn").style.display = "none";
+      if (offset >= snapshot.size) {
+        document.getElementById("verMasBtn").style.display = "none";
+      }
+    } catch (error) {
+      console.error("❌ Error al mostrar comentarios:", error);
     }
-  } catch (error) {
-    console.error("❌ Error al mostrar comentarios:", error);
   }
-}
 
-// Botón ver más
-const boton = document.getElementById("verMasBtn");
-if (boton) {
-  boton.addEventListener("click", () => mostrarComentarios(true));
-}
+  // Botón ver más
+  const boton = document.getElementById("verMasBtn");
+  if (boton) {
+    boton.addEventListener("click", () => mostrarComentarios(true));
+  }
 
-// Primeros comentarios
-mostrarComentarios();
+  // Primeros comentarios
+  mostrarComentarios();
+});
