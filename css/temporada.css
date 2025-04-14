@@ -7,12 +7,14 @@
 
 body {
   font-family: 'Georgia', serif;
-  background: url("../assets/microfono.jpg") no-repeat center top;
+  background-color: #1f1712; /* Color de fondo completo */
+  background-image: url("../assets/microfono.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
   background-size: contain;
   background-attachment: fixed;
-  background-color: #1f1712; /* Fondo oscuro */
   color: #fef8f6;
-  padding: 1rem;
+  padding-top: 15rem; /* espacio para mostrar bien el micrófono */
   min-height: 100vh;
 }
 
