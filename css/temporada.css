@@ -38,17 +38,21 @@ main {
   gap: 1.5rem;
   padding: 0 1rem;
 }
-
 .episode {
-  background: #3a2a20; /* Fondo más oscuro para las tarjetas */
+  background: #2b1c17;
   padding: 1rem 1.2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  border-bottom: 1px solid rgba(255, 215, 160, 0.3); /* línea dorada */
+  position: relative;
+  z-index: 1;
 }
 
 .episode:hover {
   transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 215, 160, 0.4); /* ✨ efecto resplandor */
+  border-bottom: 1px solid rgba(255, 215, 160, 0.6);
 }
 
 .episode h2 {
@@ -110,4 +114,16 @@ main {
 .return a:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(255, 204, 188, 0.8);
+}
+/* 💫 Aura brillante al pasar el mouse */
+.episode:hover::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 10px;
+  background: radial-gradient(rgba(255, 215, 160, 0.2), transparent);
+  z-index: -1;
 }
