@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("verMasBtn").style.display = "block";
         mostrarComentarios();
       } catch (error) {
-        console.error("❌ Error al guardar el comentario:", error);
-        alert("Ocurrió un error. Inténtalo de nuevo.");
+        console.error("❌ Error al guardar el comentario:", error.message);
+alert("Ocurrió un error: " + error.message);
       }
     });
   }
