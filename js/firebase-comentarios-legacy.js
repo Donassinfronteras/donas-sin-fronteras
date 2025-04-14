@@ -1,20 +1,23 @@
-// 🔐 Inicializar Firebase sin imports
-const firebaseConfig = {
-  apiKey: "AIzaSyB5C6vZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
-  authDomain: "donas-sin-fronteras.firebaseapp.com",
-  projectId: "donas-sin-fronteras",
-  storageBucket: "donas-sin-fronteras.appspot.com",
-  messagingSenderId: "363905129542",
-  appId: "1:363905129542:web:47ccf952597f951b827e47",
-  measurementId: "G-E1QGHCJ945"
-};
+document.addEventListener('DOMContentLoaded', function () {
+  // 🔐 Inicializar Firebase sin imports
+  const firebaseConfig = {
+    apiKey: "AIzaSyB5C6vZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
+    authDomain: "donas-sin-fronteras.firebaseapp.com",
+    projectId: "donas-sin-fronteras",
+    storageBucket: "donas-sin-fronteras.appspot.com",
+    messagingSenderId: "363905129542",
+    appId: "1:363905129542:web:47ccf952597f951b827e47",
+    measurementId: "G-E1QGHCJ945"
+  };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
 
-let offset = 0;
-const comentariosPorPagina = 4;
+  let offset = 0;
+  const comentariosPorPagina = 4;
 
+  // ... el resto de tu código completo ...
+});
 // Enviar comentario
 const form = document.getElementById("form-comentarios");
 if (form) {
