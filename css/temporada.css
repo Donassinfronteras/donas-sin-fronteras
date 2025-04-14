@@ -111,17 +111,22 @@ main {
 .episode a {
   display: inline-block;
   text-decoration: none;
-  background: #ffccbc;
-  color: #333;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
+  background: transparent;
+  color: #ffccbc;
+  border: 2px solid #ffccbc;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
   font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
 .episode a:hover {
+  background: #ffccbc;
+  color: #1f1712;
+  box-shadow: 0 0 12px rgba(255, 204, 188, 0.7);
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 204, 188, 0.8);
 }
 
 /* Botón de volver al podcast principal */
