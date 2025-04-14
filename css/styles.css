@@ -286,6 +286,12 @@ footer {
 .comentario p {
   margin: 0;
 }
+/* ✨ Fade mágico para comentarios */
+.comentario {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
 
 /* ✨ Animación mágica */
 @keyframes fadeInUp {
