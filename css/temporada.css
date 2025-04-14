@@ -10,8 +10,8 @@ body {
   background: url("../assets/microfono.jpg") no-repeat center top;
   background-size: contain;
   background-attachment: fixed;
-  background-color: #fef8f6;
-  color: #333;
+  background-color: #e7c8b1; /* ← nuevo fondo inspirado en el micrófono */
+  color: #3c2a1e;
   padding: 1rem;
   min-height: 100vh;
 }
