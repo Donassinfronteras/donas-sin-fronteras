@@ -1,13 +1,15 @@
+
+/* RESET Y BASE */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff0f5; /* rosado muy claro como base */
+  background-color: #fff0f5;
   color: #2b2b2b;
 }
 
 header {
-  background-color: #800020; /* borgoña fuerte */
+  background-color: #800020;
   color: #fff;
   padding: 1.5rem;
   text-align: center;
@@ -33,31 +35,32 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  border-bottom: 2px solid #ffd6e8; /* rosado claro elegante */
+  border-bottom: 2px solid #ffd6e8;
 }
 
-/* Sección "¿Quiénes somos?" */
+/* 🧚 FONDO QUIÉNES SOMOS */
 .quienes-somos {
   position: relative;
   padding: 4rem 2rem;
   z-index: 1;
   color: #fceadf;
   text-align: center;
+  overflow: hidden;
 }
 
-.quienes-somos-bg {
-  background: url("assets/donas.png") no-repeat center center fixed;
+.quienes-somos::before {
+  content: "";
+  background: url("../assets/donas.png") no-repeat center center fixed;
   background-size: cover;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.12;
   filter: blur(2px);
 }
 
+/* ✨ INTRO Y DOÑAS */
 .intro-text {
   max-width: 800px;
   margin: 0 auto 2rem;
@@ -67,7 +70,6 @@ nav a.active {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
-/* Tarjetas de las Doñas */
 .doñas-grid {
   display: flex;
   flex-wrap: wrap;
@@ -122,7 +124,13 @@ nav a.active {
   display: block;
 }
 
-/* Botones con efecto glow */
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* GLOW BUTTON */
 .glow-button {
   background-color: #800020;
   color: #fff;
@@ -141,51 +149,7 @@ nav a.active {
   background-color: #a00028;
 }
 
-/* Títulos de secciones */
-section h2 {
-  text-align: center;
-  color: #800020;
-  margin-top: 3rem;
-}
-
-/* Pie de página */
-footer {
-  background-color: #800020;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-footer a {
-  color: #fceadf;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffdcb3;
-  text-shadow: 0 0 5px rgba(255, 204, 188, 0.8);
-}
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-section li {
-  margin: 0.4rem 0;
-}
-/* Iconos de plataformas */
+/* PLATAFORMAS */
 .platform-icons {
   display: flex;
   flex-wrap: wrap;
@@ -207,71 +171,7 @@ footer a:hover {
   height: 60px;
 }
 
-/* Miembros */
-.miembros {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-}
-
-.miembro {
-  max-width: 250px;
-  text-align: center;
-}
-
-.miembro img {
-  width: 100%;
-  border-radius: 50%;
-  border: 3px solid #800020;
-  box-shadow: 0 0 10px rgba(128, 0, 32, 0.4);
-}
-
-.miembro h3 {
-  color: #800020;
-  margin-top: 1rem;
-}
-
-/* Iconos de redes sociales */
-.social-icon img,
-.footer-social-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-
-.social-icon-label {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #800020;
-}
-
-.footer-social-icon {
-  margin: 0 10px;
-}
-
-.social-icons,
-.footer-social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 1rem;
-}
-
-.social-icon,
-.footer-social-icon {
-  text-align: center;
-  width: 60px;
-}
-
-/* Sección de comentarios */
+/* COMENTARIOS */
 #comentarios {
   background-color: #fff5f7;
   border: 2px solid #ffd6e8;
@@ -282,8 +182,107 @@ footer a:hover {
   box-shadow: 0 0 20px rgba(128, 0, 32, 0.1);
 }
 
-#comentarios h2 {
+.comentarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.comentarios-form,
+.comentarios-recientes {
+  flex: 1 1 45%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(128, 0, 32, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.comentarios-form button {
+  background-color: #800020;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #ffd6e8;
+  transition: transform 0.2s ease;
+}
+
+.comentarios-form button:hover {
+  background-color: #a00028;
+  transform: scale(1.03);
+}
+
+.comentario {
+  background-color: #fff1f5;
+  border-left: 5px solid #ffb6c1;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: #800020;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
-  color
-::contentReference[oaicite:0]{index=0}
- 
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #fceadf;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdcb3;
+  text-shadow: 0 0 5px rgba(255, 204, 188, 0.8);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
