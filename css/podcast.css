@@ -215,3 +215,17 @@ main {
 .footer-socials img:hover {
   transform: scale(1.2);
 }
+/* SOLO para podcast.html */
+.fondo-podcast::before {
+  content: "";
+  background: url("../assets/microfono.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.08;
+  filter: blur(1px);
+}
