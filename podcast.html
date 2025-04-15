@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doñas sin Fronteras - Podcast</title>
-
-  <!-- Base general -->
+  <meta charset="UTF-8">
+  <title>Doñas sin Fronteras - Inicio</title>
   <link rel="stylesheet" href="css/styles.css">
-  
-  <!-- Estilos específicos para la página del podcast -->
-  <link rel="stylesheet" href="css/podcast.css">
-  
-  <!-- Íconos y redes sociales -->
   <link rel="stylesheet" href="css/social-icons.css">
 </head>
 <body>
@@ -19,73 +11,126 @@
     <h1>Doñas sin Fronteras</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="podcast.html" class="active">Podcast</a></li>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
         <li><a href="portal-magico.html">Portal Mágico</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="podcast-wrapper">
-      <div class="mic-frame">
-        <img src="assets/microfono.jpg" alt="Micrófono Doñas sin Fronteras">
+    <section class="quienes-somos">
+      <div class="quienes-somos-bg"></div>
+      <div class="intro-text">
+        <p>Nos conocimos por Myspace, pero el destino nos tenía reservada una conversación más larga. Somos tres voces, tres mundos, tres formas de ver la vida... Chaly, la que nos recuerda que el alma también necesita alimento. Lessi, la que con su risa y experiencia nos guía entre cámaras y emociones. Y yo... la que escribe entre suspiros, hilando recuerdos, sueños y verdades.
+Desde distintos rincones, nos reunimos para hablar de lo que duele, lo que inspira y lo que nunca decimos en voz alta. Este no es solo un podcast. Es un espacio sagrado entre amigas, entre historias... Entre lo que fuimos y lo que todavía estamos descubriendo.
+Bienvenidos a este rincón donde el corazón siempre tiene la última palabra.
+</p>
+        <p>Somos tres voces, tres mundos, tres formas de ver la vida:</p>
       </div>
 
-      <h2>Doñas sin Fronteras Podcast</h2>
-      <p>
-        Tres voces. Tres mundos. Una conexión sin fronteras.  
-        Escucha la canción oficial de nuestro podcast mientras eliges qué temporada quieres explorar.
-      </p>
+      <div class="doñas-grid">
+        <div class="doña-card" onclick="toggleBio(this)">
+          <img src="assets/chaly.png" alt="Chaly">
+          <h3>Chaly</h3>
+          <div class="bio">
+            <p> La voz serena entre el ruido. Amante de los libros y creyente profunda, Chaly es la guía espiritual del trío. Desde su rincón fuera de Venezuela, conecta las historias del día a día con pasajes bíblicos y fragmentos literarios que invitan a la reflexión. Su tono es calmo, su presencia firme y su palabra siempre llega como una pausa necesaria. Fue el puente entre Lessi y Bruxa, y hoy es parte del hilo invisible que sostiene este podcast.</p>
+          </div>
+        </div>
 
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3ztIXzqy3sCKriepfAFJpY?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="doña-card" onclick="toggleBio(this)">
+          <img src="assets/lessi.png" alt="Lessi">
+          <h3>Lessi</h3>
+          <div class="bio">
+            <p>La Carmen Julia del trío. Actriz, conductora de espíritu y alma extrovertida, Lessi es quien lleva el timón del podcast con su carisma natural. Desde Venezuela, nos recuerda que se puede brillar incluso en medio de las tormentas. Tiene experiencia frente a cámaras, pero también el don de hacer que quienes no la tienen se sientan cómodas. Comparte historias de vida con honestidad, consejos de belleza y estética con pasión, y una risa que siempre levanta el ánimo. Lessi no solo lidera el show… lo llena de vida.</p>
+          </div>
+        </div>
 
-      <div class="botones-secciones">
-        <a href="temporada1.html" class="boton-temporada">📖 Temporada 1</a>
-        <a href="temporada2.html" class="boton-temporada">🎧 Temporada 2</a>
-        <a href="debates.html" class="boton-temporada">🎤 Debate</a>
+        <div class="doña-card" onclick="toggleBio(this)">
+          <img src="assets/bruxa.png" alt="Bruxa Tarot">
+          <h3>Bruxa Tarot</h3>
+          <div class="bio">
+            <p>La voz que une los hilos. Creativa, intensa y profundamente sensible, es el alma soñadora del trío. Desde escenarios visuales llenos de magia y poesía, trae preguntas que remueven, temas que duelen o inspiran, y una forma de mirar que lo vuelve todo más humano. Se mueve entre la fantasía y la verdad con una máscara que no es para ocultar, sino para proteger lo más sagrado.
+Cada episodio lo cierras con un mensaje del oráculo, una intuición para quien escucha. Lee el tarot como quien abre una ventana al alma, y usa esa conexión para guiar, acompañar y despertar preguntas. En cada episodio abre un portal para que las tres brillen —cada una a su manera— desde el corazón
+.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="volver-inicio">
-        <a href="index.html" class="return-link">← Volver al Inicio</a>
+      <button id="welcomeBtn" class="glow-button">¡Bienvenidos!!! Comencemos!</button>
+      <audio id="podcastIntro" src="assets/intro.mp3" preload="auto"></audio>
+
+      <div class="navigation-buttons">
+        <button id="podcastPageBtn" class="glow-button">Podcast</button>
+        <button id="portalMagicoBtn" class="glow-button">Portal Mágico</button>
       </div>
-    </div>
+    </section>
   </main>
 
- <footer class="site-footer">
-  <div class="footer-content">
-    <h3>Doñas sin Fronteras</h3>
-    <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
-
-    <h4>Enlaces rápidos</h4>
-    <ul class="footer-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="portal.html">Portal Mágico</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-
-    <h4>Síguenos</h4>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/donassinfronteras1/" target="_blank" class="social-icon">
-        <img src="assets/icons/facebook.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/donassinfronteras1" target="_blank" class="social-icon">
-        <img src="assets/icons/instagram.png" alt="Instagram">
-      </a>
-      <a href="https://www.threads.net/@donassinfronteras1" target="_blank" class="social-icon">
-        <img src="assets/icons/threads.png" alt="Threads">
-      </a>
-      <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" class="social-icon">
-        <img src="assets/icons/tiktok.png" alt="TikTok">
-      </a>
-      <a href="https://x.com/donasinfrontera" target="_blank" class="social-icon">
-        <img src="assets/icons/twitter.png" alt="X (Twitter)">
-      </a>
-      <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" class="social-icon">
-        <img src="assets/icons/youtube.png" alt="YouTube">
-      </a>
+  <section id="comentarios">
+    <h2>Comparte tu opinión</h2>
+    <div class="comentarios-container">
+      <div class="comentarios-form">
+        <h3>Deja tu comentario</h3>
+        <form id="form-comentarios">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="comentario">Tu mensaje</label>
+            <textarea id="comentario" name="comentario" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="glow-button">Enviar comentario</button>
+        </form>
+      </div>
+      <div class="comentarios-recientes">
+        <h3>Comentarios recientes</h3>
+      </div>
     </div>
-  </div>
-</footer>
+    <div style="text-align: center; margin-top: 2rem;">
+      <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleBio(card) {
+      card.classList.toggle('active');
+    }
+
+    document.getElementById("welcomeBtn").addEventListener("click", () => {
+      document.getElementById("podcastIntro").play();
+    });
+
+    document.getElementById("podcastPageBtn").addEventListener("click", () => {
+      window.location.href = "podcast.html";
+    });
+
+    document.getElementById("portalMagicoBtn").addEventListener("click", () => {
+      window.location.href = "portal-magico.html";
+    });
+  </script>
 </body>
 </html>
