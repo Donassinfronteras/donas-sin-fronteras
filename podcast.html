@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/social-icons.css" />
 </head>
 
-<body class="pagina-podcast">
+<body>
   <header>
     <h1>Doñas sin Fronteras</h1>
     <nav>
@@ -26,32 +26,38 @@
     </nav>
   </header>
 
-  <main class="podcast-container">
-    <div class="mic-fondo"></div>
+  <main>
+    <div class="podcast-wrapper">
+      
+      <!-- 🎙️ Imagen del micrófono con marco -->
+      <div class="mic-frame">
+        <img src="assets/microfono.jpg" alt="Micrófono Doñas sin Fronteras" />
+      </div>
 
-    <section class="contenido-podcast">
       <h2>Doñas sin Fronteras Podcast</h2>
-      <p class="subtitulo">Tres voces. Tres mundos. Una conexión sin fronteras.  
+      <p class="subtitulo">
+        Tres voces. Tres mundos. Una conexión sin fronteras.  
         Escucha la canción oficial de nuestro podcast mientras eliges qué temporada quieres explorar.
       </p>
 
-      <!-- Canción oficial (Spotify embed) -->
+      <!-- 🎶 Canción oficial (Spotify embed) -->
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3ztIXzqy3sCKriepfAFJpY?utm_source=generator" 
-        width="100%" height="80" frameborder="0" allowfullscreen="" 
+        width="100%" height="80" frameborder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
       </iframe>
 
-      <!-- Botones de temporada -->
+      <!-- 📚 Botones de temporada -->
       <div class="botones-secciones">
         <a href="temporada1.html" class="boton-temporada">📖 Temporada 1</a>
         <a href="temporada2.html" class="boton-temporada">🎧 Temporada 2</a>
         <a href="debates.html" class="boton-temporada">🎤 Debate</a>
       </div>
 
+      <!-- ⬅️ Volver -->
       <div class="volver-inicio">
         <a href="index.html" class="return-link">← Volver al Inicio</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- Footer -->
