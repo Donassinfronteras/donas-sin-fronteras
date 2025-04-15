@@ -5,77 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doñas sin Fronteras - Podcast</title>
 
-  <!-- Tipografía personalizada -->
+  <!-- Fuente Caveat -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos generales -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/podcast.css">
-  <link rel="stylesheet" href="css/social-icons.css">
-
-  <style>
-    /* Fondo del micrófono solo en podcast */
-    .mic-fondo {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("assets/microfono.jpg") no-repeat center center;
-      background-size: contain;
-      opacity: 0.08;
-      z-index: -2;
-      pointer-events: none;
-    }
-
-    body {
-      font-family: 'Caveat', cursive;
-      color: #800020;
-    }
-
-    h2, h3, p, a {
-      color: #800020;
-    }
-
-    .boton-temporada {
-      background-color: #800020;
-      color: white;
-      text-decoration: none;
-      padding: 0.7rem 1.2rem;
-      border-radius: 30px;
-      font-weight: bold;
-      margin: 0.5rem;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .boton-temporada:hover {
-      background-color: #a00028;
-    }
-
-    .podcast-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    .volver-inicio {
-      margin-top: 2rem;
-    }
-
-    .return-link {
-      color: #800020;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-  </style>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/podcast.css" />
+  <link rel="stylesheet" href="css/social-icons.css" />
 </head>
-<body>
-  <!-- Fondo del micrófono -->
-  <div class="mic-fondo"></div>
 
+<body class="pagina-podcast">
   <header>
     <h1>Doñas sin Fronteras</h1>
     <nav>
@@ -87,16 +26,22 @@
     </nav>
   </header>
 
-  <main>
-    <div class="podcast-wrapper">
+  <main class="podcast-container">
+    <div class="mic-fondo"></div>
+
+    <section class="contenido-podcast">
       <h2>Doñas sin Fronteras Podcast</h2>
-      <p>
-        Tres voces. Tres mundos. Una conexión sin fronteras.  
+      <p class="subtitulo">Tres voces. Tres mundos. Una conexión sin fronteras.  
         Escucha la canción oficial de nuestro podcast mientras eliges qué temporada quieres explorar.
       </p>
 
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3ztIXzqy3sCKriepfAFJpY?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <!-- Canción oficial (Spotify embed) -->
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3ztIXzqy3sCKriepfAFJpY?utm_source=generator" 
+        width="100%" height="80" frameborder="0" allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+      </iframe>
 
+      <!-- Botones de temporada -->
       <div class="botones-secciones">
         <a href="temporada1.html" class="boton-temporada">📖 Temporada 1</a>
         <a href="temporada2.html" class="boton-temporada">🎧 Temporada 2</a>
@@ -106,21 +51,21 @@
       <div class="volver-inicio">
         <a href="index.html" class="return-link">← Volver al Inicio</a>
       </div>
-    </div>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h3>Doñas sin Fronteras</h3>
         <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
       </div>
-
       <div class="footer-section">
-        <h4>Enlaces rápidos</h4>
-        <ul class="footer-links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
           <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
           <li><a href="portal-magico.html">Portal Mágico</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
