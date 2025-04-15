@@ -1,3 +1,6 @@
+/* styles.css */
+
+/* Estilos generales */
 body {
   margin: 0;
   padding: 0;
@@ -36,25 +39,26 @@ nav a.active {
   border-bottom: 2px solid #ffd6e8; /* rosado claro elegante */
 }
 
+/* Sección "¿Quiénes somos?" */
+.quienes-somos {
+  position: relative;
+  padding: 4rem 2rem;
+  z-index: 1;
+  color: #fceadf;
+  text-align: center;
+}
+
 .quienes-somos-bg {
   background: url("assets/donas.png") no-repeat center center fixed;
   background-size: cover;
-  padding: 4rem 1.5rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 0;
-}
-
-.quienes-somos-bg::before {
-  content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 240, 245, 0.85); /* velo suave */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  opacity: 0.15;
+  filter: blur(2px);
 }
 
 .intro-text {
@@ -66,6 +70,7 @@ nav a.active {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
+/* Tarjetas de las Doñas */
 .doñas-grid {
   display: flex;
   flex-wrap: wrap;
@@ -120,17 +125,7 @@ nav a.active {
   display: block;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Botones con efecto glow */
 .glow-button {
   background-color: #800020;
   color: #fff;
@@ -149,12 +144,14 @@ nav a.active {
   background-color: #a00028;
 }
 
+/* Títulos de secciones */
 section h2 {
   text-align: center;
   color: #800020;
   margin-top: 3rem;
 }
 
+/* Pie de página */
 footer {
   background-color: #800020;
   color: #fff;
@@ -163,6 +160,7 @@ footer {
   margin-top: 2rem;
 }
 
+/* Iconos de plataformas */
 .platform-icons {
   display: flex;
   flex-wrap: wrap;
@@ -184,6 +182,7 @@ footer {
   height: 60px;
 }
 
+/* Miembros */
 .miembros {
   display: flex;
   flex-wrap: wrap;
@@ -209,7 +208,7 @@ footer {
   margin-top: 1rem;
 }
 
-/* ICONOS - Social media & footer */
+/* Iconos de redes sociales */
 .social-icon img,
 .footer-social-icon img {
   width: 40px;
@@ -260,98 +259,6 @@ footer {
 
 #comentarios h2 {
   text-align: center;
-  color: #800020;
-  margin-bottom: 2rem;
-}
-
-.comentarios-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-.comentarios-form,
-.comentarios-recientes {
-  flex: 1 1 45%;
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(128, 0, 32, 0.08);
-}
-
-.comentarios-form h3 {
-  margin-bottom: 1rem;
-  color: #800020;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  color: #555;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-.comentarios-form button {
-  background-color: #800020;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ffd6e8;
-  transition: transform 0.2s ease;
-}
-
-.comentarios-form button:hover {
-  background-color: #a00028;
-  transform: scale(1.03);
-}
-
-.comentario {
-  background-color: #fff1f5;
-  border-left: 5px solid #ffb6c1;
-  padding: 1.2rem;
-  margin-bottom: 1.2rem;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.comentario-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  color: #800020;
-  margin-bottom: 0.4rem;
-}
-
-.comentario p {
-  margin: 0;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  color
+::contentReference[oaicite:0]{index=0}
+ 
