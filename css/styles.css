@@ -1,333 +1,155 @@
-/* RESET Y BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+/* 🎙️ Solo para la página del podcast */
+body.pagina-podcast {
   font-family: 'Caveat', cursive;
-  background-color: #fff0f5;
-  color: #800020; /* borgoña para todo el texto */
-}
-
-/* ENCABEZADO */
-header {
-  background-color: #800020;
   color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-nav li {
-  margin: 0 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-nav a:hover,
-nav a.active {
-  border-bottom: 2px solid #ffd6e8;
-}
-
-body.pagina-index {
-  font-family: 'Caveat', cursive;
-  color: #800020;
-  background: url("../assets/donas.png") no-repeat center center fixed;
+  background: url("../assets/microfono.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative;
   min-height: 100vh;
 }
 
-.quienes-somos {
-  position: relative;
-  padding: 4rem 2rem;
-  z-index: 1;
-  color: #800020;
-  text-align: center;
-  overflow: hidden;
-}
-
-.intro-text {
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  text-shadow: 1px 1px 2px #fce4ec;
-}
-
-/* 🌟 Reseña mágica de bienvenida */
-.intro-resena {
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 204, 188, 0.5);
-  border-radius: 20px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  font-size: 1.4rem;
-  line-height: 1.7;
-  text-align: center;
-  color: #4a0d1a;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 0 25px rgba(255, 204, 188, 0.5);
-  transition: transform 0.3s ease;
-}
-
-.intro-resena:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 35px rgba(255, 182, 193, 0.7);
-}
-
-/* CARDS DE DOÑAS */
-.doñas-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.doña-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 204, 188, 0.5);
-  border-radius: 15px;
-  padding: 1rem;
-  width: 240px;
-  text-align: center;
-  transition: all 0.4s ease;
-  position: relative;
-  backdrop-filter: blur(5px);
-  cursor: pointer;
-}
-
-.doña-card:hover {
-  box-shadow: 0 0 25px rgba(255, 204, 188, 0.8);
-  transform: scale(1.04);
-  border-color: rgba(255, 182, 193, 0.9);
-}
-
-.doña-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffd6e8;
-  margin-bottom: 1rem;
-}
-
-.doña-card h3 {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #800020;
-}
-
-.bio {
-  margin-top: 1rem;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: #4a0d1a;
-  display: none;
-  animation: fadeIn 0.6s ease;
-}
-
-.doña-card.active .bio {
-  display: block;
-}
-
-/* ANIMACIÓN BIO */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* BOTONES CON BRILLO */
-.glow-button {
-  background-color: #800020;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 0 10px #ffd6e8;
-  transition: transform 0.2s ease;
-  margin: 1rem;
-}
-
-.glow-button:hover {
-  transform: scale(1.05);
-  background-color: #a00028;
-}
-
-/* SECCIÓN PLATAFORMAS */
-.platform-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
-
-.platform-icon {
-  text-align: center;
-  width: 100px;
-  color: #800020;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.platform-icon-img img {
-  width: 60px;
-  height: 60px;
-}
-
-/* COMENTARIOS */
-#comentarios {
-  background-color: #fff5f7;
-  border: 2px solid #ffd6e8;
-  border-radius: 20px;
-  padding: 2rem;
-  margin: 4rem auto;
-  max-width: 1000px;
-  box-shadow: 0 0 20px rgba(128, 0, 32, 0.1);
-}
-
-.comentarios-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-.comentarios-form,
-.comentarios-recientes {
-  flex: 1 1 45%;
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(128, 0, 32, 0.08);
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  color: #800020;
-}
-
-.form-group input,
-.form-group textarea {
+body.pagina-podcast::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  resize: vertical;
+  height: 100%;
+  background: rgba(96, 56, 43, 0.6); /* velo oscuro suave */
+  z-index: 0;
 }
 
-.comentarios-form button {
-  background-color: #800020;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ffd6e8;
-  transition: transform 0.2s ease;
+/* ENCABEZADO */
+body.pagina-podcast header {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(96, 56, 43, 0.7);
+  position: relative;
+  z-index: 1;
 }
 
-.comentarios-form button:hover {
-  background-color: #a00028;
-  transform: scale(1.03);
+body.pagina-podcast header h1 {
+  font-size: 2rem;
 }
 
-.comentario {
-  background-color: #fff1f5;
-  border-left: 5px solid #ffb6c1;
-  padding: 1.2rem;
-  margin-bottom: 1.2rem;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* REDES SOCIALES */
-.social-icons,
-.footer-social-icons {
+/* CONTENIDO PRINCIPAL */
+.podcast-container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.contenido-podcast {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* TÍTULO */
+.contenido-podcast h2 {
+  font-size: 2.5rem;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 1rem;
+  color: #fceadf;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.contenido-podcast .subtitulo {
+  font-size: 1.3rem;
+  color: #fff4ed;
+  margin-bottom: 2rem;
+}
+
+/* 🎧 Spotify Embed */
+iframe {
+  margin-bottom: 2rem;
+  border: none;
+}
+
+/* BOTONES DE TEMPORADA */
+.botones-secciones {
+  display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
-.social-icon,
-.footer-social-icon {
+.boton-temporada {
+  font-size: 1.2rem;
+  font-family: 'Caveat', cursive;
+  width: 170px;
+  height: 50px;
+  border: 1px solid rgba(150, 112, 78, 1);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px rgba(242, 201, 159, 1);
+  text-shadow: 0px 1px 0px rgba(102, 69, 40, 1);
+  background: linear-gradient(rgba(128, 76, 40, 1), rgba(108, 48, 14, 1));
+  text-decoration: none;
+  display: inline-block;
+  line-height: 50px;
   text-align: center;
-  width: 60px;
+  transition: all 0.3s ease;
 }
 
-.social-icon img,
-.footer-social-icon img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+.boton-temporada:hover {
+  background: linear-gradient(rgba(108, 48, 14, 1), rgba(128, 76, 40, 1));
+  transform: scale(1.05);
 }
 
-.social-icon-label {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #800020;
+/* BOTÓN VOLVER */
+.return-link {
+  display: inline-block;
+  background: transparent;
+  color: #ffccbc;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #ffccbc;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  margin-top: 2rem;
+}
+
+.return-link:hover {
+  background: #ffccbc;
+  color: #1f1712;
+  box-shadow: 0 0 15px rgba(255, 204, 188, 0.8);
+  transform: scale(1.05);
 }
 
 /* FOOTER */
 footer {
-  background-color: #800020;
-  color: #fff;
-  padding: 2rem 1rem;
+  background: rgba(60, 30, 20, 0.85);
+  color: #fceadf;
   text-align: center;
-  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-family: 'Georgia', serif;
+  position: relative;
+  z-index: 1;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 footer a {
-  color: #fceadf;
+  color: #fdd1b6;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 footer a:hover {
@@ -342,4 +164,8 @@ footer a:hover {
   gap: 2rem;
   padding: 2rem 1rem;
   text-align: center;
+}
+
+.footer-section {
+  max-width: 250px;
 }
