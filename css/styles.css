@@ -113,11 +113,13 @@ nav a.active {
 
 .bio {
   margin-top: 1rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #fdd1b6;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #800020; /* Borgoña */
+  font-family: 'Caveat', cursive;
   display: none;
   animation: fadeIn 0.6s ease;
+  text-shadow: none; /* Remueve el brillo blanco si estaba activo */
 }
 
 .doña-card.active .bio {
