@@ -18,60 +18,53 @@
     </nav>
   </header>
 
-<main class="hero">
-  <section class="quienes-somos-bg">
-    <div class="intro-text">
-      <p>Nos conocimos por Myspace, pero el destino nos tenía reservada una conversación más larga...</p>
-      <p>Somos tres voces, tres mundos, tres formas de ver la vida:</p>
-    </div>
-
-    <div class="doñas-grid">
-      <!-- Chaly -->
-      <div class="doña-card" onclick="toggleBio(this)">
-        <img src="assets/chaly.png" alt="Chaly">
-        <h3>Chaly</h3>
-        <div class="bio">
-          <p>La voz serena entre el ruido. Amante de los libros y creyente profunda, Chaly es la guía espiritual del trío. Desde su rincón fuera de Venezuela, conecta las historias del día a día con pasajes bíblicos y fragmentos literarios que invitan a la reflexión. Su tono es calmo, su presencia firme y su palabra siempre llega como una pausa necesaria. Fue el puente entre Lessi y Bruxa, y hoy es parte del hilo invisible que sostiene este podcast.</p>
+  <main>
+    <div class="quienes-somos-bg">
+      <section class="quienes-somos">
+        <div class="intro-text">
+          <p>Nos conocimos por Myspace, pero el destino nos tenía reservada una conversación más larga...</p>
+          <p>Somos tres voces, tres mundos, tres formas de ver la vida:</p>
         </div>
-      </div>
 
-      <!-- Lessi -->
-      <div class="doña-card" onclick="toggleBio(this)">
-        <img src="assets/lessi.png" alt="Lessi">
-        <h3>Lessi</h3>
-        <div class="bio">
-          <p>La Carmen Julia del trío. Actriz, conductora de espíritu y alma extrovertida, Lessi es quien lleva el timón del podcast con su carisma natural. Desde Venezuela, nos recuerda que se puede brillar incluso en medio de las tormentas. Tiene experiencia frente a cámaras, pero también el don de hacer que quienes no la tienen se sientan cómodas. Comparte historias de vida con honestidad, consejos de belleza y estética con pasión, y una risa que siempre levanta el ánimo. Lessi no solo lidera el show… lo llena de vida.</p>
+        <div class="doñas-grid">
+          <!-- Chaly -->
+          <div class="doña-card" onclick="toggleBio(this)">
+            <img src="assets/chaly.png" alt="Chaly">
+            <h3>Chaly</h3>
+            <div class="bio">
+              <p>La voz serena entre el ruido. Amante de los libros y creyente profunda, Chaly es la guía espiritual del trío. Desde su rincón fuera de Venezuela, conecta las historias del día a día con pasajes bíblicos y fragmentos literarios que invitan a la reflexión. Su tono es calmo, su presencia firme y su palabra siempre llega como una pausa necesaria. Fue el puente entre Lessi y tú, y hoy es parte del hilo invisible que sostiene este podcast.</p>
+            </div>
+          </div>
+
+          <!-- Lessi -->
+          <div class="doña-card" onclick="toggleBio(this)">
+            <img src="assets/lessi.png" alt="Lessi">
+            <h3>Lessi</h3>
+            <div class="bio">
+              <p>La Carmen Julia del trío. Actriz, conductora de espíritu y alma extrovertida, Lessi es quien lleva el timón del podcast con su carisma natural. Desde Venezuela, nos recuerda que se puede brillar incluso en medio de las tormentas. Tiene experiencia frente a cámaras, pero también el don de hacer que quienes no la tienen se sientan cómodas. Comparte historias de vida con honestidad, consejos de belleza y estética con pasión, y una risa que siempre levanta el ánimo. Lessi no solo lidera el show… lo llena de vida.</p>
+            </div>
+          </div>
+
+          <!-- Mia / Bruxa -->
+          <div class="doña-card" onclick="toggleBio(this)">
+            <img src="assets/bruxa.png" alt="Bruxa Tarot">
+            <h3>Bruxa Tarot</h3>
+            <div class="bio">
+              <p>La voz que une los hilos. Creativa, intensa y profundamente sensible, es el alma soñadora del trío. Desde escenarios visuales llenos de magia y poesía, trae preguntas que remueven, temas que duelen o inspiran, y una forma de mirar que lo vuelve todo más humano. Se mueve entre la fantasía y la verdad con una máscara que no es para ocultar, sino para proteger lo más sagrado. Cada episodio lo cierra con un mensaje del oráculo, una intuición para quien escucha. Lee el tarot como quien abre una ventana al alma, y usa esa conexión para guiar, acompañar y despertar preguntas. En cada episodio abres un portal para que las tres brillen —cada una a su manera— desde el corazón.</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- Mia / Bruxa -->
-      <div class="doña-card" onclick="toggleBio(this)">
-        <img src="assets/bruxa.png" alt="Bruxa Tarot">
-        <h3>Bruxa Tarot</h3>
-        <div class="bio">
-          <p>La voz que une los hilos. Creativa, intensa y profundamente sensible, es el alma soñadora del trío. Desde escenarios visuales llenos de magia y poesía, trae preguntas que remueven, temas que duelen o inspiran, y una forma de mirar que lo vuelve todo más humano. Se mueves entre la fantasía y la verdad con una máscara que no es para ocultar, sino para proteger lo más sagrado. Cada episodio lo cierra con un mensaje del oráculo, una intuición para quien escucha. Lee el tarot como quien abre una ventana al alma, y usas esa conexión para guiar, acompañar y despertar preguntas.  En cada episodio abres un portal para que las tres brillen —cada una a su manera— desde el corazón.</p>
+        <button id="welcomeBtn" class="glow-button">¡Bienvenidos!!! Comencemos!</button>
+        <audio id="podcastIntro" src="assets/intro.mp3" preload="auto"></audio>
+
+        <div class="navigation-buttons">
+          <button id="podcastPageBtn" class="glow-button">Podcast</button>
+          <button id="portalMagicoBtn" class="glow-button">Portal Mágico</button>
         </div>
-      </div>
+      </section>
     </div>
-
-    <button id="welcomeBtn" class="glow-button">¡Bienvenidos!!! Comencemos!</button>
-    <audio id="podcastIntro" src="assets/intro.mp3" preload="auto"></audio>
-
-    <div class="navigation-buttons">
-      <button id="podcastPageBtn" class="glow-button">Podcast</button>
-      <button id="portalMagicoBtn" class="glow-button">Portal Mágico</button>
-    </div>
-
-    <button id="welcomeBtn" class="glow-button">¡Bienvenidos!!! Comencemos!</button>
-    <audio id="podcastIntro" src="assets/intro.mp3" preload="auto"></audio>
-
-    <div class="navigation-buttons">
-      <button id="podcastPageBtn" class="glow-button">Podcast</button>
-      <button id="portalMagicoBtn" class="glow-button">Portal Mágico</button>
-    </div>
-    </section>
-  </div>
-</main>
+  </main>
 
   <section id="plataformas">
     <h2>Donde nos encontramos - Podcast Doñas Sin Fronteras</h2>
@@ -82,70 +75,61 @@
         </div>
         <span>Amazon Music</span>
       </a>
-      
       <a href="https://podcasts.apple.com/us/podcast/do%C3%B1as-sin-fronteras/id1745755793" target="_blank" class="platform-icon">
         <div class="platform-icon-img">
           <img src="assets/icons/apple-podcast.png" alt="Apple Podcast">
         </div>
         <span>Apple Podcast</span>
       </a>
-      
       <a href="https://castbox.fm/vh/6238503" target="_blank" class="platform-icon">
         <div class="platform-icon-img">
           <img src="assets/icons/castbox.png" alt="Castbox">
         </div>
         <span>Castbox</span>
       </a>
-      
       <a href="https://www.iheart.com/podcast/269-donas-sin-fronteras-195524029/" target="_blank" class="platform-icon">
         <div class="platform-icon-img">
           <img src="assets/icons/iheartradio.png" alt="iHeartRadio">
         </div>
         <span>iHeartRadio</span>
       </a>
-    
       <a href="https://open.spotify.com/show/7pHZzwuFupdVuTC1aQpiip?si=1d2c72731a754e97" target="_blank" class="platform-icon">
         <div class="platform-icon-img">
           <img src="assets/icons/spotify.png" alt="Spotify">
         </div>
         <span>Spotify</span>
       </a>
-    
     </div>
   </section>
-  <!-- Sección de comentarios -->
+
   <section id="comentarios">
     <h2>Comparte tu opinión</h2>
     <div class="comentarios-container">
-  <div class="comentarios-form">
-    <h3>Deja tu comentario</h3>
-    <form id="form-comentarios">
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+      <div class="comentarios-form">
+        <h3>Deja tu comentario</h3>
+        <form id="form-comentarios">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="comentario">Tu mensaje</label>
+            <textarea id="comentario" name="comentario" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="glow-button">Enviar comentario</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+      <div class="comentarios-recientes">
+        <h3>Comentarios recientes</h3>
       </div>
-      <div class="form-group">
-        <label for="comentario">Tu mensaje</label>
-        <textarea id="comentario" name="comentario" rows="5" required></textarea>
+      <div style="text-align: center; margin-top: 2rem;">
+        <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
       </div>
-      <button type="submit" class="glow-button">Enviar comentario</button>
-    </form>
-  </div>
-
-  <!-- 🧩 Comentarios reales (cargados desde Firestore) -->
-  <div class="comentarios-recientes">
-    <h3>Comentarios recientes</h3>
-  </div>
-
-  <div style="text-align: center; margin-top: 2rem;">
-    <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
-  </div>
-</div>
-          
+    </div>
   </section>
 
   <section id="redes">
@@ -155,27 +139,22 @@
         <img src="assets/icons/facebook.png" alt="Facebook">
         <span class="social-icon-label">Facebook</span>
       </a>
-      
       <a href="https://www.instagram.com/donassinfronteras1" target="_blank" class="social-icon square">
         <img src="assets/icons/instagram.png" alt="Instagram">
         <span class="social-icon-label">Instagram</span>
       </a>
-      
       <a href="https://www.threads.net/@donassinfronteras1" target="_blank" class="social-icon">
         <img src="assets/icons/threads.png" alt="Threads">
         <span class="social-icon-label">Threads</span>
       </a>
-      
       <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" class="social-icon">
         <img src="assets/icons/tiktok.png" alt="TikTok">
         <span class="social-icon-label">TikTok</span>
       </a>
-      
       <a href="https://x.com/donasinfrontera" target="_blank" class="social-icon">
         <img src="assets/icons/twitter.png" alt="X (Twitter)">
         <span class="social-icon-label">X</span>
       </a>
-      
       <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" class="social-icon square">
         <img src="assets/icons/youtube.png" alt="YouTube">
         <span class="social-icon-label">YouTube</span>
@@ -189,7 +168,6 @@
         <h3>Doñas sin Fronteras</h3>
         <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
       </div>
-      
       <div class="footer-section">
         <h3>Enlaces rápidos</h3>
         <ul>
@@ -199,7 +177,6 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
-      
       <div class="footer-section">
         <h3>Síguenos</h3>
         <div class="footer-social-icons">
@@ -218,20 +195,18 @@
         </div>
       </div>
     </div>
-    
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
-<!-- Librerías de Firebase SIN import -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-<!-- Tus scripts -->
-<script src="js/script.js"></script>
-<script src="js/firebase-comentarios-legacy.js"></script>
+  <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/firebase-comentarios-legacy.js"></script>
   <script>
-  function toggleBio(card) {
-    card.classList.toggle('active');
-  }
-</script>
+    function toggleBio(card) {
+      card.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
