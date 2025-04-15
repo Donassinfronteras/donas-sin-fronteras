@@ -56,8 +56,8 @@ nav a.active {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: -1;
-  opacity: 0.12;
-  filter: blur(2px);
+  opacity: 0.05;
+  filter: blur(1px);
 }
 
 /* ✨ INTRO Y DOÑAS */
@@ -285,4 +285,37 @@ footer a:hover {
   gap: 2rem;
   padding: 2rem 1rem;
   text-align: center;
+}
+/* REDES SOCIALES */
+.social-icons,
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.social-icon,
+.footer-social-icon {
+  text-align: center;
+  width: 60px;
+}
+
+.social-icon img,
+.footer-social-icon img {
+  width: 30px;  /* REDUCIDO para que no parezcan pokémon evolucionados */
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.social-icon-label {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #800020;
 }
