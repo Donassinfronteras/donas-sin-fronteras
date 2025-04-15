@@ -1,301 +1,252 @@
-body {
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff0f5; /* rosado muy claro como base */
-  color: #2b2b2b;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Fondo solo para index */
+body.solo-index .donas-fondo {
+  content: "";
+  background: url("../assets/donas.png") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.08;
+  filter: blur(1px);
+}
+
+/* Header */
 header {
-  background-color: #800020; /* borgoña fuerte */
+  background-color: #800020;
   color: #fff;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
-  margin: 0;
-}
-
-nav li {
-  margin: 0 1rem;
+  gap: 1.5rem;
 }
 
 nav a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover,
 nav a.active {
-  border-bottom: 2px solid #ffd6e8; /* rosado claro elegante */
+  text-decoration: underline;
 }
 
-.hero {
+/* Intro */
+.quienes-somos {
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 3rem 1rem;
-  background-color: #fff5f7;
 }
 
-.hero-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-
-.descripcion p {
-  max-width: 800px;
-  margin: 1rem auto;
+.intro-text p {
   font-size: 1.2rem;
-  line-height: 1.6;
-  color: #444;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
 }
 
+/* Doñas grid */
+.doñas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.doña-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 280px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.doña-card:hover {
+  transform: scale(1.03);
+}
+
+.doña-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid pink;
+  margin-bottom: 1rem;
+}
+
+.doña-card h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Bio desplegable */
+.bio {
+  display: none;
+  margin-top: 1rem;
+  color: #800020;
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.doña-card.active .bio {
+  display: block;
+}
+
+/* Botones */
 .glow-button {
   background-color: #800020;
   color: #fff;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  display: inline-block;
+  font-size: 1.2rem;
   border-radius: 30px;
+  box-shadow: 0 0 10px #ffdde1;
   cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ffd6e8;
-  transition: transform 0.2s ease;
-  margin: 1rem;
+  font-family: 'Caveat', cursive;
 }
 
 .glow-button:hover {
-  transform: scale(1.05);
-  background-color: #a00028;
+  background-color: #a3002d;
 }
 
-section h2 {
+/* Navegación interna */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Plataformas */
+#plataformas {
+  padding: 3rem 1rem;
   text-align: center;
+  background-color: #fff6f9;
   color: #800020;
-  margin-top: 3rem;
-}
-
-footer {
-  background-color: #800020;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 .platform-icons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .platform-icon {
-  text-align: center;
-  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
   color: #800020;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .platform-icon-img img {
   width: 60px;
   height: 60px;
+  margin-bottom: 0.5rem;
 }
 
-.miembros {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-}
-
-.miembro {
-  max-width: 250px;
+/* Redes Sociales */
+#redes {
+  background-color: #fff0f5;
+  padding: 2rem;
   text-align: center;
 }
 
-.miembro img {
-  width: 100%;
-  border-radius: 50%;
-  border: 3px solid #800020;
-  box-shadow: 0 0 10px rgba(128, 0, 32, 0.4);
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
-.miembro h3 {
-  color: #800020;
-  margin-top: 1rem;
-}
-/* ICONOS - Social media & footer */
-.social-icon img,
-.footer-social-icon img {
+.social-icon img {
   width: 40px;
   height: 40px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
 }
 
-/* Para que el texto debajo del icono no se vea aplastado */
 .social-icon-label {
   display: block;
-  margin-top: 5px;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #800020;
-}
-
-.footer-social-icon {
-  margin: 0 10px;
-}
-/* Social icons - alineados horizontalmente */
-.social-icons,
-.footer-social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 1rem;
-}
-
-.social-icon,
-.footer-social-icon {
-  text-align: center;
-  width: 60px;
-}
-
-.social-icon img,
-.footer-social-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-/* Casita para la sección de comentarios */
-#comentarios {
-  background-color: #fff5f7;
-  border: 2px solid #ffd6e8;
-  border-radius: 20px;
-  padding: 2rem;
-  margin: 4rem auto;
-  max-width: 1000px;
-  box-shadow: 0 0 20px rgba(128, 0, 32, 0.1);
-}
-
-#comentarios h2 {
-  text-align: center;
-  color: #800020;
-  margin-bottom: 2rem;
-}
-
-.comentarios-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-.comentarios-form,
-.comentarios-recientes {
-  flex: 1 1 45%;
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(128, 0, 32, 0.08);
-}
-
-/* Formulario */
-.comentarios-form h3 {
-  margin-bottom: 1rem;
-  color: #800020;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
   font-weight: bold;
-  color: #555;
+  color: #800020;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-/* Botón */
-.comentarios-form button {
+/* Footer */
+footer {
   background-color: #800020;
   color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ffd6e8;
-  transition: transform 0.2s ease;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-.comentarios-form button:hover {
-  background-color: #a00028;
-  transform: scale(1.03);
-}
-
-/* 🎇 Comentarios encantados con efecto fade */
-.comentario {
-  background-color: #fff1f5;
-  border-left: 5px solid #ffb6c1;
-  padding: 1.2rem;
-  margin-bottom: 1.2rem;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.comentario-header {
+.footer-content {
   display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  color: #800020;
-  margin-bottom: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
-.comentario p {
-  margin: 0;
-}
-/* ✨ Fade mágico para comentarios */
-.comentario {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
+.footer-section {
+  min-width: 200px;
 }
 
-/* ✨ Animación mágica */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.footer-section h3 {
+  margin-bottom: 0.8rem;
+  color: #ffe4ec;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
 }
