@@ -12,7 +12,7 @@ body {
   color: #333;
 }
 
-/* Fondo solo para index */
+/* Fondo solo para index - UPDATED for better visibility */
 body.solo-index .donas-fondo {
   content: "";
   background: url("../assets/donas.png") no-repeat center center fixed;
@@ -23,8 +23,8 @@ body.solo-index .donas-fondo {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.08;
-  filter: blur(1px);
+  opacity: 0.3; /* Increased from 0.08 to make image more visible */
+  filter: none; /* Removed blur filter */
 }
 
 /* Header */
@@ -57,15 +57,18 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Intro */
+/* Intro - UPDATED for better readability with more visible background */
 .quienes-somos {
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .intro-text p {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
 }
@@ -79,8 +82,9 @@ nav a.active {
   margin-top: 2rem;
 }
 
+/* UPDATED card style for better visibility */
 .doña-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.75);
   padding: 1.5rem;
   border-radius: 1rem;
   width: 280px;
@@ -88,6 +92,7 @@ nav a.active {
   backdrop-filter: blur(5px);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .doña-card:hover {
@@ -103,17 +108,18 @@ nav a.active {
   margin-bottom: 1rem;
 }
 
+/* UPDATED heading color for better contrast */
 .doña-card h3 {
-  color: #fff;
+  color: #800020;
   font-size: 1.4rem;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: none;
 }
 
-/* Bio desplegable */
+/* Bio desplegable - UPDATED color for better readability */
 .bio {
   display: none;
   margin-top: 1rem;
-  color: #800020;
+  color: #333;
   font-family: 'Caveat', cursive;
   font-size: 1.4rem;
   text-align: left;
@@ -250,6 +256,8 @@ footer p {
   margin-top: 1.5rem;
   font-size: 0.9rem;
 }
+
+/* Comentarios section */
 #comentarios {
   background-color: #fff5f7;
   border: 2px solid #ffd6e8;
