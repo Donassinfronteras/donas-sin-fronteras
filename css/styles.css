@@ -159,7 +159,35 @@ footer {
   text-align: center;
   margin-top: 2rem;
 }
+footer a {
+  color: #fceadf;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
+footer a:hover {
+  color: #ffdcb3;
+  text-shadow: 0 0 5px rgba(255, 204, 188, 0.8);
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: 0.4rem 0;
+}
 /* Iconos de plataformas */
 .platform-icons {
   display: flex;
