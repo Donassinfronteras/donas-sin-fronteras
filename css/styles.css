@@ -1,13 +1,13 @@
-
-/* RESET Y BASE */
+/* BASE Y RESET */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Caveat', cursive;
   background-color: #fff0f5;
-  color: #2b2b2b;
+  color: #800020; /* Borgoña para todo el texto */
 }
 
+/* HEADER */
 header {
   background-color: #800020;
   color: #fff;
@@ -31,24 +31,27 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  font-family: 'Caveat', cursive;
 }
 
 nav a:hover,
 nav a.active {
   border-bottom: 2px solid #ffd6e8;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem;
 }
 
-/* 🧚 FONDO QUIÉNES SOMOS */
-.quienes-somos {
+/* FONDO MÁGICO SOLO INDEX */
+.fondo-index {
   position: relative;
   padding: 4rem 2rem;
   z-index: 1;
-  color: #fceadf;
   text-align: center;
   overflow: hidden;
 }
 
-.quienes-somos::before {
+.fondo-index::before {
   content: "";
   background: url("../assets/donas.png") no-repeat center center fixed;
   background-size: cover;
@@ -56,20 +59,22 @@ nav a.active {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.07;
   filter: blur(1px);
+  pointer-events: none; /* evita bloquear clics */
 }
 
-/* ✨ INTRO Y DOÑAS */
+/* INTRO Y DOÑAS */
 .intro-text {
   max-width: 800px;
   margin: 0 auto 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.6;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  color: #800020;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
+/* TARJETAS DOÑAS */
 .doñas-grid {
   display: flex;
   flex-wrap: wrap;
@@ -78,8 +83,8 @@ nav a.active {
 }
 
 .doña-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 204, 188, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 204, 188, 0.4);
   border-radius: 15px;
   padding: 1rem;
   width: 220px;
@@ -106,20 +111,18 @@ nav a.active {
 
 .doña-card h3 {
   margin: 0;
-  font-size: 1.2rem;
-  color: #fff;
-  text-shadow: 0 1px 2px #000;
+  font-size: 1.3rem;
+  color: #800020;
+  text-shadow: 0 1px 2px #fff;
 }
 
 .bio {
   margin-top: 1rem;
   font-size: 1.1rem;
-  line-height: 1.6;
-  color: #800020; /* Borgoña */
-  font-family: 'Caveat', cursive;
+  line-height: 1.5;
+  color: #800020;
   display: none;
   animation: fadeIn 0.6s ease;
-  text-shadow: none; /* Remueve el brillo blanco si estaba activo */
 }
 
 .doña-card.active .bio {
@@ -132,7 +135,7 @@ nav a.active {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* GLOW BUTTON */
+/* BOTONES */
 .glow-button {
   background-color: #800020;
   color: #fff;
@@ -140,10 +143,10 @@ nav a.active {
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-shadow: 0 0 10px #ffd6e8;
   transition: transform 0.2s ease;
-  margin: 1rem;
+  font-family: 'Caveat', cursive;
 }
 
 .glow-button:hover {
@@ -157,7 +160,7 @@ nav a.active {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 .platform-icon {
@@ -208,7 +211,7 @@ nav a.active {
   display: block;
   margin-bottom: 0.3rem;
   font-weight: bold;
-  color: #555;
+  color: #800020;
 }
 
 .form-group input,
@@ -221,32 +224,15 @@ nav a.active {
   resize: vertical;
 }
 
-.comentarios-form button {
-  background-color: #800020;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ffd6e8;
-  transition: transform 0.2s ease;
-}
-
-.comentarios-form button:hover {
-  background-color: #a00028;
-  transform: scale(1.03);
-}
-
 .comentario {
   background-color: #fff1f5;
   border-left: 5px solid #ffb6c1;
   padding: 1.2rem;
   margin-bottom: 1.2rem;
   border-radius: 12px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
-  color: #4a4a4a;
+  color: #800020;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards;
@@ -259,41 +245,11 @@ nav a.active {
   }
 }
 
-/* FOOTER */
-footer {
-  background-color: #800020;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-footer a {
-  color: #fceadf;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffdcb3;
-  text-shadow: 0 0 5px rgba(255, 204, 188, 0.8);
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  text-align: center;
-}
 /* REDES SOCIALES */
 .social-icons,
 .footer-social-icons {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 1rem;
@@ -307,7 +263,7 @@ footer a:hover {
 
 .social-icon img,
 .footer-social-icon img {
-  width: 30px;  /* REDUCIDO para que no parezcan pokémon evolucionados */
+  width: 30px;
   height: 30px;
   object-fit: contain;
   display: block;
@@ -321,17 +277,60 @@ footer a:hover {
   text-align: center;
   color: #800020;
 }
-/* SOLO para index.html */
-.fondo-index::before {
-  content: "";
-  background: url("../assets/donas.png") no-repeat center center fixed;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.02; /* más suave aún */
-  filter: blur(1px);
+
+/* FOOTER */
+footer {
+  background-color: #800020;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 250px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 0.6rem;
+  color: #ffd6e8;
+}
+
+.footer-section p {
+  margin-top: 0;
+  font-size: 0.9rem;
+  color: #ffeef7;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ffeef7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #ffdcb3;
+  text-shadow: 0 0 5px rgba(255, 204, 188, 0.8);
 }
