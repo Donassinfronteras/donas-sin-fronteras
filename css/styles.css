@@ -37,23 +37,25 @@ nav a.active {
   border-bottom: 2px solid #ffd6e8; /* rosado claro elegante */
 }
 
-.quienes-somos {
-  position: relative;
-  padding: 4rem 2rem;
-  z-index: 1;
-  color: #fceadf;
-  text-align: center;
-}
-
 .quienes-somos-bg {
   background: url("assets/donas.png") no-repeat center center fixed;
   background-size: cover;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.quienes-somos-bg::before {
+  content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
+  background: rgba(255, 240, 245, 0.85); /* velo suave */
   z-index: -1;
-  opacity: 0.15;
-  filter: blur(2px);
 }
 
 .intro-text {
