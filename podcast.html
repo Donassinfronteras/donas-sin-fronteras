@@ -5,16 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doñas sin Fronteras - Podcast</title>
 
-  <!-- Base general -->
+  <!-- Tipografía personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos generales -->
   <link rel="stylesheet" href="css/styles.css">
-  
-  <!-- Estilos específicos para la página del podcast -->
   <link rel="stylesheet" href="css/podcast.css">
-  
-  <!-- Íconos y redes sociales -->
   <link rel="stylesheet" href="css/social-icons.css">
+
+  <style>
+    /* Fondo del micrófono solo en podcast */
+    .mic-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("assets/microfono.jpg") no-repeat center center;
+      background-size: contain;
+      opacity: 0.08;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    body {
+      font-family: 'Caveat', cursive;
+      color: #800020;
+    }
+
+    h2, h3, p, a {
+      color: #800020;
+    }
+
+    .boton-temporada {
+      background-color: #800020;
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 0.5rem;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .boton-temporada:hover {
+      background-color: #a00028;
+    }
+
+    .podcast-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .volver-inicio {
+      margin-top: 2rem;
+    }
+
+    .return-link {
+      color: #800020;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+  </style>
 </head>
 <body>
+  <!-- Fondo del micrófono -->
+  <div class="mic-fondo"></div>
+
   <header>
     <h1>Doñas sin Fronteras</h1>
     <nav>
@@ -27,11 +88,7 @@
   </header>
 
   <main>
-    <div class="podcast-wrapper fondo-podcast">
-      <div class="mic-frame">
-        <img src="assets/microfono.jpg" alt="Micrófono Doñas sin Fronteras">
-      </div>
-
+    <div class="podcast-wrapper">
       <h2>Doñas sin Fronteras Podcast</h2>
       <p>
         Tres voces. Tres mundos. Una conexión sin fronteras.  
@@ -52,6 +109,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section">
@@ -67,33 +125,8 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
-
-      <div class="footer-section">
-        <h4>Síguenos</h4>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank" class="social-icon">
-            <img src="assets/icons/facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/donassinfronteras1" target="_blank" class="social-icon">
-            <img src="assets/icons/instagram.png" alt="Instagram">
-          </a>
-          <a href="https://www.threads.net/@donassinfronteras1" target="_blank" class="social-icon">
-            <img src="assets/icons/threads.png" alt="Threads">
-          </a>
-          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" class="social-icon">
-            <img src="assets/icons/tiktok.png" alt="TikTok">
-          </a>
-          <a href="https://x.com/donasinfrontera" target="_blank" class="social-icon">
-            <img src="assets/icons/twitter.png" alt="X (Twitter)">
-          </a>
-          <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" class="social-icon">
-            <img src="assets/icons/youtube.png" alt="YouTube">
-          </a>
-        </div>
-      </div>
     </div>
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
-
