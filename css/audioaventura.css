@@ -24,7 +24,7 @@ header {
   background-color: var(--verde-oscuro);
   color: var(--texto-suave);
   text-align: center;
-  padding: 3rem 0;
+  padding: 3rem 0 2rem;
   margin-bottom: 2rem;
 }
 
@@ -33,24 +33,51 @@ header h1 {
   font-family: 'Caveat', cursive;
 }
 
-/* Banner imagen */
+/* Botones tipo portal */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-portal.glow {
+  background: linear-gradient(135deg, #4caf50, #81c784, #a5d6a7);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-portal.glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.9);
+}
+
+/* Intro banner */
 .intro-image img {
   display: block;
   margin: 0 auto 2rem;
-  max-width: 100%;
+  max-width: 60%;
   border-radius: 20px;
   border: 4px solid var(--verde-medio);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-/* Sección principal */
+/* AudioAventura sección */
 .audio-adventures {
   max-width: 900px;
   margin: 2rem auto;
   background-color: #fff;
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
 }
 
 .audio-adventures h2 {
@@ -107,12 +134,13 @@ header h1 {
   color: #777;
 }
 
-/* Canciones lado a lado */
+/* Canciones */
 .songs-container {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .song-item {
@@ -120,7 +148,7 @@ header h1 {
   min-width: 300px;
 }
 
-/* Insignias */
+/* Sección de insignias */
 .badges-section {
   position: relative;
   z-index: 1;
@@ -130,13 +158,13 @@ header h1 {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .badges-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #2d6a4f;
+  color: var(--verde-oscuro);
 }
 
 #badges-container {
@@ -166,7 +194,7 @@ header h1 {
 .badge p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: #2d6a4f;
+  color: var(--verde-oscuro);
 }
 
 /* Footer */
@@ -213,17 +241,21 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .chapters li {
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  .songs-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .chapters li {
+    flex-direction: column;
     text-align: center;
   }
 
   .chapters li a {
     margin-top: 0.5rem;
-  }
-
-  .songs-container {
-    flex-direction: column;
   }
 }
