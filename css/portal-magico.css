@@ -1,54 +1,194 @@
-footer {
-  background: rgba(0, 102, 102, 0.85);
-  color: #ccffff;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.portal-magico-body {
+  font-family: 'Caveat', cursive;
+  color: #00ffff; /* Turquesa brillante */
+  background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
   position: relative;
-  z-index: 2;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  border-top: 2px solid rgba(0, 255, 255, 0.3);
+  min-height: 100vh;
+}
+
+body.portal-magico-body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+header {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #aefeff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #aefeff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  border-bottom: 2px solid #aefeff;
+}
+
+/* Contenido principal */
+main {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sección de introducción */
+.intro {
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #aefeff;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0ffff;
+}
+
+/* Botones mágicos */
+.portales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-portal {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background: linear-gradient(145deg, #00ffff, #008b8b);
+  color: #000;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.btn-portal:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+}
+
+/* Mariposa mágica flotante */
+.mariposa-magica {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: auto;
+  background: url("../assets/mariposa-magica.png") no-repeat center center;
+  background-size: contain;
+  z-index: 3;
+  animation: flotar 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px gold);
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-15px); }
+}
+
+/* Botón de retorno */
+.return {
+  margin-top: 2rem;
+}
+
+.return a {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0, 128, 128, 0.7);
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.return a:hover {
+  background-color: #00ffff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+/* Footer estilizado */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #aefeff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .footer-content {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .footer-section h3 {
-  color: #33ffff;
-  margin-bottom: 1rem;
   font-size: 1.2rem;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-section li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  color: #e0ffff;
 }
 
 .footer-section a {
-  color: #ccffff;
+  color: #aefeff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #66ffff;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  text-shadow: 0 0 8px #aefeff;
+  color: #fff;
 }
 
-footer p {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: #b3ffff;
-  font-style: italic;
+.social-links a {
+  display: inline-block;
+  margin: 0.3rem 0;
 }
