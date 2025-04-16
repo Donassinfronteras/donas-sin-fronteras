@@ -3,75 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal Mágico – Doñas sin Fronteras</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap">
+  <title>Doñas sin Fronteras - Portal Mágico</title>
   <link rel="stylesheet" href="css/portal-magico.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet" />
 </head>
-<body class="portal-magico-body">
 
-  <!-- Mariposa flotante -->
+<body class="portal-magico-body">
   <div class="mariposa-magica"></div>
 
-  <header class="portal-header">
+  <header>
     <h1>Doñas sin Fronteras</h1>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="#" class="active">Portal Mágico</a></li>
+        <li><a href="portal-magico.html" class="active">Portal Mágico</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="portal-main">
-    <section class="portal-intro">
-      <h2>✨ Bienvenido al Portal Mágico ✨</h2>
+  <main class="portal-container">
+    <div class="intro">
+      <h2>Portal Mágico</h2>
       <p>
         Bienvenido al Portal Mágico de Doñas sin Fronteras, un espacio donde compartimos recursos, emociones y contenido creado con amor y un toque de brujería bonita.
       </p>
       <p>
         Explora los portales que hemos creado para ti. Cada uno es una puerta abierta a historias, canciones y aventuras hechas desde el alma.
       </p>
-    </section>
+    </div>
 
-    <section class="portales">
-      <a href="canciones.html" class="btn-portal">🎶 Canciones</a>
-      <a href="audioaventura.html" class="btn-portal">📖 AudioAventuras</a>
-      <a href="#" class="btn-portal disabled">🔮 Oráculo Prisma del Alma</a>
-      <a href="recursos.html" class="btn-portal">📂 Recursos y Descargas</a>
-    </section>
-
-    <div class="return">
-      <a href="index.html">← Volver al Inicio</a>
+    <div class="portales">
+      <a href="audioaventura.html" class="btn-portal">AudioAventuras</a>
+      <a href="canciones.html" class="btn-portal">Canciones</a>
+      <a href="oraculo.html" class="btn-portal">Oráculo Prisma</a>
+      <a href="recursos.html" class="btn-portal">Recursos y Descargas</a>
     </div>
   </main>
 
-  <footer class="portal-footer">
+  <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h3>Doñas sin Fronteras</h3>
-        <p>Un podcast donde el corazón tiene la última palabra.</p>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
       </div>
+
       <div class="footer-section">
-        <h3>Enlaces Rápidos</h3>
+        <h3>Enlaces rápidos</h3>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="portal-magico.html">Portal Mágico</a></li>
           <li><a href="podcast.html">Podcast</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
         </ul>
       </div>
+
       <div class="footer-section">
         <h3>Síguenos</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a></li>
-          <li><a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a></li>
-        </ul>
+        <div class="social-links">
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+        </div>
       </div>
     </div>
-    <p class="footer-copy">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+
+    <p class="copyright">
+      &copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.
+    </p>
   </footer>
 
+  <script>
+    // Mariposa flotando con el cursor
+    const mariposa = document.querySelector(".mariposa-magica");
+    document.addEventListener("mousemove", (e) => {
+      mariposa.style.left = e.pageX + "px";
+      mariposa.style.top = e.pageY + "px";
+    });
+  </script>
 </body>
 </html>
