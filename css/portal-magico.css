@@ -1,7 +1,7 @@
 /* 🔮 Fondo general */
 body {
   font-family: 'Caveat', cursive;
-  color: #fff;
+  color: #00796B;  /* Cambiado a turquesa oscuro */
   background: url("../assets/fondoportalmagico.png") no-repeat center center fixed;
   background-size: cover;
   position: relative;
@@ -112,13 +112,13 @@ header {
 }
 
 .portal-card h3 {
-  color: #ffeef8;
+  color: #00796B;  /* Cambiado a turquesa oscuro */
   margin-bottom: 0.8rem;
 }
 
 .portal-card p {
   font-size: 0.95rem;
-  color: #fceaf3;
+  color: #00796B;  /* Cambiado a turquesa oscuro */
   margin-bottom: 1rem;
 }
 
@@ -126,7 +126,7 @@ header {
   display: inline-block;
   padding: 0.6rem 1.4rem;
   background-color: rgba(204, 153, 255, 0.8);
-  color: #fff;
+  color: #00796B;  /* Cambiado a turquesa oscuro */
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
