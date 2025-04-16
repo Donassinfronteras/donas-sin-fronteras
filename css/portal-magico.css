@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -9,60 +9,62 @@ body.portal-magico-body {
   font-family: 'Caveat', cursive;
   background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #43005e;
+  color: #5c1362;
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Velo lila más oscuro */
+/* Velo lila */
 body.portal-magico-body::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(139, 104, 159, 0.5); /* lila uva oscuro */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(192, 144, 216, 0.4); /* Lila oscuro con transparencia */
   z-index: 0;
 }
 
-/* Mariposa flotante */
-.mariposa-magica {
+/* Mariposa gloriosa */
+.mariposa-fija {
   background: url("../assets/mariposa-magica.png") no-repeat center center;
   background-size: contain;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   position: absolute;
-  top: 48%;
+  top: 260px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  animation: flotar 5s ease-in-out infinite;
-  z-index: 3;
-}
-
-@keyframes flotar {
-  0%, 100% {
-    transform: translate(-50%, -50%) translateY(0);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateY(-15px);
-  }
-}
-
-/* Header */
-header {
-  background-color: rgba(67, 0, 94, 0.8);
-  text-align: center;
-  padding: 1rem;
-  position: relative;
+  transform: translateX(-50%);
   z-index: 2;
+  pointer-events: none;
 }
 
-header h1 {
-  font-size: 2.2rem;
+/* Mariposa flotante cursor */
+.mariposa-cursor {
+  background: url("../assets/mariposa-magica.png") no-repeat center center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: flotando 3s ease-in-out infinite;
+}
+
+@keyframes flotando {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Encabezado */
+header {
+  background-color: rgba(90, 40, 120, 0.8); /* Uva profundo */
+  padding: 1rem 0;
+  text-align: center;
   color: #fff;
-  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 3;
+  position: relative;
 }
 
 nav ul {
@@ -70,113 +72,100 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 nav a {
-  color: #e3f9ff;
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 nav a.active,
 nav a:hover {
-  border-bottom: 2px solid #aefcff;
+  border-bottom: 2px solid #bdf3f3;
 }
 
-/* Main */
-.portal-contenido {
-  position: relative;
-  z-index: 2;
-  padding: 4rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Sección de bienvenida */
 .intro-portal {
-  max-width: 900px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.35);
   padding: 2rem;
-  border-radius: 25px;
+  max-width: 900px;
+  margin: 4rem auto 2rem;
+  border-radius: 20px;
   text-align: center;
-  margin-bottom: 3rem;
-  backdrop-filter: blur(6px);
-  color: #5f007e;
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
+  color: #5c1362;
 }
 
 .intro-portal h2 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #aefcff;
-}
-
-.intro-portal p {
-  font-size: 1.4rem;
   margin-bottom: 1rem;
+  color: #5c1362;
 }
 
-/* Botones mágicos */
-.portal-links {
+/* Botones */
+.portales {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  z-index: 1;
+  position: relative;
+  margin: 2rem auto;
 }
 
-.btn-portal {
-  text-decoration: none;
-  font-family: 'Caveat', cursive;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #43005e;
-  background: linear-gradient(135deg, #e0c3fc, #8ec5fc, #f9f9d4);
+.portal-btn {
   padding: 1rem 2rem;
-  border-radius: 30px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(3px);
-  transition: all 0.4s ease;
-}
-
-.btn-portal:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
-              0 0 10px rgba(174, 255, 255, 0.8);
-}
-
-/* Volver */
-.volver {
-  margin-top: 3rem;
-}
-
-.volver-link {
-  font-size: 1.2rem;
-  font-family: 'Caveat', cursive;
-  padding: 0.8rem 1.5rem;
   border-radius: 20px;
-  background-color: rgba(67, 0, 94, 0.8);
-  color: #fff;
+  background: linear-gradient(135deg, #dffcfb, #e3d3fd, #fff1c1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  font-size: 1.3rem;
+  color: #5c1362;
+  font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.volver-link:hover {
-  background-color: rgba(90, 0, 110, 1);
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background-color: rgba(67, 0, 94, 0.8);
+  min-width: 220px;
   text-align: center;
-  padding: 1.5rem;
+}
+
+.portal-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.9);
+}
+
+.portal-btn.desactivado {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Botón volver */
+.volver {
+  text-align: center;
+  margin: 3rem 0 5rem;
+}
+
+.volver-btn {
+  background: rgba(90, 40, 120, 0.85);
   color: #fff;
-  font-size: 1rem;
-  margin-top: 3rem;
-  z-index: 2;
-  position: relative;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.volver-btn:hover {
+  background-color: #b46cf7;
+  color: #fff;
+}
+
+/* Mariposa sigue al cursor */
+body {
+  cursor: none;
 }
