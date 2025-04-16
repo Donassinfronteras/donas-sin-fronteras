@@ -13,8 +13,8 @@ function renderBadges() {
   container.innerHTML = '';
   badges.forEach(b => {
     const div = document.createElement('div');
-    const unlocked = localStorage.getItem('badge_' + b.id);
-    div.className = 'badge' + (unlocked ? ' unlocked' : '');
+    const isUnlocked = localStorage.getItem('badge_' + b.id);
+    div.className = 'badge' + (isUnlocked ? ' unlocked' : '');
     div.innerHTML = `<img src="${b.icon}" alt="${b.label}"><p>${b.label}</p>`;
     container.appendChild(div);
   });
@@ -26,7 +26,14 @@ function unlockBadge(id) {
   renderBadges();
 }
 
-// Al cargar la página desbloqueamos la insignia de AudioAventuras
+// Verificamos el pathname para marcar la visita
 document.addEventListener('DOMContentLoaded', () => {
-  unlockBadge('explorer');
+  renderBadges();
+
+  const path = window.location.pathname;
+
+  if (path.includes('audioaventura')) unlockBadge('explorer');
+  if (path.includes('tarot') || path.includes('portal-magico')) unlockBadge('oracle');
+  if (path.includes('canciones')) unlockBadge('songs');
+  if (path.includes('recursos')) unlockBadge('resources');
 });
