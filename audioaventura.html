@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AudioAventuras – Doñas sin Fronteras</title>
-  <link rel="stylesheet" href="css/audioaventura.css" />
+  <link rel="stylesheet" href="css/audioaventuras.css" />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -16,11 +16,11 @@
   <main>
     <section class="intro">
       <div class="intro-image">
-        <img src="assets/audioaventura.png" alt="AudioAventuras Banner">
+        <img src="assets/audioaventura.png" alt="Banner de AudioAventuras" />
       </div>
       <div class="intro-text">
-        <h2>En Busca de tus Ojos Verdes</h2>
-        <p>Una historia que entrelaza emociones, recuerdos y destinos. Sigue los capítulos de esta aventura sonora, donde la voz y la música te guiarán.</p>
+        <h2>En busca de tus ojos verdes</h2>
+        <p>Una historia donde los sentimientos, el destino y las decisiones marcan el camino. Acompáñanos capítulo a capítulo en esta aventura sonora.</p>
       </div>
     </section>
 
@@ -29,31 +29,33 @@
       <ul class="chapters">
         <li><strong>Capítulo 1</strong> <a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=f15fc8d0d0154d15" target="_blank">Escuchar</a></li>
         <li><strong>Capítulo 2</strong> <a href="https://open.spotify.com/episode/5KRLfbXXkSWhZwgMvrmaHB?si=e67c6ae699ff4831" target="_blank">Escuchar</a></li>
-        <li><strong>Capítulo 3</strong> <span>Coming soon</span></li>
-        <li><strong>Capítulo 4</strong> <span>Coming soon</span></li>
-        <li><strong>Capítulo 5</strong> <span>Coming soon</span></li>
+        <li><strong>Capítulo 3</strong> <span class="soon">Coming soon</span></li>
+        <li><strong>Capítulo 4</strong> <span class="soon">Coming soon</span></li>
+        <li><strong>Capítulo 5</strong> <span class="soon">Coming soon</span></li>
       </ul>
     </section>
 
     <section class="songs">
       <h2>Canciones</h2>
       <div class="song">
-        <h3>En Busca de tus Ojos Verdes</h3>
+        <h3>En busca de tus ojos verdes</h3>
         <div class="iframe-container">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
       <div class="song">
-        <h3>Tiempo Sin Piedad</h3>
+        <h3>Tiempo sin piedad</h3>
         <div class="iframe-container">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
     </section>
 
     <section class="badges-section">
       <h2>🛡️ Tus Logros</h2>
-      <div id="badges-container"></div>
+      <div id="badges-container">
+        <!-- Insignias aparecerán aquí -->
+      </div>
     </section>
 
     <div class="return">
@@ -61,8 +63,10 @@
     </div>
   </main>
 
-  <!-- Botón flotante de sugerencias -->
+  <!-- Botón flotante -->
   <button id="feedback-btn" title="Enviar sugerencia">💡</button>
+
+  <!-- Modal de sugerencias -->
   <div id="feedback-modal" class="modal">
     <div class="modal-content">
       <span id="modal-close">&times;</span>
@@ -72,6 +76,6 @@
     </div>
   </div>
 
-  <script src="js/audioaventura.js"></script>
+  <script src="js/audioaventuras.js"></script>
 </body>
 </html>
