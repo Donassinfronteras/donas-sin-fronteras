@@ -9,171 +9,197 @@ body.portal-magico-body {
   font-family: 'Caveat', cursive;
   background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #004d4d;
-  position: relative;
+  color: #4b004b;
   min-height: 100vh;
-  cursor: none;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Overlay lavanda */
-body.portal-magico-body::before {
+/* Fondo semitransparente */
+body::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(180, 150, 255, 0.25); /* lila claro */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(194, 151, 226, 0.25); /* lavanda traslúcido */
   z-index: 0;
 }
 
-/* Mariposa gloriosa (como micro) */
-.mariposa-gloriosa {
+/* Mariposa flotante */
+.mariposa-magica {
   position: absolute;
-  top: 150px;
+  top: 58%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 160px;
   height: auto;
   background-image: url("../assets/mariposa-magica.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 2;
-  animation: levitar 6s ease-in-out infinite;
+  background-position: center;
+  animation: flutter 4s ease-in-out infinite;
+  z-index: 3;
+  pointer-events: none;
 }
 
-/* Mariposa cursor */
-#cursor-mariposa {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  background: url("../assets/mariposa-magica.png") no-repeat center center;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 1000;
-  transform: translate(-50%, -50%);
+@keyframes flutter {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  50% { transform: translate(-50%, -55%) rotate(3deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
 
 /* Header */
-header {
-  background: #5e2f91;
+.portal-header {
+  background: rgba(90, 50, 130, 0.8);
   color: #fff;
-  padding: 1rem;
   text-align: center;
-  z-index: 2;
+  padding: 1.5rem;
   position: relative;
+  z-index: 2;
 }
 
-header h1 {
-  font-size: 2rem;
+.portal-header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.portal-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.portal-header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.portal-header nav a.active {
+  border-bottom: 2px solid #b7ffff;
 }
 
 /* Main */
-main.portal-container {
-  padding: 2rem;
-  text-align: center;
+.portal-main {
   position: relative;
   z-index: 2;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+/* Intro texto */
+.portal-intro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
 }
 
 .portal-intro h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #5e2f91;
+  color: #4b004b;
 }
 
-.portal-descripcion p {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #5e2f91;
+.portal-intro p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #4b004b;
 }
 
-/* Botones */
+/* Botones mágicos */
 .portales {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
-  gap: 1.2rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .btn-portal {
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
   text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  border-radius: 50px;
-  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #b084f8, #63e2ff, #ffb3ec);
+  color: #4b004b;
+  font-family: 'Caveat', cursive;
+  background: linear-gradient(135deg, #d0f0ff, #ffe5ec, #fffdd0);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-  background-size: 300% 300%;
-  animation: hologlow 6s ease infinite;
-  transition: transform 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .btn-portal:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 
 .btn-portal.disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   pointer-events: none;
 }
 
-/* Animaciones */
-@keyframes levitar {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-10px); }
+/* Volver */
+.return {
+  margin-top: 2rem;
 }
 
-@keyframes hologlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.return a {
+  background-color: #5a3282;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-footer {
-  background: rgba(80, 0, 80, 0.2); /* tono uva transparente */
+.return a:hover {
+  background-color: #7e47b6;
+}
+
+/* Footer */
+.portal-footer {
+  background: rgba(80, 30, 100, 0.85);
+  color: #fff;
   padding: 2rem 1rem;
-  color: #5e005e; /* uva profundo */
-  text-align: center;
-  font-family: 'Caveat', cursive;
+  margin-top: 3rem;
   position: relative;
   z-index: 2;
-  backdrop-filter: blur(6px);
-  border-top: 2px solid #d8a7f1;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem;
-  margin-bottom: 2rem;
-}
-
-.footer-section {
-  min-width: 200px;
+  gap: 3rem;
+  text-align: center;
 }
 
 .footer-section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.6rem;
-  color: #7e298f;
-  text-shadow: 1px 1px 2px #fcd9ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .footer-section p,
 .footer-section ul,
 .footer-section a {
-  font-size: 1.2rem;
-  color: #5e005e;
+  font-size: 1rem;
+  color: #fceaff;
+  list-style: none;
   text-decoration: none;
 }
 
 .footer-section ul {
-  list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .footer-section li {
@@ -181,23 +207,13 @@ footer {
 }
 
 .footer-section a:hover {
-  color: #aa3ec3;
-  text-shadow: 0 0 5px rgba(255, 240, 255, 0.9);
+  text-decoration: underline;
+  color: #fff;
 }
 
-.social-links a {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: bold;
-  color: #5e005e;
-}
-
-.social-links a:hover {
-  color: #c97dfd;
-}
-
-footer p.copyright {
-  font-size: 1rem;
-  color: #4a004a;
-  margin-top: 1rem;
+.footer-copy {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ddd;
 }
