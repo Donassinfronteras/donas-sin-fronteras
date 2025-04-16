@@ -23,6 +23,7 @@ body.portal-magico-body::before {
   z-index: 0;
 }
 
+/* MARIPOSA CURSOR */
 .mariposa-magica {
   position: absolute;
   width: 60px;
@@ -30,23 +31,44 @@ body.portal-magico-body::before {
   background: url("../assets/mariposa-magica.png") no-repeat center center;
   background-size: contain;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 999;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
   transition: transform 0.1s linear;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
 }
 
+/* MARIPOSA FIJA CENTRADA */
+.mariposa-central {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: url("../assets/mariposa-magica.png") no-repeat center center;
+  background-size: contain;
+  z-index: 5;
+  filter: drop-shadow(0 0 10px gold) brightness(1.2);
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+  100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+/* HEADER */
 header {
-  background-color: #6b3fa0; /* uva */
+  background-color: #6b3fa0;
   color: #fff;
-  padding: 1.2rem;
+  padding: 1.5rem;
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 header h1 {
-  font-size: 2.2rem;
-  font-family: 'Caveat', cursive;
+  font-size: 2.3rem;
 }
 
 nav ul {
@@ -71,10 +93,11 @@ nav a.active {
 .portal-container {
   position: relative;
   z-index: 2;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem 2rem;
   text-align: center;
 }
 
+/* INTRO */
 .intro {
   max-width: 800px;
   margin: 0 auto 3rem;
@@ -96,6 +119,7 @@ nav a.active {
   margin-bottom: 1rem;
 }
 
+/* BOTONES */
 .portales {
   display: flex;
   flex-wrap: wrap;
@@ -123,12 +147,15 @@ nav a.active {
   transform: scale(1.05);
 }
 
+/* FOOTER */
 footer {
   background-color: #6b3fa0;
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
   font-family: 'Georgia', serif;
+  z-index: 2;
+  position: relative;
 }
 
 .footer-content {
