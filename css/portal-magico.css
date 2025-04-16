@@ -1,197 +1,139 @@
-/* RESET */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🌌 Fondo mágico */
-body.portal-magico-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
+body {
+  font-family: 'Arial', sans-serif;
+  background: url("../assets/fondoportalmagico.png") no-repeat center center fixed;
   background-size: cover;
-  color: #00cccc;
+  color: #143C3C; /* Base en fondos claros */
   position: relative;
   min-height: 100vh;
 }
 
-/* ✨ Velo lavanda */
-body.portal-magico-body::before {
+/* ✨ Fondo lavanda oscuro como velo */
+body::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(208, 176, 255, 0.4); /* lavanda claro */
+  background: rgba(150, 100, 180, 0.4); /* lavanda profundo */
   z-index: 0;
 }
 
-/* 🦋 Mariposa mágica */
-.mariposa-magica {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  height: auto;
-  background: url("../assets/mariposa-magica.png") no-repeat center center;
-  background-size: contain;
-  z-index: 2;
-  animation: flotar 4s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -15px); }
-}
-
-/* HEADER */
+/* Encabezado */
 header {
-  background-color: rgba(168, 132, 255, 0.85);
-  text-align: center;
+  background: rgba(22, 35, 40, 0.85); /* fondo oscuro elegante */
+  color: #00cccc; /* Turquesa para el logo */
   padding: 1rem;
-  color: #fff;
   position: relative;
   z-index: 1;
-}
-
-header h1 {
+  font-family: 'Caveat', cursive;
   font-size: 2rem;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+}
+
+/* Texto general dentro del portal */
+.portal-container, .intro, .portal-card {
+  font-family: 'Arial', sans-serif;
+  color: #143C3C;
+}
+
+h2, h3 {
   font-family: 'Caveat', cursive;
+  color: #00cccc;
+  text-shadow: 1px 1px 2px rgba(0, 255, 255, 0.2);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+p {
   font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1b2f2f;
 }
 
-nav a.active {
-  border-bottom: 2px solid #fff;
-}
-
-/* INTRO */
-.intro {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 3rem auto 2rem;
-  background-color: rgba(255, 255, 255, 0.12);
-  padding: 2rem;
-  border-radius: 20px;
-  text-align: center;
-  color: #ffffff;
-  font-size: 1.3rem;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-}
-
-/* PORTALES */
-.portales {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 3rem;
-}
-
+/* Botones */
 .btn-portal {
-  background: linear-gradient(145deg, #00cccc, #008c8c);
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 204, 204, 0.6);
+  background-color: #00cccc;
+  color: #ffffff;
   font-family: 'Caveat', cursive;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.7rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 204, 204, 0.5);
 }
 
 .btn-portal:hover {
-  background: linear-gradient(145deg, #00e6e6, #00cccc);
+  background-color: #00b2b2;
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }
 
-/* RETURN */
-.return {
+/* Cards */
+.portal-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 1.5rem;
   text-align: center;
-  margin-top: 2rem;
-  z-index: 1;
-  position: relative;
+  max-width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.return a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 0.8rem 1.5rem;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
+.portal-card:hover {
+  transform: translateY(-5px);
 }
 
-.return a:hover {
-  background: #ffffff;
-  color: #800080;
-  box-shadow: 0 0 10px #fff;
+.portal-card h3 {
+  color: #800020;
+  font-size: 1.5rem;
 }
 
-/* FOOTER */
+.portal-card p {
+  color: #333;
+}
+
+/* Mariposa mágica */
+.mariposa-magica {
+  background: url("../assets/mariposa-magica.png") no-repeat center center;
+  background-size: contain;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  animation: mariposaFlota 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes mariposaFlota {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -55%) scale(1.05); }
+}
+
+/* Footer mejorado */
 footer {
-  background-color: rgba(168, 132, 255, 0.85);
-  color: #fff;
+  background-color: rgba(20, 30, 40, 0.9);
+  color: #fceadf;
   text-align: center;
   padding: 2rem 1rem;
-  margin-top: 4rem;
-  z-index: 1;
-  position: relative;
-  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  text-align: left;
-}
-
-.footer-section h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section a {
-  color: #fff;
+footer a {
+  color: #ffddee;
+  font-weight: bold;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.footer-section a:hover {
-  color: #ffe3ff;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-}
-
-footer p {
-  margin-top: 2rem;
-  font-size: 0.9rem;
+footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00cccc;
 }
