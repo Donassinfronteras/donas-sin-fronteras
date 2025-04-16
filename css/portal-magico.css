@@ -1,82 +1,67 @@
+/* ------------------------------
+   portal-magico.css (merged)
+   ------------------------------ */
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fondo general y cursor principal */
 body.portal-magico-body {
   font-family: 'Caveat', cursive;
   background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
   background-size: cover;
+  color: #5a0a7b;
   position: relative;
   min-height: 100vh;
-  color: #4b006e;
   cursor: none;
+  overflow: hidden;
 }
 
+/* Velo mágico */
 body.portal-magico-body::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(230, 210, 255, 0.6); /* lavanda suave */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(97, 59, 110, 0.3);
   z-index: 0;
 }
 
-/* MARIPOSA CURSOR */
-.mariposa-magica {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: url("../assets/mariposa-magica.png") no-repeat center center;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 999;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
-  transition: transform 0.1s linear;
+/* Fade-In general */
+.fade-in {
+  animation: fadeIn 1.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-/* MARIPOSA FIJA CENTRADA */
-.mariposa-central {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background: url("../assets/mariposa-magica.png") no-repeat center center;
-  background-size: contain;
-  z-index: 5;
-  filter: drop-shadow(0 0 10px gold) brightness(1.2);
-  animation: flotar 4s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0% { transform: translate(-50%, -50%) translateY(0); }
-  50% { transform: translate(-50%, -50%) translateY(-10px); }
-  100% { transform: translate(-50%, -50%) translateY(0); }
-}
-
-/* HEADER */
-header {
-  background-color: #6b3fa0;
-  color: #fff;
-  padding: 1.5rem;
+/* Encabezado */
+header.encabezado {
+  background-color: rgba(106, 48, 144, 0.85);
+  padding: 1rem 0;
   text-align: center;
+  color: #fff;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 header h1 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 0.5rem;
 }
 
 nav a {
@@ -84,110 +69,234 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
 }
 
 nav a.active {
-  border-bottom: 2px solid #ffe6f8;
+  text-decoration: underline;
 }
 
-.portal-container {
-  position: relative;
-  z-index: 2;
-  padding: 4rem 2rem 2rem;
+/* Bloque Intro */
+.portal-intro {
+  max-width: 1000px;
   text-align: center;
+  margin: 3rem auto 4rem;
+  padding: 2.5rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
-/* INTRO */
-.intro {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-}
-
-.intro h2 {
-  font-size: 2.5rem;
-  color: #6b3fa0;
+.portal-intro h2 {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #5a0a7b;
 }
 
-.intro p {
-  font-size: 1.3rem;
-  color: #6b3fa0;
-  margin-bottom: 1rem;
+.portal-intro p {
+  font-size: 1.6rem;
+  margin: 0.8rem 0;
 }
 
-/* BOTONES */
-.portales {
+/* Mariposa Gloriosa */
+.mariposa-gloriosa {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+.mariposa-gloriosa img {
+  width: 130px;
+  animation: glow-flutter 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes glow-flutter {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px #f8d6ff) brightness(1.1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px #ffe3ff) brightness(1.5);
+  }
+}
+
+/* Botones mágicos */
+.portal-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
-.btn-portal {
+.portal-button {
   padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  background: linear-gradient(135deg, #b5f3ff, #e0bbff, #ffd6fc, #b5f3ff);
-  background-size: 400% 400%;
-  color: #4b006e;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #d2fcf9, #fdf2ff, #ffeedd);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-  transition: background-position 1s ease, transform 0.3s ease;
+  color: #5a0a7b;
   text-decoration: none;
-  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  min-width: 230px;
+  text-align: center;
 }
 
-.btn-portal:hover {
-  background-position: right center;
+.portal-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fff5ff, 0 0 40px #ffeaff;
+}
+
+.portal-button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Efecto “despertar” extra */
+.magical-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+/* Volver */
+.volver-inicio {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.volver-inicio a {
+  background: #5a0a7b;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.volver-inicio a:hover {
   transform: scale(1.05);
 }
 
-/* FOOTER */
-footer {
-  background-color: #6b3fa0;
+/* Footer */
+footer.portal-footer {
+  background-color: rgba(106, 48, 144, 0.85);
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
-  font-family: 'Georgia', serif;
-  z-index: 2;
+  font-family: 'Caveat', cursive;
   position: relative;
+  z-index: 1;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-.footer-section {
-  min-width: 200px;
-}
-
-.footer-section h3 {
-  font-size: 1.3rem;
+footer h3 {
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
-.footer-section a {
-  color: #ffe6f8;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  margin: 0.3rem 0;
+footer p {
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
-.footer-section a:hover {
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a {
+  color: #ffe6f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
   text-decoration: underline;
 }
 
-footer p {
-  font-size: 0.9rem;
-  margin-top: 1rem;
+/* Mariposa cursor */
+.cursor-mariposa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url('../assets/mariposa-magica.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 9999;
+  animation: flutter 2s ease-in-out infinite;
 }
+
+@keyframes flutter {
+  0%, 100% { transform: translateY(0); }
+  50%     { transform: translateY(-5px); }
+}
+
+/* ------------------------------
+   Agregado: Partículas mágicas
+   ------------------------------ */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+  0%   { transform: translateY(0);     opacity: 0.8; }
+  100% { transform: translateY(-200px); opacity: 0;   }
+}
+
+/* ------------------------------
+   portal-magico.js
+   ------------------------------ */
+
+/* Generación de partículas y sonido */
+document.addEventListener("DOMContentLoaded", function() {
+  // Sonido mágico
+  const magicSound = document.getElementById("magic-sound");
+  if (magicSound) {
+    magicSound.play().catch(() => console.log("Audio mágico bloqueado hasta interacción."));
+  }
+
+  // Crear partículas
+  const numParticles = 30;
+  const container = document.getElementById("particles");
+
+  for (let i = 0; i < numParticles; i++) {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+    p.style.left = Math.random() * 100 + "%";
+    p.style.top = Math.random() * 100 + "%";
+    const size = Math.random() * 12 + 6;
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+    p.style.animationDelay = Math.random() * 5 + "s";
+    container.appendChild(p);
+  }
+});
+
