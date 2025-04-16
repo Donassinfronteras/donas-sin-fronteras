@@ -1,202 +1,69 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body.portal-magico-body {
-  font-family: 'Caveat', cursive;
-  background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #5a0a7b;
-  position: relative;
-  min-height: 100vh;
-  cursor: none;
-}
-
-/* Encabezado */
-header.encabezado {
-  background-color: rgba(106, 48, 144, 0.85); /* color uva místico */
-  padding: 1rem 0;
-  text-align: center;
-  color: #fff;
-}
-
-header h1 {
-  font-size: 2.5rem;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-nav a.active {
-  text-decoration: underline;
-}
-
-/* Bloque Intro */
-.portal-intro {
-  max-width: 1000px;
-  text-align: center;
-  margin: 3rem auto 4rem;
-  padding: 2.5rem;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.6); /* ← semitransparente */
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-  position: relative;
-  z-index: 1;
-}
-
-.portal-intro h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  color: #5a0a7b;
-}
-
-.portal-intro p {
-  font-size: 1.6rem;
-  margin: 0.8rem 0;
-}
-
-/* Mariposa Gloriosa */
-.mariposa-gloriosa {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  margin-bottom: 2rem;
-}
-
-.mariposa-gloriosa img {
-  width: 90px; /* ← 130 * 0.75 = 97.5 (puedes ajustar entre 85 y 95 si quieres probar) */
-  animation: glow-flutter 2.5s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes glow-flutter {
-  0%, 100% {
-    filter: drop-shadow(0 0 15px #f8d6ff) brightness(1.1);
-  }
-  50% {
-    filter: drop-shadow(0 0 25px #ffe3ff) brightness(1.5);
-  }
-}
-
-/* Botones mágicos */
-.portal-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
-}
-
-.portal-button {
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #d2fcf9, #fdf2ff, #ffeedd);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-  color: #5a0a7b;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  min-width: 230px;
-  text-align: center;
-}
-
-.portal-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #fff5ff, 0 0 40px #ffeaff;
-}
-
-.portal-button.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Volver */
-.volver-inicio {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.volver-inicio a {
-  background: #5a0a7b;
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.2s ease;
-}
-
-.volver-inicio a:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer.portal-footer {
-  background-color: rgba(106, 48, 144, 0.85);
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Caveat', cursive;
-}
-
-footer h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-footer p {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer a {
-  color: #ffe6f7;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
+/* ✨ Cursor mágico */
 .cursor-mariposa {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 60px;
   height: 60px;
   background: url('../assets/mariposa-magica.png') no-repeat center center;
   background-size: contain;
+  position: absolute;
   pointer-events: none;
-  z-index: 9999;
-  animation: flutter 2s ease-in-out infinite;
+  z-index: 10000;
+  animation: flotando 2s infinite ease-in-out;
 }
 
-@keyframes flutter {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+/* Gloriosa mariposa fija */
+.mariposa-gloriosa {
+  width: 150px;
+  display: block;
+  margin: 2rem auto;
+  animation: glow 3s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 200, 0.7));
+}
+
+/* Semi-transparente fondo de texto */
+.portal-intro {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  color: #502274;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Botones mágicos */
+.btn-portal {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #d2f9f6, #fdf1fc, #ffe9c7);
+  color: #502274;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-portal:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 15px rgba(204, 153, 255, 0.4);
+}
+
+/* Animaciones */
+@keyframes flotando {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(255, 200, 255, 0.6));
+  }
+  to {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 180, 0.9));
+  }
 }
