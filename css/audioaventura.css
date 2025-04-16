@@ -1,314 +1,72 @@
-/* Estilos para la página de AudioAventuras */
-
-:root {
-  --verde-oscuro: #1A4D2E;
-  --verde-medio: #2D6A4F;
-  --verde-claro: #74B49B;
-  --beige-claro: #F5F0E1;
-  --marron-oscuro: #3B2F2F;
-  --rosa-suave: #F7CAC9;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-  background-color: #F5F0E1;
-  color: var(--verde-oscuro);
-  background-image: url('../assets/butterflies-bg.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-header {
-  background-color: var(--verde-oscuro);
-  color: white;
-  text-align: center;
-  padding: 3rem 0;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(to right, var(--verde-oscuro), var(--verde-claro), var(--verde-oscuro));
-}
-
-header h1 {
-  font-size: 2.8rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem 3rem;
-}
-
-/* Sección de introducción */
-.intro {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.intro-image {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.intro-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.intro-text {
-  flex: 2;
-  min-width: 300px;
-}
-
-.intro-text h2 {
-  color: var(--verde-oscuro);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.intro-text h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80px;
-  height: 3px;
-  background-color: var(--verde-oscuro);
-}
-
-.intro-text p {
-  margin-bottom: 1rem;
-  line-height: 1.8;
-  color: #333;
-}
-
-/* Sección de AudioAventuras */
-.audio-adventures {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 15px;
-  margin-bottom: 3rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.audio-adventures h2 {
-  text-align: center;
-  color: var(--verde-oscuro);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.audio-adventures h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: var(--verde-oscuro);
-}
-
-.audio-adventures h3 {
-  color: var(--verde-medio);
+/* Botón flotante */
+#feedback-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  background: #1A4D2E;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   font-size: 1.5rem;
-  margin: 1.5rem 0 1rem;
-  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
 
-.chapters {
-  list-style: none;
-  max-width: 600px;
-  margin: 0 auto;
+#feedback-btn:hover {
+  transform: scale(1.1);
 }
 
-.chapters li {
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  background-color: rgba(116, 180, 155, 0.2);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s ease;
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
-.chapters li:hover {
-  background-color: rgba(116, 180, 155, 0.4);
-  transform: translateX(5px);
-}
-
-.chapters li strong {
-  color: var(--verde-oscuro);
-  margin-right: 1rem;
-}
-
-.chapters li a {
-  display: inline-block;
-  background-color: var(--verde-medio);
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.chapters li a:hover {
-  background-color: var(--verde-oscuro);
-  transform: scale(1.05);
-}
-
-/* Sección de canciones */
-.songs {
-  background-color: rgba(255, 255, 255, 0.9);
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 3rem;
-}
-
-.songs h2 {
-  text-align: center;
-  color: var(--verde-oscuro);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.songs h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: var(--verde-oscuro);
-}
-
-.song {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(45, 106, 79, 0.2);
-}
-
-.song:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.song h3 {
-  color: var(--verde-medio);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.song p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.iframe-container {
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
+  border: 1px solid #888;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Botón para volver */
-.return {
+  width: 90%;
+  max-width: 500px;
   text-align: center;
-  margin-top: 2rem;
 }
 
-.return a {
-  display: inline-block;
-  background-color: var(--verde-medio);
+#modal-close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#feedback-text {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+#send-feedback {
+  background-color: #2D6A4F;
   color: white;
-  text-decoration: none;
+  border: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.return a:hover {
-  background-color: var(--verde-oscuro);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .intro {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .intro-image {
-    order: -1;
-  }
-  
-  .intro-text h2 {
-    text-align: center;
-  }
-  
-  .intro-text h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .chapters li {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .chapters li strong {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
+#send-feedback:hover {
+  background-color: #1A4D2E;
 }
