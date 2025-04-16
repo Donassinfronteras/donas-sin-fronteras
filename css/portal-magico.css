@@ -1,54 +1,141 @@
-footer {
-  background: rgba(0, 102, 102, 0.85);
-  color: #ccffff;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
+/* 🔮 Fondo general */
+body {
+  font-family: 'Caveat', cursive;
+  font-size: 18px; /* Tamaño base aumentado (2px más grande) */
+  color: #00796B;  /* Texto en turquesa oscuro */
+  background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
   position: relative;
-  z-index: 2;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  border-top: 2px solid rgba(0, 255, 255, 0.3);
+  min-height: 100vh;
 }
 
-.footer-content {
+/* Velo mágico */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(97, 59, 110, 0.3); /* Opacidad reducida para resaltar más el fondo */
+  z-index: 0;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(97, 59, 110, 0.8);
+  position: relative;
+  z-index: 1;
+}
+
+/* CONTENIDO PRINCIPAL */
+.portal-container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* INTRO */
+.portal-intro {
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: rgba(240, 240, 255, 0.05);
+  border: 2px solid rgba(255, 228, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+/* 🌈 MARIPOSA FLOTANTE */
+.mariposa-frame {
+  max-width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 3px solid rgba(204, 153, 255, 0.4); /* lavanda suave */
+  box-shadow: 
+    0 0 20px rgba(255, 223, 186, 0.6),
+    0 0 15px rgba(204, 153, 255, 0.5) inset;
+  backdrop-filter: blur(6px);
+  animation: flotar 5s ease-in-out infinite;
+}
+
+.mariposa-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Efecto de levitación */
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* PORTALES */
+.portales {
+  display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 1;
 }
 
-.footer-section h3 {
-  color: #33ffff;
+/* CARD */
+.portal-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(204, 153, 255, 0.3);
+  box-shadow: 0 0 15px rgba(204, 153, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.portal-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 230, 255, 0.4);
+}
+
+.portal-icon img {
+  width: 80px;
+  height: auto;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.portal-card h3 {
+  color: #00796B;  /* Turquesa oscuro */
+  margin-bottom: 0.8rem;
+  font-size: 1.2em; /* Tamaño incrementado */
 }
 
-.footer-section li {
-  margin-bottom: 0.5rem;
+.portal-card p {
+  font-size: 1em; /* 1em = 18px, base aumentada */
+  color: #00796B;  /* Turquesa oscuro */
+  margin-bottom: 1rem;
 }
 
-.footer-section a {
-  color: #ccffff;
+.portal-link {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background-color: rgba(204, 153, 255, 0.8);
+  color: #00796B;  /* Turquesa oscuro */
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.footer-section a:hover {
-  color: #66ffff;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-}
-
-footer p {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: #b3ffff;
-  font-style: italic;
+.portal-link:hover {
+  background-color: rgba(204, 153, 255, 1);
+  transform: scale(1.05);
 }
