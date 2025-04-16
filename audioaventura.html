@@ -3,120 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AudioAventuras – Doñas sin Fronteras</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/audioaventura.css" />
+  <title>Doñas sin Fronteras – AudioAventuras</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/audioaventura.css">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="audioaventura-body">
   <header>
-    <h1>Doñas sin Fronteras</h1>
+    <h1>AudioAventuras</h1>
   </header>
 
-  <!-- Banner con imagen y título -->
-  <div class="banner-audioaventura">
-    <img src="assets/audioaventura.png" alt="Banner AudioAventura">
-    <h1 class="titulo-banner">AudioAventuras</h1>
-  </div>
-
   <main>
-
-    <!-- Introducción -->
+    <!-- Banner -->
     <section class="intro">
-      <div class="intro-text">
-        <h2>En Busca de tus Ojos Verdes</h2>
-        <p>Sumérgete en esta historia narrada por Bruxa Tarot. Cada capítulo revela emociones, misterios y un amor que desafía distancias.</p>
+      <div class="intro-image">
+        <img src="assets/audioaventura.png" alt="AudioAventuras Banner" />
       </div>
     </section>
 
-    <!-- AudioAventura por capítulos -->
-    <section class="audio-story-box">
+    <!-- Historia destacada -->
+    <section class="audio-adventures">
+      <h2>En Busca de Tus Ojos Verdes</h2>
+      <p class="aventura-descripcion">
+        Embárcate en una dulce travesía de adolescencia, sueños y primeras emociones intensas.  
+        <br><br>
+        <strong>En busca de tus ojos verdes</strong> es una historia sobre ese primer amor que te desarma sin avisar, donde una mirada basta para cambiarlo todo. Narrada por Bruxa Tarot, esta audioaventura mezcla nostalgia, mariposas y promesas no dichas, con la emoción de un partido que lo cambia todo.  
+        <br><br>
+        💚 Si alguna vez sentiste que el corazón te latía más fuerte por alguien que ni sabía que existías... esta historia es para ti.
+      </p>
+
+      <!-- Capítulos -->
       <h3>Capítulos</h3>
-      <ul class="capitulos-audio">
-        <li><strong>Capítulo 1:</strong> <a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=f15fc8d0d0154d15" target="_blank">Escuchar</a></li>
-        <li><strong>Capítulo 2:</strong> <a href="https://open.spotify.com/episode/5KRLfbXXkSWhZwgMvrmaHB?si=e67c6ae699ff4831" target="_blank">Escuchar</a></li>
-        <li><strong>Capítulo 3:</strong> Próximamente</li>
+      <ul class="chapters">
+        <li><strong>Capítulo 1</strong><a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=f15fc8d0d0154d15" target="_blank">Escuchar</a></li>
+        <li><strong>Capítulo 2</strong><a href="https://open.spotify.com/episode/5KRLfbXXkSWhZwgMvrmaHB?si=e67c6ae699ff4831" target="_blank">Escuchar</a></li>
+        <li><strong>Capítulo 3</strong><span class="coming-soon">Próximamente</span></li>
+        <li><strong>Capítulo 4</strong><span class="coming-soon">Próximamente</span></li>
+        <li><strong>Capítulo 5</strong><span class="coming-soon">Próximamente</span></li>
       </ul>
-    </section>
 
-    <!-- Canciones relacionadas -->
-    <section class="songs">
-      <h2>Canciones</h2>
-
-      <div class="song">
-        <h3>En Busca de tus Ojos Verdes</h3>
-        <div class="iframe-container small">
-          <iframe src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <!-- Canciones -->
+      <div class="songs-container">
+        <div class="song-item">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
-      </div>
-
-      <div class="song">
-        <h3>Tiempo Sin Piedad</h3>
-        <div class="iframe-container small">
-          <iframe src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="song-item">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
     </section>
-
-    <!-- Insignias -->
-    <section class="badges-section">
-      <h2>🛡️ Tus Logros</h2>
-      <div id="badges-container">
-        <!-- Insignias aparecerán aquí -->
-      </div>
-    </section>
-
-    <!-- Botón flotante para sugerencias -->
-    <button id="feedback-btn" title="Enviar sugerencia">💡</button>
-
-    <!-- Modal de sugerencias -->
-    <div id="feedback-modal" class="modal">
-      <div class="modal-content">
-        <span id="modal-close">&times;</span>
-        <h2>¡Tu sugerencia cuenta!</h2>
-        <textarea id="feedback-text" placeholder="Escribe aquí tu idea o feedback..." rows="6"></textarea>
-        <button id="send-feedback">Enviar</button>
-      </div>
-    </div>
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>Doñas sin Fronteras</h3>
-      <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
-    </div>
-
-    <div class="footer-section">
-      <h3>Enlaces rápidos</h3>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="portal-magico.html">Portal Mágico</a></li>
-        <li><a href="audioaventura.html">AudioAventuras</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h3>Síguenos</h3>
-      <div class="social-links">
-        <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a><br />
-        <a href="https://www.facebook.com/donassinfronteras1" target="_blank">Facebook</a><br />
-        <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
-      </div>
-    </div>
-  </div>
-
-  <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
-</footer>
-
-    <!-- Botón volver -->
-    <div class="return">
-      <a href="portal-magico.html">← Volver al Portal Mágico</a>
-    </div>
-
   </main>
 
-  <script src="js/audioaventura.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/donassinfronteras1" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
