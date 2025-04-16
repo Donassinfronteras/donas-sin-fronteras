@@ -13,15 +13,14 @@
   <header>
     <h1>Doñas sin Fronteras</h1>
     <nav class="nav-buttons">
-      <a href="index.html" class="btn-portal">Inicio</a>
-      <a href="portal-magico.html" class="btn-portal">Portal Mágico</a>
-      <a href="canciones.html" class="btn-portal">Canciones</a>
-      <a href="tarot.html" class="btn-portal">Oráculo</a>
+      <a href="index.html" class="btn-portal glow">Inicio</a>
+      <a href="portal-magico.html" class="btn-portal glow">Portal Mágico</a>
+      <a href="canciones.html" class="btn-portal glow">Canciones</a>
+      <a href="tarot.html" class="btn-portal glow">Oráculo</a>
     </nav>
   </header>
 
   <main>
-
     <div class="intro-image">
       <img src="assets/audioaventura.png" alt="AudioAventuras Banner" />
     </div>
@@ -60,12 +59,9 @@
     <!-- Sección de insignias -->
     <section class="badges-section">
       <h2>🛡️ Tus Logros</h2>
-      <div id="badges-container">
-        <!-- Las insignias se generan con JS -->
-      </div>
+      <div id="badges-container"></div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-section">
@@ -94,10 +90,10 @@
     </footer>
   </main>
 
-  <!-- Botón de sugerencias con Formspree -->
+  <!-- Formspree Botón de sugerencias -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
-    window.formbutton = window.formbutton || function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
     formbutton("create", {
       action: "https://formspree.io/f/mvgknqzn",
       title: "¿Qué idea tienes?",
@@ -113,7 +109,8 @@
     });
   </script>
 
-  <!-- JavaScript de insignias -->
+  <!-- JS insignias -->
   <script src="js/audioaventura.js"></script>
+
 </body>
 </html>
