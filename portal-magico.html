@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal Mágico | Doñas sin Fronteras</title>
-  
+  <title>Portal Mágico - Doñas sin Fronteras</title>
+
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  
+
   <!-- Estilos -->
   <link rel="stylesheet" href="css/portal-magico.css" />
 </head>
 
 <body class="portal-magico-body">
-  <!-- Mariposa mágica flotante -->
-  <div class="mariposa-magica"></div>
+  <!-- Mariposa Gloriosa -->
+  <div class="mariposa-fija"></div>
 
-  <!-- Encabezado -->
+  <!-- Mariposa Cursor -->
+  <div class="mariposa-cursor" id="mariposa-cursor"></div>
+
   <header>
     <h1>Doñas sin Fronteras</h1>
     <nav>
@@ -28,8 +30,7 @@
     </nav>
   </header>
 
-  <!-- Contenido principal -->
-  <main class="portal-contenido">
+  <main class="contenido-magico">
     <section class="intro-portal">
       <h2>✨ Bienvenido al Portal Mágico ✨</h2>
       <p>
@@ -40,23 +41,57 @@
       </p>
     </section>
 
-    <!-- Botones de acceso a portales -->
-    <section class="portal-links">
-      <a href="canciones.html" class="btn-portal">🎶 Canciones</a>
-      <a href="audioaventura.html" class="btn-portal">📖 AudioAventuras</a>
-      <a href="#" class="btn-portal">🔮 Oráculo Prisma del Alma</a>
-      <a href="recursos.html" class="btn-portal">📁 Recursos y Descargas</a>
+    <section class="portales">
+      <a href="canciones.html" class="portal-btn">🎶 Canciones</a>
+      <a href="audioaventura.html" class="portal-btn">📖 AudioAventuras</a>
+      <a href="#" class="portal-btn desactivado">🔮 Oráculo Prisma del Alma</a>
+      <a href="recursos.html" class="portal-btn">📁 Recursos y Descargas</a>
     </section>
 
-    <!-- Volver al inicio -->
     <div class="volver">
-      <a href="index.html" class="volver-link">← Volver al Inicio</a>
+      <a href="index.html" class="volver-btn">← Volver al Inicio</a>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+  <footer class="footer-magico">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
+        <p>Un podcast donde el corazón tiene la última palabra.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <ul class="redes-footer">
+          <li><a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.
+    </p>
   </footer>
+
+  <!-- JavaScript para mariposa flotante -->
+  <script>
+    const cursor = document.getElementById("mariposa-cursor");
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+  </script>
 </body>
 </html>
