@@ -1,141 +1,76 @@
-/* 🔮 Fondo general */
-body {
-  font-family: 'Caveat', cursive;
-  font-size: 18px; /* Tamaño base aumentado (2px más grande) */
-  color: #00796B;  /* Texto en turquesa oscuro */
-  background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doñas sin Fronteras - Portal Mágico</title>
 
-/* Velo mágico */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(97, 59, 110, 0.3); /* Opacidad reducida para resaltar más el fondo */
-  z-index: 0;
-}
+  <!-- Fuente Caveat para títulos si la quieres usar -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/portal-magico.css" />
+</head>
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(97, 59, 110, 0.8);
-  position: relative;
-  z-index: 1;
-}
+<body class="portal-magico-body">
+  <div class="mariposa-magica"></div>
 
-/* CONTENIDO PRINCIPAL */
-.portal-container {
-  position: relative;
-  z-index: 1;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  <header>
+    <h1>Doñas sin Fronteras</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="portal-magico.html" class="active">Portal Mágico</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* INTRO */
-.portal-intro {
-  max-width: 900px;
-  text-align: center;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  background: rgba(240, 240, 255, 0.05);
-  border: 2px solid rgba(255, 228, 255, 0.3);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-}
+  <main class="portal-container">
+    <section class="intro">
+      <h2>✨ Bienvenido al Portal Mágico ✨</h2>
+      <p>Aquí habita la magia. Explora los portales que hemos creado para ti con amor, música, relatos y conexión profunda.</p>
+    </section>
 
-/* 🌈 MARIPOSA FLOTANTE */
-.mariposa-frame {
-  max-width: 300px;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 3px solid rgba(204, 153, 255, 0.4); /* lavanda suave */
-  box-shadow: 
-    0 0 20px rgba(255, 223, 186, 0.6),
-    0 0 15px rgba(204, 153, 255, 0.5) inset;
-  backdrop-filter: blur(6px);
-  animation: flotar 5s ease-in-out infinite;
-}
+    <section class="portales">
+      <a href="canciones.html" class="btn-portal">🎶 Canciones</a>
+      <a href="audioaventura.html" class="btn-portal">📖 AudioAventuras</a>
+      <a href="#" class="btn-portal">🔮 Oráculo Prisma (Próximamente)</a>
+      <a href="recursos.html" class="btn-portal">📂 Recursos y Descargas</a>
+    </section>
 
-.mariposa-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    <div class="return">
+      <a href="index.html">← Volver al Inicio</a>
+    </div>
+  </main>
 
-/* Efecto de levitación */
-@keyframes flotar {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      </div>
 
-/* PORTALES */
-.portales {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  z-index: 1;
-}
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+        </ul>
+      </div>
 
-/* CARD */
-.portal-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
-  padding: 1.5rem;
-  width: 280px;
-  text-align: center;
-  transition: all 0.4s ease;
-  border: 2px solid rgba(204, 153, 255, 0.3);
-  box-shadow: 0 0 15px rgba(204, 153, 255, 0.2);
-  backdrop-filter: blur(5px);
-}
-
-.portal-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 30px rgba(255, 230, 255, 0.4);
-}
-
-.portal-icon img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.portal-card h3 {
-  color: #00796B;  /* Turquesa oscuro */
-  margin-bottom: 0.8rem;
-  font-size: 1.2em; /* Tamaño incrementado */
-}
-
-.portal-card p {
-  font-size: 1em; /* 1em = 18px, base aumentada */
-  color: #00796B;  /* Turquesa oscuro */
-  margin-bottom: 1rem;
-}
-
-.portal-link {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  background-color: rgba(204, 153, 255, 0.8);
-  color: #00796B;  /* Turquesa oscuro */
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.portal-link:hover {
-  background-color: rgba(204, 153, 255, 1);
-  transform: scale(1.05);
-}
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
