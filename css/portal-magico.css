@@ -6,16 +6,15 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #fff;
-  /* Ajusta la ruta de la imagen según la ubicación real de tu archivo */
-  background: url("../assets/fondoportalmagico.png") no-repeat center center fixed;
-  background-size: cover;
+  font-family: 'Caveat', cursive;
+  color: #4a0d1a;
+  background: url("../assets/mariposa-magica.png") no-repeat center center fixed;
+  background-size: contain;
+  background-color: #fff0f8;
   position: relative;
   min-height: 100vh;
 }
 
-/* Overlay turquesa oscuro sobre la imagen */
 body::before {
   content: "";
   position: absolute;
@@ -23,96 +22,174 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 102, 102, 0.6); /* Turquesa oscuro con opacidad */
+  background: rgba(255, 240, 250, 0.6);
   z-index: 0;
 }
 
+/* ENCABEZADO */
 header {
   text-align: center;
-  background: rgba(0, 102, 102, 0.8);
+  background: rgba(180, 140, 255, 0.8);
   padding: 1rem;
   position: relative;
-  z-index: 1; /* Por encima del overlay */
+  z-index: 1;
 }
 
 header h1 {
   font-size: 2rem;
   margin: 0;
+  color: #fff;
 }
 
-/* Contenido principal */
+/* NAV */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+/* CONTENIDO PRINCIPAL */
 main {
   position: relative;
-  z-index: 1; /* Para que quede por encima del overlay */
+  z-index: 1;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Sección de introducción */
-.intro {
+/* INTRO CON FONDO ROSADO PASTEL */
+.portal-intro {
   max-width: 800px;
   text-align: center;
   margin-bottom: 2rem;
-  background-color: rgba(0, 102, 102, 0.7);
-  padding: 1.5rem;
-  border-radius: 10px;
+  background-color: rgba(255, 235, 245, 0.75);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 190, 220, 0.5);
+  backdrop-filter: blur(6px);
 }
 
-/* Títulos y párrafos */
-.intro h2 {
-  font-size: 1.8rem;
+.portal-intro h2 {
+  font-size: 2.3rem;
+  color: #4a0d1a;
   margin-bottom: 1rem;
 }
 
-.intro p {
+.portal-intro p {
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-/* Sección de portales (enlaces a Canciones, Audioaventuras y Oráculo) */
+/* MARIPOSA FLOTANTE */
+.mariposa-flotante {
+  animation: sparkle 3.5s ease-in-out infinite;
+  border: 4px solid rgba(255, 215, 180, 0.7);
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 0 15px rgba(255, 215, 160, 0.6);
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 215, 160, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 215, 160, 0.9);
+  }
+}
+
+/* PORTALES */
 .portales {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
-/* Botones de portal */
-.btn-portal {
-  text-decoration: none;
-  padding: 1rem 2rem;
-  background-color: #00cccc; /* Un turquesa más claro para resaltar */
-  color: #fff;
-  border-radius: 5px;
+.portal-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 260px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+}
+
+.portal-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.6);
+}
+
+.portal-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.portal-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #4a0d1a;
+}
+
+.portal-card p {
+  font-size: 1rem;
+  color: #5c2b3e;
+  margin-bottom: 1rem;
+}
+
+/* BOTONES */
+.portal-link {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #4a0d1a;
+  border-radius: 30px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 215, 180, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn-portal:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 204, 204, 0.8);
+.portal-link:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255, 195, 230, 0.8);
 }
 
-/* Sección de retorno */
-.return {
-  margin-top: 1rem;
-}
-
-.return a {
-  text-decoration: none;
+/* FOOTER */
+footer {
+  background-color: rgba(180, 140, 255, 0.8);
   color: #fff;
-  background: rgba(0, 102, 102, 0.8);
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 
-.return a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 102, 102, 0.8);
+footer a {
+  color: #ffe4ec;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-shadow: 0 0 5px #fff;
 }
