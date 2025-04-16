@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,211 +8,159 @@ body.portal-magico-body {
   font-family: 'Caveat', cursive;
   background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #4b004b;
-  min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  min-height: 100vh;
+  color: #4b006e;
+  cursor: none;
 }
 
-/* Fondo semitransparente */
-body::before {
+body.portal-magico-body::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(194, 151, 226, 0.25); /* lavanda traslúcido */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(230, 210, 255, 0.6); /* lavanda suave */
   z-index: 0;
 }
 
-/* Mariposa flotante */
 .mariposa-magica {
   position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
-  height: auto;
-  background-image: url("../assets/mariposa-magica.png");
+  width: 60px;
+  height: 60px;
+  background: url("../assets/mariposa-magica.png") no-repeat center center;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: flutter 4s ease-in-out infinite;
-  z-index: 3;
   pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.1s linear;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
 }
 
-@keyframes flutter {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  50% { transform: translate(-50%, -55%) rotate(3deg); }
-  100% { transform: translate(-50%, -50%) rotate(0deg); }
-}
-
-/* Header */
-.portal-header {
-  background: rgba(90, 50, 130, 0.8);
+header {
+  background-color: #6b3fa0; /* uva */
   color: #fff;
+  padding: 1.2rem;
   text-align: center;
-  padding: 1.5rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-.portal-header h1 {
+header h1 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-family: 'Caveat', cursive;
 }
 
-.portal-header nav ul {
+nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
-.portal-header nav a {
+nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-.portal-header nav a.active {
-  border-bottom: 2px solid #b7ffff;
+nav a.active {
+  border-bottom: 2px solid #ffe6f8;
 }
 
-/* Main */
-.portal-main {
+.portal-container {
   position: relative;
   z-index: 2;
-  padding: 3rem 1.5rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-/* Intro texto */
-.portal-intro {
-  max-width: 900px;
+.intro {
+  max-width: 800px;
   margin: 0 auto 3rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
-  border-radius: 20px;
-  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
-.portal-intro h2 {
+.intro h2 {
   font-size: 2.5rem;
+  color: #6b3fa0;
   margin-bottom: 1rem;
-  color: #4b004b;
 }
 
-.portal-intro p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #4b004b;
+.intro p {
+  font-size: 1.3rem;
+  color: #6b3fa0;
+  margin-bottom: 1rem;
 }
 
-/* Botones mágicos */
 .portales {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
 }
 
 .btn-portal {
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
   border-radius: 30px;
-  text-decoration: none;
-  font-size: 1.4rem;
   font-weight: bold;
-  color: #4b004b;
+  background: linear-gradient(135deg, #b5f3ff, #e0bbff, #ffd6fc, #b5f3ff);
+  background-size: 400% 400%;
+  color: #4b006e;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transition: background-position 1s ease, transform 0.3s ease;
+  text-decoration: none;
   font-family: 'Caveat', cursive;
-  background: linear-gradient(135deg, #d0f0ff, #ffe5ec, #fffdd0);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-  transition: all 0.4s ease;
 }
 
 .btn-portal:hover {
+  background-position: right center;
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 
-.btn-portal.disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Volver */
-.return {
-  margin-top: 2rem;
-}
-
-.return a {
-  background-color: #5a3282;
+footer {
+  background-color: #6b3fa0;
   color: #fff;
-  padding: 0.8rem 2rem;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.return a:hover {
-  background-color: #7e47b6;
-}
-
-/* Footer */
-.portal-footer {
-  background: rgba(80, 30, 100, 0.85);
-  color: #fff;
+  text-align: center;
   padding: 2rem 1rem;
-  margin-top: 3rem;
-  position: relative;
-  z-index: 2;
+  font-family: 'Georgia', serif;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
-  text-align: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section {
+  min-width: 200px;
 }
 
 .footer-section h3 {
-  margin-bottom: 0.5rem;
   font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer-section p,
-.footer-section ul,
 .footer-section a {
-  font-size: 1rem;
-  color: #fceaff;
-  list-style: none;
+  color: #ffe6f8;
   text-decoration: none;
-}
-
-.footer-section ul {
-  padding: 0;
-}
-
-.footer-section li {
+  font-weight: bold;
+  display: block;
   margin: 0.3rem 0;
 }
 
 .footer-section a:hover {
   text-decoration: underline;
-  color: #fff;
 }
 
-.footer-copy {
-  margin-top: 2rem;
+footer p {
   font-size: 0.9rem;
-  text-align: center;
-  color: #ddd;
+  margin-top: 1rem;
 }
