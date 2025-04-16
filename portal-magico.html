@@ -2,22 +2,21 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doñas sin Fronteras - Portal Mágico</title>
 
   <!-- Fuente mágica -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/portal-magico.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/portal-magico.css" />
 </head>
 
 <body class="portal-magico-body">
-  <!-- 🌟 Mariposa mágica flotante -->
+  <!-- Mariposa mágica flotante -->
   <div class="mariposa-magica"></div>
 
-  <!-- 🔮 Encabezado -->
   <header>
     <h1>Doñas sin Fronteras</h1>
     <nav>
@@ -29,28 +28,52 @@
     </nav>
   </header>
 
-  <!-- ✨ Contenido principal -->
-  <main>
+  <main class="portal-container">
     <section class="intro">
       <h2>Portal Mágico</h2>
-      <p>Un universo encantado lleno de inspiración, recursos y exploración interior. Aquí, cada rincón tiene su luz propia... y una mariposa lo cuida desde las alturas.</p>
+      <p>Bienvenido al Portal Mágico de Doñas sin Fronteras, un espacio donde compartimos recursos, reflexiones y experiencias que nutren el alma.</p>
+      <p>Aquí encontrarás caminos únicos para explorar universos creados por Chaly, Lessi y Bruxa con amor y propósito.</p>
     </section>
 
-    <!-- 🌀 Botones mágicos de navegación -->
     <section class="portales">
-      <a href="audioaventura.html" class="btn-portal">🎧 AudioAventuras</a>
-      <a href="canciones.html" class="btn-portal">🎵 Canciones</a>
-      <a href="#" class="btn-portal especial">🌈 Oráculo Prisma del Alma</a>
-      <a href="recursos.html" class="btn-portal">📂 Recursos & Descargas</a>
+      <!-- AudioAventuras -->
+      <div class="portal-card">
+        <img src="assets/icon-audioaventura.png" alt="AudioAventuras" class="portal-icon" />
+        <h3>AudioAventuras</h3>
+        <p>Relatos mágicos narrados por Bruxa Tarot. Historias con música y emoción que te transportan.</p>
+        <a href="audioaventura.html" class="btn-portal">Entrar al portal</a>
+      </div>
+
+      <!-- Canciones -->
+      <div class="portal-card">
+        <img src="assets/icon-canciones.png" alt="Canciones" class="portal-icon" />
+        <h3>Canciones</h3>
+        <p>Melodías creadas desde el alma por Bruxa Tarot. Escucha, siente y vibra con su música.</p>
+        <a href="canciones.html" class="btn-portal">Entrar al portal</a>
+      </div>
+
+      <!-- Oráculo -->
+      <div class="portal-card">
+        <img src="assets/icon-oraculo.png" alt="Oráculo Prisma del Alma" class="portal-icon" />
+        <h3>Oráculo Prisma del Alma</h3>
+        <p>Próximamente: Una herramienta única de conexión y sabiduría para descubrir los mensajes del universo.</p>
+        <a href="#" class="btn-portal">Próximamente</a>
+      </div>
+
+      <!-- Recursos -->
+      <div class="portal-card">
+        <img src="assets/icon-recursos.png" alt="Recursos y Descargas" class="portal-icon" />
+        <h3>Recursos y Descargas</h3>
+        <p>Fondos, plantillas, audios, extras y material para tu ritual diario mágico.</p>
+        <a href="recursos.html" class="btn-portal">Entrar al portal</a>
+      </div>
     </section>
 
-    <!-- 🔙 Botón de retorno -->
     <div class="return">
-      <a href="index.html">← Volver al Inicio</a>
+      <a href="index.html">← Volver al inicio</a>
     </div>
   </main>
 
-  <!-- ✍️ Footer mágico -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
@@ -70,11 +93,11 @@
 
       <div class="footer-section">
         <h3>Síguenos</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a></li>
-          <li><a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a></li>
-        </ul>
+        <div class="social-links">
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+        </div>
       </div>
     </div>
 
