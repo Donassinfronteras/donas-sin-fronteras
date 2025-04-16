@@ -80,7 +80,7 @@ nav a.active {
 }
 
 .mariposa-gloriosa img {
-  width: 130px;
+  width: 90px; /* ← 130 * 0.75 = 97.5 (puedes ajustar entre 85 y 95 si quieres probar) */
   animation: glow-flutter 2.5s ease-in-out infinite;
   pointer-events: none;
 }
@@ -183,7 +183,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Mariposa cursor */
 .cursor-mariposa {
   position: fixed;
   top: 0;
