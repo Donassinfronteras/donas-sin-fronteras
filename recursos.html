@@ -1,16 +1,80 @@
+<!-- recursos.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recursos - En Construcción</title>
-  <link rel="stylesheet" href="recursos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recursos y Descargas – Doñas sin Fronteras</title>
+
+  <!-- Fuente mágica -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Estilos específicos para Recursos -->
+  <link rel="stylesheet" href="css/recursos.css" />
 </head>
-<body>
-  <div class="container">
-    <h1>¡Página en construcción!</h1>
-    <p>Estamos trabajando para traerte contenido Magico.<br>
-       ¡Vuelve pronto!</p>
-  </div>
+
+<body class="pagina-recursos">
+  <!-- Overlay semitransparente -->
+  <div class="overlay"></div>
+
+  <header>
+    <h1>Recursos y Descargas</h1>
+    <nav class="nav-buttons">
+      <a href="index.html" class="btn-portal holo">Inicio</a>
+      <a href="podcast.html" class="btn-portal holo">Podcast</a>
+      <a href="portal-magico.html" class="btn-portal holo">Portal Mágico</a>
+    </nav>
+  </header>
+
+  <main class="recursos-container">
+    <!-- Aquí van tus enlaces o tarjetas de recursos -->
+    <section class="resource-list">
+      <article class="resource-item">
+        <h2>Guía de Inicio</h2>
+        <a href="assets/docs/guia-inicio.pdf" download>Descargar PDF</a>
+      </article>
+      <article class="resource-item">
+        <h2>Plantillas</h2>
+        <a href="assets/zip/plantillas.zip" download>Descargar ZIP</a>
+      </article>
+      <!-- … más recursos … -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <h2>Doñas sin Fronteras</h2>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      </div>
+      <div>
+        <h3>Enlaces rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Síguenos</h3>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS de badges -->
+  <script src="js/badges.js"></script>
+  <script>
+    // 🗂️ Badge de Recursos
+    aumentarVisita("resources");
+  </script>
 </body>
 </html>
