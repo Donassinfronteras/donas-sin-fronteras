@@ -9,7 +9,7 @@
   --rosado:         #FF9AA2;   /* rosado intenso para franjas */
   --text-dark:      #663C00;
   --overlay-alpha:  0.15;      /* 15% de opacidad en el velo */
-  --stripe-alpha:   0.9;       /* 90% de opacidad en franjas */
+  --stripe-alpha:   0.2;       /* 20% de opacidad en las franjas (ajustado) */
 }
 
 /* 2. Reset y box‑sizing */
@@ -38,7 +38,7 @@ body.pagina-recursos {
   z-index: 0;
 }
 
-/* 4. Header y navegación con franja rosado intenso (90%) */
+/* 4. Header y navegación con franja rosado intenso (ahora 20% opacidad) */
 body.pagina-recursos header {
   position: relative;
   z-index: 1;
@@ -117,7 +117,7 @@ body.pagina-recursos header h1 {
   color: var(--text-dark);
 }
 
-/* 6. Lista de otros recursos con misma franja rosado intenso */
+/* 6. Lista de otros recursos con franja semitransparente */
 .resource-list {
   position: relative;
   z-index: 1;
@@ -149,7 +149,7 @@ body.pagina-recursos header h1 {
   color: var(--melocoton);
 }
 
-/* 7. Footer con franja rosado intenso */
+/* 7. Footer con franja semitransparente */
 .site-footer {
   position: relative;
   z-index: 1;
