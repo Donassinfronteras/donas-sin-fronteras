@@ -2,22 +2,34 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Canciones - Doñas sin Fronteras</title>
-  <!-- Ajusta la ruta si ubicas el CSS en otra carpeta -->
-  <link rel="stylesheet" href="css/canciones.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canciones – Doñas sin Fronteras</title>
+  
+  <!-- Fuente mágica -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos globales y específicos -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/canciones.css" />
 </head>
-<body>
+<body class="pagina-canciones">
+
+  <!-- Overlay semitransparente -->
+  <div class="overlay"></div>
+
   <header>
     <h1>Canciones</h1>
+    <nav class="nav-buttons">
+      <a href="index.html" class="btn-portal glow">Inicio</a>
+      <a href="podcast.html" class="btn-portal glow">Podcast</a>
+      <a href="portal-magico.html" class="btn-portal glow">Portal Mágico</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Sección de perfil de artista -->
+    <!-- Perfil de artista con banner -->
     <section class="artist-profile">
-      <!-- Imagen estilo "hero" o principal -->
-      <img src="assets/bruxadj.png" alt="Bruxa Tarot DJ" class="artist-image">
-
-      <!-- Descripción de la artista -->
+      <img src="assets/banner.png" alt="Banner Bruxa Tarot DJ" class="artist-image" />
       <div class="artist-info">
         <h2>Bruxa Tarot</h2>
         <h3>La Voz que Quema en Silencio</h3>
@@ -26,201 +38,65 @@
           Cada beat… una cicatriz. Cada letra… un hechizo.<br>
           No canta… pero conjura melodías que despiertan almas dormidas.
         </p>
-
-        <!-- Perfiles de Artista -->
         <h4>Perfil de Artista</h4>
-        <p>
-          <!-- Enlace a Apple Music -->
-          <strong>Apple Music:</strong> 
+        <p><strong>Apple Music:</strong>
           <a href="https://music.apple.com/us/artist/bruxa-tarot/1796078622" target="_blank">
-            https://music.apple.com/us/artist/bruxa-tarot/1796078622
+            apple.com/artist/bruxa-tarot
           </a>
         </p>
-
-        <!-- Spotify: Perfil de artista (iframe embebido) -->
         <div class="iframe-container">
-          <iframe 
-            style="border-radius:12px" 
-            src="https://open.spotify.com/embed/artist/6TWzQZohtDAZm27FKQEjKo?utm_source=generator" 
-            width="100%" 
-            height="152" 
-            frameborder="0" 
-            allowfullscreen 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-          </iframe>
+          <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/artist/6TWzQZohtDAZm27FKQEjKo?utm_source=generator"
+                  width="100%" height="152" frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"></iframe>
         </div>
-
-        <!-- Amazon Music (iframe embebido) -->
         <div class="iframe-container">
-          <iframe 
-            id="AmazonMusicEmbedB0DWY8J371"
-            src="https://music.amazon.es/embed/B0DWY8J371/?id=yzlE0EIeDE&marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES" 
-            width="100%" 
-            height="352px" 
-            frameborder="0" 
-            style="border-radius:20px"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+          <iframe id="AmazonMusicEmbedB0DWY8J371"
+                  src="https://music.amazon.es/embed/B0DWY8J371/?id=yzlE0EIeDE&marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES"
+                  width="100%" height="352" frameborder="0" style="border-radius:20px"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
           </iframe>
         </div>
       </div>
     </section>
 
-    <!-- Sección de canciones individuales -->
+    <!-- Listado de canciones -->
     <section class="song-list">
       <h2>Doñas Sin Fronteras</h2>
       <p>“Donde las historias sanan, y las doñas sueñan sin límites.”</p>
       <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px" 
-          src="https://open.spotify.com/embed/track/3ztIXzqy3sCKriepfAFJpY?utm_source=generator" 
-          width="50%" 
-          height="152" 
-          frameborder="0" 
-          allowfullscreen 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-          loading="lazy">
-        </iframe>
+        <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/3ztIXzqy3sCKriepfAFJpY?utm_source=generator"
+                width="100%" height="152" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
       </div>
 
       <h2>En Busca De Tus Ojos Verdes</h2>
       <p>"No todos los amores están hechos para quedarse… algunos solo enseñan el camino."</p>
       <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px" 
-          src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" 
-          width="50%" 
-          height="152" 
-          frameborder="0" 
-          allowfullscreen 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
+        <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator"
+                width="100%" height="152" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
       </div>
 
-      <h2>Ultima Jugada</h2>
-      <p>“No fue venganza, fue justicia en el idioma que tú entendías."</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px" 
-          src="https://open.spotify.com/embed/track/2jMZB53ubsxTrGCPQqbg5a?utm_source=generator" 
-          width="50%" 
-          height="152" 
-          frameborder="0" 
-          allowfullscreen 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <h2>La Proxima Vez</h2>
-      <p>“Te amé en silencio… y en el eco de ese amor aún te escucho.”</p>
-      <div class="iframe-container apple-music-iframe">
-        <iframe 
-          allow="autoplay *; encrypted-media *;"
-          frameborder="0"
-          height="450"
-          style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-          src="https://embed.music.apple.com/us/album/la-proxima-vez-single/1807587803">
-        </iframe>
-      </div>
-
-      <h2>Rise From The Ashes</h2>
-      <p>“El fuego no me consume, me revela”</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/0LjEc7Ca8nQyCIzg1DQSig?utm_source=generator"
-          width="50%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <h2>Entre La Multitud</h2>
-      <p>“Fuiste la única verdad en un mundo que ya no reconozco.”</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/265fThn6TFIk3idK3RtH2B?utm_source=generator"
-          width="50%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <h2>Rise From The Ashes (extended)</h2>
-      <p>“Quemaron mi historia.... pero ni pudieron quemar mi alma”</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/4qvMsYZvnDpO03DTSsiHlX?utm_source=generator"
-          width="50%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <h2>Sombra en Su Piel</h2>
-      <p>“Yo fui su historia no contada… pero la que nunca olvidó.”</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/7tsAMpWiSStl8JtWcyJ7cm?utm_source=generator"
-          width="50%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <h2>Tiempo Sin Piedad</h2>
-      <p>“Le pedí al tiempo un respiro… y me quitó todo.”</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator"
-          width="50%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <h2>Atrapado En Tu Piel</h2>
-      <p>“Te perdí… pero tú aún vives en mi piel.”</p>
-      <div class="iframe-container">
-        <iframe 
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/6g5gOv52nhCUPYR2Xk5YiO?utm_source=generator"
-          width="50%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-      </div>
+      <!-- Añade aquí más canciones siguiendo el mismo patrón -->
     </section>
 
-    <!-- Botón para regresar al Portal Mágico -->
+    <!-- Botón de regreso -->
     <div class="return">
       <a href="portal-magico.html">← Volver al Portal Mágico</a>
     </div>
   </main>
+
+  <!-- Scripts mágicos para badges -->
+  <script src="js/badges.js"></script>
+  <script>
+    // Suma 1 visita al badge "song" (Melodía del Alma)
+    aumentarVisita("song");
+  </script>
 </body>
 </html>
