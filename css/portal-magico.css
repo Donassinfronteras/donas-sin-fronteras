@@ -172,3 +172,33 @@ footer {
 .footer-section a:hover {
   text-decoration: underline;
 }
+/* Galería de insignias mágicas */
+.badges-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.badge-item {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%) opacity(0.4);
+  transition: filter 0.3s ease;
+}
+
+.badge-item.unlocked {
+  filter: none;
+}
+
+.badge-label {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: #4b0082;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+}
