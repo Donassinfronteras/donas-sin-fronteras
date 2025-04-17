@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* 1. Estilos generales del cuerpo */
 body.portal-magico-body {
   font-family: 'Caveat', cursive;
   background: url("../assets/butterflies-bg.jpg") no-repeat center center fixed;
@@ -14,17 +15,16 @@ body.portal-magico-body {
   min-height: 100vh;
   cursor: none;
 }
-
-body::before {
+body.portal-magico-body::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   background: rgba(180, 150, 255, 0.4); /* velo lavanda */
   z-index: 0;
 }
 
+/* 2. Header y navegación */
 header {
   background: #4b0082;
   padding: 1rem;
@@ -33,7 +33,6 @@ header {
   position: relative;
   z-index: 1;
 }
-
 nav ul {
   display: flex;
   justify-content: center;
@@ -41,45 +40,40 @@ nav ul {
   margin-top: 0.5rem;
   gap: 2rem;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a.active {
   text-decoration: underline;
 }
 
+/* 3. Contenedor principal */
 .portal-container {
   position: relative;
   z-index: 1;
   padding: 2rem;
   text-align: center;
 }
-
 .intro {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   padding: 2rem;
-  margin-bottom: 2rem;
-  color: #4b0082;
+  margin: 0 auto 2rem;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #4b0082;
   font-size: 1.4rem;
   text-shadow: 0 0 4px rgba(255,255,255,0.6);
 }
 
-/* Botones mágicos */
+/* 4. Botones mágicos */
 .portales {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 }
-
 .btn-portal {
   font-size: 1.2rem;
   padding: 1rem 2rem;
@@ -91,43 +85,37 @@ nav a.active {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   transition: all 0.4s ease;
 }
-
 .btn-portal:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 0 8px #fff inset;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), inset 0 0 8px #fff;
 }
-
 .btn-portal.disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
-/* Mariposa gloriosa */
+/* 5. Mariposa gloriosa */
 .mariposa-central {
   background-image: url("../assets/mariposa-magica.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 150px;
-  height: 150px;
+  width: 150px; height: 150px;
   margin: 0 auto 2rem;
   animation: flotar 5s ease-in-out infinite;
   position: relative;
   z-index: 2;
 }
-
 @keyframes flotar {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50%      { transform: translateY(-10px); }
 }
 
-/* Cursor personalizado */
+/* 6. Cursor personalizado */
 .cursor-mariposa {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
+  top: 0; left: 0;
+  width: 40px; height: 40px;
   background-image: url("../assets/mariposa-magica.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -136,66 +124,36 @@ nav a.active {
   transform: translate(-50%, -50%);
 }
 
-/* Footer */
-footer {
-  background-color: #4b0082;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
+/* 7. Galería de insignias mágicas */
+.galeria-logros-footer {
+  margin: 3rem auto 2rem;
+  max-width: 800px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   position: relative;
   z-index: 1;
-  margin-top: 3rem;
 }
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.footer-section h3 {
-  margin-bottom: 0.5rem;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section a {
-  color: #ffeaff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer-section a:hover {
-  text-decoration: underline;
-}
-
-/* Galería de insignias mágicas */
 .badges-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
-
 .badge-item {
-  width: 80px;
-  height: 80px;
+  width: 80px; height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   filter: grayscale(100%) opacity(0.4);
   transition: filter 0.3s ease;
 }
-
 .badge-item.unlocked {
   filter: none;
 }
-
 .badge-label {
   text-align: center;
   font-size: 1rem;
@@ -204,25 +162,45 @@ footer {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
-/* Contenedor de la galería entre botones y footer */
-.galeria-logros-footer {
+/* 8. Footer completo */
+footer {
+  background-color: #4b0082;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
   margin-top: 3rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
-/* Popup de logro desbloqueado */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.footer-section h3 {
+  margin-bottom: 0.5rem;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section a {
+  color: #ffeaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* 9. Popup de logro desbloqueado */
 .badge-popup {
   position: fixed;
-  bottom: 20%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(100%);
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
   background: rgba(75, 0, 130, 0.9);
   color: #fff;
   padding: 1rem 1.5rem;
@@ -230,11 +208,10 @@ footer {
   font-family: 'Caveat', cursive;
   text-align: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  opacity: 0;
   z-index: 9999;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .badge-popup.show {
-  transform: translateX(-50%) translateY(0);
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
