@@ -8,9 +8,8 @@
   <!-- Fuente mágica -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Estilos globales -->
+  <!-- Estilos globales y específicos -->
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Estilos específicos para Recursos -->
   <link rel="stylesheet" href="css/recursos.css" />
 </head>
 
@@ -28,7 +27,7 @@
   </header>
 
   <main class="recursos-container">
-    <!-- Galería de fondos de pantalla descargables -->
+    <!-- 1. Galería de fondos de pantalla descargables -->
     <section class="wallpapers-gallery">
       <h2>Fondos de Pantalla</h2>
       <div class="wallpapers-grid">
@@ -59,13 +58,38 @@
       </div>
     </section>
 
-    <!-- Lista de otros recursos -->
-    <section class="resource-list">
-      <h2>Material Extra</h2>
-      <ul>
-        <li><a href="assets/docs/guia-inicio.pdf" download>Guía de Inicio (PDF)</a></li>
-        <li><a href="assets/zip/plantillas.zip" download>Plantillas (ZIP)</a></li>
-      </ul>
+    <!-- 2. Lista de otros recursos -->
+    
+
+    <!-- 3. Redes Sociales -->
+    <section id="redes">
+      <h2>Síguenos en Nuestras Redes Sociales</h2>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/donassinfronteras1/" target="_blank" class="social-icon square">
+          <img src="assets/icons/facebook.png" alt="Facebook" />
+          <span class="social-icon-label">Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/donassinfronteras1" target="_blank" class="social-icon square">
+          <img src="assets/icons/instagram.png" alt="Instagram" />
+          <span class="social-icon-label">Instagram</span>
+        </a>
+        <a href="https://www.threads.net/@donassinfronteras1" target="_blank" class="social-icon square">
+          <img src="assets/icons/threads.png" alt="Threads" />
+          <span class="social-icon-label">Threads</span>
+        </a>
+        <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" class="social-icon square">
+          <img src="assets/icons/tiktok.png" alt="TikTok" />
+          <span class="social-icon-label">TikTok</span>
+        </a>
+        <a href="https://x.com/donasinfrontera" target="_blank" class="social-icon square">
+          <img src="assets/icons/twitter.png" alt="X" />
+          <span class="social-icon-label">X</span>
+        </a>
+        <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" class="social-icon square">
+          <img src="assets/icons/youtube.png" alt="YouTube" />
+          <span class="social-icon-label">YouTube</span>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -76,52 +100,27 @@
     <div id="lightbox-caption" class="lightbox-caption"></div>
   </div>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
-      <div>
-        <h2>Doñas sin Fronteras</h2>
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
         <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
       </div>
-      <div>
+      <div class="footer-section">
         <h3>Enlaces rápidos</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">
-              <img class="social-icon" src="assets/icons/home.svg" alt="Inicio">Inicio
-            </a>
-          </li>
-          <li><a href="podcast.html">
-              <img class="social-icon" src="assets/icons/podcast.svg" alt="Podcast">Podcast
-            </a>
-          </li>
-          <li><a href="portal-magico.html">
-              <img class="social-icon" src="assets/icons/magic-wand.svg" alt="Portal Mágico">Portal Mágico
-            </a>
-          </li>
-          <li><a href="contacto.html">
-              <img class="social-icon" src="assets/icons/mail.svg" alt="Contacto">Contacto
-            </a>
-          </li>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
-      </div>
-      <div>
-        <h3>Síguenos</h3>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">
-            <img class="social-icon" src="assets/icons/facebook.svg" alt="Facebook">Facebook
-          </a>
-          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">
-            <img class="social-icon" src="assets/icons/instagram.svg" alt="Instagram">Instagram
-          </a>
-          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">
-            <img class="social-icon" src="assets/icons/tiktok.svg" alt="TikTok">TikTok
-          </a>
-        </div>
       </div>
     </div>
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- JS de insignias y preview -->
+  <!-- Scripts mágicos -->
   <script src="js/badges.js"></script>
   <script>
     // 🗂️ Badge de Recursos
@@ -130,7 +129,8 @@
     // Lightbox preview
     const lightbox = document.getElementById("lightbox");
     const lbImg    = document.getElementById("lightbox-img");
-    const caption = document.getElementById("lightbox-caption");
+    const caption  = document.getElementById("lightbox-caption");
+
     document.querySelectorAll(".wallpapers-grid img").forEach(img => {
       img.addEventListener("click", () => {
         lbImg.src = img.src;
@@ -138,6 +138,7 @@
         lightbox.classList.add("show");
       });
     });
+
     document.querySelector(".lightbox-close").addEventListener("click", () => {
       lightbox.classList.remove("show");
     });
