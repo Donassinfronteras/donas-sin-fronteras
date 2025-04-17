@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Debate Sin Fronteras - Doñas sin Fronteras</title>
-  <link rel="stylesheet" href="css/temporada.css">
-  <!-- Asegúrate de que tu CSS incluya también el estilo de footer y el popup CSS del paso 1 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Debate Sin Fronteras – Doñas sin Fronteras</title>
+  <!-- Fuente Caveat -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Mismo CSS de temporada para que el footer luzca igual -->
+  <link rel="stylesheet" href="css/temporada.css" />
+  <!-- Iconos sociales (si los usas) -->
+  <link rel="stylesheet" href="css/social-icons.css" />
 </head>
-<body>
+<body class="pagina-podcast">
   <header>
     <h1>Debate Sin Fronteras</h1>
+    <nav>
+      <ul class="navigation-buttons">
+        <li><a href="temporada1.html" class="nav-btn">📖 Temporada 1</a></li>
+        <li><a href="temporada2.html" class="nav-btn">🎧 Temporada 2</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Navegación entre secciones -->
-  <div class="navigation-buttons">
-    <a href="temporada1.html" class="nav-btn">📖 Temporada 1</a>
-    <a href="temporada2.html" class="nav-btn">🎧 Temporada 2</a>
-    <a href="podcast.html" class="nav-btn">🎙️ Podcast</a>
-    <a href="portal-magico.html" class="nav-btn">🔮 Portal Mágico</a>
-  </div>
-
-  <main>
+  <main class="podcast-container">
     <section class="episodes">
       <article class="episode">
         <h2>Amistades Verdaderas Deberían Estar en Todas Las Etapas de Tu Vida?</h2>
@@ -33,7 +37,7 @@
       </article>
 
       <article class="episode">
-        <h2>Lenguaje Inclusivo: ¿Es Realmente Inclusión?</h2>
+        <h2>Lenguaje Inclusivo: ¿Es Realmente inclusión?</h2>
         <a href="https://open.spotify.com/episode/7pVLBhrrwMJ9sF04R0Os7t?si=31303e9810594165" target="_blank">Escuchar episodio</a>
       </article>
 
@@ -63,46 +67,45 @@
       </article>
     </section>
 
-    <!-- Botón de regreso -->
     <div class="return">
       <a href="podcast.html">← Volver al Portal del Podcast</a>
     </div>
   </main>
 
-  <!-- Footer completo -->
-  <footer>
+  <!-- Footer al estilo Temporada/Podcast -->
+  <footer class="site-footer">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Doñas sin Fronteras</h3>
+      <div>
+        <h2>Doñas sin Fronteras</h2>
         <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
       </div>
-
-      <div class="footer-section">
+      <div>
         <h3>Enlaces rápidos</h3>
-        <ul>
+        <ul class="footer-links">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="podcast.html">Podcast</a></li>
           <li><a href="portal-magico.html">Portal Mágico</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
-
-      <div class="footer-section">
+      <div>
         <h3>Síguenos</h3>
-        <div class="social-links">
-          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+        <div class="footer-socials">
           <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
           <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+          <a href="https://x.com/donassinfrontera" target="_blank">X</a>
+          <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank">YouTube</a>
         </div>
       </div>
     </div>
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Scripts mágicos para badges -->
+  <!-- Scripts mágicos -->
   <script src="js/badges.js"></script>
   <script>
-    // 🥊 Incrementa visita al badge "gloves" (Guantes del Debate)
+    // 🥊 Badge de Debate
     aumentarVisita("gloves");
   </script>
 </body>
