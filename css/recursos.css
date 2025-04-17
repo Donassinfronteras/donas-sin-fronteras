@@ -1,13 +1,13 @@
-/* recursos.css – Paleta Melocotón/Rosado, Overlay, Lightbox & Redes Sociales */
+/* recursos.css – Paleta Melocotón/Rosado, Overlay, Galería, Recursos, Redes Sociales, Footer & Lightbox */
 
 /* 1. Variables de color */
 :root {
-  --rosado-light:   #FFD1DC;   /* rosado suave para overlay */
+  --rosado-light:   #FFD1DC;   /* rosado suave (overlay) */
   --melocoton:      #FFB997;   /* melocotón principal */
-  --rosado:         #FF9AA2;   /* rosado intenso para franjas */
+  --rosado:         #FF9AA2;   /* rosado intenso (franjas) */
   --text-dark:      #663C00;   /* texto oscuro */
-  --overlay-alpha:  0.15;      /* 15% de opacidad en el velo */
-  --stripe-alpha:   0.8;       /* 20% de opacidad en las franjas */
+  --overlay-alpha:  0.15;      /* 15% opacidad overlay */
+  --stripe-alpha:   0.7;       /* 20% opacidad franjas */
 }
 
 /* 2. Reset y box‑sizing */
@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 
-/* 3. Fondo e overlay (rosado claro 15%) */
+/* 3. Fondo e overlay */
 body.pagina-recursos {
   position: relative;
   font-family: 'Caveat', cursive;
@@ -28,21 +28,19 @@ body.pagina-recursos {
 }
 .overlay-recursos {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255,209,220,var(--overlay-alpha)); /* rosado-light */
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255,209,220,var(--overlay-alpha));
   backdrop-filter: blur(4px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* 4. Header y navegación con franja rosado intenso (20% opacidad) */
+/* 4. Header y navegación */
 body.pagina-recursos header {
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
   text-align: center;
   padding: 2rem 1rem;
-  background: rgba(255,154,162,var(--stripe-alpha)); /* rosado */
+  background: rgba(255,154,162,var(--stripe-alpha));
 }
 body.pagina-recursos header h1 {
   font-size: 2.8rem;
@@ -74,8 +72,7 @@ body.pagina-recursos header h1 {
 
 /* 5. Galería de fondos de pantalla */
 .wallpapers-gallery {
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
   max-width: 900px;
   margin: 3rem auto;
   text-align: center;
@@ -95,8 +92,8 @@ body.pagina-recursos header h1 {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 200px;
   margin: 0 auto;
+  max-width: 200px;
 }
 .wallpapers-grid figure:hover {
   transform: translateY(-5px);
@@ -114,11 +111,10 @@ body.pagina-recursos header h1 {
 
 /* 6. Lista de otros recursos */
 .resource-list {
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(255,154,162,var(--stripe-alpha)); /* rosado */
+  background: rgba(255,154,162,var(--stripe-alpha));
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -146,8 +142,7 @@ body.pagina-recursos header h1 {
 
 /* 7. Sección “Síguenos” */
 #redes {
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
   max-width: 900px;
   margin: 3rem auto 1rem;
   text-align: center;
@@ -195,34 +190,33 @@ body.pagina-recursos header h1 {
 
 /* 8. Footer */
 footer {
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
   background: rgba(255,154,162,var(--stripe-alpha));
   color: var(--text-dark);
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 2rem;
 }
-footer .footer-content {
+.footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
-footer .footer-section h3 {
+.footer-section h3 {
   margin-bottom: 0.5rem;
 }
-footer .footer-section ul {
+.footer-section ul {
   list-style: none;
   padding: 0;
 }
-footer .footer-section a {
+.footer-section a {
   color: var(--text-dark);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
-footer .footer-section a:hover {
+.footer-section a:hover {
   color: var(--melocoton);
 }
 footer p {
@@ -234,8 +228,7 @@ footer p {
 .lightbox {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
