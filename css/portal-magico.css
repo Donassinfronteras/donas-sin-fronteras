@@ -172,6 +172,7 @@ footer {
 .footer-section a:hover {
   text-decoration: underline;
 }
+
 /* Galería de insignias mágicas */
 .badges-gallery {
   display: flex;
@@ -201,4 +202,18 @@ footer {
   margin-top: 0.2rem;
   color: #4b0082;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+/* Contenedor de la galería entre botones y footer */
+.galeria-logros-footer {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
