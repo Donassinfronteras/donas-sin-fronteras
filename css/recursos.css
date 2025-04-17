@@ -9,7 +9,7 @@
   --rosado:         #FF9AA2;   /* rosado intenso para franjas */
   --text-dark:      #663C00;
   --overlay-alpha:  0.15;      /* 15% de opacidad en el velo */
-  --stripe-alpha:   0.8;       /* 20% de opacidad en las franjas (ajustado) */
+  --stripe-alpha:   0.2;       /* 20% de opacidad en franjas */
 }
 
 /* 2. Reset y box‑sizing */
@@ -38,7 +38,7 @@ body.pagina-recursos {
   z-index: 0;
 }
 
-/* 4. Header y navegación con franja rosado intenso (ahora 20% opacidad) */
+/* 4. Header y navegación con franja rosado intenso (20% opacidad) */
 body.pagina-recursos header {
   position: relative;
   z-index: 1;
@@ -149,7 +149,7 @@ body.pagina-recursos header h1 {
   color: var(--melocoton);
 }
 
-/* 7. Footer con franja semitransparente */
+/* 7. Footer con franja semitransparente y iconos */
 .site-footer {
   position: relative;
   z-index: 1;
@@ -177,15 +177,26 @@ body.pagina-recursos header h1 {
   flex-direction: column;
   gap: 0.5rem;
 }
-.footer-links a {
-  text-decoration: none;
+.footer-links li,
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.footer-links a,
+.footer-socials a {
   color: var(--text-dark);
+  text-decoration: none;
   font-weight: bold;
 }
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+.site-footer .social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.footer-links a:hover .social-icon,
+.footer-socials a:hover .social-icon {
+  filter: brightness(1.2);
 }
 
 /* 8. Lightbox Preview */
