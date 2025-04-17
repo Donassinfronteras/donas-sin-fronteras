@@ -1,3 +1,44 @@
+// Muestra un popup cuando subes de nivel
+function showBadgePopup(badgeKey, newLevel) {
+  const names = BADGES[badgeKey];
+  const title = names[newLevel - 1] || names[0];
+  const pop = document.createElement('div');
+  pop.className = 'badge-popup';
+  pop.innerHTML = `🔓 <strong>${title}</strong><br/>¡Nivel ${newLevel}!`;
+  document.body.appendChild(pop);
+  // animar entrada
+  requestAnimationFrame(() => pop.classList.add('show'));
+  // desaparecer después de 3s
+  setTimeout(() => {
+    pop.classList.remove('show');
+    setTimeout(() => pop.remove(), 500);
+  }, 3000);
+}
+
+// Función que incrementa visitas y dispara popup si sube de nivel
+function aumentarVisita(badgeKey) {
+  const prevCount = parseInt(localStorage.getItem(`badge-${badgeKey}-count`)) || 0;
+  const prevLevel = prevCount >= 30 ? 4
+                  : prevCount >= 20 ? 3
+                  : prevCount >= 10 ? 2
+                  : prevCount >= 1  ? 1
+                  : 0;
+  const newCount = prevCount + 1;
+  localStorage.setItem(`badge-${badgeKey}-count`, newCount);
+
+  // calcular nuevo nivel
+  const newLevel = newCount >= 30 ? 4
+                  : newCount >= 20 ? 3
+                  : newCount >= 10 ? 2
+                  : newCount >= 1  ? 1
+                  : 0;
+
+  // si acabas de subir de nivel, muestro popup
+  if (newLevel > prevLevel) {
+    showBadgePopup(badgeKey, newLevel);
+  }
+}
+
 const BADGES = {
   "explorer": ["Mapa de Realidades (Iniciado)", "Explorador Interdimensional", "Viajero entre Portales", "Guardiana de las Dimensiones"],
   "oracle": ["Visión de la Sibila", "Intuición Despierta", "Sabia del Umbral", "Profeta del Prisma"],
