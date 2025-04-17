@@ -9,7 +9,7 @@
   --rosado:         #FF9AA2;   /* rosado intenso para franjas */
   --text-dark:      #663C00;
   --overlay-alpha:  0.15;      /* 15% de opacidad en el velo */
-  --stripe-alpha:   0.2;       /* 20% de opacidad en las franjas (ajustado) */
+  --stripe-alpha:   0.8;       /* 20% de opacidad en las franjas (ajustado) */
 }
 
 /* 2. Reset y box‑sizing */
