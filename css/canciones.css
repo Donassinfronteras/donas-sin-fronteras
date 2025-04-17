@@ -31,7 +31,6 @@ body.pagina-canciones {
   padding-bottom: 3rem;
 }
 body.pagina-canciones .overlay {
-  content: "";
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -141,22 +140,36 @@ header {
   margin-bottom: 1rem;
 }
 
-/* 7. iFrame containers */
-.iframe-container {
+/* 7. Cartas flotantes para cada canción */
+.song-list .song-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.song-list .song-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* 8. Contenedores de iframe dentro de las cartas */
+.song-list .song-card .iframe-container {
   position: relative;
-  margin: 1.5rem auto;
+  margin: 1rem 0 0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-.iframe-container iframe {
+.song-list .song-card .iframe-container iframe {
   width: 100%;
-  max-width: 660px;
-  height: auto;
   display: block;
 }
 
-/* 8. Botón “Volver” */
+/* 9. Botón “Volver” */
 .return {
   position: relative;
   z-index: 1;
@@ -178,13 +191,17 @@ header {
   transform: scale(1.05);
 }
 
-/* 9. Responsive */
+/* 10. Responsive */
 @media (max-width: 768px) {
   .artist-profile {
     flex-direction: column;
   }
   .artist-image {
     margin: 0 auto 1rem;
+  }
+  .song-list, .song-card {
+    margin: 1rem;
+    padding: 1.5rem;
   }
   .iframe-container {
     width: 100%;
