@@ -7,33 +7,6 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/portal-magico.css" />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .badges-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .badge-item {
-      width: 80px;
-      height: 80px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      filter: grayscale(100%) opacity(0.4);
-      transition: filter 0.3s ease;
-    }
-    .badge-item.unlocked {
-      filter: none;
-    }
-    .badge-label {
-      text-align: center;
-      font-size: 1rem;
-      margin-top: 0.2rem;
-      color: #4b0082;
-    }
-  </style>
 </head>
 
 <body class="portal-magico-body">
@@ -52,21 +25,14 @@
   </header>
 
   <main class="portal-container">
+    <!-- Bloque semitransparente con reseña -->
     <section class="intro">
       <h2>Portal Mágico</h2>
       <p>Bienvenido al Portal Mágico de Doñas sin Fronteras, un espacio donde compartimos recursos, emociones y contenido creado con amor y un toque de brujería bonita.</p>
       <p>Explora los portales que hemos creado para ti. Cada uno es una puerta abierta a historias, canciones y aventuras hechas desde el alma.</p>
     </section>
 
-    <!-- Galería de insignias -->
-    <section>
-      <h3>Desbloquea tus logros visitando los portales del sitio</h3>
-      <div class="badges-gallery" id="badgesGallery">
-        <!-- Badges se insertan por JS -->
-      </div>
-    </section>
-
-    <!-- Mariposa fija gloriosa -->
+    <!-- Mariposa gloriosa -->
     <div class="mariposa-central"></div>
 
     <!-- Botones mágicos -->
@@ -75,6 +41,14 @@
       <a href="canciones.html" class="btn-portal">Canciones</a>
       <a href="#" class="btn-portal disabled">Oráculo Prisma del Alma</a>
       <a href="recursos.html" class="btn-portal">Recursos y Descargas</a>
+    </section>
+
+    <!-- Galería de logros mágicos -->
+    <section class="galeria-logros-footer">
+      <h3>Desbloquea tus logros visitando los portales del sitio</h3>
+      <div class="badges-gallery" id="badgesGallery">
+        <!-- Badges se insertan por JS -->
+      </div>
     </section>
   </main>
 
