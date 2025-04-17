@@ -28,37 +28,37 @@
   </header>
 
   <main class="recursos-container">
-    <!-- Galería de fondos de pantalla descargables -->
+    <!-- Galería de wallpapers descargables -->
     <section class="wallpapers-gallery">
       <h2>Fondos de Pantalla</h2>
       <div class="wallpapers-grid">
         <!-- Fondo 1 -->
         <figure>
           <a href="assets/wallpapers/b-fondo.png" download="DSF-fondo1.png">
-            <img src="assets/wallpapers/b-fondo.png" alt="Fondo melocotón 1">
+            <img src="assets/wallpapers/b-fondo.png" alt="Fondo melocotón 1">
           </a>
-          <figcaption>Descargar fondo 1</figcaption>
+          <figcaption>Descargar 1</figcaption>
         </figure>
         <!-- Fondo 2 -->
         <figure>
           <a href="assets/wallpapers/d-j-fondo.png" download="DSF-fondo2.png">
             <img src="assets/wallpapers/d-j-fondo.png" alt="Fondo melocotón 2">
           </a>
-          <figcaption>Descargar fondo 2</figcaption>
+          <figcaption>Descargar 2</figcaption>
         </figure>
         <!-- Fondo 3 -->
         <figure>
           <a href="assets/wallpapers/e-d-fondo.png" download="DSF-fondo3.png">
             <img src="assets/wallpapers/e-d-fondo.png" alt="Fondo melocotón 3">
           </a>
-          <figcaption>Descargar fondo 3</figcaption>
+          <figcaption>Descargar 3</figcaption>
         </figure>
         <!-- Fondo 4 -->
         <figure>
           <a href="assets/wallpapers/fondo-recursos.png" download="DSF-fondo4.png">
             <img src="assets/wallpapers/fondo-recursos.png" alt="Fondo melocotón 4">
           </a>
-          <figcaption>Descargar fondo 4</figcaption>
+          <figcaption>Descargar 4</figcaption>
         </figure>
       </div>
     </section>
@@ -76,6 +76,13 @@
       <!-- …más recursos… -->
     </section>
   </main>
+
+  <!-- Lightbox para preview -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-content">
@@ -104,11 +111,26 @@
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- JS de insignias -->
+  <!-- JS de insignias y preview -->
   <script src="js/badges.js"></script>
   <script>
     // 🗂️ Badge de Recursos
     aumentarVisita("resources");
+
+    // Lightbox preview
+    const lightbox = document.getElementById("lightbox");
+    const lbImg    = document.getElementById("lightbox-img");
+    const caption = document.getElementById("lightbox-caption");
+    document.querySelectorAll(".wallpapers-grid img").forEach(img => {
+      img.addEventListener("click", () => {
+        lbImg.src = img.src;
+        caption.textContent = img.alt;
+        lightbox.classList.add("show");
+      });
+    });
+    document.querySelector(".lightbox-close").addEventListener("click", () => {
+      lightbox.classList.remove("show");
+    });
   </script>
 </body>
 </html>
