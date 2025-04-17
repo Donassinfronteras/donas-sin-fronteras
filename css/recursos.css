@@ -1,7 +1,5 @@
 /* ==============================================
    recursos.css – Paleta Melocotón & Lightbox Preview
-   Ajustes: overlay coloreado, franjas unificadas y semitransparentes,
-   overlay clic-through, miniaturas limitadas, lightbox
    ============================================== */
 
 /* 1. Variables de color */
@@ -11,8 +9,8 @@
   --pink-soft:     #FF9AA2;    /* rosa suave */
   --yellow-warm:   #FFDAC1;
   --text-dark:     #663C00;
-  --overlay-alpha: 0.2;        /* disminuye la opacidad del velo */
-  --stripe-alpha:  0.8;        /* transparencias de franjas */
+  --overlay-alpha: 0.2;        /* 20% de opacidad en el velo */
+  --stripe-alpha:  0.8;        /* 80% de opacidad en franjas */
 }
 
 /* 2. Reset y box‑sizing */
@@ -22,7 +20,7 @@
   box-sizing: border-box;
 }
 
-/* 3. Fondo e overlay que no bloquea clicks */
+/* 3. Fondo e overlay (melocotón 20%) */
 body.pagina-recursos {
   position: relative;
   font-family: 'Caveat', cursive;
@@ -35,19 +33,19 @@ body.pagina-recursos {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(255, 185, 151, var(--overlay-alpha)); /* melocotón */
+  background: rgba(255,185,151,var(--overlay-alpha));
   backdrop-filter: blur(4px);
-  pointer-events: none; /* deja pasar clicks a enlaces */
+  pointer-events: none;
   z-index: 0;
 }
 
-/* 4. Header y navegación con franja melocotón transparente */
+/* 4. Header y navegación con franja melocotón (80%) */
 body.pagina-recursos header {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 2rem 1rem;
-  background: rgba(255, 185, 151, var(--stripe-alpha)); /* franja unificada */
+  background: rgba(255,185,151,var(--stripe-alpha));
   box-shadow: none;
 }
 body.pagina-recursos header h1 {
@@ -120,13 +118,13 @@ body.pagina-recursos header h1 {
   color: var(--text-dark);
 }
 
-/* 6. Otros recursos */
+/* 6. Lista de otros recursos con franja unificada */
 .resource-list {
   position: relative;
   z-index: 1;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(255, 218, 193, var(--stripe-alpha)); /* franja unificada */
+  background: rgba(255,185,151,var(--stripe-alpha));
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -152,11 +150,11 @@ body.pagina-recursos header h1 {
   color: var(--peach);
 }
 
-/* 7. Footer con misma franja semi-transparente */
+/* 7. Footer con misma franja semitransparente */
 .site-footer {
   position: relative;
   z-index: 1;
-  background: rgba(255, 185, 151, var(--stripe-alpha));
+  background: rgba(255,185,151,var(--stripe-alpha));
   color: var(--text-dark);
   text-align: center;
   padding: 2rem 1rem;
