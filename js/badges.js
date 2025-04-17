@@ -1,4 +1,4 @@
-// badges.js
+// js/badges.js
 
 // 1. Definición de los badges y sus títulos por nivel
 const BADGES = {
@@ -40,7 +40,10 @@ const BADGES = {
   ]
 };
 
-// 2. Función para mostrar un popup centrado al subir de nivel
+// 2. Umbrales de visitas para cada nivel
+const LEVEL_THRESHOLDS = [1, 10, 20, 30];
+
+// 3. Función para mostrar un popup centrado al subir de nivel
 function showBadgePopup(badgeKey, newLevel) {
   const titles = BADGES[badgeKey] || [];
   const title = titles[newLevel - 1] || titles[0] || `Nivel ${newLevel}`;
@@ -49,27 +52,24 @@ function showBadgePopup(badgeKey, newLevel) {
   pop.innerHTML = `🔓 <strong>${title}</strong><br/>¡Nivel ${newLevel}!`;
 
   document.body.appendChild(pop);
-  // espera un frame para disparar la animación CSS
   requestAnimationFrame(() => pop.classList.add("show"));
-  // después de 3s, oculta y elimina
   setTimeout(() => {
     pop.classList.remove("show");
     setTimeout(() => pop.remove(), 500);
   }, 3000);
 }
 
-// 3. Función que incrementa el contador, calcula nivel y dispara popup si sube
+// 4. Función que incrementa el contador, calcula nivel y dispara popup si sube
 function aumentarVisita(badgeKey) {
   const storageKey = `badge-${badgeKey}-count`;
   const prevCount = parseInt(localStorage.getItem(storageKey), 10) || 0;
 
-  // calcula niveles en base a umbrales [1,10,20,30]
   const getLevel = count =>
-    count >= 30 ? 4 :
-    count >= 20 ? 3 :
-    count >= 10 ? 2 :
-    count >= 1  ? 1 :
-                  0;
+    count >= LEVEL_THRESHOLDS[3] ? 4 :
+    count >= LEVEL_THRESHOLDS[2] ? 3 :
+    count >= LEVEL_THRESHOLDS[1] ? 2 :
+    count >= LEVEL_THRESHOLDS[0] ? 1 :
+    0;
 
   const prevLevel = getLevel(prevCount);
   const newCount = prevCount + 1;
@@ -81,7 +81,7 @@ function aumentarVisita(badgeKey) {
   }
 }
 
-// 4. Renderiza la galería de badges en el Portal Mágico
+// 5. Renderiza la galería de badges en el Portal Mágico
 function renderBadges() {
   const badgeGallery = document.getElementById("badgesGallery");
   if (!badgeGallery) return;
@@ -90,19 +90,21 @@ function renderBadges() {
   Object.keys(BADGES).forEach(badgeKey => {
     const storageKey = `badge-${badgeKey}-count`;
     const visits = parseInt(localStorage.getItem(storageKey), 10) || 0;
-    const level = 
-      visits >= 30 ? 4 :
-      visits >= 20 ? 3 :
-      visits >= 10 ? 2 :
-      visits >= 1  ? 1 :
-                     0;
+    const level =
+      visits >= LEVEL_THRESHOLDS[3] ? 4 :
+      visits >= LEVEL_THRESHOLDS[2] ? 3 :
+      visits >= LEVEL_THRESHOLDS[1] ? 2 :
+      visits >= LEVEL_THRESHOLDS[0] ? 1 :
+      0;
 
     // crea la caja del badge
     const badgeDiv = document.createElement("div");
     badgeDiv.className = "badge-item" + (level > 0 ? " unlocked" : "");
     const imgLevel = level > 0 ? level : 1; // muestra nivel 1 si es 0
-    badgeDiv.style.backgroundImage = 
-      `url("assets/badges/badge-${badgeKey}-nivel${imgLevel}.png")`;
+
+    // ← Ruta corregida para tu carpeta badges/ en la raíz:
+    badgeDiv.style.backgroundImage =
+      `url("badges/badge-${badgeKey}-nivel${imgLevel}.png")`;
 
     // crea la etiqueta
     const label = document.createElement("div");
@@ -113,9 +115,7 @@ function renderBadges() {
 
     // empaqueta ambos
     const wrapper = document.createElement("div");
-    wrapper.style.display = "flex";
-    wrapper.style.flexDirection = "column";
-    wrapper.style.alignItems = "center";
+    wrapper.className = "badge-wrapper";
     wrapper.appendChild(badgeDiv);
     wrapper.appendChild(label);
 
@@ -123,10 +123,8 @@ function renderBadges() {
   });
 }
 
-// 5. Inicialización al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-  renderBadges();
-});
+// 6. Inicialización al cargar la página
+document.addEventListener("DOMContentLoaded", renderBadges);
 
-// 6. Exponer la función para que otras páginas puedan invocarla
+// 7. Exponer la función para que otras páginas puedan invocarla
 window.aumentarVisita = aumentarVisita;
