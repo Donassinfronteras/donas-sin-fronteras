@@ -48,69 +48,54 @@
 
       <div class="songs-container">
         <div class="song-item">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VkG2n85p9koUZ4rf82M4P?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <div class="song-item">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4miX0nqTt6wu2AE34cG8sy?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
     </section>
 
-    <!-- Sección de insignias -->
+    <!-- Sección de insignias (opcional) -->
     <section class="badges-section">
       <h2>🛡️ Tus Logros</h2>
       <div id="badges-container"></div>
     </section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Doñas sin Fronteras</h3>
-          <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Enlaces rápidos</h3>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="podcast.html">Podcast</a></li>
-            <li><a href="portal-magico.html">Portal Mágico</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Síguenos</h3>
-          <div class="social-links">
-            <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
-            <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
-          </div>
-        </div>
-      </div>
-      <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
-    </footer>
   </main>
 
-  <!-- Formspree Botón de sugerencias -->
-  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts mágicos para badges -->
+  <script src="js/badges.js"></script>
   <script>
-    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-    formbutton("create", {
-      action: "https://formspree.io/f/mvgknqzn",
-      title: "¿Qué idea tienes?",
-      fields: [
-        { type: "email", label: "Tu correo", name: "email", required: true, placeholder: "tucorreo@email.com" },
-        { type: "textarea", label: "Mensaje", name: "message", placeholder: "Cuéntanos tu idea o sugerencia" },
-        { type: "submit" }
-      ],
-      styles: {
-        title: { backgroundColor: "#2d6a4f" },
-        button: { backgroundColor: "#2d6a4f" }
-      }
-    });
+    // Suma 1 visita al badge "explorer" (Mapa de Realidades)
+    aumentarVisita("explorer");
   </script>
-
-  <!-- JS insignias -->
-  <script src="js/audioaventura.js"></script>
-
 </body>
 </html>
