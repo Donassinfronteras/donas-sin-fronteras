@@ -1,16 +1,15 @@
 /* ==============================================
-   recursos.css – Paleta Melocotón & Lightbox Preview
+   recursos.css – Paleta Melocotón/Rosado & Lightbox
    ============================================== */
 
 /* 1. Variables de color */
 :root {
-  --peach-light:   #FFE5D4;
-  --peach:         #FFB997;    /* melocotón principal */
-  --pink-soft:     #FF9AA2;    /* rosa suave */
-  --yellow-warm:   #FFDAC1;
-  --text-dark:     #663C00;
-  --overlay-alpha: 0.2;        /* 20% de opacidad en el velo */
-  --stripe-alpha:  0.8;        /* 80% de opacidad en franjas */
+  --rosado-light:   #FFD1DC;   /* rosado suave para overlay */
+  --melocoton:      #FFB997;   /* melocotón principal */
+  --rosado:         #FF9AA2;   /* rosado intenso para franjas */
+  --text-dark:      #663C00;
+  --overlay-alpha:  0.15;      /* 15% de opacidad en el velo */
+  --stripe-alpha:   0.9;       /* 90% de opacidad en franjas */
 }
 
 /* 2. Reset y box‑sizing */
@@ -20,12 +19,12 @@
   box-sizing: border-box;
 }
 
-/* 3. Fondo e overlay (melocotón 20%) */
+/* 3. Fondo e overlay (rosado claro 15%) */
 body.pagina-recursos {
   position: relative;
   font-family: 'Caveat', cursive;
   color: var(--text-dark);
-  background: url("../assets/fondocanciones.png") no-repeat center center fixed;
+  background: url("../assets/fondo-recursos.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
 }
@@ -33,19 +32,19 @@ body.pagina-recursos {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(255,185,151,var(--overlay-alpha));
+  background: rgba(255,209,220,var(--overlay-alpha)); /* --rosado-light */
   backdrop-filter: blur(4px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* 4. Header y navegación con franja melocotón (80%) */
+/* 4. Header y navegación con franja rosado intenso (90%) */
 body.pagina-recursos header {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 2rem 1rem;
-  background: rgba(255,185,151,var(--stripe-alpha));
+  background: rgba(255,154,162,var(--stripe-alpha)); /* --rosado */
   box-shadow: none;
 }
 body.pagina-recursos header h1 {
@@ -65,8 +64,8 @@ body.pagina-recursos header h1 {
   border: none;
   border-radius: 30px;
   background: radial-gradient(circle at top left,
-                              var(--pink-soft),
-                              var(--peach));
+                              var(--rosado-light),
+                              var(--melocoton));
   color: var(--text-dark);
   text-decoration: none;
   font-weight: bold;
@@ -96,7 +95,7 @@ body.pagina-recursos header h1 {
   gap: 1rem;
 }
 .wallpapers-grid figure {
-  background: var(--peach-light);
+  background: var(--rosado-light);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -118,13 +117,13 @@ body.pagina-recursos header h1 {
   color: var(--text-dark);
 }
 
-/* 6. Lista de otros recursos con franja unificada */
+/* 6. Lista de otros recursos con misma franja rosado intenso */
 .resource-list {
   position: relative;
   z-index: 1;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(255,185,151,var(--stripe-alpha));
+  background: rgba(255,154,162,var(--stripe-alpha)); /* --rosado */
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -142,19 +141,19 @@ body.pagina-recursos header h1 {
 }
 .resource-list a {
   text-decoration: none;
-  color: var(--pink-soft);
+  color: var(--rosado-light);
   font-weight: bold;
   transition: color 0.3s;
 }
 .resource-list a:hover {
-  color: var(--peach);
+  color: var(--melocoton);
 }
 
-/* 7. Footer con misma franja semitransparente */
+/* 7. Footer con franja rosado intenso */
 .site-footer {
   position: relative;
   z-index: 1;
-  background: rgba(255,185,151,var(--stripe-alpha));
+  background: rgba(255,154,162,var(--stripe-alpha)); /* --rosado */
   color: var(--text-dark);
   text-align: center;
   padding: 2rem 1rem;
