@@ -1,0 +1,312 @@
+[
+  {
+    "Carta ID":1,
+    "Nombre de la Carta":"Bruxa Tarot",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Es tiempo de recuperar tu magia personal. ¿En qué áreas de tu vida te sientes estancada o apagada? ¿Dónde necesitas recuperar tu chispa creativa? Bruxa Tarot es tu señal para despertar, crear, y permitirte vivir una vida vibrante nuevamente.",
+    "Sombra (opcional)":"Invertida, Bruxa Tarot señala que has perdido conexión con tu poder creativo y emocional. Quizás te has quedado atrapada en una visión pesimista, esperando que algo externo te inspire. Esta carta te invita a volver a encontrar dentro de ti misma esa fuente de inspiración y energía vital. No olvides: la vida no te da color; tú eres quien lo crea.",
+    "Ritual Sugerido (opcional)":"Elige un espacio o elemento de tu vida que sientas apagado. Dale nueva vida con arte, flores, luces, aromas o palabras que te inspiren. Deja que el proceso despierte tu creatividad y simbolice tu renacer emocional",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/bruxa.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/bruxa.png"
+  },
+  {
+    "Carta ID":2,
+    "Nombre de la Carta":"Nabi",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"La carta surge cuando estás llamada a reconocer y enfrentar tus propios “espíritus”, esos miedos o situaciones cotidianas que percibes como amenazas o desafíos. Nabi te dice que es momento de actuar con valentía, transformando tus debilidades en fortalezas. No subestimes lo pequeño: cada detalle puede ser una gran aventura.",
+    "Sombra (opcional)":"Invertida, Nabi te avisa que puedes estar reaccionando exageradamente ante algo que no representa realmente un peligro. Asegúrate de no crear enemigos donde solo hay situaciones cotidianas. Respira profundo y toma distancia; recuerda que no todas las batallas merecen tu energía.",
+    "Ritual Sugerido (opcional)":"Dedica un momento del día a explorar tu entorno con ojos nuevos. Observa atentamente algo que normalmente pasaría desapercibido: una planta, un insecto, una sombra. Imagina qué historia épica podrías contar desde su perspectiva. Este sencillo acto refuerza tu conexión con la magia cotidiana y despierta tu percepción intuitiva.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/nabi.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/nabi.png"
+  },
+  {
+    "Carta ID":3,
+    "Nombre de la Carta":"Marta",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Esta carta llega a ti cuando necesitas reconocer que sanar no implica evitar el dolor, sino atravesarlo con valentía y paciencia. Marta te invita a confiar en que cada lágrima derramada riega tu camino hacia una versión más fuerte y hermosa de ti.",
+    "Sombra (opcional)":"Si aparece al revés, Marta indica que podrías estar evitando enfrentar heridas profundas por miedo a sentir dolor. Recuerda que negar tu sufrimiento solo lo intensifica con el tiempo. Abraza tus sentimientos difíciles y confía en que la sanación auténtica viene cuando permites que las emociones fluyan libremente.",
+    "Ritual Sugerido (opcional)":"Prepara un altar con flores blancas o suaves y una vela blanca. Escribe en un papel lo que necesitas liberar y sanar, permitiéndote sentir plenamente cualquier emoción que surja. Dobla el papel y quémalo (de manera segura), visualizando cómo las cenizas se llevan tu dolor para transformarlo en fortaleza..",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/marta.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/marta.png"
+  },
+  {
+    "Carta ID":4,
+    "Nombre de la Carta":"Jade",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Esta carta se presenta cuando necesitas reconocer las consecuencias de tus acciones, tanto positivas como negativas. Jade te invita a reflexionar sobre tu camino y entender que cada experiencia, incluso las difíciles, está allí para equilibrar, enseñar y transformarte. El karma no es castigo; es simplemente energía que regresa para restaurar el orden",
+    "Sombra (opcional)":"Si aparece al revés, Jade indica que quizás estás ignorando las lecciones del karma o culpando al universo de lo que te sucede, en lugar de aceptar tu parte de responsabilidad. Esta posición te recuerda que el primer paso hacia el equilibrio es reconocer tus propias acciones y decisiones. Evita escapar de tus responsabilidades; abrázalas y verás cómo el universo responde a tu sinceridad.",
+    "Ritual Sugerido (opcional)":"Siéntate en un lugar tranquilo y visualiza una balanza en tus manos. Coloca simbólicamente en un lado tus acciones recientes que te enorgullecen, y en el otro, aquellas que te generan inquietud o arrepentimiento. Sin juzgarte, observa la balanza. Luego, escribe tres acciones conscientes que puedas tomar para traer equilibrio y paz a tu vida. Guarda esta lista contigo hasta completarla.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/jade.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/jade.png"
+  },
+  {
+    "Carta ID":5,
+    "Nombre de la Carta":"Elena",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Esta carta surge cuando enfrentas decisiones importantes o sientes dudas respecto a cuál camino tomar. Elena te recuerda que escuchar a tu corazón es un acto de coraje. A veces, el camino correcto parece más difícil, más largo o incluso doloroso, pero al final siempre te llevará al lugar donde realmente perteneces. Elena te anima a avanzar con decisión y confiar en que tu verdad siempre iluminará el sendero correcto.",
+    "Sombra (opcional)":"Si la carta aparece invertida, Elena te alerta sobre el peligro de elegir caminos por comodidad o miedo al cambio. Puede que estés evitando confrontar verdades importantes o te estés aferrando a una seguridad falsa. Elena te anima suavemente a enfrentar esa incomodidad y reconocer que el verdadero crecimiento solo ocurre cuando eliges lo que es auténtico, incluso si duele momentáneamente",
+    "Ritual Sugerido (opcional)":"Cierra los ojos y visualiza dos caminos frente a ti. Uno parece fácil pero termina en espinas, mientras que el otro parece retador pero termina lleno de luz. Pregúntate: ¿qué decisiones estoy evitando por miedo? Escribe esas decisiones en un papel y, debajo de cada una, anota qué paso valiente puedes dar hoy mismo. Guarda esa nota cerca de ti como recordatorio de tu poder interior.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/elena.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/elena.png"
+  },
+  {
+    "Carta ID":6,
+    "Nombre de la Carta":"Mia",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"La presencia de Mia anuncia que es tiempo de soltar lo que ya no te sirve emocionalmente. Es posible que hayas estado entregando demasiado de ti misma, esperando algo a cambio. Mia te invita a poner límites claros, priorizar tu bienestar y darte cuenta de que no necesitas perseguir el amor ni validación de nadie más. Cuando te reconoces a ti misma primero, atraes relaciones más sanas y auténticas.",
+    "Sombra (opcional)":"Cuando Mia aparece invertida, te recuerda suavemente que quizás estás descuidando tu valor, permitiendo que otros definan lo que vales. Puede que estés atrapada en patrones donde buscas validación externa. Mia te invita a romper con esa dinámica y empezar a reconocerte plenamente, sabiendo que el verdadero amor comienza dentro de ti.",
+    "Ritual Sugerido (opcional)":"Ve a un lugar tranquilo, preferiblemente cerca del agua (si es posible). Escribe en un papel lo que ya no estás dispuesta a tolerar, y luego, en otro papel, escribe las cosas maravillosas que reconoces en ti misma. Con intención, rompe el primer papel y déjalo ir, mientras guardas cerca el segundo para recordarte lo valiosa que eres. Si no puedes ir cerca del agua, realiza el ritual con un recipiente de agua en casa, simbolizando limpieza emocional y renovación.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/mia.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/mia.png"
+  },
+  {
+    "Carta ID":7,
+    "Nombre de la Carta":"Tony",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Si Tony está aquí, es probable que hayas estado postergando algo importante o perdiendo tiempo en situaciones, personas o lugares que no aportan valor real a tu vida. Te recuerda que cada oportunidad perdida es un pequeño duelo que luego tendrás que enfrentar. Tony llega como un llamado urgente a reflexionar y a tomar decisiones claras antes de que sea demasiado tarde.",
+    "Sombra (opcional)":"Cuando Tony aparece invertido, indica que estás atrapada en patrones repetitivos donde no aprendes de tus errores, dejando que valiosas oportunidades se escurran entre tus dedos. Es un llamado serio a revisar dónde estás malgastando tu energía y tu vida, y a recuperar el control antes de que sea demasiado tarde. Tony invertido te susurra: «Despierta. Todavía hay tiempo, pero no esperes más».",
+    "Ritual Sugerido (opcional)":"Busca un reloj o temporizador y pon exactamente 10 minutos. Durante esos minutos, escribe sin detenerte todo lo que deseas hacer pero que has estado postergando. Al terminar el tiempo, léelo en voz alta y escoge una cosa de la lista que puedas empezar hoy mismo. Este ritual activa tu consciencia del tiempo y te compromete a la acción inmediata.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/tony.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/tony.png"
+  },
+  {
+    "Carta ID":8,
+    "Nombre de la Carta":"Dante",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Dante te visita cuando estás enfrentando momentos difíciles, cuando sientes que algo o alguien intenta interponerse entre tú y tus sueños. Su presencia es una poderosa señal de que tienes dentro de ti la fuerza necesaria para vencer cualquier adversidad. Te invita a abrazar tus cicatrices como medallas de valentía, a seguir avanzando sin miedo y a creer profundamente en tu poder para transformar cualquier dolor en victoria..",
+    "Sombra (opcional)":"Cuando Dante aparece invertido, indica que podrías estar permitiendo que las derrotas te definan, o estás dudando de tu fuerza y potencial. Quizá te estés aferrando demasiado al dolor, impidiendo que ocurra el necesario renacer. Dante invertido te dice: «No eres tus heridas. Tienes el poder de transformar cada golpe en un nuevo comienzo. Levántate, que el fuego aún arde dentro de ti»",
+    "Ritual Sugerido (opcional)":"Escribe en un papel aquello que quieres superar o aquello que sientes que te limita. Luego, en un lugar seguro, quémalo simbólicamente, dejando que el fuego purifique esas energías negativas. Mientras las cenizas caen, repite con convicción: «Renazco desde mis cenizas, imparable y libre». Este ritual fortalece tu determinación y conecta con la energía del ave fénix que Dante representa.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/dante.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/dante.png"
+  },
+  {
+    "Carta ID":9,
+    "Nombre de la Carta":"La Voz Clara",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Esta carta surge cuando estás lista para romper el silencio, cuando tu garganta arde por todo lo que no se ha dicho. Tal vez llevas tiempo sintiéndote invisible, minimizando lo que sientes o cediendo tu poder en nombre de la paz. La Voz Clara aparece para impulsarte a recuperar tu tono, tu energía, tu narrativa. Es hora de tomar el micrófono de tu vida",
+    "Sombra (opcional)":"Cuando esta carta aparece invertida, puede indicar que estás negando tus emociones, autocensurándote o permitiendo que el miedo bloquee tu garganta. Quizás hablas mucho, pero no desde tu verdad, o bien guardas lo que más importa. Esta carta invertida te dice:\n“Callar lo que eres no protegerá tu paz, solo silenciará tu alma.”\nEs momento de romper con la autocensura y permitirte decir lo que de verdad sientes, aunque tiemble la voz..\n",
+    "Ritual Sugerido (opcional)":"Busca un lugar tranquilo. Coloca una vela azul (voz, expresión, verdad). Escribe en un papel: Tres cosas que no has dicho pero que necesitas expresar. Tres deseos que guardas en silencio. Tres verdades que te definen.  Luego, frente al espejo, léelas en voz alta. Que el sonido de tu verdad vibre en el aire y te recuerde que mereces ser escuchada\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/la-voz-clara.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/la-voz-clara.png"
+  },
+  {
+    "Carta ID":10,
+    "Nombre de la Carta":"El Llamado del Alma",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Cuando te sientes inquieta sin saber por qué. Cuando todo parece estar “bien”, pero sientes un vacío. Cuando tu corazón desea otra vida, aunque aún no sepa cuál.\nTambién puede aparecer cuando ya diste el primer paso, y necesitas confirmación de que tu alma está guiándote.\n",
+    "Sombra (opcional)":"Temor al cambio. Estás ignorando los susurros de tu alma por miedo a lo desconocido. La negación solo alarga el proceso. El llamado volverá… y cada vez más fuerte.",
+    "Ritual Sugerido (opcional)":"Haz una lista de cosas que ya no te hacen sentir viva. Luego, escribe una segunda lista: “Lo que mi alma quiere experimentar.” No importa si parecen imposibles. Esa es tu brújula.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/llama.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/llama.png"
+  },
+  {
+    "Carta ID":11,
+    "Nombre de la Carta":"El Regreso a Casa",
+    "Categoría":"Esencias Sagradas del Prisma",
+    "Mensaje (Luz)":"Cuando logras cerrar un ciclo. Cuando sientes que, aunque el mundo siga en caos, dentro de ti hay calma. También puede salir cuando necesitas recordar que no estás perdida. Que lo que buscas no está fuera, sino en la reconexión con tu alma..",
+    "Sombra (opcional)":"Estás anhelando un regreso, pero aún no cierras el ciclo anterior. Puede haber nostalgia, o deseo de volver a algo que ya no existe. Tu alma quiere paz, no pasado.",
+    "Ritual Sugerido (opcional)":"Crea un pequeño altar con objetos que te representen (una foto, una carta, una piedra, un aroma, lo que tú quieras). Quédate en silencio frente a él y repite: “Estoy aquí. Soy suficiente. Este es mi hogar.”.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/regreso.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/regreso.png"
+  },
+  {
+    "Carta ID":12,
+    "Nombre de la Carta":"Alvaro",
+    "Categoría":"Dualidades Prisma – El Espejo del Alma",
+    "Mensaje (Luz)":"Cuando alguien está jugando contigo sin decirlo. Cuando te preguntas si estás exagerando... pero tu intuición ya sabe la verdad. También surge cuando tú misma estás cayendo en dinámicas de manipulación emocional, aunque no lo notes.",
+    "Sombra (opcional)":"Cuidado: estás permitiendo que alguien controle tu luz con sus hilos invisibles. No esperes que se detenga. Eres tú quien debe cortar la red.",
+    "Ritual Sugerido (opcional)":"Toma un hilo negro o rojo. Nómbralo: \"esto representa la historia que tejiste para que yo no viera la verdad\". Luego, con intención, rómpelo y di: “Hoy me libero del hechizo. Que la sombra ya no nuble mi claridad.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/alvaro.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/alvaro.png"
+  },
+  {
+    "Carta ID":13,
+    "Nombre de la Carta":"Emmanuel",
+    "Categoría":"Dualidades Prisma – El Espejo del Alma",
+    "Mensaje (Luz)":"Cuando estás esperando que alguien elija… y no lo hace.\nCuando te quedas atrapada en un \"casi\" que duele más que un \"no\".\nTambién aparece cuando tú misma estás dudando de lo que sabes que quieres, por miedo a lo que implica conseguirlo.\n",
+    "Sombra (opcional)":"Estás atrapada en un eco. Revives escenas, miradas, “y si…”\nPero no vives.\nNo esperes que alguien que duda te sostenga. El amor no es tibio. Es fuego o no es nada\n",
+    "Ritual Sugerido (opcional)":"Escribe el nombre o símbolo de aquello que no te elige.\nLlévalo contigo un momento, siente su peso. Luego, entiérralo bajo tierra o déjalo flotar en agua y di:\n“Te libero para que no sigas flotando en mi mente. Hoy me elijo yo.”\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/emmanuel.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/emmanuel.png"
+  },
+  {
+    "Carta ID":14,
+    "Nombre de la Carta":"Valeria",
+    "Categoría":"Dualidades Prisma – El Espejo del Alma",
+    "Mensaje (Luz)":"Cuando percibes que detrás de una sonrisa hay intenciones ocultas.\nCuando sientes que alguien usa tu ambición o tu deseo para sus propios fines. También surge si tú misma estás justificando comportamientos tóxicos en nombre del éxito o la validación.\n",
+    "Sombra (opcional)":"Valeria invertida señala que puedes estar adoptando sus tácticas sin darte cuenta: usando el chantaje emocional, la culpa o la seducción para conseguir lo que quieres. Este reflejo oscuro te pide revisar tus métodos y elegir la autenticidad y el respeto sobre la manipulación",
+    "Ritual Sugerido (opcional)":"Toma un hilo negro y átalo alrededor de tu muñeca mientras dices:\n“Corto los lazos con toda manipulación que no respeta mi luz.”\n Luego rompe el hilo con determinación y tíralo, imaginando cómo te liberas de cualquier influencia tóxica.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/valeria.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/valeria.png"
+  },
+  {
+    "Carta ID":15,
+    "Nombre de la Carta":"Karina",
+    "Categoría":"Dualidades Prisma – El Espejo del Alma",
+    "Mensaje (Luz)":"Cuando sientes un resentimiento inexplicable al éxito o reconocimiento de alguien más.\nCuando actúas por miedo a perder tu lugar o tu influencia.\nCuando compararte te lleva a sabotear, consciente o inconscientemente, los logros ajenos.\n",
+    "Sombra (opcional)":"Invertida, Karina refleja cuando tu envidia se vuelve contra ti: desmereces tus logros, te niegas la alegría, y te comparas sin piedad. Es momento de volver la mirada hacia dentro, abrazar tu valía y celebrar tu camino sin medirlo con la vara de otros..Escribe en un papel aquello que envidias profundamente. Siente el peso de esa emoción mientras lo haces. Luego, quémalo con intención, diciendo en voz alta:\n“Libero la envidia para dar espacio a mi propia luz.”  Observa cómo las cenizas se llevan ese veneno y abre tu corazón a tus propios talentos.\n\n",
+    "Ritual Sugerido (opcional)":null,
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/karina.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/karina.png"
+  },
+  {
+    "Carta ID":16,
+    "Nombre de la Carta":"Tatiana",
+    "Categoría":"Dualidades Prisma – El Espejo del Alma",
+    "Mensaje (Luz)":"Cuando repites patrones de relación o de vida que sólo te dejan estancada.\nCuando sientes más temor al cambio que al dolor de lo familiar.\nCuando tu zona de confort se convierte en tu jaula.\n",
+    "Sombra (opcional)":"Invertida, Tatiana señala que puedes estar idealizando un pasado que ya no existe, o que te justificas en él para no asumir nuevos desafíos. Te pide soltar la nostalgia de lo que fue y atreverte a crear un presente que sea sólo tuyo..\n",
+    "Ritual Sugerido (opcional)":"Escribe en un papel las frases que te repites para no avanzar (por ejemplo, “mejor me quedo aquí”). Dobla el papel y quémalo con intención, diciendo:\n“Suelo al pasado para abrirme a mi propia luz.”\nSiente cómo ese fuego limpia el apego tóxico y crea espacio para tu libertad\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/tatiana.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/tatiana.png"
+  },
+  {
+    "Carta ID":17,
+    "Nombre de la Carta":"Lucia y Samuel",
+    "Categoría":"Dualidades Prisma – El Espejo del Alma",
+    "Mensaje (Luz)":"Cuando sientes que has perdido un amor sin haberlo vivido por completo.\nCuando una conexión sigue viva en tu alma, aunque ya no exista en el plano físico.\nCuando sueñas con alguien que ya no está… pero su energía sigue contigo.",
+    "Sombra (opcional)":"Cuando esta carta aparece al revés, señala que te aferras a una historia que ya no existe, convirtiendo la nostalgia en un ancla que impide tu crecimiento. Puedes estar usando ese amor imposible como excusa para no abrirte a nuevas posibilidades. Es momento de agradecer ese susurro del pasado y, con amor, ofrecerle alas para que fluya hacia un futuro donde puedas crear nuevos ecos del corazón.\n",
+    "Ritual Sugerido (opcional)":"Escribe una carta a esa persona (o ese amor) que no pudo ser. No la edites, no la revises. Luego guárdala en una caja o frasco con sal, flores secas o lavanda, y entiérrala simbólicamente como si entregaras ese amor al universo. Deja que el alma lo reciba donde esté.\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/lucia-samuel.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/lucia-samuel.png"
+  },
+  {
+    "Carta ID":18,
+    "Nombre de la Carta":"Alberto",
+    "Categoría":"Guardianes del Prisma",
+    "Mensaje (Luz)":"Cuando observas que alguien sufre sin recibir respaldo.\nCuando tú misma sientes el impulso de defender o apoyar a otros, aunque nadie lo note.\nCuando un acto de intercesión puede cambiar el rumbo de una situación adversa.\n",
+    "Sombra (opcional)":"Al revés, Alberto revela la inacción ante el sufrimiento ajeno. Quizá ignores injusticias por miedo o conveniencia, dejando solo a quienes merecen un aliado. Esta posición te insta a honrar tu propio sentido de responsabilidad: tomar tu escudo moral y actuar, sin esperar reconocimiento ni recompensas..\n",
+    "Ritual Sugerido (opcional)":"Toma una pequeña piedra blanca y sostenla en tu mano izquierda. Cierra los ojos y visualiza el rostro de alguien que necesita tu apoyo. Mientras la piedra descansa en tu palma, repite:\n“Soy escudo para quien lo necesite.”\n Guarda la piedra en un lugar especial; cada vez que la veas, recuerda tu promesa de interceder..",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/alberto.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/alberto.png"
+  },
+  {
+    "Carta ID":19,
+    "Nombre de la Carta":"Oracio",
+    "Categoría":"Guardianes del Prisma",
+    "Mensaje (Luz)":"Es momento de honrar lo que siempre ha estado ahí. Puede ser un amor no correspondido, una amistad que te sostuvo, o incluso una parte de ti que nunca dejaste morir, a pesar del dolor. Esta carta no exige nada… solo te recuerda.\n",
+    "Sombra (opcional)":"Al revés, Oracio señala que puedes estar negándote consuelo o rechazando el apoyo de otros por orgullo o temor. Quizá ignores tu propio dolor o minimices el de quienes te rodean. Esta posición te invita a abrirte: permitir que te cuiden y, cuando puedas, cuidar tú sin miedo",
+    "Ritual Sugerido (opcional)":"Busca una piedra suave o una concha pequeña. Sosténla cerca de tu corazón y piensa en alguien (o en ti misma) que necesite consuelo. Mientras la acaricias, repite en voz baja:\n“Soy refugio para los corazones que sufren.”  Guarda este objeto en un lugar cercano; cuando lo toques, sentirás esa ternura firme de Oracio",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/oracio.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/oracio.png"
+  },
+  {
+    "Carta ID":20,
+    "Nombre de la Carta":"Rosario",
+    "Categoría":"Guardianes del Prisma",
+    "Mensaje (Luz)":"Cuando necesitas detenerte y observar tus emociones sin juicio.\nCuando una parte de ti ya conoce la verdad, pero requiere tu permiso para emerger. Cuando buscas un refugio donde el silencio sea tan sanador como cualquier palabra.\n",
+    "Sombra (opcional)":"Invertida, Rosario señala que estás ignorando tus propios espejos: permitiendo que voces externas opaquen tu verdad o evitando ver lo que duele. Es un llamado a dejar el ruido, volver al silencio interior y reconocer, con compasión, aquello que llevas dentro..\n",
+    "Ritual Sugerido (opcional)":"Llena un cuenco con agua limpia y colócalo ante un espejo. Siéntate frente a ellos, respira hondo y mira tu reflejo en el agua. Pregúntate en voz baja:\n“¿Qué parte de mí necesita revelarse?”\n Permanece en silencio el tiempo que necesites, luego escribe lo que percibas en un papel y guárdalo como guía.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/rosario.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/rosario.png"
+  },
+  {
+    "Carta ID":21,
+    "Nombre de la Carta":"Las Tres Aliadas de Corazon",
+    "Categoría":"Guardianes del Prisma",
+    "Mensaje (Luz)":"Cuando necesitas recordar quiénes son tus verdaderos aliados. Cuando estás perdiendo la fe en ti misma… y solo hace falta una voz que te diga: \"Aquí estoy.\" Cuando el alma necesita una red que la sostenga sin condiciones.\n",
+    "Sombra (opcional)":"Cuando esta carta aparece invertida, puede que te estés aislando o cerrando al apoyo emocional por miedo, orgullo o desconfianza. También puede señalar que estás rodeada de vínculos que no nutren, o que has olvidado ser aliada para ti misma.",
+    "Ritual Sugerido (opcional)":"Escribe los nombres de las personas que han sido tu sostén real, aunque no siempre lo veas. Escribe qué representa cada una en tu vida (la risa, la fuerza, la sabiduría…). Haz una carta simbólica para cada una (puedes entregársela o no). Siente la energía de esas conexiones y deja que te sostengan incluso a la distancia.\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/lastres.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/lastres.png"
+  },
+  {
+    "Carta ID":22,
+    "Nombre de la Carta":"Jazmin",
+    "Categoría":"Guardianes del Prisma",
+    "Mensaje (Luz)":"Cuando sientes un “tic” de tu corazón ante una presencia nueva.\nCuando una coincidencia te hace temblar de emoción. Cuando alguien te conecta con una oportunidad de amor sin que lo notes.\n",
+    "Sombra (opcional)":"Invertida, Jazmín señala que estás forzando encuentros o aferrándote a conexiones que aún no están listas. El amor no se impone; se reconoce. Permite que el proceso siga su curso natural y evita tejer expectativas prematuras.\n",
+    "Ritual Sugerido (opcional)":"Escribe en una semilla o pequeño papel el nombre o símbolo de la relación que deseas atraer. Guárdalo en un frasco junto con un pétalo de flor y un poco de tierra. Cada vez que lo mires, recuerda que Jazmín trabaja en silencio y confía en el tiempo del universo\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/jazmin.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/jazmin.png"
+  },
+  {
+    "Carta ID":23,
+    "Nombre de la Carta":"Daniela",
+    "Categoría":"Guardianes del Prisma",
+    "Mensaje (Luz)":"Cuando tu motivación flaquea y necesitas un empujón de energía.\nCuando dudas de tus capacidades y urge recordar tu fuerza interna. Cuando minimizas tus propios triunfos por miedo al orgullo.\n",
+    "Sombra (opcional)":"Al revés, Daniela señala que puedes estar esperando el aplauso ajeno antes de reconocer tu propio valor, o desestimando tus avances por miedo a brillar. Es hora de convertirte en tu propia porrista: celebra tus victorias sin depender de un público externo.",
+    "Ritual Sugerido (opcional)":"En una cajita o frasco, coloca cinco papeles con tus logros o cualidades favoritas. Decóralo con colores vibrantes. Cada mañana, saca uno, léelo en voz alta y da un pequeño salto celebratorio, repitiendo en tu interior:\n“¡Esto soy yo y lo celebró!\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/daniela.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/daniela.png"
+  },
+  {
+    "Carta ID":24,
+    "Nombre de la Carta":"Heimdall",
+    "Categoría":"Llaves Prismáticas del Alma",
+    "Mensaje (Luz)":"Cuando un simple juego de manos, una idea fugaz o un giro de tu rutina revela un nuevo horizonte. Cuando te resistes a explorar porque “no parece importante”, y luego descubres que ahí estaba la llave.\nCuando necesitas recordar que la magia no siempre llega con grandes rituales, sino con pequeños atrevimientos.\n",
+    "Sombra (opcional)":"Si Heimdall sale al revés, señala que estás ignorando las señales más simples: evitaste explorar lo invisible por miedo al caos. Es hora de soltar la rigidez, abrir esa puerta olvidada y permitir que la sorpresa te guíe.\n",
+    "Ritual Sugerido (opcional)":"Elige una puerta o cajón en tu casa que casi nunca uses. Ponte delante con la intención de “buscar algo nuevo en mi vida”, abre despacio y observa qué ves. Puede ser un objeto cotidiano—su simple aparición será tu señal de que ya tienes la llave para cruzar nuevos umbrales..",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/heimdall.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/heimdall.png"
+  },
+  {
+    "Carta ID":25,
+    "Nombre de la Carta":"Erebus",
+    "Categoría":"Llaves Prismáticas del Alma",
+    "Mensaje (Luz)":"Cuando necesitas ver con más claridad.\nCuando estás rodeado de ruido… y tu alma pide silencio.\nCuando sabes que hay algo más, pero aún no logras nombrarlo.",
+    "Sombra (opcional)":"Erebus invertido señala que has bloqueado tu voz interna con exceso de estímulos externos. Estás tan rodeada de ruido que has enterrado tus “susurros nocturnos”. Te invita a apagar las distracciones, adentrarte en la penumbra interior y rescatar esa “visión velada” que sabes que existe.\n",
+    "Ritual Sugerido (opcional)":"Al anochecer, apaga todas las luces y coloca frente a ti una vela apagada o un cuenco con agua oscura. Cierra los ojos y di en voz baja:\n“Que el eco de lo olvidado me guíe.”  Siente el silencio. Luego abre los ojos, enciende la vela o observa el agua, y anota lo primero que percibas.\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/erebus.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/erebus.png"
+  },
+  {
+    "Carta ID":26,
+    "Nombre de la Carta":"Aetherius",
+    "Categoría":"Llaves Prismáticas del Alma",
+    "Mensaje (Luz)":"Cuando sientes el llamado de algo más allá de tu comprensión diaria. Cuando intuiciones secretos o respuestas que no aparecen en la luz del día.\nCuando has recorrido tanto tu propio laberinto que necesitas guía en la penumbra.\n",
+    "Sombra (opcional)":"Invertida, Aetherius revela que te has perdido en laberintos internos sin guía, o que recoges cargas ajenas como propias. Puede indicar evasión: caminas tanto por sombras que olvidas tu luz. Es hora de soltar el peso ajeno y regresar al camino claro de tu propio ser.\n",
+    "Ritual Sugerido (opcional)":"Al anochecer, coloca un pañuelo oscuro sobre una mesa. Pon encima un objeto que consideres misterioso (una piedra, una llave antigua). Siéntate frente a él, cierra los ojos y di:\n“Aetherius, trae tu secreto.”  Permanece en silencio. Al cabo de un minuto, anota la primera imagen o palabra que emerja de tu mente.\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/aetherius.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/aetherius.png"
+  },
+  {
+    "Carta ID":27,
+    "Nombre de la Carta":"El Umbral del Inframundo",
+    "Categoría":"Portales Místicos",
+    "Mensaje (Luz)":"Cuando sientes que algo en ti debe morir para que algo mayor nazca.\nCuando el alivio no llega con palabras ni deseos, sino con el silencio de tu propia sombra.\nCuando buscas cerrar un ciclo viejo… para emerger de verdad, sin regresar a la comodidad de lo conocido.\n",
+    "Sombra (opcional)":"Cuando aparece al revés, revela resistencia a soltar: aferrarte al dolor como si fuera tu refugio y evitar la inmersión necesaria para renacer. Es señal de que rehúsas tu propia sombra y, por tanto, bloqueas la fuerza que nace de la catarsis\n",
+    "Ritual Sugerido (opcional)":"Enciende una vela de color oscuro (negra o púrpura).\nEscribe en un papel aquello que ya no quieres cargar (miedos, culpas, patrones).\nDóblalo y colócalo bajo la vela, visualizando cómo la llama absorbe ese peso.\nDeja que la vela se consuma parcialmente y luego entierra las cenizas en la tierra o revuélvelas en agua corriente, agradeciendo la transmutación silenciosa.\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/umbral.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/umbral.png"
+  },
+  {
+    "Carta ID":28,
+    "Nombre de la Carta":"El Concilio de la Magia",
+    "Categoría":"Portales Místicos",
+    "Mensaje (Luz)":"Cuando necesitas recordarte que no estás sola y que tienes un refugio en las personas que te quieren.\nCuando un espacio compartido, un gesto cotidiano o una comida simple se convierten en el bálsamo que tu alma estaba buscando.\nCuando tu corazón anhela pertenencia y te convoca a reconocer a tu propia tribu.\n",
+    "Sombra (opcional)":"Al revés, advierte que puedes estar descuidando tus conexiones más profundas: confundiendo la prisa con la compañía, o dando por sentada la presencia de los que te aman. Te insta a detenerte, volver a la mesa y redescubrir la ternura que sostiene tu vida.\n",
+    "Ritual Sugerido (opcional)":"Invita a alguien cercano a compartir una comida sencilla sin distracciones (sin teléfonos ni pantallas). Antes de comenzar, cierren los ojos y agradezcan por estar juntos. Saboreen cada bocado con plena atención, reconociendo en cada sabor el amor que los une",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/concilio.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/concilio.png"
+  },
+  {
+    "Carta ID":29,
+    "Nombre de la Carta":"El Portal del Caos",
+    "Categoría":"Portales Místicos",
+    "Mensaje (Luz)":"Cuando sientes que el estancamiento te asfixia y necesitas un impulso radical.\nCuando el exceso de lo mismo te cierra puertas en lugar de abrir caminos.\nCuando intuyes que, para renacer, primero debes soltar cargas acumuladas.\n\n",
+    "Sombra (opcional)":"Cuando sale al revés, advierte de la parálisis ante el cambio: el miedo a soltar, el apego acumulador o el sabotaje al propio proceso de renovación. Si dudas en limpiar, el caos se convertirá en fardo. Esta posición te insta a enfrentar tus resistencias y permitirte recomponer tu espacio… y tu ser.\n",
+    "Ritual Sugerido (opcional)":"Pon música que te inspire energía. Abre tu armario, cajones o cualquier rincón atestado. Selecciona aquello que ya no usas o que te pesa, y dóna, regala o recicla esos objetos. Mientras los apartas, di en voz alta:\n“Me libero de lo viejo para dar paso a lo nuevo.”  Al cerrar la puerta una vez limpio, siéntete ligera y lista para la siguiente fase.\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/caos.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/caos.png"
+  },
+  {
+    "Carta ID":30,
+    "Nombre de la Carta":"El Inframundo de las Pociones",
+    "Categoría":"Portales Místicos",
+    "Mensaje (Luz)":"Cuando estás impaciente por ver cambios y olvidas que el cambio profundo lleva su tiempo.\nCuando intentas “arreglar” todo de golpe, sin dar espacio a la maduración emocional.\nCuando necesitas un recordatorio de que el amor y la paciencia son los mejores condimentos para tu proceso de crecimiento.\n",
+    "Sombra (opcional)":"Si aparece al revés, advierte que buscas soluciones rápidas o “parchear” sin profundizar: saltas pasos o tomas atajos emocionales, impidiendo que tu alma se fortalezca de verdad. Es señal de que necesitas regresar a la olla, bajar el fuego y permitir que el tiempo haga su magia..\n",
+    "Ritual Sugerido (opcional)":"Ritual sugerido:\nElige una receta sencilla (un caldo, una sopa o un guiso suave). Mientras cocinas, hazlo con plena conciencia:\nSiente cada aroma y textura.\nAgrega sal, hierbas o especias con la intención de “sanar lo que necesito sanar”.\nDeja cocer a fuego lento, recordando que tu propio proceso interior necesita el mismo calor y tiempo.\n Sirve en un tazón, siéntate en silencio y saborea cada cucharada como un acto de amor hacia ti misma.",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/pociones.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/pociones.png"
+  },
+  {
+    "Carta ID":31,
+    "Nombre de la Carta":"El Portal del Conocimiento Infinito",
+    "Categoría":"Portales Místicos",
+    "Mensaje (Luz)":"Cuando una idea te golpea con fuerza, como si emergiera de otra dimensión.\nCuando una pregunta repetida, de pronto, encuentra respuesta sin esfuerzo consciente.\nCuando sueñas o recibes señales (imágenes, canciones, frases) que contienen enseñanzas precisas para tu camino",
+    "Sombra (opcional)":"Invertida, esta carta advierte del bloqueo mental: exceso de información externa, análisis paralizante o rechazo de tu voz interna. Te instiga a silenciar el ruido, soltar la urgencia de comprenderlo todo y abrir espacio a la revelación espontánea que sólo brota cuando te permites fluir.\n",
+    "Ritual Sugerido (opcional)":"Toma una libreta pequeña y un bolígrafo.\nFormula una pregunta esencial para ti (por ejemplo, “¿Cuál es el siguiente paso para mi proyecto?”).\nColoca la libreta bajo tu almohada y duerme con la intención de recibir una pista.\nAl despertar, anota sin editar lo primero que recuerdes: puede ser una palabra, un símbolo, una sensación…\n",
+    "Imagen (nombre archivo)":"assets\/cartas-oraculo\/conocimiento.png",
+    "Imagen URL":"https:\/\/raw.githubusercontent.com\/Donassinfronteras\/donas-sin-fronteras\/main\/assets\/cartas-oraculo\/conocimiento.png"
+  }
+]
