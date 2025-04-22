@@ -13,14 +13,30 @@ body {
 }
 
 .card-container {
-  background-color: rgba(255, 255, 255, 0.05);
+  position: relative; /* esto es clave para la posición de la marca de agua */
+  background-color: rgba(255,255,255,0.05);
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
   max-width: 400px;
   transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* evita que se desborde */
 }
 
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.06); /* súper sutil */
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 10;
+  white-space: nowrap;
+}
 .card-image {
   width: 100%;
   border-radius: 12px;
