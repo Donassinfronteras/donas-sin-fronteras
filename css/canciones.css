@@ -207,3 +207,10 @@ header {
     width: 100%;
   }
 }
+.banner {
+  width: 100%;
+  height: auto;
+  max-width: 100vw;
+  object-fit: contain;
+  display: block;
+}
