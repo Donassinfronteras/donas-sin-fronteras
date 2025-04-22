@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oráculo Prisma - Carta del Día</title>
-  
-  <!-- Vinculando el archivo de estilos externo -->
   <link rel="stylesheet" href="css/carta-del-dia.css">
 </head>
 <body>
@@ -31,12 +29,14 @@
         if (esSombra) {
           document.getElementById('card-img').style.transform = "rotate(180deg)";
           setTimeout(() => {
-            document.getElementById('card-message').textContent = carta["Sombra"];
+            const sombra = carta["Sombra"] || carta["Sombra (opcional)"] || "Esta carta aún guarda su sombra en secreto.";
+            document.getElementById('card-message').textContent = sombra;
             document.getElementById('card-message').classList.add('visible');
           }, 3000);
         } else {
           setTimeout(() => {
-            document.getElementById('card-message').textContent = carta["Mensaje (Luz)"];
+            const luz = carta["Mensaje (Luz)"] || "Este mensaje de luz aún está despertando...";
+            document.getElementById('card-message').textContent = luz;
             document.getElementById('card-message').classList.add('visible');
           }, 3000);
         }
