@@ -15,14 +15,12 @@
   --font-main:      'Caveat', cursive;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body.oraculo-prisma-body {
   position: relative;
   min-height: 100vh;
@@ -34,7 +32,6 @@ body.oraculo-prisma-body {
   cursor: url('../assets/cursor-mariposa.png') 16 16, auto;
 }
 
-/* Overlay mariposas */
 .butterfly-overlay {
   pointer-events: none;
   position: absolute;
@@ -46,7 +43,14 @@ body.oraculo-prisma-body {
   z-index: 0;
 }
 
-/* Header */
+#particle-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .oraculo-header {
   position: relative;
   z-index: 2;
@@ -55,13 +59,13 @@ body.oraculo-prisma-body {
   background: rgba(26, 26, 46, 0.6);
   backdrop-filter: blur(6px);
 }
+
 .oraculo-header h1 {
   font-size: 3rem;
   color: var(--c-lavender);
   text-shadow: 0 0 8px var(--c-lavender);
 }
 
-/* Botones */
 .oraculo-main {
   position: relative;
   z-index: 2;
@@ -73,28 +77,35 @@ body.oraculo-prisma-body {
   padding: 2rem 1rem;
   min-height: calc(100vh - 200px);
 }
+
 .btn {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  color: var(--c-bg);
-  background: rgba(255,255,255,0.1);
+  color: #0D1B2A;
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  box-shadow: 0 0 12px rgba(255,255,255,0.3);
   transition: box-shadow 0.4s ease, transform 0.3s ease, background 0.4s ease;
-}
-.btn-query   { background: rgba(47,206,209,0.3); }
-.btn-cards   { background: rgba(178,141,255,0.3); }
-.btn-guide   { background: rgba(47,206,209,0.3); }
-.btn-rituals { background: rgba(247,132,173,0.3); }
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px var(--c-turquoise), 0 0 30px var(--c-pink), inset 0 0 5px white;
+  font-weight: bold;
 }
 
-/* Footer */
+/* Colores más vivos y visibles */
+.btn-query   { background: linear-gradient(135deg, #82F2B0, #2FCED1); color: #0D1B2A; }
+.btn-cards   { background: linear-gradient(135deg, #B28DFF, #81d4fa); color: #0D1B2A; }
+.btn-guide   { background: linear-gradient(135deg, #F784AD, #FFD1F9); color: #0D1B2A; }
+.btn-rituals { background: linear-gradient(135deg, #FEEABF, #F784AD); color: #0D1B2A; }
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px var(--c-turquoise),
+    0 0 30px var(--c-pink),
+    inset 0 0 5px white;
+}
+
 .oraculo-footer {
   position: relative;
   z-index: 2;
@@ -103,12 +114,12 @@ body.oraculo-prisma-body {
   background: rgba(26, 26, 46, 0.6);
   backdrop-filter: blur(6px);
 }
+
 .oraculo-footer p {
   font-size: 0.9rem;
   color: var(--c-gold);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .oraculo-main {
     flex-direction: column;
