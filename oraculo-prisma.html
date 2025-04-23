@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/oraculo-prisma.css" />
 </head>
 <body class="oraculo-prisma-body">
+ 
+  <div class="cursor-mariposa"></div>
 
   <!-- Fondo de mariposas como velo -->
   <div class="butterfly-overlay"></div>
@@ -36,12 +38,25 @@
     <p>&copy; 2025 Doñas sin Fronteras – Oráculo Prisma</p>
   </footer>
 
- <!-- Scripts mágicos -->
-<script src="js/particles.js"></script>
-<script src="js/oraculo-prisma.js"></script>
-<script src="js/badges.js"></script>
+<!-- Scripts mágicos -->
+<script src="js/particles.js"></script> <!-- ✨ Fondo animado de partículas -->
+<script src="js/oraculo-prisma.js"></script> <!-- 🧠 Funciones mágicas del oráculo -->
+<script src="js/badges.js"></script> <!-- 🏅 Sistema de insignias -->
+
 <script>
-  aumentarVisita('oracle'); // 👈 Esta es la que activa la insignia del Oráculo
+  // 🔓 Esta línea incrementa y activa la insignia al visitar el Oráculo
+  aumentarVisita('oracle');
+</script>
+
+<script>
+  // 🦋 Script para mover la mariposa con el cursor
+  document.addEventListener("mousemove", e => {
+    const cursor = document.querySelector(".cursor-mariposa");
+    if (cursor) {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
+    }
+  });
 </script>
 </body>
 </html>
