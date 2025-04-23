@@ -119,6 +119,18 @@ body.oraculo-prisma-body {
   font-size: 0.9rem;
   color: var(--c-gold);
 }
+.cursor-mariposa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  background: url('../assets/cursor-mariposa.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
 
 @media (max-width: 768px) {
   .oraculo-main {
