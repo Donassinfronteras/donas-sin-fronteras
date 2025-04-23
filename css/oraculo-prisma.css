@@ -2,27 +2,27 @@
    Oráculo Prisma – Universo Prisma Style
    ====================================== */
 
-/* 1. Variables de color */
+/* Variables de color */
 :root {
-  --c-bg:           #0D1B2A; /* azul noche profundo */
-  --c-galaxy:       #4C2A85; /* violeta galaxia */
-  --c-cosmic:       #1A1A2E; /* negro cósmico */
-  --c-turquoise:    #2FCED1; /* turquesa etéreo */
-  --c-pink:         #F784AD; /* rosa aura */
-  --c-lavender:     #B28DFF; /* lavanda bruma */
-  --c-auric:        #82F2B0; /* verde áurico suave */
-  --c-gold:         #FEEABF; /* dorado estelar tenue */
+  --c-bg:           #0D1B2A;
+  --c-galaxy:       #4C2A85;
+  --c-cosmic:       #1A1A2E;
+  --c-turquoise:    #2FCED1;
+  --c-pink:         #F784AD;
+  --c-lavender:     #B28DFF;
+  --c-auric:        #82F2B0;
+  --c-gold:         #FEEABF;
   --font-main:      'Caveat', cursive;
 }
 
-/* 2. Reset y box‑sizing */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 3. Body y fondos */
+/* Body */
 body.oraculo-prisma-body {
   position: relative;
   min-height: 100vh;
@@ -31,9 +31,10 @@ body.oraculo-prisma-body {
   font-family: var(--font-main);
   color: var(--c-gold);
   overflow: hidden;
+  cursor: url('../assets/cursor-mariposa.png') 16 16, auto;
 }
 
-/* 4. Velo de mariposas */
+/* Overlay mariposas */
 .butterfly-overlay {
   pointer-events: none;
   position: absolute;
@@ -45,15 +46,7 @@ body.oraculo-prisma-body {
   z-index: 0;
 }
 
-/* 5. Canvas de partículas */
-#particle-canvas {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 1;
-}
-
-/* 6. Header */
+/* Header */
 .oraculo-header {
   position: relative;
   z-index: 2;
@@ -68,7 +61,7 @@ body.oraculo-prisma-body {
   text-shadow: 0 0 8px var(--c-lavender);
 }
 
-/* 7. Hero y botones */
+/* Botones */
 .oraculo-main {
   position: relative;
   z-index: 2;
@@ -90,25 +83,18 @@ body.oraculo-prisma-body {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
-  transition: 
-    box-shadow 0.4s ease,
-    transform 0.3s ease,
-    background 0.4s ease;
+  transition: box-shadow 0.4s ease, transform 0.3s ease, background 0.4s ease;
 }
-.btn-query   { background: rgba(47,206,209,0.3); } /* turquesa */
-.btn-cards   { background: rgba(178,141,255,0.3); } /* lavanda */
-.btn-guide   { background: rgba(47,206,209,0.3); } /* turquesa */
-.btn-rituals { background: rgba(247,132,173,0.3); } /* rosa */
-
+.btn-query   { background: rgba(47,206,209,0.3); }
+.btn-cards   { background: rgba(178,141,255,0.3); }
+.btn-guide   { background: rgba(47,206,209,0.3); }
+.btn-rituals { background: rgba(247,132,173,0.3); }
 .btn:hover {
   transform: scale(1.05);
-  box-shadow:
-    0 0 20px var(--c-turquoise),
-    0 0 30px var(--c-pink),
-    inset 0 0 5px white;
+  box-shadow: 0 0 20px var(--c-turquoise), 0 0 30px var(--c-pink), inset 0 0 5px white;
 }
 
-/* 8. Footer */
+/* Footer */
 .oraculo-footer {
   position: relative;
   z-index: 2;
@@ -122,7 +108,7 @@ body.oraculo-prisma-body {
   color: var(--c-gold);
 }
 
-/* 9. Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
   .oraculo-main {
     flex-direction: column;
