@@ -81,3 +81,26 @@ body {
     opacity: 0.7;
   }
 }
+.return-btn {
+  text-align: center;
+  margin-top: 1rem;
+  z-index: 3;
+  position: relative;
+}
+
+.return-btn a {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--c-pink), var(--c-lavender));
+  color: var(--c-bg);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.return-btn a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
