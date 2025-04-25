@@ -67,22 +67,23 @@ header {
   gap: 2rem;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(0, 20, 60, 0.5); /* 50% en lugar de 60% */
+  background: rgba(0, 20, 60, 0.5);
   backdrop-filter: blur(6px);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
+.artist-banner {
+  flex: 1 1 300px;
+}
 .artist-image {
-  flex: 1;
-  min-width: 250px;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 .artist-info {
-  flex: 2;
-  min-width: 250px;
+  flex: 2 1 300px;
 }
 .artist-info h2 {
   color: var(--celeste);
@@ -122,7 +123,7 @@ header {
   z-index: 1;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(0, 20, 60, 0.5); /* 50% en lugar de 60% */
+  background: rgba(0, 20, 60, 0.5);
   backdrop-filter: blur(6px);
   padding: 2.5rem 2rem;
   border-radius: 15px;
@@ -207,7 +208,8 @@ header {
     width: 100%;
   }
 }
-/* Ajuste específico solo para el banner en móviles */
+
+/* 11. Ajuste específico solo para el banner en móviles */
 @media (max-width: 768px) {
   .banner-img {
     width: 100%;
@@ -215,5 +217,20 @@ header {
     object-fit: contain;
     margin-bottom: 1.5rem;
     display: block;
+  }
+}
+
+/* 12. Limitamos el banner en desktop y móvil */
+.artist-banner .artist-image,
+.banner-img {
+  max-height: 250px;      /* Altura máxima */
+  width: auto;            /* Ancho automático */
+  margin: 0 auto 1.5rem;  /* Centrado y espacio abajo */
+  object-fit: contain;    /* Mantiene proporción sin recortar */
+  display: block;
+}
+@media (min-width: 769px) {
+  .artist-banner .artist-image {
+    max-height: 300px;    /* Un poco más alto en pantallas grandes */
   }
 }
