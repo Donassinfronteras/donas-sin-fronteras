@@ -33,30 +33,75 @@
     <button class="btn btn-rituals" onclick="alert('Rituales mágicos en construcción 🔮')">Tiradas</button>
   </main>
 
-  <!-- Pie de página -->
-  <footer class="oraculo-footer">
-    <p>&copy; 2025 Doñas sin Fronteras – Oráculo Prisma</p>
+  <!-- Botón para volver al inicio -->
+  <div class="return" style="text-align:center; margin: 2rem 0;">
+    <a href="index.html" class="btn btn-return">← Volver al Inicio</a>
+  </div>
+
+  <!-- Footer completo -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Doñas sin Fronteras</h3>
+        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/donassinfronteras1" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank">TikTok</a>
+          <a href="https://x.com/donasinfrontera" target="_blank">X</a>
+          <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-<!-- Scripts mágicos -->
-<script src="js/particles.js"></script> <!-- ✨ Fondo animado de partículas -->
-<script src="js/oraculo-prisma.js"></script> <!-- 🧠 Funciones mágicas del oráculo -->
-<script src="js/badges.js"></script> <!-- 🏅 Sistema de insignias -->
+  <!-- Scripts mágicos -->
+  <script src="js/particles.js"></script>
+  <script src="js/oraculo-prisma.js"></script>
+  <script src="js/badges.js"></script>
 
-<script>
-  // 🔓 Esta línea incrementa y activa la insignia al visitar el Oráculo
-  aumentarVisita('oracle');
-</script>
+  <script>
+    // 🔓 Esta línea incrementa y activa la insignia al visitar el Oráculo
+    aumentarVisita('oracle');
+  </script>
 
-<script>
-  // 🦋 Script para mover la mariposa con el cursor
-  document.addEventListener("mousemove", e => {
-    const cursor = document.querySelector(".cursor-mariposa");
-    if (cursor) {
-      cursor.style.top = `${e.clientY}px`;
-      cursor.style.left = `${e.clientX}px`;
-    }
-  });
-</script>
+  <script>
+    // 🦋 Script para mover la mariposa con el cursor
+    document.addEventListener("mousemove", e => {
+      const cursor = document.querySelector(".cursor-mariposa");
+      if (cursor) {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+      }
+    });
+  </script>
+
+  <!-- 🧿 Script de seguimiento Metricool -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://tracker.metricool.com/resources/be.js";
+      script.onload = function () {
+        beTracker.t({ hash: "99f2f6631f8d7b7b2f039fbaf9e1b94c" });
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
 </body>
 </html>
