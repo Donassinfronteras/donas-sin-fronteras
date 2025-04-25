@@ -1,12 +1,12 @@
 /* ==============================
    Canciones – Elegancia Oceánica
-   (fondo más claro y velo 40%)
+   (véase banner contenido)
    ============================== */
 
 /* 1. Variables de color */
 :root {
-  --azul-marino:   #00284d; /* ligeramente más claro */
-  --azul-profundo: #003a66; /* ligeramente más claro */
+  --azul-marino:   #00284d;
+  --azul-profundo: #003a66;
   --turquesa:      #38b2ac;
   --celeste:       #81d4fa;
   --blanco-espuma: #e0f7fa;
@@ -30,11 +30,11 @@ body.pagina-canciones {
   min-height: 100vh;
   padding-bottom: 3rem;
 }
-body.pagina-canciones .overlay {
+.overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 32, 0.4); /* 40% en lugar de 60% */
+  background: rgba(0, 0, 32, 0.4);
   backdrop-filter: blur(4px);
   z-index: 0;
 }
@@ -74,7 +74,7 @@ header {
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 .artist-banner {
-  flex: 1 1 300px;
+  flex: 1 1 100%;
 }
 .artist-image {
   width: 100%;
@@ -83,7 +83,7 @@ header {
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 .artist-info {
-  flex: 2 1 300px;
+  flex: 1 1 100%;
 }
 .artist-info h2 {
   color: var(--celeste);
@@ -99,6 +99,7 @@ header {
 .artist-info p {
   color: var(--blanco-espuma);
   margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 .artist-info h4 {
   color: var(--celeste);
@@ -115,6 +116,12 @@ header {
 .artist-info a:hover {
   color: var(--celeste);
   text-decoration: underline;
+}
+.iframe-container {
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* 6. Listado de canciones */
@@ -157,9 +164,8 @@ header {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* 8. Contenedores de iframe dentro de las cartas */
+/* 8. Contenedor de iframe */
 .song-list .song-card .iframe-container {
-  position: relative;
   margin: 1rem 0 0;
   border-radius: 12px;
   overflow: hidden;
@@ -192,13 +198,10 @@ header {
   transform: scale(1.05);
 }
 
-/* 10. Responsive */
+/* 10. Responsive general */
 @media (max-width: 768px) {
   .artist-profile {
     flex-direction: column;
-  }
-  .artist-image {
-    margin: 0 auto 1rem;
   }
   .song-list, .song-card {
     margin: 1rem;
@@ -209,28 +212,18 @@ header {
   }
 }
 
-/* 11. Ajuste específico solo para el banner en móviles */
-@media (max-width: 768px) {
-  .banner-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 1.5rem;
-    display: block;
-  }
-}
-
-/* 12. Limitamos el banner en desktop y móvil */
+/* 11. Ajuste banner: ocupa toda la fila y altura contenida */
 .artist-banner .artist-image,
 .banner-img {
-  max-height: 250px;      /* Altura máxima */
-  width: auto;            /* Ancho automático */
-  margin: 0 auto 1.5rem;  /* Centrado y espacio abajo */
-  object-fit: contain;    /* Mantiene proporción sin recortar */
+  width: 100%;
+  height: auto;
+  max-height: 150px;      /* Ajuste: altura máxima reducida */
+  margin: 0 auto 1rem;
+  object-fit: contain;
   display: block;
 }
 @media (min-width: 769px) {
   .artist-banner .artist-image {
-    max-height: 300px;    /* Un poco más alto en pantallas grandes */
+    max-height: 200px;    /* Un poco más alto en pantallas grandes */
   }
 }
