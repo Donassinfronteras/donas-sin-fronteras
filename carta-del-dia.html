@@ -52,5 +52,18 @@
         console.error(err);
       });
   </script>
+
+  <!-- 🔮 Script de seguimiento Metricool -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://tracker.metricool.com/resources/be.js";
+      script.onload = function () {
+        beTracker.t({ hash: "99f2f6631f8d7b7b2f039fbaf9e1b94c" });
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
 </body>
 </html>
