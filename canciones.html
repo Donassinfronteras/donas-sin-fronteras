@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canciones – Doñas sin Fronteras</title>
-  
+
   <!-- Fuente mágica -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Estilos globales y específicos -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/canciones.css" />
-</head>
-<body class="pagina-canciones">
 
-  <!-- Overlay semitransparente -->
+  <!-- 🔮 Tracking de Metricool -->
+  <script>
+    function loadScript(a){
+      var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+      c.type = "text/javascript",
+      c.src = "https://tracker.metricool.com/resources/be.js",
+      c.onreadystatechange = a,
+      c.onload = a,
+      b.appendChild(c);
+    }
+    loadScript(function(){
+      beTracker.t({ hash: "99f2f6631f8d7b7b2f039fbaf9e1b94c" });
+    });
+  </script>
+</head>
+
+<body class="pagina-canciones">
+  <!-- Mariposa mágica que sigue el cursor -->
+  <div class="cursor-mariposa"></div>
+
+  <!-- Overlay decorativo -->
   <div class="overlay"></div>
 
   <header>
@@ -27,43 +46,40 @@
   </header>
 
   <main>
-    <!-- Perfil de artista con banner -->
+    <!-- Perfil de artista -->
     <section class="artist-profile">
       <img src="assets/banner.png" alt="Banner Bruxa Tarot DJ" class="artist-image banner-img" />
-        <h2>Bruxa Tarot</h2>
-        <h3>La Voz que Quema en Silencio</h3>
-        <p>
-          Desde la sombra de cada canción, su alma mezcla el dolor con la belleza.<br>
-          Cada beat… una cicatriz. Cada letra… un hechizo.<br>
-          No canta… pero conjura melodías que despiertan almas dormidas.
-        </p>
-        <h4>Perfil de Artista</h4>
-        <p><strong>Apple Music:</strong>
-          <a href="https://music.apple.com/us/artist/bruxa-tarot/1796078622" target="_blank">
-            apple.com/artist/bruxa-tarot
-          </a>
-        </p>
-        <div class="iframe-container">
-          <iframe style="border-radius:12px"
-                  src="https://open.spotify.com/embed/artist/6TWzQZohtDAZm27FKQEjKo?utm_source=generator"
-                  width="100%" height="152" frameborder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"></iframe>
-        </div>
-        <div class="iframe-container">
-          <iframe id="AmazonMusicEmbedB0DWY8J371"
-                  src="https://music.amazon.es/embed/B0DWY8J371/?id=yzlE0EIeDE&marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES"
-                  width="100%" height="352" frameborder="0" style="border-radius:20px"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-          </iframe>
-        </div>
+      <h2>Bruxa Tarot</h2>
+      <h3>La Voz que Quema en Silencio</h3>
+      <p>
+        Desde la sombra de cada canción, su alma mezcla el dolor con la belleza.<br>
+        Cada beat… una cicatriz. Cada letra… un hechizo.<br>
+        No canta… pero conjura melodías que despiertan almas dormidas.
+      </p>
+      <h4>Perfil de Artista</h4>
+      <p><strong>Apple Music:</strong>
+        <a href="https://music.apple.com/us/artist/bruxa-tarot/1796078622" target="_blank">
+          apple.com/artist/bruxa-tarot
+        </a>
+      </p>
+      <div class="iframe-container">
+        <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/artist/6TWzQZohtDAZm27FKQEjKo?utm_source=generator"
+                width="100%" height="152" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+      </div>
+      <div class="iframe-container">
+        <iframe id="AmazonMusicEmbedB0DWY8J371"
+                src="https://music.amazon.es/embed/B0DWY8J371/?id=yzlE0EIeDE&marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES"
+                width="100%" height="352" frameborder="0" style="border-radius:20px"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
       </div>
     </section>
 
-    <!-- Listado de canciones -->
+    <!-- Canciones -->
     <section class="song-list">
-
-      <!-- Cada bloque .song-card engloba título, texto e iframe -->
       <div class="song-card">
         <h2>Doñas Sin Fronteras</h2>
         <p>“Donde las historias sanan, y las doñas sueñan sin límites.”</p>
@@ -183,19 +199,27 @@
                   loading="lazy"></iframe>
         </div>
       </div>
-
     </section>
 
-    <!-- Botón de regreso -->
+    <!-- Volver -->
     <div class="return">
       <a href="portal-magico.html">← Volver al Portal Mágico</a>
     </div>
   </main>
 
-  <!-- Scripts mágicos para badges -->
+  <!-- Scripts -->
   <script src="js/badges.js"></script>
   <script>
     aumentarVisita("song");
+  </script>
+  <script>
+    document.addEventListener("mousemove", e => {
+      const cursor = document.querySelector(".cursor-mariposa");
+      if (cursor) {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+      }
+    });
   </script>
 </body>
 </html>
