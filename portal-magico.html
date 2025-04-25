@@ -4,9 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doñas sin Fronteras – Portal Mágico</title>
+
+  <!-- Fuente Caveat -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/portal-magico.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- 🔮 Tracking de Metricool -->
+  <script>
+    function loadScript(a){
+      var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+      c.type = "text/javascript",
+      c.src = "https://tracker.metricool.com/resources/be.js",
+      c.onreadystatechange = a,
+      c.onload = a,
+      b.appendChild(c);
+    }
+    loadScript(function(){
+      beTracker.t({ hash: "99f2f6631f8d7b7b2f039fbaf9e1b94c" });
+    });
+  </script>
 </head>
 
 <body class="portal-magico-body">
@@ -25,17 +45,17 @@
   </header>
 
   <main class="portal-container">
-    <!-- Bloque semitransparente con reseña -->
+    <!-- Intro mágica -->
     <section class="intro">
       <h2>Portal Mágico</h2>
       <p>Bienvenido al Portal Mágico de Doñas sin Fronteras, un espacio donde compartimos recursos, emociones y contenido creado con amor y un toque de brujería bonita.</p>
       <p>Explora los portales que hemos creado para ti. Cada uno es una puerta abierta a historias, canciones y aventuras hechas desde el alma.</p>
     </section>
 
-    <!-- Mariposa gloriosa -->
+    <!-- Mariposa central decorativa -->
     <div class="mariposa-central"></div>
 
-    <!-- Botones mágicos -->
+    <!-- Botones de acceso a portales -->
     <section class="portales">
       <a href="audioaventura.html" class="btn-portal">AudioAventuras</a>
       <a href="canciones.html" class="btn-portal">Canciones</a>
@@ -43,11 +63,11 @@
       <a href="recursos.html" class="btn-portal">Recursos y Descargas</a>
     </section>
 
-    <!-- Galería de logros mágicos -->
+    <!-- Galería de insignias -->
     <section class="galeria-logros-footer">
       <h3>Desbloquea tus logros visitando los portales del sitio</h3>
       <div class="badges-gallery" id="badgesGallery">
-        <!-- Badges se insertan por JS -->
+        <!-- Las insignias se insertan por JavaScript -->
       </div>
     </section>
   </main>
@@ -82,7 +102,22 @@
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Scripts mágicos -->
   <script src="js/mariposa-cursor.js"></script>
   <script src="js/badges.js"></script>
+  <script>
+    // 🧭 Activamos la insignia del Portal Mágico
+    aumentarVisita("explorer");
+  </script>
+  <script>
+    // 🦋 Seguimiento visual del cursor mariposa
+    document.addEventListener("mousemove", e => {
+      const cursor = document.querySelector(".cursor-mariposa");
+      if (cursor) {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+      }
+    });
+  </script>
 </body>
 </html>
