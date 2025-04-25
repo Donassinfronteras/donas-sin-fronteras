@@ -12,6 +12,22 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/podcast.css" />
   <link rel="stylesheet" href="css/social-icons.css" />
+
+  <!-- Tracking de Metricool -->
+  <script>
+    function loadScript(a){
+      var b=document.getElementsByTagName("head")[0],
+          c=document.createElement("script");
+      c.type="text/javascript",
+      c.src="https://tracker.metricool.com/resources/be.js",
+      c.onreadystatechange=a,
+      c.onload=a,
+      b.appendChild(c)
+    }
+    loadScript(function(){
+      beTracker.t({hash:"99f2f6631f8d7b7b2f039fbaf9e1b94c"});
+    });
+  </script>
 </head>
 
 <body class="pagina-podcast">
