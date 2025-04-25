@@ -41,7 +41,7 @@
       <ul class="chapters">
         <li><strong>Capítulo 1</strong><a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=f15fc8d0d0154d15" target="_blank">Escuchar</a></li>
         <li><strong>Capítulo 2</strong><a href="https://open.spotify.com/episode/5KRLfbXXkSWhZwgMvrmaHB?si=e67c6ae699ff4831" target="_blank">Escuchar</a></li>
-        <li><strong>Capítulo 3</strong><span class="coming-soon">Próximamente</span></li>
+        <li><strong>Capítulo 3</strong><a href="https://open.spotify.com/episode/0z2rWBxoEt6ScxOD9jk53i?si=1db9739a95c548b6" target="_blank">Escuchar</a</li>
         <li><strong>Capítulo 4</strong><span class="coming-soon">Próximamente</span></li>
         <li><strong>Capítulo 5</strong><span class="coming-soon">Próximamente</span></li>
       </ul>
@@ -91,11 +91,24 @@
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Scripts mágicos para badges -->
+   <!-- Scripts mágicos para badges -->
   <script src="js/badges.js"></script>
   <script>
     // Suma 1 visita al badge "explorer" (Mapa de Realidades)
     aumentarVisita("explorer");
+  </script>
+
+  <!-- 🔍 Script de seguimiento Metricool -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://tracker.metricool.com/resources/be.js";
+      script.onload = function () {
+        beTracker.t({ hash: "99f2f6631f8d7b7b2f039fbaf9e1b94c" });
+      };
+      document.head.appendChild(script);
+    })();
   </script>
 </body>
 </html>
