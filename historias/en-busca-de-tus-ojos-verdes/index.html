@@ -1,86 +1,106 @@
-<!-- Por favorcito, con azúcar en el top 🍭 -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biblioteca de Historias – Doñas Sin Fronteras</title>
+  <title>En busca de tus ojos verdes</title>
+
   <!-- Fuentes -->
   <link
     href="https://fonts.googleapis.com/css2?family=Modern+Love&family=Caveat:wght@400;700&display=swap"
     rel="stylesheet"
   />
-  <!-- CSS específico para índice de historias -->
+
+  <!-- Tema específico -->
   <link
     rel="stylesheet"
     href="css/index.css"
   />
 </head>
-<body class="stories-index">
+<body>
+  <!-- Header con título y navegación -->
+  <header>
+    <h1>En busca de tus ojos verdes</h1>
+    <nav class="nav-capitulos">
+      <a href="../index.html">← Biblioteca</a>
+      <a href="capitulo-1.html" class="active">Capítulo 1</a>
+    </nav>
+  </header>
 
-  <!-- Banner general de la biblioteca -->
-  <div class="main-banner">
+  <!-- Hero banner -->
+  <div class="story-banner">
     <div class="banner-overlay"></div>
     <img
-      src="assets/banner-historias.jpg"
-      alt="Banner Biblioteca de Historias"
+      src="assets/banner-en-busca.jpeg"
+      alt="Marta y Tony en las escaleras"
       class="banner-img"
     />
     <div class="banner-text">
-      <h1>Doñas Sin Fronteras</h1>
-      <p>Historias para leer y escuchar</p>
+      <h1>En Busca De Tus Ojos Verdes</h1>
+      <p>Una Audioaventura de 5 capítulos</p>
     </div>
   </div>
 
-  <div class="container">
-    <!-- Encabezado -->
-    <header class="stories-header">
-      <h1>Biblioteca de Historias</h1>
-      <p>Explora nuestras audioaventuras y relatos escritos</p>
-    </header>
-
-    <!-- Grid de historias -->
-    <section class="stories-library">
-      <!-- Historia 1 -->
-      <article class="story-card">
-        <img
-          src="en-busca-de-tus-ojos-verdes/assets/banner-en-busca.jpeg"
-          alt="En busca de tus ojos verdes"
-        />
-        <div class="story-card-content">
-          <h3>En busca de tus ojos verdes</h3>
-          <p>Audioaventura de ilusión, reencuentros y decisiones.</p>
-        </div>
-        <div class="story-card-actions">
-          <a href="en-busca-de-tus-ojos-verdes/capitulo-1.html">Leer</a>
-          <a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=ef0b14d2b07d4036">Escuchar</a>
-        </div>
-      </article>
-
-      <!-- Historia 2 -->
-      <article class="story-card">
-        <img
-          src="susurros-de-mi-alma/assets/cover-susurros.jpeg"
-          alt="Susurros de mi alma"
-        />
-        <div class="story-card-content">
-          <h3>Susurros de mi alma</h3>
-          <p>Una historia que no solo se escucha... se siente.</p>
-        </div>
-        <div class="story-card-actions">
-          <a href="susurros-de-mi-alma/index.html">Leer</a>
-          <a href="../../podcast-link-susurros">Escuchar</a>
-        </div>
-      </article>
-
-      <!-- Agrega más historias aquí siguiendo la misma estructura -->
-
+  <!-- Introducción y opciones -->
+  <main class="container">
+    <section class="capitulo-intro">
+      <h2>Audioaventura • 5 capítulos</h2>
+      <p><em>Por Bruxa Tarot</em></p>
+      <div class="options">
+        <a class="btn-audio" href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=bffa0e02a68c47a5">▶️ Escuchar Capítulo 1</a>
+        <a class="btn-lectura" href="capitulo-1.html">📖 Leer Capítulo 1</a>
+      </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer class="stories-footer">
-      <p>© 2025 Doñas Sin Fronteras</p>
-    </footer>
-  </div>
+    <!-- Divisor -->
+    <div class="divider"></div>
+
+    <!-- Lista de capítulos -->
+    <section class="chapter-list">
+      <h3>Capítulos</h3>
+      <ul>
+        <li>
+          <strong>Capítulo 1 – Las Escaleras</strong>
+          <div>
+            <a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=bffa0e02a68c47a5">▶️ Escuchar</a>
+            <a href="capitulo-1.html">📖 Leer</a>
+          </div>
+        </li>
+        <li>
+          <strong>Capítulo 2 – El Encuentro</strong>
+          <div>
+            <a href="https://open.spotify.com/episode/5KRLfbXXkSWhZwgMvrmaHB?si=bedf236835cb4f3b">▶️ Escuchar</a>
+            <a href="capitulo-2.html">📖 Leer</a>
+          </div>
+        </li>
+        <li>
+          <strong>Capítulo 3 – La Confesión</strong>
+          <div>
+            <a href="https://open.spotify.com/episode/0z2rWBxoEt6ScxOD9jk53i?si=0eaf2fd43d0b4153">▶️ Escuchar</a>
+            <a href="capitulo-3.html">📖 Leer</a>
+          </div>
+        </li>
+        <li>
+          <strong>Capítulo 4 – Entre ilusión y realidad</strong>
+          <div>
+            <a href="https://open.spotify.com/episode/4DOgksBjqmiokZGsGslztn?si=4dcc8c20cba84191">▶️ Escuchar</a>
+            <a href="capitulo-4.html">📖 Leer</a>
+          </div>
+        </li>
+        <li class="coming-soon">
+          <strong>Capítulo 5 – Decisiones y cambios</strong>
+          <div>
+            <span>▶️ Próximamente</span>
+            <span>📖 Próximamente</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Doñas Sin Fronteras</p>
+  </footer>
 </body>
 </html>
