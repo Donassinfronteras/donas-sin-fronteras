@@ -1,38 +1,71 @@
-<body class="solo-index">
-  <!-- Hero banner con la imagen que elijas -->
-  <div class="main-banner">
-    <div class="banner-overlay"></div>
-    <img src="assets/banner-historias.jpg" alt="Título o descripción" class="banner-img"/>
-    <div class="banner-text">
-      <h1>Doñas Sin Fronteras</h1>
-      <p>Historias, risas y anécdotas que cruzan cualquier frontera</p>
-    </div>
+<!-- Por favorcito, con azúcar en el top 🍭 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biblioteca de Historias – Doñas Sin Fronteras</title>
+  <!-- Fuentes -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Modern+Love&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- CSS específico para índice de historias -->
+  <link
+    rel="stylesheet"
+    href="css/historias-index.css"
+  />
+</head>
+<body class="stories-index">
+  <div class="container">
+    <!-- Encabezado -->
+    <header class="stories-header">
+      <h1>Biblioteca de Historias</h1>
+      <p>Historias para leer y escuchar</p>
+    </header>
+
+    <!-- Grid de historias -->
+    <section class="stories-library">
+      <!-- Historia 1 -->
+      <article class="story-card">
+        <img
+          src="en-busca-de-tus-ojos-verdes/assets/banner-en-busca.jpeg"
+          alt="En busca de tus ojos verdes"
+        />
+        <div class="story-card-content">
+          <h3>En busca de tus ojos verdes</h3>
+          <p>Audioaventura de ilusión, reencuentros y decisiones.</p>
+        </div>
+        <div class="story-card-actions">
+          <a href="en-busca-de-tus-ojos-verdes/index.html">Leer</a>
+          <a href="../../podcast-link-cap1">Escuchar</a>
+        </div>
+      </article>
+
+      <!-- Historia 2 -->
+      <article class="story-card">
+        <img
+          src="susurros-de-mi-alma/assets/cover-susurros.jpeg"
+          alt="Susurros de mi alma"
+        />
+        <div class="story-card-content">
+          <h3>Susurros de mi alma</h3>
+          <p>Una historia que no solo se escucha... se siente.</p>
+        </div>
+        <div class="story-card-actions">
+          <a href="susurros-de-mi-alma/index.html">Leer</a>
+          <a href="../../podcast-link-susurros">Escuchar</a>
+        </div>
+      </article>
+
+      <!-- Agrega más historias aquí siguiendo la misma estructura -->
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="stories-footer">
+      <p>© 2025 Doñas Sin Fronteras</p>
+    </footer>
   </div>
-
-  <!-- Sección “Quiénes somos” o introducción breve -->
-  <section class="quienes-somos container">
-    <h2>Bienvenidas a nuestro podcast</h2>
-    <p>Somos las doñas que no le temen a nada… ¡ni a los comentarios más impertinentes!</p>
-  </section>
-
-  <!-- Sección de historias / audioaventuras -->
-  <section class="audio-adventures container">
-    <h2>Nuestras audioaventuras</h2>
-    <ul class="chapters">
-      <li>
-        <strong>En busca de tus ojos verdes</strong>
-        <a href="historias/en-busca-de-tus-ojos-verdes/">Leer & Escuchar</a>
-      </li>
-      <li>
-        <strong>Susurros de mi alma</strong>
-        <a href="historias/susurros-de-mi-alma/">Leer & Escuchar</a>
-      </li>
-      <!-- más historias -->
-    </ul>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Doñas Sin Fronteras</p>
-  </footer>
 </body>
+</html>
