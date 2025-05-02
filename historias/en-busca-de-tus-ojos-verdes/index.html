@@ -4,25 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>En busca de tus ojos verdes</title>
-
-  <!-- Reset + Variables + Global (si los usas) -->
   <link rel="stylesheet" href="../../css/reset.css" />
   <link rel="stylesheet" href="../../css/variables.css" />
   <link rel="stylesheet" href="../../css/global.css" />
-
-  <!-- CSS específico de esta historia -->
   <link rel="stylesheet" href="css/en-busca-de-tus-ojos-verdes.css" />
 </head>
 <body>
-  <header>
-    <h1>En busca de tus ojos verdes</h1>
-    <p><em>Por Bruxa Tarot</em></p>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">En busca de tus ojos verdes</h1>
+      <nav class="site-nav">
+        <a href="../../index.html">Inicio</a>
+        <a href="../../podcast-link">Podcast</a>
+        <a href="index.html" class="active">Leer historia</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <p>Una audioaventura de 5 capítulos sobre ilusión, reencuentros y decisiones que cambian el destino.</p>
-    <a href="../../podcast-link">▶️ Escúchalo aquí</a>
-    <a href="capitulo-1.html">📖 Leer Capítulo 1</a>
-  </section>
+  <main class="container">
+    <!-- Intro de la historia -->
+    <section class="story-intro">
+      <h2>Una audioaventura de 5 capítulos</h2>
+      <p>Ilusión, reencuentros y decisiones que cambian el destino.  
+      Elige cómo seguirla:</p>
+      <p class="options">
+        <a class="btn-audio" href="../../podcast-link">▶️ Escuchar en audio</a>
+        <a class="btn-lectura" href="capitulo-1.html">📖 Leer Capítulo 1</a>
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- Lista de capítulos -->
+    <section class="chapter-list">
+      <h3>Capítulos</h3>
+      <ul>
+        <li>
+          <strong>Capítulo 1 – El Puente</strong><br>
+          <a href="../../podcast-link-cap1">▶️ Escuchar</a>
+          <a href="capitulo-1.html">📖 Leer</a>
+        </li>
+        <li>
+          <strong>Capítulo 2 – El Encuentro</strong><br>
+          <a href="../../podcast-link-cap2">▶️ Escuchar</a>
+          <a href="capitulo-2.html">📖 Leer</a>
+        </li>
+        <li>
+          <strong>Capítulo 3 – La Confesión</strong><br>
+          <a href="../../podcast-link-cap3">▶️ Escuchar</a>
+          <a href="capitulo-3.html">📖 Leer</a>
+        </li>
+        <li>
+          <strong>Capítulo 4 – Entre ilusión y realidad</strong><br>
+          <a href="../../podcast-link-cap4">▶️ Escuchar</a>
+          <a href="capitulo-4.html">📖 Leer</a>
+        </li>
+        <li>
+          <strong>Capítulo 5 – Decisiones y cambios</strong><br>
+          <span>▶️ Próximamente</span>
+          <span>📖 Próximamente</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Doñas Sin Fronteras • <a href="../../privacy.html">Política de privacidad</a></p>
+    </div>
+  </footer>
 </body>
 </html>
