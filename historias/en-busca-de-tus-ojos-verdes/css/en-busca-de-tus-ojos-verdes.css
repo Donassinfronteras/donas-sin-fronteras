@@ -1,31 +1,39 @@
-/* Colores del tema */
-:root {
-  --color-principal: #4caf50; /* verde hoja */
-  --color-fondo: #f9f9f9;
-}
-
-/* Estilos de portada */
+/* 1) Tipografía general: texto en Times New Roman */
 body {
-  background: var(--color-fondo);
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--color-fondo, #f9f9f9);
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-header h1 {
+/* 2) Títulos con tu fuente especial */
+h1, h2, h3 {
   font-family: 'Modern Love', cursive;
-  color: var(--color-principal);
+  color: var(--color-principal, #4caf50);
+  margin-bottom: 0.5em;
 }
 
-/* Enlaces “Leer” */
+/* 3) Enlaces “Leer” destacados */
 a[href$="capitulo-1.html"] {
-  background: var(--color-principal);
+  display: inline-block;
+  background: var(--color-principal, #4caf50);
   color: white;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 4px;
   text-decoration: none;
+  margin-top: 1em;
 }
 
-/* Ajustes de párrafo, márgenes, etc. */
-main p {
+/* 4) Párrafos y espaciado */
+p {
   line-height: 1.6;
   margin-bottom: 1em;
+  font-size: 1rem;
+}
+
+/* 5) Ajustes adicionales (opcional) */
+header {
+  text-align: center;
+  padding: 2em 1em;
 }
