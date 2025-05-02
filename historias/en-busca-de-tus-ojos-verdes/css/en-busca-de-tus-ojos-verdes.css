@@ -31,6 +31,21 @@ p {
   margin-bottom: 1em;
   font-size: 1rem;
 }
+.enlaces-capitulos ul {
+  list-style: none;
+  padding: 0;
+}
+.enlaces-capitulos li {
+  margin-bottom: 0.5em;
+}
+.enlaces-capitulos a {
+  text-decoration: none;
+  color: var(--color-principal);
+}
+.enlaces-capitulos a:hover {
+  text-decoration: underline;
+}
+
 
 /* 5) Ajustes adicionales (opcional) */
 header {
