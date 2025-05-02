@@ -1,0 +1,150 @@
+/* ===================================================================
+   historias-index.css
+   Estilos para el “Índice de Historias” (biblioteca)
+   =================================================================== */
+
+/* —————— Variables de color —————— */
+:root {
+  --verde-oscuro:  #1b3923;
+  --verde-medio:   #2d6a4f;
+  --verde-claro:   #74b49b;
+  --gris-claro:    #f9f9f9;
+  --gris-medio:    #dddddd;
+  --texto-principal: #333333;
+  --texto-secundario: #666666;
+  --blanco:        #ffffff;
+}
+
+/* —————— Reset básico —————— */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* —————— Base del cuerpo —————— */
+body.stories-index {
+  font-family: "Georgia", serif;
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+/* —————— Contenedor general —————— */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* ===================================================================
+   Encabezado de sección
+   =================================================================== */
+.stories-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.stories-header h1 {
+  font-family: "Modern Love", cursive;
+  font-size: 2.8rem;
+  color: var(--verde-medio);
+  margin-bottom: 0.5rem;
+}
+.stories-header p {
+  color: var(--texto-secundario);
+  font-size: 1.1rem;
+}
+
+/* ===================================================================
+   Grid de historias
+   =================================================================== */
+.stories-library {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* ===================================================================
+   Tarjeta de historia individual
+   =================================================================== */
+.story-card {
+  background-color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.story-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.story-card-content {
+  flex: 1;
+  padding: 1rem;
+}
+.story-card-content h3 {
+  font-family: "Modern Love", cursive;
+  color: var(--verde-oscuro);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.story-card-content p {
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* ===================================================================
+   Acciones de la tarjeta (Leer / Escuchar)
+   =================================================================== */
+.story-card-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75rem;
+  background-color: var(--gris-medio);
+}
+.story-card-actions a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--blanco);
+  background-color: var(--verde-medio);
+  transition: background 0.2s;
+}
+.story-card-actions a:hover {
+  background-color: var(--verde-oscuro);
+}
+
+/* ===================================================================
+   Footer de la sección (opcional)
+   =================================================================== */
+.stories-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+.stories-footer p {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+/* ===================================================================
+   Responsive tweaks
+   =================================================================== */
+@media (max-width: 576px) {
+  .story-card img {
+    height: 140px;
+  }
+  .story-card-content h3 {
+    font-size: 1.2rem;
+  }
+}
