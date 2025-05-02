@@ -1,77 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>En busca de tus ojos verdes</title>
-  <link rel="stylesheet" href="../../css/reset.css" />
-  <link rel="stylesheet" href="../../css/variables.css" />
-  <link rel="stylesheet" href="../../css/global.css" />
-  <link rel="stylesheet" href="css/en-busca-de-tus-ojos-verdes.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">En busca de tus ojos verdes</h1>
-      <nav class="site-nav">
-        <a href="../../index.html">Inicio</a>
-        <a href="../../podcast-link">Podcast</a>
-        <a href="index.html" class="active">Leer historia</a>
-      </nav>
+<body class="solo-index">
+  <!-- Hero banner con la imagen que elijas -->
+  <div class="main-banner">
+    <div class="banner-overlay"></div>
+    <img src="assets/banner-historias.jpg" alt="Título o descripción" class="banner-img"/>
+    <div class="banner-text">
+      <h1>Doñas Sin Fronteras</h1>
+      <p>Historias, risas y anécdotas que cruzan cualquier frontera</p>
     </div>
-  </header>
+  </div>
 
-  <main class="container">
-    <!-- Intro de la historia -->
-    <section class="story-intro">
-      <h2>Una audioaventura de 5 capítulos</h2>
-      <p>Ilusión, reencuentros y decisiones que cambian el destino.  
-      Elige cómo seguirla:</p>
-      <p class="options">
-        <a class="btn-audio" href="../../podcast-link">▶️ Escuchar en audio</a>
-        <a class="btn-lectura" href="capitulo-1.html">📖 Leer Capítulo 1</a>
-      </p>
-    </section>
+  <!-- Sección “Quiénes somos” o introducción breve -->
+  <section class="quienes-somos container">
+    <h2>Bienvenidas a nuestro podcast</h2>
+    <p>Somos las doñas que no le temen a nada… ¡ni a los comentarios más impertinentes!</p>
+  </section>
 
-    <hr>
+  <!-- Sección de historias / audioaventuras -->
+  <section class="audio-adventures container">
+    <h2>Nuestras audioaventuras</h2>
+    <ul class="chapters">
+      <li>
+        <strong>En busca de tus ojos verdes</strong>
+        <a href="historias/en-busca-de-tus-ojos-verdes/">Leer & Escuchar</a>
+      </li>
+      <li>
+        <strong>Susurros de mi alma</strong>
+        <a href="historias/susurros-de-mi-alma/">Leer & Escuchar</a>
+      </li>
+      <!-- más historias -->
+    </ul>
+  </section>
 
-    <!-- Lista de capítulos -->
-    <section class="chapter-list">
-      <h3>Capítulos</h3>
-      <ul>
-        <li>
-          <strong>Capítulo 1 – El Puente</strong><br>
-          <a href="../../podcast-link-cap1">▶️ Escuchar</a>
-          <a href="capitulo-1.html">📖 Leer</a>
-        </li>
-        <li>
-          <strong>Capítulo 2 – El Encuentro</strong><br>
-          <a href="../../podcast-link-cap2">▶️ Escuchar</a>
-          <a href="capitulo-2.html">📖 Leer</a>
-        </li>
-        <li>
-          <strong>Capítulo 3 – La Confesión</strong><br>
-          <a href="../../podcast-link-cap3">▶️ Escuchar</a>
-          <a href="capitulo-3.html">📖 Leer</a>
-        </li>
-        <li>
-          <strong>Capítulo 4 – Entre ilusión y realidad</strong><br>
-          <a href="../../podcast-link-cap4">▶️ Escuchar</a>
-          <a href="capitulo-4.html">📖 Leer</a>
-        </li>
-        <li>
-          <strong>Capítulo 5 – Decisiones y cambios</strong><br>
-          <span>▶️ Próximamente</span>
-          <span>📖 Próximamente</span>
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Doñas Sin Fronteras • <a href="../../privacy.html">Política de privacidad</a></p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Doñas Sin Fronteras</p>
   </footer>
 </body>
-</html>
