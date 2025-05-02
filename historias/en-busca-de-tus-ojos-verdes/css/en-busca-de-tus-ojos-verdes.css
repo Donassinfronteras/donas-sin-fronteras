@@ -1,0 +1,31 @@
+/* Colores del tema */
+:root {
+  --color-principal: #4caf50; /* verde hoja */
+  --color-fondo: #f9f9f9;
+}
+
+/* Estilos de portada */
+body {
+  background: var(--color-fondo);
+  color: #333;
+}
+
+header h1 {
+  font-family: 'Modern Love', cursive;
+  color: var(--color-principal);
+}
+
+/* Enlaces “Leer” */
+a[href$="capitulo-1.html"] {
+  background: var(--color-principal);
+  color: white;
+  padding: .5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Ajustes de párrafo, márgenes, etc. */
+main p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
