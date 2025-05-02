@@ -1,54 +1,99 @@
-/* 1) Tipografía general: texto en Times New Roman */
+/* Contenedor central */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Reset del body y tipografía */
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: var(--color-fondo, #f9f9f9);
+  background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #2d4059;
+  color: white;
+  padding: 1rem 0;
+}
+.site-title {
   margin: 0;
-  padding: 0;
-}
-
-/* 2) Títulos con tu fuente especial */
-h1, h2, h3 {
   font-family: 'Modern Love', cursive;
-  color: var(--color-principal, #4caf50);
-  margin-bottom: 0.5em;
+  font-size: 2rem;
+}
+.site-nav {
+  margin-top: 0.5rem;
+}
+.site-nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.site-nav a.active {
+  text-decoration: underline;
 }
 
-/* 3) Enlaces “Leer” destacados */
-a[href$="capitulo-1.html"] {
+/* Introducción */
+.story-intro h2 {
+  font-family: 'Modern Love', cursive;
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+}
+.options a {
   display: inline-block;
-  background: var(--color-principal, #4caf50);
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+.btn-audio {
+  background: #38b2ac;
   color: white;
   padding: 0.5em 1em;
   border-radius: 4px;
   text-decoration: none;
-  margin-top: 1em;
+}
+.btn-lectura {
+  background: #4caf50;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-/* 4) Párrafos y espaciado */
-p {
-  line-height: 1.6;
-  margin-bottom: 1em;
-  font-size: 1rem;
+/* Lista de capítulos */
+.chapter-list h3 {
+  font-family: 'Modern Love', cursive;
+  color: #4caf50;
+  margin-bottom: 1rem;
 }
-.enlaces-capitulos ul {
+.chapter-list ul {
   list-style: none;
   padding: 0;
 }
-.enlaces-capitulos li {
-  margin-bottom: 0.5em;
+.chapter-list li {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
-.enlaces-capitulos a {
+.chapter-list a {
+  color: #38b2ac;
   text-decoration: none;
-  color: var(--color-principal);
+  margin-right: 0.5rem;
 }
-.enlaces-capitulos a:hover {
+.chapter-list a:hover {
   text-decoration: underline;
 }
 
-
-/* 5) Ajustes adicionales (opcional) */
-header {
+/* Footer */
+.site-footer {
   text-align: center;
-  padding: 2em 1em;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
 }
+
