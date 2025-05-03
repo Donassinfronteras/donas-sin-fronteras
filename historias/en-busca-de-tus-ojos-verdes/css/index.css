@@ -156,24 +156,19 @@ body.stories-index {
 /* ===================================================================
    Acciones de la tarjeta (Leer / Escuchar)
    =================================================================== */
+/* Ajuste para que los enlaces de capítulos no se corten */
 .story-card-actions {
   display: flex;
-  justify-content: space-around;
-  padding: 0.75rem;
-  background-color: var(--gris-medio);
+  flex-wrap: wrap;         /* permite salto de línea cuando no caben */
+  gap: 0.5rem 1rem;        /* espacio vertical y horizontal */
+  justify-content: center; /* centrar los botones */
+  padding: 1rem;           /* un poco más de “espacio respirable” */
 }
+
 .story-card-actions a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: var(--blanco);
-  background-color: var(--verde-medio);
-  transition: background 0.2s;
-}
-.story-card-actions a:hover {
-  background-color: var(--verde-oscuro);
+  flex: 1 1 auto;          /* que cada enlace pueda crecer/encoger */
+  text-align: center;
+  margin: 0;               /* el gap ya se encarga del espacio */
 }
 
 /* ===================================================================
