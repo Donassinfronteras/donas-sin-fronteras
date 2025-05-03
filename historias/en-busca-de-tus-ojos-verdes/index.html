@@ -3,104 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biblioteca de Historias</title>
+  <title>Biblioteca de Historias – Doñas Sin Fronteras</title>
 
   <!-- Fuentes -->
   <link
     href="https://fonts.googleapis.com/css2?family=Modern+Love&family=Caveat:wght@400;700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Tema específico -->
-  <link
-    rel="stylesheet"
-    href="css/index.css"
-  />
+  <!-- CSS específico para índice de historias -->
+  <link rel="stylesheet" href="css/index.css" />
 </head>
-<body>
-  <!-- Header con título y navegación -->
-  <header>
-    <h1>EN BUSCA DE TUS OJOS VERDES</h1>
-    <nav class="nav-capitulos">
-      <a href="../index.html">← Biblioteca</a>
-      <a href="capitulo-1.html" class="active">Capítulo 1</a>
-    </nav>
-  </header>
+<body class="stories-index">
 
-  <!-- Hero banner -->
-  <div class="story-banner">
+  <!-- Navegación principal -->
+  <nav class="nav-buttons">
+    <a href="../audioaventura.html" class="btn-portal glow">Podcast</a>
+    <a href="../portal-magico.html" class="btn-portal glow">Portal Mágico</a>
+    <a href="../index.html" class="btn-portal glow">Inicio</a>
+  </nav>
+
+  <!-- Banner general de la biblioteca -->
+  <div class="main-banner">
     <div class="banner-overlay"></div>
     <img
-      src="assets/banner-historias.jpg"
-      alt="Marta y Tony en las escaleras"
+      src="../assets/banner-historias.jpg"
+      alt="Banner Biblioteca de Historias"
       class="banner-img"
     />
     <div class="banner-text">
-      <h1>En Busca De Tus Ojos Verdes</h1>
-      <p>Una Audioaventura de 5 capítulos</p>
+      <h1>Biblioteca de Historias</h1>
+      <p>Historias para leer y escuchar</p>
     </div>
   </div>
 
-  <!-- Introducción y opciones -->
-  <main class="container">
-    <section class="capitulo-intro">
-      <h2>Audioaventura • 5 capítulos</h2>
-      <p><em>Por Bruxa Tarot</em></p>
-      <div class="options">
-        <a class="btn-audio" href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=bffa0e02a68c47a5">▶️ Escuchar Capítulo 1</a>
-        <a class="btn-lectura" href="capitulo-1.html">📖 Leer Capítulo 1</a>
-      </div>
+  <div class="container">
+    <!-- Introducción -->
+    <section class="stories-header">
+      <h1>Biblioteca de Historias</h1>
+      <p>
+        ✨📖✨  
+        «Si las Audioaventuras ya susurraron en tus oídos y ahora anhelas perderte entre letras,
+        explorar sus misterios en silencio, o quizás la voz no fue tu camino,
+        y tu alma prefiere navegar a su propio ritmo entre páginas,
+        este es tu refugio, el santuario donde las historias esperan ser descubiertas por tus ojos.»  
+        ✨📖✨  
+        «Historias mágicas, nacidas del corazón y conjuradas por el alma de Bruxa Tarot.»  
+        ✨📖✨
+      </p>
     </section>
 
-    <!-- Divisor -->
-    <div class="divider"></div>
+    <!-- Grid de historias -->
+    <section class="stories-library">
+      <!-- En busca de tus ojos verdes (ya disponible) -->
+      <article class="story-card">
+        <img
+          src="en-busca-de-tus-ojos-verdes/assets/banner-en-busca.jpeg"
+          alt="En busca de tus ojos verdes"
+        />
+        <div class="story-card-content">
+          <h3>En busca de tus ojos verdes</h3>
+          <p>5 capítulos • Disponible</p>
+        </div>
+        <div class="story-card-actions">
+          <a href="en-busca-de-tus-ojos-verdes/capitulo-1.html">Cap 1</a>
+          <a href="en-busca-de-tus-ojos-verdes/capitulo-2.html">Cap 2</a>
+          <a href="en-busca-de-tus-ojos-verdes/capitulo-3.html">Cap 3</a>
+          <a href="en-busca-de-tus-ojos-verdes/capitulo-4.html">Cap 4</a>
+          <a href="en-busca-de-tus-ojos-verdes/capitulo-5.html">Cap 5</a>
+          <a href="../audioaventura.html">Escuchar</a>
+        </div>
+      </article>
 
-    <!-- Lista de capítulos -->
-    <section class="chapter-list">
-      <h3>Capítulos</h3>
-      <ul>
-        <li>
-          <strong>Capítulo 1 – Las Escaleras</strong>
-          <div>
-            <a href="https://open.spotify.com/episode/5iNrLn5CXhmn1XgE158KQ6?si=bffa0e02a68c47a5">▶️ Escuchar</a>
-            <a href="capitulo-1.html">📖 Leer</a>
-          </div>
-        </li>
-        <li>
-          <strong>Capítulo 2 – El Encuentro</strong>
-          <div>
-            <a href="https://open.spotify.com/episode/5KRLfbXXkSWhZwgMvrmaHB?si=bedf236835cb4f3b">▶️ Escuchar</a>
-            <a href="capitulo-2.html">📖 Leer</a>
-          </div>
-        </li>
-        <li>
-          <strong>Capítulo 3 – La Confesión</strong>
-          <div>
-            <a href="https://open.spotify.com/episode/0z2rWBxoEt6ScxOD9jk53i?si=0eaf2fd43d0b4153">▶️ Escuchar</a>
-            <a href="capitulo-3.html">📖 Leer</a>
-          </div>
-        </li>
-        <li>
-          <strong>Capítulo 4 – Entre ilusión y realidad</strong>
-          <div>
-            <a href="https://open.spotify.com/episode/4DOgksBjqmiokZGsGslztn?si=4dcc8c20cba84191">▶️ Escuchar</a>
-            <a href="capitulo-4.html">📖 Leer</a>
-          </div>
-        </li>
-        <li class="coming-soon">
-          <strong>Capítulo 5 – Decisiones y cambios</strong>
-          <div>
-            <span>▶️ Próximamente</span>
-            <span>📖 Próximamente</span>
-          </div>
-        </li>
-      </ul>
+      <!-- Susurros de mi alma (próximamente) -->
+      <article class="story-card">
+        <img
+          src="susurros-de-mi-alma/assets/cover-susurros.jpeg"
+          alt="Susurros de mi alma"
+        />
+        <div class="story-card-content">
+          <h3>Susurros de mi alma</h3>
+          <p>5 capítulos • Próximamente</p>
+        </div>
+        <div class="story-card-actions">
+          <span class="coming-soon">Próximamente</span>
+        </div>
+      </article>
+
+      <!-- Última Jugada (próximamente) -->
+      <article class="story-card">
+        <img
+          src="ultima-jugada/assets/cover-ultima-jugada.jpeg"
+          alt="Última Jugada"
+        />
+        <div class="story-card-content">
+          <h3>Última Jugada</h3>
+          <p>6 capítulos • Próximamente</p>
+        </div>
+        <div class="story-card-actions">
+          <span class="coming-soon">Próximamente</span>
+        </div>
+      </article>
+
+      <!-- No Soy Una Fan Más (próximamente) -->
+      <article class="story-card">
+        <img
+          src="no-soy-una-fan-mas/assets/cover-no-fan.jpeg"
+          alt="No Soy Una Fan Más"
+        />
+        <div class="story-card-content">
+          <h3>No Soy Una Fan Más</h3>
+          <p>6 capítulos • Próximamente</p>
+        </div>
+        <div class="story-card-actions">
+          <span class="coming-soon">Próximamente</span>
+        </div>
+      </article>
+
+      <!-- Eco En Tu Piel (próximamente) -->
+      <article class="story-card">
+        <img
+          src="eco-en-tu-piel/assets/cover-eco.jpeg"
+          alt="Eco En Tu Piel"
+        />
+        <div class="story-card-content">
+          <h3>Eco En Tu Piel</h3>
+          <p>6 capítulos • Próximamente</p>
+        </div>
+        <div class="story-card-actions">
+          <span class="coming-soon">Próximamente</span>
+        </div>
+      </article>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Doñas Sin Fronteras</p>
-  </footer>
+    <!-- Pie de página -->
+    <footer class="stories-footer">
+      <p>© 2025 Doñas Sin Fronteras</p>
+    </footer>
+  </div>
 </body>
 </html>
