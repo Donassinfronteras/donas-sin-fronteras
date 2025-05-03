@@ -2,6 +2,32 @@
    historias-index.css
    Estilos para el “Índice de Historias” (biblioteca)
    =================================================================== */
+/* Navegación superior de la biblioteca */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: var(--verde-medio); /* o el color que elijas */
+}
+
+.btn-portal.glow {
+  background: linear-gradient(135deg, #4caf50, #81c784, #a5d6a7);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-portal.glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.9);
+}
 /* Banner en índice de historias */
 .main-banner {
   position: relative;
