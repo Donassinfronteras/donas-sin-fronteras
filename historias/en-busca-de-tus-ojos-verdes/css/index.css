@@ -1,69 +1,20 @@
 /* ===================================================================
    historias-index.css
-   Estilos para el “Índice de Historias” (biblioteca)
+   Estilos para el “Índice de Historias” (biblioteca) — Tema Naranja
    =================================================================== */
-/* Navegación superior de la biblioteca */
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem 0;
-  background: var(--verde-medio); /* o el color que elijas */
-}
-
-.btn-portal.glow {
-  background: linear-gradient(135deg, #4caf50, #81c784, #a5d6a7);
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  font-family: 'Caveat', cursive;
-  font-size: 1rem;
-  text-decoration: none;
-  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-portal.glow:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(76, 175, 80, 0.9);
-}
-/* Banner en índice de historias */
-.main-banner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 16/9;       /* mantiene la proporción 16:9 */
-  max-height: 400px;        /* no crecerá más de 400px de alto */
-  margin-bottom: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.main-banner .banner-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* recorta/encuadra correctamente */
-  filter: brightness(0.7);
-  transition: transform 0.5s ease;
-}
-
-.main-banner:hover .banner-img {
-  transform: scale(1.05);
-}
 
 /* —————— Variables de color —————— */
 :root {
-  --verde-oscuro:  #1b3923;
-  --verde-medio:   #2d6a4f;
-  --verde-claro:   #74b49b;
-  --gris-claro:    #f9f9f9;
-  --gris-medio:    #dddddd;
-  --texto-principal: #333333;
+  /* Naranjas “biblioteca” */
+  --naranja-oscuro:  #e65100;
+  --naranja-medio:   #ff6f00;
+  --naranja-claro:   #ffcc80;
+  --naranja-suave:   #fff3e0;
+
+  /* Neutros */
+  --texto-principal:  #333333;
   --texto-secundario: #666666;
-  --blanco:        #ffffff;
+  --blanco:           #ffffff;
 }
 
 /* —————— Reset básico —————— */
@@ -76,7 +27,7 @@
 /* —————— Base del cuerpo —————— */
 body.stories-index {
   font-family: "Georgia", serif;
-  background-color: var(--gris-claro);
+  background-color: var(--naranja-suave);
   color: var(--texto-principal);
   line-height: 1.6;
 }
@@ -90,6 +41,69 @@ body.stories-index {
 }
 
 /* ===================================================================
+   Navegación superior de la biblioteca
+   =================================================================== */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: var(--naranja-medio);
+}
+
+/* Botones “portal” con efecto glow */
+.btn-portal.glow {
+  background: linear-gradient(
+    135deg,
+    var(--naranja-oscuro),
+    var(--naranja-medio),
+    var(--naranja-claro)
+  );
+  color: var(--blanco);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255,111,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-portal.glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,111,0,0.9);
+}
+
+/* ===================================================================
+   Banner en índice de historias
+   =================================================================== */
+.main-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 400px;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.main-banner .banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transition: transform 0.5s ease;
+}
+
+.main-banner:hover .banner-img {
+  transform: scale(1.05);
+}
+
+/* ===================================================================
    Encabezado de sección
    =================================================================== */
 .stories-header {
@@ -99,7 +113,7 @@ body.stories-index {
 .stories-header h1 {
   font-family: "Modern Love", cursive;
   font-size: 2.8rem;
-  color: var(--verde-medio);
+  color: var(--naranja-oscuro);
   margin-bottom: 0.5rem;
 }
 .stories-header p {
@@ -143,7 +157,7 @@ body.stories-index {
 }
 .story-card-content h3 {
   font-family: "Modern Love", cursive;
-  color: var(--verde-oscuro);
+  color: var(--naranja-oscuro);
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
@@ -158,32 +172,30 @@ body.stories-index {
    =================================================================== */
 .story-card-actions {
   display: flex;
-  flex-wrap: wrap;          /* saltos de línea automáticos */
-  gap: 0.75rem 1rem;        /* espacio entre filas y columnas */
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
   justify-content: center;
   padding: 1rem;
 }
-
 .story-card-actions a {
-  flex: 1 1 auto;           /* crecen/reducen según espacio */
+  flex: 1 1 auto;
   text-align: center;
-  background-color: var(--verde-medio);  /* fondo verde */
-  color: var(--texto-claro);            /* texto blanco */
-  border: 2px solid var(--verde-medio); /* borde verde */
+  background-color: var(--naranja-medio);
+  color: var(--blanco);
+  border: 2px solid var(--naranja-medio);
   border-radius: 20px;
   padding: 0.6rem 1.2rem;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s, color 0.2s;
 }
-
 .story-card-actions a:hover {
-  background-color: var(--verde-claro);
-  color: var(--verde-oscuro);
+  background-color: var(--naranja-claro);
+  color: var(--naranja-oscuro);
 }
 
 /* ===================================================================
-   Footer de la sección (opcional)
+   Footer de la sección
    =================================================================== */
 .stories-footer {
   text-align: center;
