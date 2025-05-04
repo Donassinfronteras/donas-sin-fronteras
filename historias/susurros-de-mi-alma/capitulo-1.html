@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Susurros de mi Alma – Capítulo 1</title>
+  <title>SUSURROS DE MI ALMA</title>
 
-  <!-- Tipografías: Caveat para texto, Playfair Display para títulos -->
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
 
-  <!-- Estilos específicos -->
+<!-- Estilos -->
   <link rel="stylesheet" href="css/susurros-de-mi-alma.css"/>
 </head>
 <body class="audioaventura-body">
 
-  <!-- Header igual que en "AudioAventuras" -->
+<body>
+  <!-- Header con navegación entre capítulos -->
   <header>
-    <h1>Doñas sin Fronteras</h1>
-    <nav class="nav-buttons">
-      <a href="../index.html" class="btn-portal glow">Inicio</a>
-      <a href="../podcast.html" class="btn-portal glow">Podcast</a>
-      <a href="../portal-magico.html" class="btn-portal glow">Portal Mágico</a>
-      <a href="../historias.html" class="btn-portal glow">Historias</a>
+    <h1>Susurros De Mi Alma</h1>
+    <nav class="nav-capitulos">
+      <a href="index.html">Portada</a>
+      <a href="capitulo-1.html">Capítulo 1 →</a>
     </nav>
   </header>
 
-  <main class="audio-adventures">
-    <!-- Banner de la historia -->
-    <div class="intro-image">
-      <img src="assets/susurros-de-mi-alma.jpg" alt="Susurros de mi Alma">
+  <!-- Hero banner -->
+  <div class="story-banner">
+    <div class="banner-overlay"></div>
+    <img
+      src=assets/susurros-de-mi-alma.jpg"
+      alt="susurros de mi alma"
+      class="banner-img"
+    />
+    <div class="banner-text">
+      <h1>Susurros De Mi alma</h1>
+      <p>Capítulo 1: Entre el Silencio y el Reencuentro</p>
     </div>
+  </div>
 
-    <!-- Texto de la historia -->
-    <section class="aventura-descripcion">
-      <h2>Susurros de mi Alma</h2>
-      <h3>Capítulo 1: Entre el silencio y el reencuentro</h3>
+  <!-- Contenido del capítulo -->
+  <main class="container">
+    <section class="capitulo-intro">
+      <h2>Capítulo 1: Entre el Silencio y el Reencuentro</h2>
+      <p><em>Por Bruxa Tarot</em></p>
+    </section>
+
+    <p class="dropcap">
 
       <p>
         A veces el amor llega en silencio…<br/>
@@ -156,30 +167,13 @@
       </p>
     </section>
 
-    <div class="return">
-      <a href="../historias.html" class="return-link">← Volver a Historias</a>
-    </div>
+   <!-- Divisor decorativo -->
+    <div class="divider"></div>
   </main>
 
-  <!-- Footer igual que en "AudioAventuras" -->
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Doñas sin Fronteras</h3>
-        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Enlaces rápidos</h3>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="../podcast.html">Podcast</a></li>
-          <li><a href="../portal-magico.html">Portal Mágico</a></li>
-          <li><a href="../historias.html">Historias</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
+    <p>© 2025 Doñas Sin Fronteras</p>
   </footer>
-
 </body>
 </html>
