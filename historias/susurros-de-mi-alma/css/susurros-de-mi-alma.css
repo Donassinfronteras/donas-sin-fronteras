@@ -1,6 +1,6 @@
 /* ==============================
    Susurros de mi Alma – Estilo “En Busca De Tus Ojos Verdes”
-   Colores: Lavanda grisáceo para acento, fondo claro
+   Colores: Lavanda grisáceo de acento, fondo claro
    ============================== */
 
 /* 1. Reset */
@@ -10,11 +10,11 @@
   box-sizing: border-box;
 }
 
-/* 2. Fuentes y fondo */
+/* 2. Fuente y fondo */
 body {
   font-family: 'Caveat', cursive;
-  background-color: #F7F3FA;       /* Fondo claro */
-  color: #2c1b3b;                   /* Ciruela oscuro */
+  background-color: #F7F3FA; /* Fondo claro */
+  color: #2c1b3b;             /* Ciruela oscuro */
   line-height: 1.6;
 }
 
@@ -22,7 +22,7 @@ body {
 header {
   text-align: center;
   padding: 1rem;
-  background-color: #c1b6d8;        /* Lavanda grisáceo */
+  background-color: #c1b6d8; /* Lavanda grisáceo */
 }
 header h1 {
   font-family: 'Modern Love', cursive;
@@ -47,27 +47,25 @@ header h1 {
   background: rgba(193,182,216,0.4);
 }
 
-/* 4. Banner */
+/* 4. Banner con hover */
 .story-banner {
   position: relative;
   overflow: hidden;
-}
-.banner-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(193,182,216,0.6);
-  z-index: 1;
 }
 .banner-img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.story-banner:hover .banner-img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 .banner-text {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  z-index: 2;
   color: #2c1b3b;
 }
 .banner-text h1 {
@@ -77,7 +75,7 @@ header h1 {
 .banner-text p {
   font-size: 1rem;
   font-style: italic;
-  color: #4c2a85;   /* Violeta galaxia */
+  color: #4c2a85; /* Violeta galaxia */
 }
 
 /* 5. Contenido */
