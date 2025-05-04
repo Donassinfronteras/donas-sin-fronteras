@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EN BUSCA DE TUS OJOS VERDES</title>
+
+  <!-- Fuentes -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Modern+Love&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS de tema -->
+  <link
+    rel="stylesheet"
+    href="css/en-busca-de-tus-ojos-verdes.css"
+  />
+</head>
+
+<body>
+  <!-- Header con navegación entre capítulos -->
+  <header>
+    <h1>En Busca De Tus Ojos Verdes</h1>
+    <nav class="nav-capitulos">
+      <a href="index.html">Portada</a>
+      <a href="capitulo-5.html">Capítulo 5 →</a>
+    </nav>
+  </header>
+
+  <!-- Hero banner -->
+  <div class="story-banner">
+    <div class="banner-overlay"></div>
+    <img
+      src="assets/banner-en-busca.jpeg"
+      alt="Marta y Tony en las escaleras"
+      class="banner-img"
+    />
+    <div class="banner-text">
+      <h1>En Busca De Tus Ojos Verdes</h1>
+      <p>Capítulo 4 – Entre La Ilusion y La Desilusion</p>
+    </div>
+  </div>
+
+  <!-- Contenido del capítulo -->
+  <main class="container">
+    <section class="capitulo-intro">
+      <h2>Capítulo 4 –Entre La Ilusion y La Desilusion</h2>
+      <p><em>Por Bruxa Tarot</em></p>
+    </section>
+
+    <p class="dropcap">
+ Marta notó cómo cada vez estaba más y más cerca de Tony, su cabeza llena de pensamientos y emociones. Estaban en la calle, fuera del salón, alrededor de las 9:00 pm. La calle estaba oscura, iluminada solo por la luz de los postes que emitían un suave resplandor, creando un ambiente íntimo y romántico. Pasaban pocos carros, y la brisa cálida de una noche de verano hacía que el momento se sintiera aún más especial. 🌙✨</p>
+<p>Tony colocó la otra mano en su cintura y la miró fijamente a los ojos. Marta sentía mariposas en el estómago y un cosquilleo en la piel cada vez que Tony se acercaba más. Sentía cómo el mundo se derretía a su alrededor, incapaz de apartar la mirada de esos ojos que la miraban intensamente. No pudo soportarlo más y trató de mirar a otro lado. 💓😳</p>
+<p><strong>Tony:</strong> <em>(sin dejar de mirarla, se mojó los labios y le preguntó)</em> "¿Quieres ser mi novia?" 😮👉 <p>
+<p>El corazón de Marta latía con tanta fuerza que sentía que se le iba a salir del pecho. Quería gritar que sí, pero apenas pudo susurrar un suave <em>"sí".</em> Tony movió unos cabellos que caían lentamente sobre el rostro sonrojado de Marta, colocó su mano en su cuello y, mientras sostenía la mano de Marta, la colocó detrás, acercándola aún más a él. Marta estaba muy nerviosa; nunca había tenido novio, nunca había besado a nadie, y ahora estaba frente a su primer amor, muriendo de nervios, con temor y ansias del primer beso. 💓😅</p>
+<p>Tony acercó su rostro lentamente, y sus labios se unieron en un romántico y dulce beso. El beso fue suave y cálido, los labios de Tony tenían un ligero sabor dulce que Marta no podía olvidar. El mundo se detuvo, aunque solo fueron unos segundos. Después del beso, ambos se miraron a los ojos, respirando un poco más rápido de lo normal, con sonrisas tímidas que reflejaban la felicidad compartida. Marta se preguntaba en su mente,<em> "¿Lo hice bien? ¿Le gustó? ¿Notaría que era mi primera vez?"</em> 💏🌟</p>
+<p>Tony buscó acercarse para otro beso, y Marta se sintió más segura. Tony acarició el rostro de Marta y comenzó a hablar sobre qué harían ahora que eran novios. Él trabajaba y estudiaba, y ella tenía que ir a la escuela. Sabían que iba a ser un reto, pero estaban dispuestos a intentarlo. </p>
+<p><strong>Tony: </strong>"Va a ser complicado con mi trabajo y estudios, y tú con la escuela, pero creo que podemos hacerlo. ¿Me das tu número de teléfono?" </p>
+<p><strong>Marta: </strong>"Claro, anota el mío. Y dame el tuyo también." <em>(dijo mientras ambos sacaban sus teléfonos). </em></p>
+<p>Tony le dio su número de trabajo y anotó el de Marta. Justo en ese momento, un familiar de Tony y Jazmín se acercó para decirle que ya tenían que llevar a Dani y a Marta a casa. </p>
+<p><strong>Familiar:</strong> "Tony, tenemos que llevar a Daniela y a Marta a casa." </p>
+<p><strong>Tony:</strong> "Dame unos segundos."<em> (volvió a mirar a Marta, sonriendo). </em></p>
+<p><strong>Tony:</strong> "Voy con ustedes para acompañarte a casa."<em> (dijo con una sonrisa). </em></p>
+<p>Tony volvió a mirar a Marta y le dio un último beso suave. 💌📚</p>
+    <!-- Divisor decorativo -->
+    <div class="divider"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Doñas Sin Fronteras</p>
+  </footer>
+</body>
+</html>
+
+   
