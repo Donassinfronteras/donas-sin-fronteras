@@ -1,78 +1,120 @@
 /* ==============================
-   Susurros de mi Alma – Capítulo 1
-   Paleta: Lavanda grisáceo #c1b6d8
-   Títulos en Playfair Display, texto en Times New Roman
+   Susurros de mi Alma – Estilo “En Busca De Tus Ojos Verdes”
+   Colores: Lavanda grisáceo para acento, fondo claro
    ============================== */
 
-/* 1. Reset y box-sizing */
+/* 1. Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 2. Estilos de cuerpo */
-body.susurros-body {
-  background-color: #c1b6d8;
-  color: #2c1b3b;
-  font-family: 'Times New Roman', serif;
-  line-height: 1.7;
-  padding: 1rem;
+/* 2. Fuentes por defecto */
+body {
+  font-family: 'Caveat', cursive;
+  background-color: #F7F3FA;       /* Fondo claro */
+  color: #2c1b3b;                   /* Ciruela oscuro */
+  line-height: 1.6;
 }
 
-/* 3. Cabecera */
+/* 3. Header */
 header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #c1b6d8;        /* Lavanda grisáceo */
 }
 header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin-bottom: 0.3rem;
+  font-family: 'Modern Love', cursive;
+  font-size: 2.5rem;
+  color: #2c1b3b;
 }
-header h2 {
-  font-size: 1.2rem;
+.nav-capitulos {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.nav-capitulos a {
+  text-decoration: none;
+  color: #2c1b3b;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.nav-capitulos a:hover {
+  background: rgba(193,182,216,0.4);
+}
+
+/* 4. Story banner */
+.story-banner {
+  position: relative;
+  overflow: hidden;
+}
+.banner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(193,182,216,0.6);
+  z-index: 1;
+}
+.banner-img {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.banner-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  color: #2c1b3b;
+}
+.banner-text h1 {
+  font-family: 'Modern Love', cursive;
+  font-size: 2.2rem;
+}
+.banner-text p {
+  font-size: 1rem;
   font-style: italic;
+  color: #4c2a85;   /* Violeta galaxia */
+}
+
+/* 5. Contenedor del capítulo */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 6. Primera letra estilo “dropcap” */
+.dropcap {
+  font-size: 3rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
   color: #4c2a85;
 }
 
-/* 4. Banner */
-.banner-container {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.banner {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* 5. Contenido de la historia */
-.story-content {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-.story-content p {
-  margin-bottom: 1.2rem;
+/* 7. Párrafos */
+.container p {
+  margin-bottom: 1rem;
   text-align: justify;
 }
 
-/* 6. Enlace de regreso */
-.return {
+/* 8. Footer */
+footer {
   text-align: center;
-  margin: 2rem 0;
-}
-.return a {
-  font-family: 'Times New Roman', serif;
-  color: #4c2a85;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 1px dashed #4c2a85;
-}
-.return a:hover {
+  padding: 1rem;
+  background-color: #c1b6d8;
   color: #2c1b3b;
-  border-bottom-color: #2c1b3b;
+  font-size: 0.9rem;
+}
+
+/* 9. Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  .banner-img { max-height: 250px; }
+  .banner-text h1 { font-size: 1.6rem; }
 }
