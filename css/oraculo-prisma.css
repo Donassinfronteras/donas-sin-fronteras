@@ -91,7 +91,17 @@ body.oraculo-prisma-body {
   transition: box-shadow 0.4s ease, transform 0.3s ease, background 0.4s ease;
   font-weight: bold;
 }
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 32, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 0;
 
+  /* esto hace que “ignore” clics y toques */
+  pointer-events: none;
+}
 /* Colores más vivos y visibles */
 .btn-query   { background: linear-gradient(135deg, #82F2B0, #2FCED1); color: #0D1B2A; }
 .btn-cards   { background: linear-gradient(135deg, #B28DFF, #81d4fa); color: #0D1B2A; }
