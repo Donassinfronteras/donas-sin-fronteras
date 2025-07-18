@@ -3,7 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const fs = require('fs');
 const path = require('path');
-const { Configuration, OpenAIApi } = require('openai');
+const OpenAI = require('openai');
 
 dotenv.config();
 
@@ -11,10 +11,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 app.get('/api/carta-del-dia', (req, res) => {
   const filePath = path.join(__dirname, 'data', 'cartas_oraculo_prisma.json');
@@ -54,12 +53,12 @@ ${esReversa ? 'Luego describe el bloqueo y termina con un consejo:\n"\ud83c\udf3
 
 Haz que cada lectura sea única, compasiva y mágica. Usa lenguaje simbólico y emocional.`;
 
-    const completion = await openai.createChatCompletion({
+    const completion = await openai.chat.completions.create({
       model: 'gpt-4',
       messages: [{ role: 'user', content: prompt }],
     });
 
-    const lectura = completion.data.choices[0].message.content.trim();
+    const lectura = completion.choices[0].message.content.trim();
     res.json({ lectura });
   } catch (error) {
     console.error(error);
