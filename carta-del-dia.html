@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="css/carta-del-dia.css">
 </head>
 <body>
+  <div class="intention-form">
+    <input type="text" id="intencion" placeholder="Escribe tu intención">
+    <button id="sacar-carta">Sacar Carta</button>
+  </div>
   <div class="card-container">
     <div class="watermark">Donas Sin Fronteras – Oráculo Prisma</div>
     <img id="card-img" class="card-image" src="" alt="Carta del Día">
@@ -14,6 +18,7 @@
     <div class="text-reveal" id="card-message">...</div>
     <div class="footer">Oráculo Prisma ✨</div>
   </div>
+  <div id="lectura-ia"></div>
 
   <!-- Botón de regreso -->
   <div class="return-btn">
@@ -23,34 +28,61 @@
   <script>
     const jsonURL = "https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/data/cartas_oraculo_prisma.json";
 
-    fetch(jsonURL)
-      .then(res => res.json())
-      .then(data => {
-        const carta = data[Math.floor(Math.random() * data.length)];
-        const esSombra = Math.random() < 0.5;
+    document.getElementById("sacar-carta").addEventListener("click", sacarCarta);
 
-        document.getElementById('card-img').src = carta["Imagen URL"];
-        document.getElementById('card-title').textContent = `${carta["Nombre de la Carta"]} ${esSombra ? '(Sombra)' : ''}`;
+    function sacarCarta() {
+      const intencion = document.getElementById("intencion").value || "";
 
-        if (esSombra) {
-          document.getElementById('card-img').style.transform = "rotate(180deg)";
-          setTimeout(() => {
-            const sombra = carta["Sombra"] || carta["Sombra (opcional)"] || "Esta carta aún guarda su sombra en secreto.";
-            document.getElementById('card-message').textContent = sombra;
-            document.getElementById('card-message').classList.add('visible');
-          }, 3000);
-        } else {
-          setTimeout(() => {
-            const luz = carta["Mensaje (Luz)"] || "Este mensaje de luz aún está despertando...";
-            document.getElementById('card-message').textContent = luz;
-            document.getElementById('card-message').classList.add('visible');
-          }, 3000);
-        }
-      })
-      .catch(err => {
-        document.getElementById('card-title').textContent = "Error al cargar la carta.";
-        console.error(err);
-      });
+      fetch(jsonURL)
+        .then(res => res.json())
+        .then(data => {
+          const carta = data[Math.floor(Math.random() * data.length)];
+          const esReversa = Math.random() < 0.5;
+
+          document.getElementById("card-img").src = carta["Imagen URL"];
+          document.getElementById("card-title").textContent = `${carta["Nombre de la Carta"]} ${esReversa ? '(Reversa)' : ''}`;
+
+          if (esReversa) {
+            document.getElementById("card-img").style.transform = "rotate(180deg)";
+            setTimeout(() => {
+              const sombra = carta["Sombra"] || carta["Sombra (opcional)"] || "Esta carta aún guarda su sombra en secreto.";
+              document.getElementById("card-message").textContent = sombra;
+              document.getElementById("card-message").classList.add("visible");
+            }, 3000);
+          } else {
+            document.getElementById("card-img").style.transform = "rotate(0deg)";
+            setTimeout(() => {
+              const luz = carta["Mensaje (Luz)"] || "Este mensaje de luz aún está despertando...";
+              document.getElementById("card-message").textContent = luz;
+              document.getElementById("card-message").classList.add("visible");
+            }, 3000);
+          }
+
+          fetch('/api/lectura', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              nombreCarta: carta["Nombre de la Carta"],
+              significado: carta["Mensaje (Luz)"],
+              categoria: carta["Categoría"],
+              intencion,
+              esReversa
+            })
+          })
+            .then(res => res.json())
+            .then(data => {
+              document.getElementById("lectura-ia").textContent = data.lectura;
+            })
+            .catch(err => {
+              document.getElementById("lectura-ia").textContent = 'Error al generar la lectura.';
+              console.error(err);
+            });
+        })
+        .catch(err => {
+          document.getElementById("card-title").textContent = "Error al cargar la carta.";
+          console.error(err);
+        });
+    }
   </script>
 
   <!-- 🔮 Script de seguimiento Metricool -->

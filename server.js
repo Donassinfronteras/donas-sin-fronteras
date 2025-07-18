@@ -1,0 +1,51 @@
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const { Configuration, OpenAIApi } = require('openai');
+
+dotenv.config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+
+app.post('/api/lectura', async (req, res) => {
+  const { nombreCarta, significado, categoria, intencion, esReversa } = req.body;
+  try {
+    const orientation = esReversa ? 'La carta está en posición reversa.' : 'La carta está en posición normal.';
+    const prompt = `Actúa como *Bruxa Tarot*, canal espiritual del Oráculo Prisma.
+
+Hoy el alma que consulta ha sacado la carta "${nombreCarta}". ${orientation}
+
+Significado base de la carta: "${significado}"
+Categoría: ${categoria}
+Intención del alma: "${intencion}"
+
+Crea una lectura personalizada que comience siempre con:
+
+"Hola, Alma Brillante… he canalizado este mensaje especialmente para ti."
+${esReversa ? 'Esta carta ha salido como tu obstáculo del día...' : ''}
+${esReversa ? 'Luego describe el bloqueo y termina con un consejo:\n"\ud83c\udf3f Consejo canalizado para mitigar o ayudarte en el proceso: [mensaje canalizado]"' : ''}
+
+Haz que cada lectura sea única, compasiva y mágica. Usa lenguaje simbólico y emocional.`;
+
+    const completion = await openai.createChatCompletion({
+      model: 'gpt-4',
+      messages: [{ role: 'user', content: prompt }],
+    });
+
+    const lectura = completion.data.choices[0].message.content.trim();
+    res.json({ lectura });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error al generar la lectura' });
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
