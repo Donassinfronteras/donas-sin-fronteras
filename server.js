@@ -68,4 +68,5 @@ Haz que cada lectura sea única, compasiva y mágica. Usa lenguaje simbólico y 
 });
 
 const PORT = process.env.PORT || 3000;
+console.log("Punto de arranque antes del listen");
 app.listen(PORT, () => console.log('Servidor Prisma corriendo en puerto', PORT));
