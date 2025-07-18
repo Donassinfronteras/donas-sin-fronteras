@@ -31,7 +31,7 @@
     function sacarCarta() {
       const intencion = document.getElementById("intencion").value || "";
 
-      fetch('/api/carta-del-dia')
+      fetch('https://donas-sin-fronteras.onrender.com/api/carta-del-dia')
         .then(res => res.json())
         .then(carta => {
           const esReversa = Math.random() < 0.5;
@@ -41,21 +41,14 @@
 
           if (esReversa) {
             document.getElementById("card-img").style.transform = "rotate(180deg)";
-            setTimeout(() => {
-              const sombra = carta["Sombra"] || carta["Sombra (opcional)"] || "Esta carta aún guarda su sombra en secreto.";
-              document.getElementById("card-message").textContent = sombra;
-              document.getElementById("card-message").classList.add("visible");
-            }, 3000);
           } else {
             document.getElementById("card-img").style.transform = "rotate(0deg)";
-            setTimeout(() => {
-              const luz = carta["Mensaje (Luz)"] || "Este mensaje de luz aún está despertando...";
-              document.getElementById("card-message").textContent = luz;
-              document.getElementById("card-message").classList.add("visible");
-            }, 3000);
           }
 
-          fetch('/api/lectura', {
+          document.getElementById("card-message").textContent = '';
+          document.getElementById("card-message").classList.remove("visible");
+
+          fetch('https://donas-sin-fronteras.onrender.com/api/lectura', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
