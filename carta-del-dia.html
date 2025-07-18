@@ -26,17 +26,14 @@
   </div>
 
   <script>
-    const jsonURL = "https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/data/cartas_oraculo_prisma.json";
-
     document.getElementById("sacar-carta").addEventListener("click", sacarCarta);
 
     function sacarCarta() {
       const intencion = document.getElementById("intencion").value || "";
 
-      fetch(jsonURL)
+      fetch('/api/carta-del-dia')
         .then(res => res.json())
-        .then(data => {
-          const carta = data[Math.floor(Math.random() * data.length)];
+        .then(carta => {
           const esReversa = Math.random() < 0.5;
 
           document.getElementById("card-img").src = carta["Imagen URL"];
