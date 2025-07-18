@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const fs = require('fs');
+const path = require('path');
 const { Configuration, OpenAIApi } = require('openai');
 
 dotenv.config();
@@ -13,6 +15,24 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
+
+app.get('/api/carta-del-dia', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'cartas_oraculo_prisma.json');
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Error al leer las cartas' });
+    }
+    try {
+      const cartas = JSON.parse(data);
+      const carta = cartas[Math.floor(Math.random() * cartas.length)];
+      res.json(carta);
+    } catch (parseErr) {
+      console.error(parseErr);
+      res.status(500).json({ error: 'Error al procesar las cartas' });
+    }
+  });
+});
 
 app.post('/api/lectura', async (req, res) => {
   const { nombreCarta, significado, categoria, intencion, esReversa } = req.body;
