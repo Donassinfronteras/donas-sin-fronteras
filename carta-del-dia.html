@@ -31,13 +31,16 @@
     function sacarCarta() {
       const intencion = document.getElementById("intencion").value || "";
 
+      const lecturaDiv = document.getElementById("lectura-ia");
+      lecturaDiv.textContent = 'Cargando...';
+
       fetch('https://donas-sin-fronteras.onrender.com/api/carta-del-dia')
         .then(res => res.json())
         .then(carta => {
           const esReversa = Math.random() < 0.5;
 
           document.getElementById("card-img").src = carta["Imagen URL"];
-          document.getElementById("card-title").textContent = `${carta["Nombre de la Carta"]} ${esReversa ? '(Reversa)' : ''}`;
+          document.getElementById("card-title").textContent = carta["Nombre de la Carta"];
 
           if (esReversa) {
             document.getElementById("card-img").style.transform = "rotate(180deg)";
@@ -48,7 +51,7 @@
           document.getElementById("card-message").textContent = '';
           document.getElementById("card-message").classList.remove("visible");
 
-          fetch('https://donas-sin-fronteras.onrender.com/api/lectura', {
+          return fetch('https://donas-sin-fronteras.onrender.com/api/lectura', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -58,18 +61,14 @@
               intencion,
               esReversa
             })
-          })
-            .then(res => res.json())
-            .then(data => {
-              document.getElementById("lectura-ia").textContent = data.lectura;
-            })
-            .catch(err => {
-              document.getElementById("lectura-ia").textContent = 'Error al generar la lectura.';
-              console.error(err);
-            });
+          });
+        })
+        .then(res => res.json())
+        .then(data => {
+          lecturaDiv.textContent = data.lectura;
         })
         .catch(err => {
-          document.getElementById("card-title").textContent = "Error al cargar la carta.";
+          lecturaDiv.textContent = 'No se pudo canalizar la carta, intenta de nuevo.';
           console.error(err);
         });
     }
