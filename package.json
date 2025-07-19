@@ -1,0 +1,12 @@
+{
+  "name": "donas-sin-fronteras",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "@google/genai": "^0.1.0"
+  }
+}
