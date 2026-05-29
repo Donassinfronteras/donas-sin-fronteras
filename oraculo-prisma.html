@@ -30,27 +30,45 @@
       margin-bottom: 2rem;
       opacity: 0.9;
     }
-    .pregunta-container {
+
+    /* Selector de temas */
+    .temas-container {
       margin-bottom: 2rem;
-      text-align: left;
     }
-    .pregunta-container label {
-      display: block;
-      font-size: 1.1rem;
+    .temas-titulo {
+      font-size: 1.2rem;
       color: var(--c-pink);
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .pregunta-container textarea {
-      width: 100%;
-      min-height: 90px;
-      padding: 1rem;
-      border-radius: 15px;
-      border: 2px solid var(--c-turquoise);
+    .temas-botones {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-tema {
       background: rgba(13, 27, 42, 0.6);
-      color: white;
-      font-size: 1.05rem;
-      resize: vertical;
+      border: 2px solid var(--c-turquoise);
+      color: var(--c-gold);
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 140px;
     }
+    .btn-tema:hover {
+      background: var(--c-turquoise);
+      color: #0D1B2A;
+      transform: translateY(-2px);
+    }
+    .btn-tema.activo {
+      background: linear-gradient(135deg, #2FCED1, #B28DFF);
+      color: #0D1B2A;
+      border-color: var(--c-lavender);
+      box-shadow: 0 0 15px rgba(47, 206, 209, 0.4);
+    }
+
     .tirada-buttons {
       display: flex;
       gap: 1.5rem;
@@ -279,12 +297,16 @@
   <main class="oraculo-main">
     <div class="tirada-container">
       <h2 class="tirada-titulo">✧ Consulta el Oráculo Prisma ✧</h2>
-      <p class="tirada-subtitulo">Formula tu pregunta con el corazón y deja que el Prisma te responda</p>
+      <p class="tirada-subtitulo">Elige un tema y deja que el Prisma te guíe</p>
 
-      <!-- Campo de pregunta -->
-      <div class="pregunta-container">
-        <label for="pregunta">¿Qué pregunta traes al Oráculo hoy?</label>
-        <textarea id="pregunta" placeholder="Ej: ¿Qué necesito soltar para avanzar? ¿Cómo puedo recuperar mi poder creativo?"></textarea>
+      <!-- Selector de Tema -->
+      <div class="temas-container">
+        <div class="temas-titulo">Elige el área que quieres consultar:</div>
+        <div class="temas-botones">
+          <button class="btn-tema" data-tema="amor" onclick="seleccionarTema(this, 'amor')">❤️ Amor</button>
+          <button class="btn-tema" data-tema="trabajo" onclick="seleccionarTema(this, 'trabajo')">💼 Trabajo</button>
+          <button class="btn-tema" data-tema="carta-del-dia" onclick="seleccionarTema(this, 'carta-del-dia')">🌙 Carta del Día</button>
+        </div>
       </div>
 
       <!-- Botones de tirada -->
@@ -369,7 +391,7 @@
   <script>
     // Variables globales
     let deck = [];
-    let currentPregunta = '';
+    let temaSeleccionado = null; // 'amor', 'trabajo' o 'carta-del-dia'
 
     // Cargar el mazo de cartas
     async function cargarMazo() {
@@ -383,38 +405,44 @@
       }
     }
 
-    // Generar interpretación contextual inteligente
-    function generarInterpretacion(carta, pregunta, posicion = null) {
+    // Seleccionar tema
+    function seleccionarTema(boton, tema) {
+      // Quitar clase activo de todos
+      document.querySelectorAll('.btn-tema').forEach(b => b.classList.remove('activo'));
+      // Activar el seleccionado
+      boton.classList.add('activo');
+      temaSeleccionado = tema;
+    }
+
+    // Generar interpretación según tema
+    function generarInterpretacion(carta, posicion = null) {
       const nombre = carta["Nombre de la Carta"];
       const luz = carta["Mensaje (Luz)"] || '';
       const sombra = carta["Sombra (opcional)"] || '';
       const ritual = carta["Ritual Sugerido (opcional)"] || '';
 
       let interpretacion = '';
-      let prefijo = '';
+      let prefijoPosicion = '';
+      let prefijoTema = '';
 
+      // Prefijo por posición (en tirada de 3)
       if (posicion) {
-        if (posicion === 'Estado Mental') {
-          prefijo = `En tu estado mental actual, `;
-        } else if (posicion === 'La Situación') {
-          prefijo = `Respecto a la situación que vives, `;
-        } else if (posicion === 'Consejo') {
-          prefijo = `El consejo del Oráculo Prisma es: `;
-        }
+        if (posicion === 'Estado Mental') prefijoPosicion = `En tu estado mental actual, `;
+        else if (posicion === 'La Situación') prefijoPosicion = `Respecto a la situación que vives, `;
+        else if (posicion === 'Consejo') prefijoPosicion = `El consejo del Oráculo es: `;
       }
 
-      if (pregunta && pregunta.trim().length > 5) {
-        const plantillas = [
-          `Respecto a tu pregunta "${pregunta}", la carta de <strong>${nombre}</strong> te muestra que `,
-          `El Oráculo Prisma responde directamente a tu consulta sobre "${pregunta}" a través de <strong>${nombre}</strong>: `,
-          `En relación con lo que preguntas sobre "${pregunta}", <strong>${nombre}</strong> te recuerda que `,
-          `Tu pregunta "${pregunta}" encuentra respuesta en la energía de <strong>${nombre}</strong>, que te dice: `
-        ];
-        const base = plantillas[Math.floor(Math.random() * plantillas.length)];
-        interpretacion = prefijo + base + luz.toLowerCase();
-      } else {
-        interpretacion = prefijo + `<strong>${nombre}</strong> aparece para ti en este momento y te recuerda que ` + luz.toLowerCase();
+      // Prefijo según tema seleccionado
+      if (temaSeleccionado === 'amor') {
+        prefijoTema = `En el ámbito del amor y las relaciones, `;
+      } else if (temaSeleccionado === 'trabajo') {
+        prefijoTema = `En tu camino profesional y de propósito, `;
+      } else if (temaSeleccionado === 'carta-del-dia') {
+        prefijoTema = `Para este día, `;
       }
+
+      // Construir interpretación
+      interpretacion = prefijoTema + prefijoPosicion + `<strong>${nombre}</strong> te recuerda que ` + luz.toLowerCase();
 
       return {
         interpretacion,
@@ -428,14 +456,16 @@
 
     // Realizar tirada
     async function realizarTirada(cantidad) {
+      if (!temaSeleccionado) {
+        alert('Por favor selecciona un tema antes de tirar las cartas.');
+        return;
+      }
+
       if (deck.length === 0) {
         await cargarMazo();
       }
 
-      const preguntaInput = document.getElementById('pregunta').value.trim();
-      currentPregunta = preguntaInput;
-
-      // Seleccionar cartas aleatorias sin repetición
+      // Seleccionar cartas aleatorias
       const cartasSeleccionadas = [];
       const deckCopia = [...deck];
 
@@ -446,12 +476,11 @@
         deckCopia.splice(indice, 1);
       }
 
-      // Mostrar en el modal con animación
-      mostrarModal(cartasSeleccionadas, preguntaInput);
+      mostrarModal(cartasSeleccionadas);
     }
 
-    // Mostrar el modal con las cartas + animación de revelación
-    function mostrarModal(cartas, pregunta) {
+    // Mostrar el modal
+    function mostrarModal(cartas) {
       const modal = document.getElementById('modal-oraculo');
       const contenedor = document.getElementById('modal-cartas');
       const revelando = document.getElementById('revelando-msg');
@@ -462,20 +491,17 @@
       modal.style.display = 'block';
       document.body.style.overflow = 'hidden';
 
-      // Definir posiciones según cantidad de cartas
+      // Posiciones para tirada de 3
       let posiciones = [];
       if (cartas.length === 3) {
         posiciones = ['Estado Mental', 'La Situación', 'Consejo'];
       }
 
-      // Construir todo el HTML de una sola vez
       let htmlCompleto = '';
-      const cartaData = [];
 
       cartas.forEach((carta, index) => {
         const posicion = posiciones[index] || null;
-        const datos = generarInterpretacion(carta, pregunta, posicion);
-        cartaData.push({ ...datos, posicion });
+        const datos = generarInterpretacion(carta, posicion);
 
         const labelHTML = posicion 
           ? `<div class="posicion-label">${posicion}</div>` 
@@ -517,18 +543,14 @@
         htmlCompleto += cartaHTML;
       });
 
-      // Insertar todo de una vez
       contenedor.innerHTML = htmlCompleto;
 
-      // Obtener las cartas ya insertadas
       const cartaElements = contenedor.querySelectorAll('.carta-revelada');
 
-      // Ocultar mensaje de revelación
       setTimeout(() => {
         revelando.style.display = 'none';
       }, 550);
 
-      // Revelar las cartas con stagger
       cartaElements.forEach((cartaEl, i) => {
         setTimeout(() => {
           cartaEl.classList.add('reveal');
@@ -567,7 +589,7 @@
     window.onload = function() {
       cargarMazo();
       
-      // Cursor mariposa mejorado
+      // Cursor mariposa
       const cursor = document.querySelector('.cursor-mariposa');
       if (cursor) {
         document.addEventListener('mousemove', (e) => {
@@ -581,6 +603,14 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
       }
+
+      // Seleccionar por defecto "Carta del Día"
+      setTimeout(() => {
+        const defaultBtn = document.querySelector('.btn-tema[data-tema="carta-del-dia"]');
+        if (defaultBtn) {
+          seleccionarTema(defaultBtn, 'carta-del-dia');
+        }
+      }, 300);
     };
 
     // Cerrar modal con Escape
