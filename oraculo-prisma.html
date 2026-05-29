@@ -115,13 +115,37 @@
       cursor: pointer;
       line-height: 1;
     }
+
+    /* === ANIMACIONES DE REVELACIÓN DE CARTAS === */
     .carta-revelada {
       background: rgba(26, 26, 46, 0.7);
       border-radius: 20px;
       padding: 1.8rem;
       margin-bottom: 1.5rem;
       border: 1px solid var(--c-lavender);
+      opacity: 0;
+      transform: translateY(40px) scale(0.92) rotateX(8deg);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
+
+    .carta-revelada.reveal {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotateX(0deg);
+      box-shadow: 0 0 25px rgba(178, 141, 255, 0.25);
+    }
+
+    /* Efecto de glow mágico al revelar */
+    .carta-revelada.reveal .carta-imagen {
+      animation: cardGlow 1.2s ease forwards;
+    }
+
+    @keyframes cardGlow {
+      0% { box-shadow: 0 0 10px rgba(254, 234, 191, 0.3); }
+      50% { box-shadow: 0 0 35px rgba(178, 141, 255, 0.6), 0 0 50px rgba(47, 206, 209, 0.3); }
+      100% { box-shadow: 0 0 20px rgba(254, 234, 191, 0.4); }
+    }
+
     .carta-header {
       display: flex;
       align-items: center;
@@ -135,6 +159,10 @@
       border-radius: 15px;
       border: 3px solid var(--c-gold);
       box-shadow: 0 0 20px rgba(254, 234, 191, 0.4);
+      transition: transform 0.4s ease;
+    }
+    .carta-revelada:hover .carta-imagen {
+      transform: scale(1.03);
     }
     .carta-info h3 {
       font-size: 2rem;
@@ -164,6 +192,11 @@
       cursor: pointer;
       margin: 1rem 0;
       display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .sombra-toggle:hover {
+      background: #F784AD;
+      color: #0D1B2A;
     }
     .sombra-content {
       display: none;
@@ -193,6 +226,25 @@
       font-size: 1.1rem;
       cursor: pointer;
       margin: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-modal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(247, 132, 173, 0.5);
+    }
+
+    /* Mensaje de revelación */
+    .revelando {
+      text-align: center;
+      color: var(--c-gold);
+      font-style: italic;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
     }
   </style>
 </head>
@@ -279,6 +331,7 @@
       <span class="modal-close" onclick="cerrarModal()">&times;</span>
       
       <h2 id="modal-titulo" style="text-align:center; color: var(--c-lavender); margin-bottom: 1.5rem;">✨ Respuesta del Oráculo Prisma ✨</h2>
+      <div id="revelando-msg" class="revelando" style="display:none;">✨ El Oráculo está revelando las cartas... ✨</div>
       
       <div id="modal-cartas">
         <!-- Las cartas se insertan aquí dinámicamente -->
@@ -371,15 +424,24 @@
         deckCopia.splice(indice, 1);
       }
 
-      // Mostrar en el modal
+      // Mostrar en el modal con animación
       mostrarModal(cartasSeleccionadas, preguntaInput);
     }
 
-    // Mostrar el modal con las cartas
+    // Mostrar el modal con las cartas + animación de revelación
     function mostrarModal(cartas, pregunta) {
       const modal = document.getElementById('modal-oraculo');
       const contenedor = document.getElementById('modal-cartas');
+      const revelando = document.getElementById('revelando-msg');
+
       contenedor.innerHTML = '';
+      revelando.style.display = 'block';
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+
+      // Crear las cartas (inicialmente ocultas)
+      const cartaElements = [];
 
       cartas.forEach((carta, index) => {
         const datos = generarInterpretacion(carta, pregunta);
@@ -417,10 +479,21 @@
         `;
         
         contenedor.innerHTML += cartaHTML;
+        const nuevaCarta = contenedor.lastElementChild;
+        cartaElements.push(nuevaCarta);
       });
 
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
+      // Ocultar mensaje de "revelando"
+      setTimeout(() => {
+        revelando.style.display = 'none';
+      }, 600);
+
+      // Revelar las cartas con stagger (una por una)
+      cartaElements.forEach((cartaEl, i) => {
+        setTimeout(() => {
+          cartaEl.classList.add('reveal');
+        }, 650 + (i * 420)); // Delay progresivo bonito
+      });
     }
 
     function toggleSombra(btn) {
@@ -442,13 +515,12 @@
 
     function realizarOtraTirada() {
       cerrarModal();
-      // Pequeño delay para mejor UX
       setTimeout(() => {
         const cantidad = prompt('Número de cartas (1 o 3):', '1');
         if (cantidad === '1' || cantidad === '3') {
           realizarTirada(parseInt(cantidad));
         }
-      }, 300);
+      }, 350);
     }
 
     // Inicialización
@@ -464,12 +536,10 @@
         });
       }
 
-      // Efecto sutil en el canvas (opcional)
       const canvas = document.getElementById('particle-canvas');
       if (canvas) {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        // Puedes agregar partículas simples aquí si quieres en el futuro
       }
     };
 
