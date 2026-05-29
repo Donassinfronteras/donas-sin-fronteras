@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "descripcion": "Oráculo Prisma - Versiones temáticas con 4 variaciones por carta (derecho y sombra)",
+  "descripcion": "Oráculo Prisma - Versiones temáticas con 4 variaciones por carta (derecho y sombra) - Profundidad psicológica aumentada",
   "temas": ["amor", "trabajo", "carta-del-dia"],
   "cartas": [
     {
@@ -9,26 +9,20 @@
       "temas": {
         "amor": {
           "derecho": [
-            "Es tiempo de recuperar tu magia en el amor. Has estado apagando tu brillo por miedo a no ser suficiente. Esta carta te recuerda que tu poder creativo y tu capacidad de amar son lo mismo. Deja de esconderte.",
-            "El amor que buscas comienza cuando dejas de negociar tu esencia. Bruxa Tarot aparece para decirte que ya eres suficiente magia. Deja de esperar que alguien te complete cuando ya estás completa.",
-            "Tu corazón está listo para una conexión que honre tu intensidad. Ya no tienes que suavizarte ni hacerte más pequeña para ser amada. Esta carta te da permiso para brillar sin pedir perdón.",
-            "La magia del amor verdadero se activa cuando dejas de buscar fuera lo que ya existe dentro de ti. Bruxa Tarot te invita a convertirte en la persona que quieres atraer."
+            "Estás apagando tu brillo creativo y emocional como estrategia de supervivencia. La herida de no ser suficiente te ha llevado a creer que tu intensidad ahuyenta el amor. Esta carta te invita a desarmar esa creencia y permitir que tu magia sea visible.",
+            "Tu capacidad de crear y amar están profundamente conectadas. Cuando te niegas el derecho a brillar, también te niegas la posibilidad de relaciones donde puedas ser vista en tu totalidad. Bruxa Tarot te recuerda que mereces ser amada sin tener que reducirte.",
+            "Has construido una versión de ti misma más 'fácil de querer'. Esta carta señala el momento de desmantelar esa versión y atreverte a ser la persona intensa, creativa y compleja que realmente eres.",
+            "El amor que buscas requiere que dejes de negociar tu esencia. Mientras sigas ofreciendo una versión atenuada de ti, seguirás atrayendo relaciones que no pueden sostener tu profundidad real."
           ],
           "sombra": [
-            "Has estado usando tu creatividad y tu intensidad como escudo para no dejarte ver realmente. El miedo a ser abandonada te ha llevado a crear versiones de ti misma que no son del todo honestas.",
-            "Existe una parte de ti que sigue creyendo que el amor duele o que hay que ganárselo. Esta creencia te está haciendo repetir patrones donde das demasiado y recibes poco.",
-            "Tu sombra en el amor se llama 'miedo a la decepción'. Has construido tantas defensas que ahora te cuesta dejar entrar incluso a quien viene con buenas intenciones.",
-            "Estás usando tu poder mágico para controlar el desenlace en vez de confiar en el proceso. El control disfrazado de protección te está alejando de la conexión real que tanto deseas."
+            "Tu sombra principal en el amor es el miedo a ser abandonada por ser demasiado. Esta creencia te ha llevado a desarrollar una hiper-independencia creativa como forma de protección. Estás usando tu magia como escudo.",
+            "Existe una parte de ti que sigue creyendo que el amor se gana con esfuerzo, sacrificio o 'ser especial'. Esta creencia proviene de una herida temprana y te está llevando a sobre-dar y sub-recibir.",
+            "Estás controlando la narrativa de tus relaciones para evitar la decepción. Esta necesidad de control emocional te está impidiendo experimentar una conexión donde puedas realmente dejarte ver y ser sostenida.",
+            "Tu patrón más repetido es encenderte y luego apagar tu luz cuando sientes que el otro no puede sostener tu intensidad. Esto genera ciclos de acercamiento y retirada que confunden tanto a los demás como a ti misma."
           ]
         },
-        "trabajo": {
-          "derecho": [],
-          "sombra": []
-        },
-        "carta-del-dia": {
-          "derecho": [],
-          "sombra": []
-        }
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
     {
@@ -37,26 +31,20 @@
       "temas": {
         "amor": {
           "derecho": [
-            "El amor que estás llamando requiere valentía. Nabi te recuerda que los miedos que sientes no son señales para huir, sino para avanzar con el corazón abierto pero consciente.",
-            "Hay una relación (o la posibilidad de una) que te está pidiendo que dejes de minimizar lo que sientes. Nabi viene a decirte que tu intuición es tu mejor aliada en el amor.",
-            "Estás entrando en una etapa donde el amor ya no se trata de salvar o ser salvada, sino de caminar juntos con los ojos abiertos. Nabi te da fuerzas para elegir desde la verdad.",
-            "Tu capacidad de amar profundamente es también tu mayor don. Nabi te recuerda que no tienes que elegir entre ser intensa y ser amada."
+            "Tus miedos en el amor no son irracionales, pero muchos de ellos pertenecen al pasado y no a la relación actual. Nabi te invita a distinguir entre la amenaza real y la activación de tu sistema nervioso por heridas antiguas.",
+            "Estás en un proceso de aprendizaje donde tu intuición y tu miedo están compitiendo por el control. Esta carta te da permiso para confiar en tu percepción, pero también te pide que no dejes que el miedo tome todas las decisiones.",
+            "Tu capacidad de percibir peligro es alta. Ahora necesitas desarrollar la misma capacidad para percibir seguridad. Nabi te acompaña a entrenar esa otra mirada.",
+            "El amor maduro que estás buscando requiere que dejes de reaccionar desde la hipervigilancia y empieces a responder desde la presencia."
           ],
           "sombra": [
-            "Estás reaccionando con miedo ante situaciones que no representan un peligro real. Tu sistema nervioso está en alerta por heridas antiguas y está saboteando conexiones que podrían ser sanas.",
-            "Hay una tendencia a crear drama o a magnificar problemas para sentir que 'pasa algo'. Esta energía te mantiene en un estado de inestabilidad emocional constante.",
-            "Tu sombra en el amor se llama 'hipervigilancia'. Estás tan pendiente de posibles traiciones que no dejas espacio para que la confianza se construya naturalmente.",
-            "Estás usando el miedo como excusa para no comprometerte del todo. Mientras sigas protegiéndote de esta forma, el amor que deseas seguirá sintiéndose lejos."
+            "Tu hipervigilancia emocional se ha convertido en un mecanismo de defensa que sabotea conexiones antes de que puedan demostrarte que son seguras. Estás creando enemigos donde solo hay personas imperfectas.",
+            "Estás usando el miedo como forma de mantener el control emocional. Mientras sigas anticipando el abandono, no dejas espacio real para que la confianza se construya.",
+            "Tu sombra más fuerte aquí es la tendencia a magnificar amenazas para justificar la retirada. Esto te mantiene en un estado constante de alerta que agota tanto tus relaciones como tu sistema nervioso.",
+            "Estás repitiendo el patrón de 'probar' al otro constantemente. Esta necesidad de evidencia continua de seguridad impide que se desarrolle una confianza orgánica."
           ]
         },
-        "trabajo": {
-          "derecho": [],
-          "sombra": []
-        },
-        "carta-del-dia": {
-          "derecho": [],
-          "sombra": []
-        }
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
     {
@@ -65,26 +53,20 @@
       "temas": {
         "amor": {
           "derecho": [
-            "Sanar en el amor no significa evitar el dolor, sino atravesarlo con presencia. Marta te acompaña a soltar la idea de que el amor debería ser solo fácil y placentero.",
-            "Hay un proceso de sanación emocional que se está activando en ti. Esta carta te recuerda que llorar, sentir rabia o extrañar también forma parte del camino hacia un amor más maduro.",
-            "Estás aprendiendo que el amor verdadero incluye la capacidad de sostenerte a ti misma cuando las cosas duelen. Marta te está enseñando a ser tu propio refugio.",
-            "El amor que viene hacia ti ya no va a pedirte que ignores tu dolor. Marta aparece como testigo de que sanar y amar pueden coexistir."
+            "Estás en un proceso de sanación donde el dolor ya no puede ser evitado ni negado. Marta te acompaña a entender que tu capacidad de sentir profundamente no es una debilidad, sino la puerta hacia un amor más maduro.",
+            "Has estado cargando heridas amorosas sin permitirte procesarlas del todo. Esta carta señala que es momento de dejar de 'ser fuerte' y permitir que las emociones que has postergado finalmente se muevan.",
+            "Tu sanación en el amor está directamente relacionada con tu capacidad de sostenerte a ti misma cuando el otro no puede (o no quiere) hacerlo. Marta te está enseñando regulación emocional desde el amor propio.",
+            "El amor que viene hacia ti ya no va a pedirte que ignores tu dolor para mantener la paz. Esta carta te da permiso para sentir y sanar al mismo tiempo."
           ],
           "sombra": [
-            "Estás evitando sentir el dolor de relaciones pasadas y eso te está impidiendo abrirte completamente a lo nuevo. La herida no desaparece por ignorarla.",
-            "Hay una parte de ti que sigue usando el sufrimiento como identidad. 'Yo siempre sufro por amor' se ha convertido en una historia que ya no te sirve.",
-            "Tu sombra en el amor se llama 'miedo a la vulnerabilidad'. Prefieres quedarte con lo conocido (aunque duela) antes que arriesgarte a sentir algo nuevo.",
-            "Estás proyectando en las nuevas personas el dolor que no has procesado de las anteriores. Esto te está haciendo juzgar y cerrar puertas antes de tiempo."
+            "Estás usando el rol de 'la que siempre sana' o 'la fuerte' como forma de evitar sentir tu propio dolor. Esta identificación con la resiliencia te está impidiendo procesar lo que realmente te duele.",
+            "Tu sombra principal es la evasión emocional disfrazada de madurez. Dices 'ya lo superé' cuando en realidad solo lo has guardado en un lugar donde sigue influyendo en tus elecciones.",
+            "Estás proyectando en las nuevas relaciones las heridas que no has integrado de las anteriores. Esto te hace reaccionar de forma desproporcionada ante situaciones que activan tu dolor no procesado.",
+            "Hay una parte de ti que sigue usando el sufrimiento como identidad. 'Yo siempre termino sufriendo por amor' se ha convertido en una narrativa que, aunque dolorosa, te resulta familiar y segura."
           ]
         },
-        "trabajo": {
-          "derecho": [],
-          "sombra": []
-        },
-        "carta-del-dia": {
-          "derecho": [],
-          "sombra": []
-        }
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
     {
@@ -93,26 +75,20 @@
       "temas": {
         "amor": {
           "derecho": [
-            "El amor que estás viviendo (o atrayendo) es un espejo de las decisiones que has tomado hasta ahora. Jade te invita a observar con honestidad qué patrones estás repitiendo.",
-            "Hay un equilibrio kármico en tus relaciones. Lo que das y lo que recibes está volviendo a ti. Esta carta te pide que observes si estás en un ciclo de dar demasiado o recibir muy poco.",
-            "Estás en un momento donde puedes cerrar ciclos amorosos antiguos con más conciencia. Jade te da la claridad para entender por qué ciertas relaciones se repiten.",
-            "El amor maduro que buscas requiere que asumas responsabilidad por la energía que pones en tus relaciones. Jade te recuerda que el karma no castiga, sino que equilibra."
+            "Estás frente a un espejo kármico en tus relaciones. Lo que estás recibiendo es, en gran medida, el reflejo de los patrones que has repetido (dar demasiado, tolerar poco, elegir desde la herida). Jade te invita a mirar con honestidad.",
+            "Hay un desequilibrio energético en tus relaciones que necesita ser visto. Esta carta te pide que observes sin juicio dónde has estado sosteniendo dinámicas que no te corresponden.",
+            "Estás en un momento donde puedes cerrar ciclos desde la responsabilidad y no desde la culpa. Jade te da la claridad para entender tu parte sin caer en autodesvalorización.",
+            "El amor maduro requiere que dejes de repetir patrones desde la inconsciencia. Esta carta te acompaña a tomar responsabilidad de forma compasiva."
           ],
           "sombra": [
-            "Estás repitiendo patrones donde das más de lo que recibes y luego te sientes víctima. Jade te confronta con tu parte de responsabilidad en estos desequilibrios.",
-            "Hay una tendencia a culpar al otro (o al destino) de lo que te pasa en el amor, sin mirar tus propias elecciones repetidas. Esta posición te mantiene estancada.",
-            "Tu sombra en el amor se llama 'evitar la responsabilidad'. Prefieres creer que 'te pasan cosas' antes que reconocer los patrones que sigues eligiendo.",
-            "Estás cargando culpas que no te corresponden o, por el contrario, negándote a ver dónde sí has herido. Jade te pide equilibrio y honestidad."
+            "Tu patrón más repetido es dar en exceso y luego resentirte. Jade te confronta con tu dificultad para poner límites claros y para reconocer cuándo estás sobre-dar desde la herida de no ser suficiente.",
+            "Estás proyectando la responsabilidad de tus elecciones en el otro o en el destino. Esta posición te mantiene en el rol de víctima y te impide ver dónde sí tienes poder de cambio.",
+            "Tu sombra aquí es la dificultad para recibir. Has construido una identidad alrededor de ser quien da, y ahora te cuesta permitir que alguien te sostenga sin sentirte en deuda o vulnerable.",
+            "Estás repitiendo relaciones donde el desequilibrio es similar, pero con diferentes personas. Jade te invita a mirar el patrón común en vez de seguir culpando a cada nuevo vínculo."
           ]
         },
-        "trabajo": {
-          "derecho": [],
-          "sombra": []
-        },
-        "carta-del-dia": {
-          "derecho": [],
-          "sombra": []
-        }
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
     {
@@ -121,26 +97,570 @@
       "temas": {
         "amor": {
           "derecho": [
-            "Hay una decisión importante en el amor que tu corazón ya sabe, aunque tu mente siga dudando. Elena te invita a confiar en esa voz interna que ya conoce el camino.",
-            "El amor que realmente quieres puede requerir que tomes una decisión valiente (aunque incómoda). Esta carta te recuerda que elegir desde el corazón siempre termina siendo lo correcto.",
-            "Estás en un cruce de caminos amoroso. Elena aparece para recordarte que el camino más fácil no siempre es el que te lleva a la conexión que tu alma necesita.",
-            "Tu verdad en el amor está pidiendo ser escuchada. Ya sea una conversación pendiente o una decisión interna, Elena te da fuerza para actuar con autenticidad."
+            "Hay una decisión que tu corazón ya tomó, pero tu mente y tus heridas siguen retrasando. Elena te invita a alinear tu acción con lo que ya sabes internamente.",
+            "Estás en un cruce donde elegir desde el miedo al abandono o al conflicto te está costando tu autenticidad. Esta carta te da fuerza para priorizar tu verdad aunque sea incómoda.",
+            "Tu proceso actual en el amor está pidiendo que dejes de postergar lo inevitable. Elena aparece como recordatorio de que posponer una decisión dolorosa suele generar más dolor a largo plazo.",
+            "Estás lista para elegir desde tu centro y no desde tus heridas de apego. Esta carta te acompaña a tomar decisiones más alineadas con quien estás convirtiéndote."
           ],
           "sombra": [
-            "Estás eligiendo desde el miedo al cambio o al abandono en vez de desde lo que realmente deseas. Esta posición te está manteniendo en situaciones que ya no te nutren.",
-            "Hay una tendencia a posponer decisiones importantes en el amor por comodidad o por miedo a lastimar. Elena te confronta con el costo de no elegir.",
-            "Tu sombra en el amor se llama 'evitar la verdad'. Sabes lo que necesitas hacer o decir, pero sigues postergándolo por miedo a las consecuencias.",
-            "Estás aferrándote a una relación o a una idea de amor que ya no te representa, solo porque el cambio da miedo. Elena te recuerda que la verdad duele menos que la mentira prolongada."
+            "Estás eligiendo desde el miedo al abandono más que desde lo que realmente deseas. Esta posición te mantiene en relaciones y dinámicas que ya no te nutren.",
+            "Tu sombra principal aquí es la evasión de la confrontación. Sabes lo que necesitas hacer o decir, pero sigues postergándolo para no generar conflicto o pérdida.",
+            "Estás aferrándote a una relación (o idea de relación) porque el duelo te parece más amenazante que seguir en una situación que te va erosionando. Elena te confronta con este autoengaño.",
+            "Hay una parte de ti que sigue priorizando 'no lastimar al otro' por encima de no lastimarte a ti misma. Esta inversión de prioridades es uno de tus patrones más repetidos."
           ]
         },
-        "trabajo": {
-          "derecho": [],
-          "sombra": []
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Mia",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Es momento de soltar lo que ya no te nutre en el amor. Mia te recuerda que entregar demasiado de ti misma esperando algo a cambio solo te está vaciando. El amor real comienza cuando aprendes a priorizarte.",
+            "Estás entrando en una etapa donde ya no necesitas perseguir el amor ni la validación. Mia aparece para decirte que cuando te reconoces primero, atraes relaciones más sanas y auténticas.",
+            "Hay una relación (o patrón) donde has estado dando más de lo que recibes. Esta carta te invita a poner límites claros y a entender que no tienes que ganarte el derecho a ser amada.",
+            "Tu bienestar emocional es la base de cualquier relación sana. Mia te recuerda que no necesitas hacerte más pequeña ni más disponible para ser elegida."
+          ],
+          "sombra": [
+            "Estás descuidando tu propio valor al permitir dinámicas donde das mucho más de lo que recibes. Esta posición te invita a revisar si estás repitiendo el patrón de 'dar para ser amada'.",
+            "Tu sombra en el amor se llama 'miedo a estar sola'. Este miedo te está llevando a tolerar situaciones que no te respetan ni te nutren.",
+            "Estás buscando validación externa para sentirte suficiente. Mia te confronta con la necesidad de reconocer tu propio valor sin depender de que alguien te lo confirme.",
+            "Hay una parte de ti que sigue creyendo que si das más, eventualmente recibirás lo mismo. Esta creencia te está manteniendo en ciclos de agotamiento emocional."
+          ]
         },
-        "carta-del-dia": {
-          "derecho": [],
-          "sombra": []
-        }
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Tony",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Has estado postergando decisiones importantes en el amor. Tony te recuerda que cada día que dejas pasar sin actuar es tiempo que no recuperas. Es momento de ser honesta contigo misma.",
+            "Hay una situación amorosa que requiere que dejes de postergar la conversación o la decisión que ya sabes que necesitas tomar. Esta carta llega como un llamado urgente.",
+            "Estás invirtiendo energía en dinámicas que no te están dando nada a cambio. Tony te invita a reflexionar sobre dónde estás malgastando tu tiempo y tu corazón.",
+            "El amor que deseas requiere que dejes de esperar el momento perfecto y empieces a actuar desde la verdad. Tony te da el impulso para dejar de postergar tu felicidad."
+          ],
+          "sombra": [
+            "Estás atrapada en patrones donde sigues invirtiendo en relaciones que ya sabes que no tienen futuro. Esta posición te confronta con el miedo a soltar lo conocido.",
+            "Tu sombra en el amor se llama 'evitar el duelo'. Prefieres quedarte en lo que ya no funciona antes que enfrentar el dolor de soltar.",
+            "Has estado perdiendo tiempo en situaciones donde no hay reciprocidad real. Tony te recuerda que mientras sigas postergando, más tiempo pierdes.",
+            "Existe una parte de ti que sigue aferrada a 'lo que podría ser' en vez de aceptar lo que realmente es. Esta ilusión te está impidiendo avanzar."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Dante",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás enfrentando un momento difícil en el amor, pero tienes dentro de ti la fuerza necesaria para superarlo. Dante te recuerda que tus cicatrices también son medallas de valentía.",
+            "El dolor que estás sintiendo ahora puede transformarse en una victoria si decides no rendirte. Esta carta te invita a abrazar tu poder de renacer.",
+            "Hay una situación amorosa que te está poniendo a prueba. Dante aparece para recordarte que tienes la fuerza para atravesar esta adversidad y salir más fuerte.",
+            "Tu capacidad de transformar el dolor en crecimiento es uno de tus mayores dones. Dante te acompaña a convertir esta experiencia en una nueva versión de ti."
+          ],
+          "sombra": [
+            "Estás permitiendo que las derrotas amorosas te definan. Dante te confronta con la necesidad de dejar de identificarte con el dolor y empezar a verte como alguien que puede renacer.",
+            "Tu sombra en el amor se llama 'aferrarte al sufrimiento'. Estás usando el dolor como refugio para no tener que volver a arriesgarte.",
+            "Has estado dudando de tu propia fuerza después de una herida. Esta posición te invita a recordar que no eres tus heridas.",
+            "Estás repitiendo el patrón de quedarte en situaciones dolorosas porque crees que no mereces algo mejor. Dante te recuerda que sí lo mereces."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "La Voz Clara",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Es tiempo de romper el silencio en el amor. Hay cosas que necesitas decir (o que necesitas escuchar) y que ya no puedes seguir guardando. Esta carta te da fuerza para usar tu voz.",
+            "Has estado minimizando lo que sientes o cediendo tu poder en nombre de la paz. La Voz Clara aparece para recordarte que mereces ser escuchada.",
+            "Tu verdad en las relaciones está pidiendo salir. Ya sea una conversación pendiente o una decisión que has estado callando, esta carta te impulsa a expresarla.",
+            "Estás lista para recuperar tu tono y tu narrativa en el amor. La Voz Clara te recuerda que callar lo que eres no protege tu paz, solo silencia tu alma."
+          ],
+          "sombra": [
+            "Estás negando tus emociones o autocensurándote por miedo a generar conflicto. Esta posición te confronta con el costo de no decir lo que realmente sientes.",
+            "Tu sombra en el amor se llama 'miedo a la confrontación'. Prefieres callar antes que arriesgarte a expresar tu verdad.",
+            "Has estado hablando mucho pero no desde tu verdad profunda. Esta carta te invita a dejar de lado las palabras superficiales y decir lo que realmente importa.",
+            "Estás permitiendo que el miedo bloquee tu garganta. La Voz Clara te recuerda que callar lo que eres no te protege, solo te aleja de ti misma."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "El Llamado del Alma",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Sientes un vacío o una inquietud en el amor que no sabes nombrar. Esta carta aparece para recordarte que tu alma está llamando a una conexión más profunda y auténtica.",
+            "Hay un deseo en tu corazón que va más allá de lo que has experimentado hasta ahora. El Llamado del Alma te invita a escuchar esa voz que pide algo más.",
+            "Estás en un punto donde ya diste pasos importantes y necesitas confirmación de que vas por el camino correcto. Esta carta te da esa confirmación.",
+            "Tu alma está guiándote hacia un tipo de amor diferente al que has conocido. Confía en esa inquietud: es tu brújula."
+          ],
+          "sombra": [
+            "Estás ignorando los susurros de tu alma por miedo al cambio. Esta posición te advierte que la negación solo alarga el proceso.",
+            "Tu sombra en el amor se llama 'miedo a lo desconocido'. Prefieres quedarte en lo familiar (aunque no te llene) antes que seguir el llamado.",
+            "Has estado llenando el vacío con distracciones o relaciones que no te nutren realmente. Esta carta te invita a enfrentar esa verdad.",
+            "Estás resistiéndote a escuchar lo que tu corazón realmente quiere porque implica soltar o cambiar. El llamado volverá… cada vez más fuerte."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "El Regreso a Casa",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás cerrando un ciclo importante en el amor. Aunque el mundo siga en caos, dentro de ti está naciendo una calma nueva. Esta carta celebra ese regreso a ti.",
+            "El amor que buscas no está fuera, sino en la reconexión profunda contigo misma. El Regreso a Casa te recuerda que ya no estás perdida.",
+            "Has llegado a un punto donde puedes soltar lo que ya no te sirve y volver a casa (a ti). Esta carta es un abrazo de bienvenida.",
+            "Estás recordando que tu verdadero hogar está en la relación que tienes contigo misma. El Regreso a Casa te invita a habitarte plenamente."
+          ],
+          "sombra": [
+            "Estás anhelando un regreso, pero aún no has cerrado el ciclo anterior. Hay nostalgia o deseo de volver a algo que ya no existe.",
+            "Tu sombra en el amor se llama 'idealizar el pasado'. Estás aferrándote a una versión romantizada de lo que fue en vez de crear lo que puede ser.",
+            "Te estás negando el regreso a ti misma por miedo a estar sola. Esta posición te confronta con la necesidad de elegirte aunque duela.",
+            "Estás buscando fuera lo que solo puedes encontrar dentro. El Regreso a Casa te recuerda que la paz que buscas comienza cuando dejas de huir de ti."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Alvaro",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Hay alguien jugando contigo sin decirlo claramente. Alvaro te recuerda que tu intuición ya sabe la verdad, aunque tu mente siga buscando excusas. Es momento de dejar de minimizar lo que sientes.",
+            "Estás detectando dinámicas de manipulación emocional (ya sea de otro hacia ti o de ti hacia otro). Esta carta te invita a cortar con honestidad esos hilos invisibles.",
+            "El amor que mereces no se construye con juegos ni con poder. Alvaro aparece para recordarte que la claridad y la autenticidad son la base de cualquier conexión sana.",
+            "Hay una relación donde sientes que te están tejiendo una red. Esta carta te da fuerza para ver con claridad y actuar en consecuencia."
+          ],
+          "sombra": [
+            "Estás permitiendo que alguien controle tu luz con hilos invisibles. Tu sombra aquí es seguir justificando comportamientos que sabes que no están bien.",
+            "Hay una parte de ti que está usando tácticas de manipulación emocional (culpa, silencio, seducción) para conseguir lo que quieres. Alvaro te confronta con esa verdad.",
+            "Tu sombra en el amor se llama 'miedo a confrontar la verdad'. Prefieres seguir en la confusión antes que admitir lo que ya sabes.",
+            "Estás atrapada en una dinámica donde nadie gana. Esta posición te invita a cortar la red, aunque duela."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 13,
+      "nombre": "Emmanuel",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás esperando que alguien elija… y esa espera te está haciendo daño. Emmanuel te recuerda que el amor no es tibio. Es fuego o no es nada.",
+            "Hay una situación de 'casi' que duele más que un 'no'. Esta carta te invita a dejar de sostener lo que no te sostiene.",
+            "Estás dudando de lo que sabes que quieres por miedo a lo que implica conseguirlo. Emmanuel te da fuerza para elegir con claridad.",
+            "El amor que buscas no va a llegar mientras sigas sosteniendo espacios que ya no te nutren. Es momento de soltar."
+          ],
+          "sombra": [
+            "Estás reviviendo escenas, miradas y 'y si…' una y otra vez. Esta posición te mantiene atrapada en un eco que no te deja vivir el presente.",
+            "Tu sombra en el amor se llama 'aferrarte a lo que no te elige'. Mientras sigas esperando, te estás negando la posibilidad de ser elegida de verdad.",
+            "Estás usando la esperanza como forma de no cerrar ciclos. Emmanuel te confronta con la necesidad de soltar lo que no te sostiene.",
+            "Hay una parte de ti que prefiere el 'casi' doloroso antes que el riesgo de buscar algo que sí te corresponda."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 14,
+      "nombre": "Valeria",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás percibiendo que detrás de una sonrisa hay intenciones ocultas. Valeria te recuerda que tu intuición es precisa. Confía en lo que ves más allá de las palabras.",
+            "Hay alguien usando tu deseo de conexión o tu ambición para sus propios fines. Esta carta te invita a poner límites claros.",
+            "Estás justificando comportamientos tóxicos en nombre del amor o la conexión. Valeria aparece para recordarte que el respeto no se negocia.",
+            "El amor sano no se construye con manipulación ni con segundas intenciones. Esta carta te da fuerza para elegir la autenticidad."
+          ],
+          "sombra": [
+            "Estás adoptando tácticas de manipulación (culpa, seducción, chantaje emocional) sin darte cuenta. Valeria te confronta con tu propio reflejo oscuro.",
+            "Tu sombra en el amor se llama 'usar el poder para controlar'. Estás repitiendo patrones que te han herido, pero ahora desde el otro lado.",
+            "Estás justificando comportamientos tóxicos propios o ajenos porque 'el amor todo lo puede'. Esta posición te invita a revisar esa creencia.",
+            "Hay una parte de ti que está usando la seducción o la culpa para conseguir lo que quieres. Valeria te pide que elijas la autenticidad sobre el control."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 15,
+      "nombre": "Karina",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás sintiendo resentimiento o envidia ante el éxito o la felicidad amorosa de alguien más. Karina te invita a mirar hacia dentro en vez de comparar.",
+            "Hay una tendencia a sabotear (consciente o inconscientemente) las conexiones o logros de otros por miedo a perder tu lugar. Esta carta te pide honestidad.",
+            "Estás midiendo tu camino amoroso con la vara de los demás. Karina aparece para recordarte que tu historia es única.",
+            "El amor propio incluye celebrar el amor ajeno sin que te reste. Esta carta te ayuda a soltar la comparación tóxica."
+          ],
+          "sombra": [
+            "Tu envidia se está volviendo contra ti: te niegas la alegría y te comparas sin piedad. Karina te confronta con el veneno que estás bebiendo.",
+            "Estás desmereciendo tus propios logros y tu camino por enfocarte en lo que otros tienen. Esta posición te mantiene en escasez emocional.",
+            "Tu sombra en el amor se llama 'competencia disfrazada de amistad'. Estás midiendo tu valor contra el de otros constantemente.",
+            "Hay una parte de ti que siente alivio cuando otros fallan en el amor. Karina te invita a sanar esa herida de escasez."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 16,
+      "nombre": "Tatiana",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás repitiendo patrones de relación que solo te dejan estancada. Tatiana te recuerda que el miedo al cambio es más doloroso a largo plazo que el riesgo de soltar.",
+            "Tu zona de confort se ha convertido en una jaula. Esta carta te invita a atreverte a crear un presente que sea solo tuyo.",
+            "Hay un patrón repetitivo en tus relaciones que ya no te sirve. Tatiana aparece para darte fuerza para romperlo.",
+            "El amor que mereces requiere que dejes de elegir desde el miedo a lo desconocido. Esta carta te acompaña a soltar lo familiar."
+          ],
+          "sombra": [
+            "Estás idealizando un pasado que ya no existe para no tener que enfrentar el presente. Tatiana te confronta con esa nostalgia tóxica.",
+            "Tu sombra en el amor se llama 'miedo al cambio'. Prefieres quedarte en lo conocido (aunque te duela) antes que arriesgarte a lo nuevo.",
+            "Estás justificando patrones repetitivos con frases como 'así soy yo' o 'siempre me pasa lo mismo'. Esta posición te mantiene estancada.",
+            "Hay una parte de ti que sigue repitiendo lo mismo esperando resultados diferentes. Tatiana te recuerda que el cambio empieza con una decisión."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 18,
+      "nombre": "Alberto",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás sintiendo el impulso de apoyar o defender a alguien que está sufriendo en el amor (o en la vida). Alberto te recuerda que un acto de intercesión puede cambiar el rumbo.",
+            "Hay alguien en tu entorno que necesita respaldo y tú tienes la capacidad de dárselo. Esta carta te invita a actuar con el corazón.",
+            "El amor también se expresa protegiendo y sosteniendo a quienes amamos. Alberto aparece para recordarte el poder de ser escudo para otro.",
+            "Tu sentido de justicia y protección está activado. Esta carta te da fuerza para interceder cuando sea necesario."
+          ],
+          "sombra": [
+            "Estás ignorando el sufrimiento de alguien cercano por miedo, conveniencia o para no involucrarte. Alberto te confronta con tu inacción.",
+            "Tu sombra en el amor se llama 'evitar la responsabilidad'. Sabes que alguien necesita apoyo y estás eligiendo mirar hacia otro lado.",
+            "Estás priorizando tu comodidad antes que ser un aliado para quien lo necesita. Esta posición te invita a revisar tus valores.",
+            "Hay una parte de ti que prefiere no involucrarse aunque vea injusticia. Alberto te recuerda que el amor también es acción."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 19,
+      "nombre": "Oracio",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Hay un amor (pasado o presente) que sigue habitando en ti aunque la relación haya terminado. Oracio te invita a honrar esa conexión sin necesidad de mantenerla activa. Puedes soltar sin borrar lo que significó.",
+            "Estás en un proceso de integrar una relación que te marcó profundamente. Esta carta te recuerda que el amor no siempre se resuelve con distancia; a veces se resuelve con reconocimiento interno.",
+            "Hay una parte de ti que sigue sosteniendo emocionalmente a alguien que ya no está (o que ya no te corresponde). Oracio te da permiso para seguir queriendo sin tener que seguir esperando.",
+            "El amor maduro también incluye la capacidad de honrar lo que fue sin convertirlo en una carga. Esta carta te acompaña a cerrar con dignidad y ternura."
+          ],
+          "sombra": [
+            "Estás negándote el derecho a extrañar o a seguir sintiendo por alguien que ya no está en tu vida. Esta negación te está impidiendo procesar el duelo real.",
+            "Tu sombra aquí es el orgullo disfrazado de cierre. Estás rechazando el apoyo o el consuelo porque crees que deberías 'ya haber superado' lo que pasó.",
+            "Estás manteniendo viva una conexión emocional (aunque sea solo en tu mente) como forma de no enfrentar la soledad que vendría si realmente la sueltas.",
+            "Hay una parte de ti que sigue usando el recuerdo de esa persona como refugio emocional. Oracio te confronta con la necesidad de volver a habitar tu presente."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 20,
+      "nombre": "Rosario",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás necesitando un espacio de silencio y observación interna respecto a tus emociones amorosas. Rosario te invita a dejar de buscar respuestas afuera y mirar lo que ya está ocurriendo dentro de ti.",
+            "Hay una verdad emocional que ya conoces, pero que requiere tu permiso para emerger. Esta carta te da ese permiso para sentir sin juicio lo que realmente está pasando.",
+            "Tu proceso actual pide que dejes de intelectualizar tanto el amor y vuelvas a sentirlo. Rosario aparece como un refugio donde puedes estar con lo que sientes sin tener que explicarlo.",
+            "Estás en un momento donde el silencio interior es más sanador que cualquier conversación. Esta carta te invita a crear ese espacio."
+          ],
+          "sombra": [
+            "Estás evitando mirar lo que realmente sientes por miedo a lo que puedas descubrir. Esta evasión te mantiene en una confusión que, aunque incómoda, te resulta más segura que la claridad.",
+            "Tu sombra aquí es la dificultad para estar contigo misma sin distracciones. Has externalizado tanto tu regulación emocional que ahora te cuesta sostenerte en silencio.",
+            "Estás usando el ruido externo (conversaciones, análisis, redes) para no tener que escuchar lo que tu corazón ya sabe. Rosario te confronta con esa huida.",
+            "Hay una parte de ti que sigue buscando validación o claridad fuera porque no confías en tu propia percepción emocional. Esta carta te invita a volver a tu centro."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 21,
+      "nombre": "Las Tres Aliadas de Corazón",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás necesitando recordar quiénes realmente te sostienen. Esta carta aparece cuando has estado invirtiendo energía en relaciones que no te devuelven lo mismo que das.",
+            "Hay una red de apoyo (aunque sea pequeña) que está disponible para ti. Las Tres Aliadas te recuerdan que no tienes que cargar todo sola.",
+            "Tu proceso actual en el amor requiere que dejes de aislarte. Esta carta te invita a reconocer y recibir el sostén que ya existe en tu vida.",
+            "Estás en un momento donde ser aliada de ti misma también significa permitir que otros te acompañen. Esta carta te da permiso para necesitar."
+          ],
+          "sombra": [
+            "Estás aislándote emocionalmente por orgullo, miedo o decepción pasada. Esta posición te está privando del sostén que podrías recibir.",
+            "Tu sombra aquí es la dificultad para pedir y recibir. Has construido una identidad de autosuficiencia que ahora te está dejando sola cuando más necesitas conexión.",
+            "Estás rodeada de relaciones superficiales mientras descuidas (o no reconoces) a las pocas personas que realmente podrían sostenerte. Esta carta te invita a priorizar calidad sobre cantidad.",
+            "Hay una parte de ti que sigue creyendo que 'molestas' o que 'deberías poder sola'. Esta creencia te está impidiendo construir una red real de apoyo."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 22,
+      "nombre": "Jazmin",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás sintiendo una atracción o conexión que te genera expectativa y también miedo. Jazmín te recuerda que el amor no se fuerza; se reconoce cuando está listo.",
+            "Hay una posibilidad nueva que está surgiendo. Esta carta te invita a no proyectar demasiado rápido ni a cerrar por miedo antes de tiempo.",
+            "Tu corazón está respondiendo a algo (o alguien) antes de que tu mente pueda explicarlo. Jazmín te da permiso para sentir sin tener que definir inmediatamente.",
+            "Estás en un proceso donde el amor puede aparecer de formas que no esperabas. Esta carta te acompaña a mantener el corazón abierto sin perder el centro."
+          ],
+          "sombra": [
+            "Estás forzando una conexión o creando expectativas prematuras porque tienes miedo de que 'se escape' lo bueno. Esta ansiedad está nublando tu percepción real.",
+            "Tu sombra aquí es la idealización temprana. Estás proyectando en alguien (o en una situación) todo lo que has estado esperando, sin ver quién o qué está realmente frente a ti.",
+            "Estás aferrándote a una chispa porque tienes miedo de volver a la soledad. Jazmín te confronta con la necesidad de no usar a otro como salvavidas emocional.",
+            "Hay una parte de ti que está tejiendo historias y futuros antes de que la conexión tenga tiempo de desarrollarse naturalmente. Esta carta te invita a soltar el control del desenlace."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 23,
+      "nombre": "Daniela",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás dudando de tu propio valor en el amor. Daniela te recuerda que tu merecimiento no depende de que alguien te lo confirme. Es momento de convertirte en tu propia fuente de reconocimiento.",
+            "Has estado minimizando tus logros y cualidades por miedo a parecer arrogante. Esta carta te invita a celebrar tu propio camino sin esperar aplausos externos.",
+            "Tu motivación y tu autoestima en el amor están conectadas. Daniela aparece para recordarte que mereces relaciones donde no tengas que probar constantemente tu valía.",
+            "Estás en un proceso de dejar de buscar validación afuera y empezar a reconocerte desde dentro. Esta carta te da fuerza para eso."
+          ],
+          "sombra": [
+            "Estás esperando que alguien te dé el permiso para sentirte suficiente. Esta dependencia externa de validación te está manteniendo en una posición de inferioridad emocional.",
+            "Tu sombra aquí es la dificultad para celebrar tus propios logros. Has internalizado que 'brillar' es peligroso o que te hace menos querible.",
+            "Estás desestimando tus avances y cualidades porque crees que 'no son suficientes'. Esta autodesvalorización constante te está impidiendo atraer relaciones que te vean realmente.",
+            "Hay una parte de ti que sigue midiendo su valor según la respuesta del otro. Daniela te confronta con esta dependencia emocional de la aprobación externa."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 24,
+      "nombre": "Heimdall",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Hay una puerta pequeña (una coincidencia, una conversación, una señal) que se está abriendo en tu vida amorosa. Heimdall te invita a no ignorarla por parecer 'poco importante'.",
+            "Estás en un momento donde lo nuevo puede llegar a través de caminos que no esperabas. Esta carta te recuerda que la magia a veces se esconde en lo cotidiano.",
+            "Tu resistencia a explorar lo desconocido está limitando tus posibilidades de conexión. Heimdall te da permiso para abrir esa puerta aunque no sepas qué hay del otro lado.",
+            "Estás necesitando soltar la rigidez de 'cómo debería llegar el amor' para permitir que llegue de formas inesperadas."
+          ],
+          "sombra": [
+            "Estás ignorando señales y oportunidades por miedo al caos o a lo desconocido. Esta posición te mantiene estancada en lo conocido aunque ya no te nutra.",
+            "Tu sombra aquí es la necesidad de control y previsibilidad. Prefieres no abrir ciertas puertas antes que arriesgarte a algo que no puedas manejar.",
+            "Estás rechazando oportunidades de conexión porque no encajan con la imagen que tenías de 'cómo debería ser'. Esta rigidez te está cerrando caminos.",
+            "Hay una parte de ti que sigue esperando que el amor llegue de forma 'segura' y predecible. Heimdall te confronta con esa ilusión."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 25,
+      "nombre": "Erebus",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás necesitando ver con más claridad una situación amorosa que has estado evitando mirar de frente. Erebus te invita a entrar en la penumbra interna donde está la verdad.",
+            "Hay algo que sabes pero que no quieres ver. Esta carta te acompaña a bajar el ruido externo para escuchar lo que tu interior ya está diciendo.",
+            "Tu proceso actual requiere que dejes de buscar respuestas en todas partes menos dentro de ti. Erebus te invita a la oscuridad fértil donde nace la claridad real.",
+            "Estás en un momento donde la revelación viene del silencio y no de más información. Esta carta te da permiso para apagar el ruido."
+          ],
+          "sombra": [
+            "Estás bloqueando tu voz interna con exceso de estímulos, análisis y distracciones. Esta posición te mantiene confundida a propósito.",
+            "Tu sombra aquí es el miedo a ver lo que ya sabes. Prefieres mantener la confusión antes que enfrentar una verdad que te obligaría a actuar.",
+            "Estás usando el ruido externo como forma de no tener que tomar decisiones que ya sabes que necesitas tomar. Erebus te confronta con esa huida.",
+            "Hay una parte de ti que sigue recolectando opiniones y consejos externos porque no confías en tu propia percepción. Esta carta te invita a volver a tu centro."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 26,
+      "nombre": "Aetherius",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás sintiendo un llamado hacia algo más profundo en el amor, algo que va más allá de lo que has experimentado. Aetherius te acompaña a confiar en esa búsqueda aunque no sepas exactamente qué estás buscando.",
+            "Hay una dimensión de tu ser que está pidiendo ser integrada en tus relaciones. Esta carta te invita a conectar con esa parte más misteriosa y profunda de ti.",
+            "Estás en un proceso donde las respuestas no van a venir de la lógica, sino de la conexión con algo más grande que tú. Aetherius te da permiso para soltar el control.",
+            "Tu alma está guiándote hacia un tipo de amor que aún no conoces del todo. Esta carta te acompaña a confiar en ese camino aunque sea incierto."
+          ],
+          "sombra": [
+            "Estás perdiéndote en laberintos internos y proyecciones sin guía. Aetherius te confronta con la necesidad de soltar cargas ajenas y volver a tu propio centro.",
+            "Tu sombra aquí es la evasión espiritualizada. Estás usando conceptos elevados para no tener que enfrentar las realidades concretas de tus relaciones.",
+            "Estás recolectando información espiritual y mística sobre el amor mientras evitas hacer el trabajo emocional real que esas enseñanzas te piden.",
+            "Hay una parte de ti que sigue buscando 'señales' y 'guías' externas porque tiene miedo de tomar decisiones desde su propia autoridad interna."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 27,
+      "nombre": "El Umbral del Inframundo",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás en un proceso donde algo dentro de ti necesita morir para que algo nuevo nazca. Esta carta te acompaña a soltar identidades amorosas que ya no te representan.",
+            "Hay un ciclo que está cerrándose de forma definitiva. El Umbral te invita a no resistir la muerte de lo viejo, porque de ahí nace tu renacimiento.",
+            "Estás siendo llamada a atravesar una transformación profunda en tu forma de amar. Esta carta te da fuerza para no quedarte en la orilla.",
+            "El amor que viene hacia ti requiere que dejes atrás una versión anterior de ti misma. Esta carta te acompaña en ese tránsito."
+          ],
+          "sombra": [
+            "Estás resistiendo la transformación porque tienes miedo de quién serás después de soltar. Esta resistencia te está manteniendo en un estado de limbo doloroso.",
+            "Tu sombra aquí es el apego al sufrimiento como identidad. Has construido tanto alrededor de 'lo que te pasó' que te cuesta soltar esa historia.",
+            "Estás aferrándote a una versión de ti misma (o de una relación) que ya no existe. El Umbral te confronta con la necesidad de dejar morir lo que ya murió.",
+            "Hay una parte de ti que prefiere quedarse en el umbral antes que dar el paso hacia lo desconocido. Esta carta te invita a cruzar."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 28,
+      "nombre": "El Concilio de la Magia",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás necesitando recordar que no estás sola en tu proceso amoroso. Hay personas (y también fuerzas internas) que te sostienen aunque no siempre las veas.",
+            "Hay un espacio de pertenencia y conexión que está disponible para ti. Esta carta te invita a volver a la mesa donde eres recibida tal como eres.",
+            "Tu corazón está anhelando una tribu o una red donde puedas ser vulnerable sin miedo. El Concilio te recuerda que esa red existe o puede construirse.",
+            "Estás en un momento donde recibir amor y sostén también es un acto de amor propio. Esta carta te da permiso para necesitar y ser sostenida."
+          ],
+          "sombra": [
+            "Estás descuidando tus conexiones más profundas por prisa, orgullo o decepción pasada. Esta posición te está dejando emocionalmente empobrecida.",
+            "Tu sombra aquí es la dificultad para crear y mantener vínculos profundos. Has aprendido a funcionar en superficie y ahora te cuesta bajar a niveles más íntimos.",
+            "Estás dando por sentada la presencia de quienes te aman o, por el contrario, alejándote de ellos por miedo a necesitarlos.",
+            "Hay una parte de ti que sigue eligiendo la soledad como forma de protección. El Concilio te confronta con el costo de esa elección."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 29,
+      "nombre": "El Portal del Caos",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás sintiendo que el estancamiento en tu vida amorosa ya no es sostenible. Esta carta te invita a generar un cambio radical aunque implique soltar mucho.",
+            "Hay una acumulación de patrones, expectativas y cargas que necesita ser liberada para que algo nuevo pueda entrar. El Portal del Caos te acompaña en esa limpieza.",
+            "Tu proceso actual requiere que dejes de hacer 'más de lo mismo' y te atrevas a un cambio estructural en cómo te relacionas.",
+            "Estás lista para un renacimiento en tu forma de amar. Esta carta te da fuerza para soltar lo viejo aunque duela."
+          ],
+          "sombra": [
+            "Estás paralizada por el miedo a soltar. Esta parálisis te está manteniendo en un caos interno que es más familiar que el cambio.",
+            "Tu sombra aquí es el apego acumulador (de relaciones, de historias, de identidades). Sigues cargando cosas que ya no te sirven por miedo al vacío.",
+            "Estás saboteando tu propio proceso de renovación porque el caos controlado te resulta más seguro que el orden que vendría después de soltar.",
+            "Hay una parte de ti que sigue repitiendo patrones destructivos porque cambiar implica enfrentar el duelo de todo lo que has invertido en ellos."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 30,
+      "nombre": "El Inframundo de las Pociones",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás queriendo resultados rápidos en tu proceso amoroso y esto te está impidiendo madurar emocionalmente. Esta carta te recuerda que el amor profundo requiere tiempo y cocción lenta.",
+            "Hay un proceso interno que necesita ser cocido a fuego lento. El Inframundo de las Pociones te invita a bajar el ritmo y permitir que las cosas se transformen a su tiempo.",
+            "Estás intentando 'arreglar' tu vida amorosa desde la urgencia. Esta carta te pide que confíes en los tiempos de maduración emocional.",
+            "Tu crecimiento en el amor está pidiendo paciencia y presencia, no soluciones rápidas. Esta carta te acompaña a honrar ese ritmo."
+          ],
+          "sombra": [
+            "Estás saltando pasos emocionales importantes porque quieres llegar rápido a un resultado. Esta prisa te está impidiendo integrar lo que necesitas aprender.",
+            "Tu sombra aquí es la impaciencia disfrazada de progreso. Estás avanzando superficialmente sin darte tiempo a que los cambios se asienten en tu sistema nervioso y en tu psique.",
+            "Estás buscando atajos emocionales que te permitan evitar el trabajo profundo. Esta carta te confronta con el costo de esa estrategia.",
+            "Hay una parte de ti que sigue creyendo que 'si no pasa rápido, no va a pasar'. Esta creencia te está generando ansiedad y decisiones precipitadas."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 31,
+      "nombre": "El Portal del Conocimiento Infinito",
+      "temas": {
+        "amor": {
+          "derecho": [
+            "Estás recibiendo insights y revelaciones importantes sobre tu patrón en el amor. Este Portal te invita a prestar atención a las señales, sueños y comprensiones que están llegando.",
+            "Hay una respuesta que tu mente no puede alcanzar pero que tu ser ya está recibiendo. Esta carta te da permiso para confiar en esa sabiduría que viene de otro lugar.",
+            "Estás en un momento donde una idea, una imagen o una comprensión puede cambiar tu forma de relacionarte. El Portal te acompaña a recibirla.",
+            "Tu proceso actual está siendo guiado por algo más grande que tu voluntad consciente. Esta carta te invita a estar receptiva a esa guía."
+          ],
+          "sombra": [
+            "Estás bloqueando la revelación con exceso de análisis y control mental. Esta posición te mantiene en la superficie de lo que podrías entender.",
+            "Tu sombra aquí es el rechazo de tu propia sabiduría interna. Sigues buscando respuestas afuera cuando la comprensión más importante ya está llegando desde dentro.",
+            "Estás saturándote de información espiritual y psicológica sobre el amor mientras evitas integrar lo que ya has recibido. Esta carta te invita a digerir.",
+            "Hay una parte de ti que tiene miedo de recibir una verdad que te obligue a cambiar. El Portal te confronta con esa resistencia al conocimiento transformador."
+          ]
+        },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     }
   ]
