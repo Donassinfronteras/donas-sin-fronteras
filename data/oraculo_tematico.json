@@ -8,8 +8,18 @@
       "nombre": "Bruxa Tarot",
       "temas": {
         "amor": {
-          "derecho": [],
-          "sombra": []
+          "derecho": [
+            "Es tiempo de recuperar tu magia en el amor. Has estado apagando tu brillo por miedo a no ser suficiente. Esta carta te recuerda que tu poder creativo y tu capacidad de amar son lo mismo. Deja de esconderte.",
+            "El amor que buscas comienza cuando dejas de negociar tu esencia. Bruxa Tarot aparece para decirte que ya eres suficiente magia. Deja de esperar que alguien te complete cuando ya estás completa.",
+            "Tu corazón está listo para una conexión que honre tu intensidad. Ya no tienes que suavizarte ni hacerte más pequeña para ser amada. Esta carta te da permiso para brillar sin pedir perdón.",
+            "La magia del amor verdadero se activa cuando dejas de buscar fuera lo que ya existe dentro de ti. Bruxa Tarot te invita a convertirte en la persona que quieres atraer."
+          ],
+          "sombra": [
+            "Has estado usando tu creatividad y tu intensidad como escudo para no dejarte ver realmente. El miedo a ser abandonada te ha llevado a crear versiones de ti misma que no son del todo honestas.",
+            "Existe una parte de ti que sigue creyendo que el amor duele o que hay que ganárselo. Esta creencia te está haciendo repetir patrones donde das demasiado y recibes poco.",
+            "Tu sombra en el amor se llama 'miedo a la decepción'. Has construido tantas defensas que ahora te cuesta dejar entrar incluso a quien viene con buenas intenciones.",
+            "Estás usando tu poder mágico para controlar el desenlace en vez de confiar en el proceso. El control disfrazado de protección te está alejando de la conexión real que tanto deseas."
+          ]
         },
         "trabajo": {
           "derecho": [],
@@ -25,63 +35,112 @@
       "id": 2,
       "nombre": "Nabi",
       "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
+        "amor": {
+          "derecho": [
+            "El amor que estás llamando requiere valentía. Nabi te recuerda que los miedos que sientes no son señales para huir, sino para avanzar con el corazón abierto pero consciente.",
+            "Hay una relación (o la posibilidad de una) que te está pidiendo que dejes de minimizar lo que sientes. Nabi viene a decirte que tu intuición es tu mejor aliada en el amor.",
+            "Estás entrando en una etapa donde el amor ya no se trata de salvar o ser salvada, sino de caminar juntos con los ojos abiertos. Nabi te da fuerzas para elegir desde la verdad.",
+            "Tu capacidad de amar profundamente es también tu mayor don. Nabi te recuerda que no tienes que elegir entre ser intensa y ser amada."
+          ],
+          "sombra": [
+            "Estás reaccionando con miedo ante situaciones que no representan un peligro real. Tu sistema nervioso está en alerta por heridas antiguas y está saboteando conexiones que podrían ser sanas.",
+            "Hay una tendencia a crear drama o a magnificar problemas para sentir que 'pasa algo'. Esta energía te mantiene en un estado de inestabilidad emocional constante.",
+            "Tu sombra en el amor se llama 'hipervigilancia'. Estás tan pendiente de posibles traiciones que no dejas espacio para que la confianza se construya naturalmente.",
+            "Estás usando el miedo como excusa para no comprometerte del todo. Mientras sigas protegiéndote de esta forma, el amor que deseas seguirá sintiéndose lejos."
+          ]
+        },
+        "trabajo": {
+          "derecho": [],
+          "sombra": []
+        },
+        "carta-del-dia": {
+          "derecho": [],
+          "sombra": []
+        }
       }
     },
     {
       "id": 3,
       "nombre": "Marta",
       "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
+        "amor": {
+          "derecho": [
+            "Sanar en el amor no significa evitar el dolor, sino atravesarlo con presencia. Marta te acompaña a soltar la idea de que el amor debería ser solo fácil y placentero.",
+            "Hay un proceso de sanación emocional que se está activando en ti. Esta carta te recuerda que llorar, sentir rabia o extrañar también forma parte del camino hacia un amor más maduro.",
+            "Estás aprendiendo que el amor verdadero incluye la capacidad de sostenerte a ti misma cuando las cosas duelen. Marta te está enseñando a ser tu propio refugio.",
+            "El amor que viene hacia ti ya no va a pedirte que ignores tu dolor. Marta aparece como testigo de que sanar y amar pueden coexistir."
+          ],
+          "sombra": [
+            "Estás evitando sentir el dolor de relaciones pasadas y eso te está impidiendo abrirte completamente a lo nuevo. La herida no desaparece por ignorarla.",
+            "Hay una parte de ti que sigue usando el sufrimiento como identidad. 'Yo siempre sufro por amor' se ha convertido en una historia que ya no te sirve.",
+            "Tu sombra en el amor se llama 'miedo a la vulnerabilidad'. Prefieres quedarte con lo conocido (aunque duela) antes que arriesgarte a sentir algo nuevo.",
+            "Estás proyectando en las nuevas personas el dolor que no has procesado de las anteriores. Esto te está haciendo juzgar y cerrar puertas antes de tiempo."
+          ]
+        },
+        "trabajo": {
+          "derecho": [],
+          "sombra": []
+        },
+        "carta-del-dia": {
+          "derecho": [],
+          "sombra": []
+        }
       }
     },
     {
       "id": 4,
       "nombre": "Jade",
       "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
+        "amor": {
+          "derecho": [
+            "El amor que estás viviendo (o atrayendo) es un espejo de las decisiones que has tomado hasta ahora. Jade te invita a observar con honestidad qué patrones estás repitiendo.",
+            "Hay un equilibrio kármico en tus relaciones. Lo que das y lo que recibes está volviendo a ti. Esta carta te pide que observes si estás en un ciclo de dar demasiado o recibir muy poco.",
+            "Estás en un momento donde puedes cerrar ciclos amorosos antiguos con más conciencia. Jade te da la claridad para entender por qué ciertas relaciones se repiten.",
+            "El amor maduro que buscas requiere que asumas responsabilidad por la energía que pones en tus relaciones. Jade te recuerda que el karma no castiga, sino que equilibra."
+          ],
+          "sombra": [
+            "Estás repitiendo patrones donde das más de lo que recibes y luego te sientes víctima. Jade te confronta con tu parte de responsabilidad en estos desequilibrios.",
+            "Hay una tendencia a culpar al otro (o al destino) de lo que te pasa en el amor, sin mirar tus propias elecciones repetidas. Esta posición te mantiene estancada.",
+            "Tu sombra en el amor se llama 'evitar la responsabilidad'. Prefieres creer que 'te pasan cosas' antes que reconocer los patrones que sigues eligiendo.",
+            "Estás cargando culpas que no te corresponden o, por el contrario, negándote a ver dónde sí has herido. Jade te pide equilibrio y honestidad."
+          ]
+        },
+        "trabajo": {
+          "derecho": [],
+          "sombra": []
+        },
+        "carta-del-dia": {
+          "derecho": [],
+          "sombra": []
+        }
       }
     },
     {
       "id": 5,
       "nombre": "Elena",
       "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
-      }
-    },
-    {
-      "id": 6,
-      "nombre": "Mia",
-      "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
-      }
-    },
-    {
-      "id": 7,
-      "nombre": "Tony",
-      "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
-      }
-    },
-    {
-      "id": 8,
-      "nombre": "Dante",
-      "temas": {
-        "amor": { "derecho": [], "sombra": [] },
-        "trabajo": { "derecho": [], "sombra": [] },
-        "carta-del-dia": { "derecho": [], "sombra": [] }
+        "amor": {
+          "derecho": [
+            "Hay una decisión importante en el amor que tu corazón ya sabe, aunque tu mente siga dudando. Elena te invita a confiar en esa voz interna que ya conoce el camino.",
+            "El amor que realmente quieres puede requerir que tomes una decisión valiente (aunque incómoda). Esta carta te recuerda que elegir desde el corazón siempre termina siendo lo correcto.",
+            "Estás en un cruce de caminos amoroso. Elena aparece para recordarte que el camino más fácil no siempre es el que te lleva a la conexión que tu alma necesita.",
+            "Tu verdad en el amor está pidiendo ser escuchada. Ya sea una conversación pendiente o una decisión interna, Elena te da fuerza para actuar con autenticidad."
+          ],
+          "sombra": [
+            "Estás eligiendo desde el miedo al cambio o al abandono en vez de desde lo que realmente deseas. Esta posición te está manteniendo en situaciones que ya no te nutren.",
+            "Hay una tendencia a posponer decisiones importantes en el amor por comodidad o por miedo a lastimar. Elena te confronta con el costo de no elegir.",
+            "Tu sombra en el amor se llama 'evitar la verdad'. Sabes lo que necesitas hacer o decir, pero sigues postergándolo por miedo a las consecuencias.",
+            "Estás aferrándote a una relación o a una idea de amor que ya no te representa, solo porque el cambio da miedo. Elena te recuerda que la verdad duele menos que la mentira prolongada."
+          ]
+        },
+        "trabajo": {
+          "derecho": [],
+          "sombra": []
+        },
+        "carta-del-dia": {
+          "derecho": [],
+          "sombra": []
+        }
       }
     }
   ]
