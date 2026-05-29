@@ -391,66 +391,60 @@
   <script>
     // Variables globales
     let deck = [];
-    let temaSeleccionado = null; // 'amor', 'trabajo' o 'carta-del-dia'
+    let temaSeleccionado = null;
 
-    // Cargar el mazo de cartas
+    // Cargar el nuevo mazo temático
     async function cargarMazo() {
       try {
-        const response = await fetch('data/cartas_oraculo_prisma.json');
-        deck = await response.json();
-        console.log('Mazo del Oráculo Prisma cargado:', deck.length, 'cartas');
+        const response = await fetch('data/oraculo_tematico.json');
+        const data = await response.json();
+        deck = data.cartas;
+        console.log('Mazo temático cargado:', deck.length, 'cartas');
       } catch (error) {
-        console.error('Error cargando el mazo:', error);
+        console.error('Error cargando el mazo temático:', error);
         alert('No se pudo cargar el Oráculo. Por favor recarga la página.');
       }
     }
 
     // Seleccionar tema
     function seleccionarTema(boton, tema) {
-      // Quitar clase activo de todos
       document.querySelectorAll('.btn-tema').forEach(b => b.classList.remove('activo'));
-      // Activar el seleccionado
       boton.classList.add('activo');
       temaSeleccionado = tema;
     }
 
-    // Generar interpretación según tema
+    // Obtener versión aleatoria según tema y tipo (derecho/sombra)
+    function obtenerVersionAleatoria(carta, tipo = 'derecho') {
+      if (!temaSeleccionado || !carta.temas || !carta.temas[temaSeleccionado]) {
+        return null;
+      }
+      const versiones = carta.temas[temaSeleccionado][tipo] || [];
+      if (versiones.length === 0) return null;
+      return versiones[Math.floor(Math.random() * versiones.length)];
+    }
+
+    // Generar interpretación
     function generarInterpretacion(carta, posicion = null) {
-      const nombre = carta["Nombre de la Carta"];
-      const luz = carta["Mensaje (Luz)"] || '';
-      const sombra = carta["Sombra (opcional)"] || '';
-      const ritual = carta["Ritual Sugerido (opcional)"] || '';
+      const nombre = carta.nombre;
+      const derecho = obtenerVersionAleatoria(carta, 'derecho');
+      const sombra = obtenerVersionAleatoria(carta, 'sombra');
 
-      let interpretacion = '';
-      let prefijoPosicion = '';
-      let prefijoTema = '';
+      let interpretacion = derecho || `La energía de <strong>${nombre}</strong> está presente para ti.`;
 
-      // Prefijo por posición (en tirada de 3)
+      // Prefijo de posición
       if (posicion) {
-        if (posicion === 'Estado Mental') prefijoPosicion = `En tu estado mental actual, `;
-        else if (posicion === 'La Situación') prefijoPosicion = `Respecto a la situación que vives, `;
-        else if (posicion === 'Consejo') prefijoPosicion = `El consejo del Oráculo es: `;
+        if (posicion === 'Estado Mental') interpretacion = `En tu estado mental actual, ${interpretacion.toLowerCase()}`;
+        else if (posicion === 'La Situación') interpretacion = `Respecto a la situación que vives, ${interpretacion.toLowerCase()}`;
+        else if (posicion === 'Consejo') interpretacion = `El consejo del Oráculo es: ${interpretacion.toLowerCase()}`;
       }
-
-      // Prefijo según tema seleccionado
-      if (temaSeleccionado === 'amor') {
-        prefijoTema = `En el ámbito del amor y las relaciones, `;
-      } else if (temaSeleccionado === 'trabajo') {
-        prefijoTema = `En tu camino profesional y de propósito, `;
-      } else if (temaSeleccionado === 'carta-del-dia') {
-        prefijoTema = `Para este día, `;
-      }
-
-      // Construir interpretación
-      interpretacion = prefijoTema + prefijoPosicion + `<strong>${nombre}</strong> te recuerda que ` + luz.toLowerCase();
 
       return {
         interpretacion,
-        luz,
-        sombra,
-        ritual,
+        luz: derecho,
+        sombra: sombra,
+        ritual: '', // Por ahora vacío, se puede agregar después
         nombre,
-        categoria: carta["Categoría"] || 'Esencias del Prisma'
+        categoria: 'Oráculo Prisma'
       };
     }
 
@@ -465,7 +459,6 @@
         await cargarMazo();
       }
 
-      // Seleccionar cartas aleatorias
       const cartasSeleccionadas = [];
       const deckCopia = [...deck];
 
@@ -491,7 +484,6 @@
       modal.style.display = 'block';
       document.body.style.overflow = 'hidden';
 
-      // Posiciones para tirada de 3
       let posiciones = [];
       if (cartas.length === 3) {
         posiciones = ['Estado Mental', 'La Situación', 'Consejo'];
@@ -511,9 +503,9 @@
           <div class="carta-revelada">
             ${labelHTML}
             <div class="carta-header">
-              ${carta["Imagen URL"] ? 
-                `<img src="${carta["Imagen URL"]}" alt="${datos.nombre}" class="carta-imagen">` : 
-                `<div class="carta-imagen" style="background: #1A1A2E; display:flex; align-items:center; justify-content:center; color:#FEEABF; font-size:1.2rem;">Oráculo Prisma</div>`}
+              <div class="carta-imagen" style="background: linear-gradient(135deg, #2FCED1, #B28DFF); display:flex; align-items:center; justify-content:center; color:#0D1B2A; font-weight:bold; font-size:1.1rem;">
+                ${datos.nombre}
+              </div>
               <div class="carta-info">
                 <h3>${datos.nombre}</h3>
                 <div class="carta-categoria">${datos.categoria}</div>
@@ -530,12 +522,6 @@
               <div class="sombra-content">
                 ${datos.sombra}
               </div>
-            </div>` : ''}
-
-            ${datos.ritual ? `
-            <div class="ritual">
-              <strong>🕯️ Ritual Sugerido:</strong><br>
-              ${datos.ritual}
             </div>` : ''}
           </div>
         `;
@@ -589,7 +575,6 @@
     window.onload = function() {
       cargarMazo();
       
-      // Cursor mariposa
       const cursor = document.querySelector('.cursor-mariposa');
       if (cursor) {
         document.addEventListener('mousemove', (e) => {
@@ -604,7 +589,7 @@
         canvas.height = window.innerHeight;
       }
 
-      // Seleccionar por defecto "Carta del Día"
+      // Seleccionar "Carta del Día" por defecto
       setTimeout(() => {
         const defaultBtn = document.querySelector('.btn-tema[data-tema="carta-del-dia"]');
         if (defaultBtn) {
@@ -613,7 +598,6 @@
       }, 300);
     };
 
-    // Cerrar modal con Escape
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         const modal = document.getElementById('modal-oraculo');
