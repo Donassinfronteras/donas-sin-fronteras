@@ -10,6 +10,191 @@
 
   <!-- Estilos Oráculo Prisma -->
   <link rel="stylesheet" href="css/oraculo-prisma.css" />
+  <style>
+    /* Estilos adicionales para la tirada interactiva */
+    .tirada-container {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .tirada-titulo {
+      font-size: 2.8rem;
+      color: var(--c-lavender);
+      text-shadow: 0 0 15px var(--c-lavender);
+      margin-bottom: 0.5rem;
+    }
+    .tirada-subtitulo {
+      font-size: 1.3rem;
+      color: var(--c-gold);
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    .pregunta-container {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .pregunta-container label {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--c-pink);
+      margin-bottom: 0.5rem;
+    }
+    .pregunta-container textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 1rem;
+      border-radius: 15px;
+      border: 2px solid var(--c-turquoise);
+      background: rgba(13, 27, 42, 0.6);
+      color: white;
+      font-size: 1.05rem;
+      resize: vertical;
+    }
+    .tirada-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    .btn-tirada {
+      background: linear-gradient(135deg, #2FCED1, #B28DFF);
+      color: #0D1B2A;
+      font-size: 1.3rem;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(47, 206, 209, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .btn-tirada:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 0 30px rgba(178, 141, 255, 0.6);
+    }
+    .nota-tirada {
+      font-size: 0.95rem;
+      color: var(--c-gold);
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    /* Modal del Oráculo */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 27, 42, 0.92);
+      backdrop-filter: blur(8px);
+      overflow-y: auto;
+    }
+    .modal-content {
+      background: #0D1B2A;
+      margin: 3% auto;
+      padding: 2rem;
+      border-radius: 25px;
+      max-width: 920px;
+      border: 2px solid var(--c-turquoise);
+      position: relative;
+      box-shadow: 0 0 40px rgba(47, 206, 209, 0.3);
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2.5rem;
+      color: var(--c-pink);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .carta-revelada {
+      background: rgba(26, 26, 46, 0.7);
+      border-radius: 20px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--c-lavender);
+    }
+    .carta-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .carta-imagen {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 3px solid var(--c-gold);
+      box-shadow: 0 0 20px rgba(254, 234, 191, 0.4);
+    }
+    .carta-info h3 {
+      font-size: 2rem;
+      color: var(--c-lavender);
+      margin: 0 0 0.3rem 0;
+    }
+    .carta-categoria {
+      color: var(--c-turquoise);
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .interpretacion {
+      background: rgba(13, 27, 42, 0.5);
+      padding: 1.3rem;
+      border-radius: 15px;
+      margin: 1rem 0;
+      line-height: 1.7;
+      font-size: 1.15rem;
+      color: #FEEABF;
+    }
+    .sombra-toggle {
+      background: #1A1A2E;
+      color: #F784AD;
+      border: 1px solid #F784AD;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 1rem 0;
+      display: inline-block;
+    }
+    .sombra-content {
+      display: none;
+      background: rgba(26, 26, 46, 0.6);
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin-top: 0.8rem;
+      border-left: 4px solid #F784AD;
+    }
+    .ritual {
+      background: rgba(47, 206, 209, 0.1);
+      padding: 1.2rem;
+      border-radius: 15px;
+      margin-top: 1rem;
+      border-left: 5px solid var(--c-turquoise);
+    }
+    .modal-actions {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .btn-modal {
+      background: linear-gradient(135deg, #800020, #F784AD);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin: 0.5rem;
+    }
+  </style>
 </head>
 <body class="oraculo-prisma-body">
  
@@ -25,12 +210,30 @@
     <h1>Oráculo Prisma</h1>
   </header>
 
-  <!-- Botones principales -->
+  <!-- Sección de Tirada Interactiva del Oráculo Prisma -->
   <main class="oraculo-main">
-    <button class="btn btn-query" onclick="window.location.href='carta-del-dia.html'">Carta del Día</button>
-    <button class="btn btn-cards" onclick="alert('Próximamente 🌟')">🧙‍♀️ Mis Cartas</button>
-    <button class="btn btn-guide" onclick="alert('Muy pronto 💫')">📖 Guía del Prisma</button>
-    <button class="btn btn-rituals" onclick="alert('Rituales mágicos en construcción 🔮')">Tiradas</button>
+    <div class="tirada-container">
+      <h2 class="tirada-titulo">✧ Consulta el Oráculo Prisma ✧</h2>
+      <p class="tirada-subtitulo">Formula tu pregunta con el corazón y deja que el Prisma te responda</p>
+
+      <!-- Campo de pregunta -->
+      <div class="pregunta-container">
+        <label for="pregunta">¿Qué pregunta traes al Oráculo hoy?</label>
+        <textarea id="pregunta" placeholder="Ej: ¿Qué necesito soltar para avanzar? ¿Cómo puedo recuperar mi poder creativo?"></textarea>
+      </div>
+
+      <!-- Botones de tirada -->
+      <div class="tirada-buttons">
+        <button class="btn btn-tirada" onclick="realizarTirada(1)">
+          🂏 <span>Tirar 1 Carta</span>
+        </button>
+        <button class="btn btn-tirada" onclick="realizarTirada(3)">
+          🂏🂏🂏 <span>Tirar 3 Cartas</span>
+        </button>
+      </div>
+
+      <p class="nota-tirada">Cada tirada es única. El Oráculo responde según tu energía del momento.</p>
+    </div>
   </main>
 
   <!-- Botón para volver al inicio -->
@@ -70,28 +273,216 @@
     <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Scripts mágicos -->
-  <script src="js/particles.js"></script>
-  <script src="js/oraculo-prisma.js"></script>
+  <!-- Modal del Oráculo -->
+  <div id="modal-oraculo" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="cerrarModal()">&times;</span>
+      
+      <h2 id="modal-titulo" style="text-align:center; color: var(--c-lavender); margin-bottom: 1.5rem;">✨ Respuesta del Oráculo Prisma ✨</h2>
+      
+      <div id="modal-cartas">
+        <!-- Las cartas se insertan aquí dinámicamente -->
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-modal" onclick="realizarOtraTirada()">🔄 Hacer otra tirada</button>
+        <button class="btn-modal" onclick="cerrarModal()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="js/badges.js"></script>
+  <script src="js/mariposa-cursor.js"></script>
 
   <script>
-    // 🔓 Esta línea incrementa y activa la insignia al visitar el Oráculo
+    // Incrementar badge al visitar
     aumentarVisita('oracle');
   </script>
 
   <script>
-    // 🦋 Script para mover la mariposa con el cursor
-    document.addEventListener("mousemove", e => {
-      const cursor = document.querySelector(".cursor-mariposa");
+    // Variables globales
+    let deck = [];
+    let currentPregunta = '';
+
+    // Cargar el mazo de cartas
+    async function cargarMazo() {
+      try {
+        const response = await fetch('data/cartas_oraculo_prisma.json');
+        deck = await response.json();
+        console.log('Mazo del Oráculo Prisma cargado:', deck.length, 'cartas');
+      } catch (error) {
+        console.error('Error cargando el mazo:', error);
+        alert('No se pudo cargar el Oráculo. Por favor recarga la página.');
+      }
+    }
+
+    // Generar interpretación contextual inteligente
+    function generarInterpretacion(carta, pregunta) {
+      const nombre = carta["Nombre de la Carta"];
+      const luz = carta["Mensaje (Luz)"] || '';
+      const sombra = carta["Sombra (opcional)"] || '';
+      const ritual = carta["Ritual Sugerido (opcional)"] || '';
+
+      let interpretacion = '';
+
+      if (pregunta && pregunta.trim().length > 5) {
+        // Interpretación personalizada con la pregunta
+        const plantillas = [
+          `Respecto a tu pregunta "${pregunta}", la carta de <strong>${nombre}</strong> te muestra que `,
+          `El Oráculo Prisma responde directamente a tu consulta sobre "${pregunta}" a través de <strong>${nombre}</strong>: `,
+          `En relación con lo que preguntas sobre "${pregunta}", <strong>${nombre}</strong> te recuerda que `,
+          `Tu pregunta "${pregunta}" encuentra respuesta en la energía de <strong>${nombre}</strong>, que te dice: `
+        ];
+        const base = plantillas[Math.floor(Math.random() * plantillas.length)];
+        interpretacion = base + luz.toLowerCase();
+      } else {
+        // Interpretación general
+        interpretacion = `<strong>${nombre}</strong> aparece para ti en este momento y te recuerda que ` + luz.toLowerCase();
+      }
+
+      return {
+        interpretacion,
+        luz,
+        sombra,
+        ritual,
+        nombre,
+        categoria: carta["Categoría"] || 'Esencias del Prisma'
+      };
+    }
+
+    // Realizar tirada
+    async function realizarTirada(cantidad) {
+      if (deck.length === 0) {
+        await cargarMazo();
+      }
+
+      const preguntaInput = document.getElementById('pregunta').value.trim();
+      currentPregunta = preguntaInput;
+
+      // Seleccionar cartas aleatorias sin repetición
+      const cartasSeleccionadas = [];
+      const deckCopia = [...deck];
+
+      for (let i = 0; i < cantidad; i++) {
+        if (deckCopia.length === 0) break;
+        const indice = Math.floor(Math.random() * deckCopia.length);
+        cartasSeleccionadas.push(deckCopia[indice]);
+        deckCopia.splice(indice, 1);
+      }
+
+      // Mostrar en el modal
+      mostrarModal(cartasSeleccionadas, preguntaInput);
+    }
+
+    // Mostrar el modal con las cartas
+    function mostrarModal(cartas, pregunta) {
+      const modal = document.getElementById('modal-oraculo');
+      const contenedor = document.getElementById('modal-cartas');
+      contenedor.innerHTML = '';
+
+      cartas.forEach((carta, index) => {
+        const datos = generarInterpretacion(carta, pregunta);
+        
+        const cartaHTML = `
+          <div class="carta-revelada">
+            <div class="carta-header">
+              ${carta["Imagen URL"] ? 
+                `<img src="${carta["Imagen URL"]}" alt="${datos.nombre}" class="carta-imagen">` : 
+                `<div class="carta-imagen" style="background: #1A1A2E; display:flex; align-items:center; justify-content:center; color:#FEEABF; font-size:1.2rem;">Oráculo Prisma</div>`}
+              <div class="carta-info">
+                <h3>${datos.nombre}</h3>
+                <div class="carta-categoria">${datos.categoria}</div>
+              </div>
+            </div>
+
+            <div class="interpretacion">
+              ${datos.interpretacion}
+            </div>
+
+            ${datos.sombra ? `
+            <div>
+              <button class="sombra-toggle" onclick="toggleSombra(this)">▼ Ver mensaje de Sombra</button>
+              <div class="sombra-content">
+                ${datos.sombra}
+              </div>
+            </div>` : ''}
+
+            ${datos.ritual ? `
+            <div class="ritual">
+              <strong>🕯️ Ritual Sugerido:</strong><br>
+              ${datos.ritual}
+            </div>` : ''}
+          </div>
+        `;
+        
+        contenedor.innerHTML += cartaHTML;
+      });
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function toggleSombra(btn) {
+      const content = btn.nextElementSibling;
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        btn.innerHTML = '▼ Ver mensaje de Sombra';
+      } else {
+        content.style.display = 'block';
+        btn.innerHTML = '▲ Ocultar mensaje de Sombra';
+      }
+    }
+
+    function cerrarModal() {
+      const modal = document.getElementById('modal-oraculo');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function realizarOtraTirada() {
+      cerrarModal();
+      // Pequeño delay para mejor UX
+      setTimeout(() => {
+        const cantidad = prompt('Número de cartas (1 o 3):', '1');
+        if (cantidad === '1' || cantidad === '3') {
+          realizarTirada(parseInt(cantidad));
+        }
+      }, 300);
+    }
+
+    // Inicialización
+    window.onload = function() {
+      cargarMazo();
+      
+      // Cursor mariposa mejorado
+      const cursor = document.querySelector('.cursor-mariposa');
       if (cursor) {
-        cursor.style.top = `${e.clientY}px`;
-        cursor.style.left = `${e.clientX}px`;
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+      }
+
+      // Efecto sutil en el canvas (opcional)
+      const canvas = document.getElementById('particle-canvas');
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        // Puedes agregar partículas simples aquí si quieres en el futuro
+      }
+    };
+
+    // Cerrar modal con Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('modal-oraculo');
+        if (modal.style.display === 'block') cerrarModal();
       }
     });
   </script>
 
-  <!-- 🧿 Script de seguimiento Metricool -->
+  <!-- 🔮 Script de seguimiento Metricool -->
   <script>
     (function () {
       var script = document.createElement("script");
