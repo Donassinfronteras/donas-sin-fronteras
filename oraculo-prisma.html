@@ -413,39 +413,75 @@
       temaSeleccionado = tema;
     }
 
-    // Obtener versión aleatoria según tema y tipo (derecho/sombra)
+    // Obtener versión aleatoria según tema y tipo (derecho/sombra) - versión robusta
     function obtenerVersionAleatoria(carta, tipo = 'derecho') {
-      if (!temaSeleccionado || !carta.temas || !carta.temas[temaSeleccionado]) {
+      try {
+        if (!temaSeleccionado || !carta || !carta.temas) {
+          return null;
+        }
+        const temaData = carta.temas[temaSeleccionado];
+        if (!temaData) return null;
+        
+        const versiones = temaData[tipo] || [];
+        if (!Array.isArray(versiones) || versiones.length === 0) return null;
+        
+        return versiones[Math.floor(Math.random() * versiones.length)];
+      } catch (e) {
+        console.error('Error en obtenerVersionAleatoria:', e);
         return null;
       }
-      const versiones = carta.temas[temaSeleccionado][tipo] || [];
-      if (versiones.length === 0) return null;
-      return versiones[Math.floor(Math.random() * versiones.length)];
     }
 
-    // Generar interpretación
+    // Generar interpretación - versión robusta
     function generarInterpretacion(carta, posicion = null) {
-      const nombre = carta.nombre;
-      const derecho = obtenerVersionAleatoria(carta, 'derecho');
-      const sombra = obtenerVersionAleatoria(carta, 'sombra');
+      try {
+        if (!carta) {
+          return {
+            interpretacion: 'No se pudo cargar la carta.',
+            luz: null,
+            sombra: null,
+            ritual: '',
+            nombre: 'Carta',
+            categoria: 'Oráculo Prisma'
+          };
+        }
 
-      let interpretacion = derecho || `La energía de <strong>${nombre}</strong> está presente para ti.`;
+        const nombre = carta.nombre || 'Carta del Oráculo';
+        const derecho = obtenerVersionAleatoria(carta, 'derecho');
+        const sombra = obtenerVersionAleatoria(carta, 'sombra');
 
-      // Prefijo de posición
-      if (posicion) {
-        if (posicion === 'Estado Mental') interpretacion = `En tu estado mental actual, ${interpretacion.toLowerCase()}`;
-        else if (posicion === 'La Situación') interpretacion = `Respecto a la situación que vives, ${interpretacion.toLowerCase()}`;
-        else if (posicion === 'Consejo') interpretacion = `El consejo del Oráculo es: ${interpretacion.toLowerCase()}`;
+        let interpretacion = derecho || `La energía de <strong>${nombre}</strong> está presente para ti en este momento.`;
+
+        // Prefijo de posición (solo en tirada de 3)
+        if (posicion) {
+          if (posicion === 'Estado Mental') {
+            interpretacion = `En tu estado mental actual, ${interpretacion.toLowerCase()}`;
+          } else if (posicion === 'La Situación') {
+            interpretacion = `Respecto a la situación que vives, ${interpretacion.toLowerCase()}`;
+          } else if (posicion === 'Consejo') {
+            interpretacion = `El consejo del Oráculo es: ${interpretacion.toLowerCase()}`;
+          }
+        }
+
+        return {
+          interpretacion,
+          luz: derecho,
+          sombra: sombra,
+          ritual: '',
+          nombre,
+          categoria: 'Oráculo Prisma'
+        };
+      } catch (e) {
+        console.error('Error en generarInterpretacion:', e);
+        return {
+          interpretacion: 'Hubo un problema al generar la interpretación.',
+          luz: null,
+          sombra: null,
+          ritual: '',
+          nombre: carta?.nombre || 'Carta',
+          categoria: 'Oráculo Prisma'
+        };
       }
-
-      return {
-        interpretacion,
-        luz: derecho,
-        sombra: sombra,
-        ritual: '', // Por ahora vacío, se puede agregar después
-        nombre,
-        categoria: 'Oráculo Prisma'
-      };
     }
 
     // Realizar tirada
@@ -472,11 +508,16 @@
       mostrarModal(cartasSeleccionadas);
     }
 
-    // Mostrar el modal
+    // Mostrar el modal - versión robusta
     function mostrarModal(cartas) {
       const modal = document.getElementById('modal-oraculo');
       const contenedor = document.getElementById('modal-cartas');
       const revelando = document.getElementById('revelando-msg');
+
+      if (!contenedor || !modal) {
+        console.error('No se encontraron los elementos del modal');
+        return;
+      }
 
       contenedor.innerHTML = '';
       revelando.style.display = 'block';
@@ -492,41 +533,61 @@
       let htmlCompleto = '';
 
       cartas.forEach((carta, index) => {
-        const posicion = posiciones[index] || null;
-        const datos = generarInterpretacion(carta, posicion);
+        try {
+          const posicion = posiciones[index] || null;
+          const datos = generarInterpretacion(carta, posicion);
 
-        const labelHTML = posicion 
-          ? `<div class="posicion-label">${posicion}</div>` 
-          : '';
+          const labelHTML = posicion 
+            ? `<div class="posicion-label">${posicion}</div>` 
+            : '';
 
-        const cartaHTML = `
-          <div class="carta-revelada">
-            ${labelHTML}
-            <div class="carta-header">
-              <div class="carta-imagen" style="background: linear-gradient(135deg, #2FCED1, #B28DFF); display:flex; align-items:center; justify-content:center; color:#0D1B2A; font-weight:bold; font-size:1.1rem;">
-                ${datos.nombre}
+          const tieneSombra = datos.sombra && datos.sombra.length > 10;
+
+          const cartaHTML = `
+            <div class="carta-revelada">
+              ${labelHTML}
+              <div class="carta-header">
+                <div class="carta-imagen" style="background: linear-gradient(135deg, #2FCED1, #B28DFF); display:flex; align-items:center; justify-content:center; color:#0D1B2A; font-weight:bold; font-size:1.05rem; text-align:center; padding:0.5rem;">
+                  ${datos.nombre}
+                </div>
+                <div class="carta-info">
+                  <h3>${datos.nombre}</h3>
+                  <div class="carta-categoria">${datos.categoria}</div>
+                </div>
               </div>
-              <div class="carta-info">
-                <h3>${datos.nombre}</h3>
-                <div class="carta-categoria">${datos.categoria}</div>
+
+              <div class="interpretacion">
+                ${datos.interpretacion}
               </div>
+
+              ${tieneSombra ? `
+              <div>
+                <button class="sombra-toggle" onclick="toggleSombra(this)">▼ Ver mensaje de Sombra</button>
+                <div class="sombra-content">
+                  ${datos.sombra}
+                </div>
+              </div>` : ''}
             </div>
-
-            <div class="interpretacion">
-              ${datos.interpretacion}
-            </div>
-
-            ${datos.sombra ? `
-            <div>
-              <button class="sombra-toggle" onclick="toggleSombra(this)">▼ Ver mensaje de Sombra</button>
-              <div class="sombra-content">
-                ${datos.sombra}
+          `;
+          
+          htmlCompleto += cartaHTML;
+        } catch (e) {
+          console.error('Error renderizando carta:', e, carta);
+          // Renderizar carta de fallback
+          htmlCompleto += `
+            <div class="carta-revelada">
+              <div class="carta-header">
+                <div class="carta-imagen" style="background:#1A1A2E; display:flex; align-items:center; justify-content:center; color:#FEEABF;">
+                  Carta
+                </div>
+                <div class="carta-info">
+                  <h3>Carta del Oráculo</h3>
+                </div>
               </div>
-            </div>` : ''}
-          </div>
-        `;
-        
-        htmlCompleto += cartaHTML;
+              <div class="interpretacion">La energía de esta carta está presente para ti.</div>
+            </div>
+          `;
+        }
       });
 
       contenedor.innerHTML = htmlCompleto;
@@ -534,12 +595,12 @@
       const cartaElements = contenedor.querySelectorAll('.carta-revelada');
 
       setTimeout(() => {
-        revelando.style.display = 'none';
+        if (revelando) revelando.style.display = 'none';
       }, 550);
 
       cartaElements.forEach((cartaEl, i) => {
         setTimeout(() => {
-          cartaEl.classList.add('reveal');
+          if (cartaEl) cartaEl.classList.add('reveal');
         }, 700 + (i * 380));
       });
     }
@@ -557,7 +618,7 @@
 
     function cerrarModal() {
       const modal = document.getElementById('modal-oraculo');
-      modal.style.display = 'none';
+      if (modal) modal.style.display = 'none';
       document.body.style.overflow = 'auto';
     }
 
@@ -589,7 +650,7 @@
         canvas.height = window.innerHeight;
       }
 
-      // Seleccionar "Carta del Día" por defecto
+      // Seleccionar "Carta del Día" por defecto (pero advertir que está vacío)
       setTimeout(() => {
         const defaultBtn = document.querySelector('.btn-tema[data-tema="carta-del-dia"]');
         if (defaultBtn) {
@@ -601,7 +662,7 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         const modal = document.getElementById('modal-oraculo');
-        if (modal.style.display === 'block') cerrarModal();
+        if (modal && modal.style.display === 'block') cerrarModal();
       }
     });
   </script>
