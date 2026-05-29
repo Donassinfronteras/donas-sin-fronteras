@@ -246,6 +246,19 @@
       0%, 100% { opacity: 0.6; }
       50% { opacity: 1; }
     }
+
+    /* Etiqueta de posición en tirada de 3 cartas */
+    .posicion-label {
+      display: inline-block;
+      background: linear-gradient(135deg, #2FCED1, #B28DFF);
+      color: #0D1B2A;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body class="oraculo-prisma-body">
@@ -371,16 +384,26 @@
     }
 
     // Generar interpretación contextual inteligente
-    function generarInterpretacion(carta, pregunta) {
+    function generarInterpretacion(carta, pregunta, posicion = null) {
       const nombre = carta["Nombre de la Carta"];
       const luz = carta["Mensaje (Luz)"] || '';
       const sombra = carta["Sombra (opcional)"] || '';
       const ritual = carta["Ritual Sugerido (opcional)"] || '';
 
       let interpretacion = '';
+      let prefijo = '';
+
+      if (posicion) {
+        if (posicion === 'Estado Mental') {
+          prefijo = `En tu estado mental actual, `;
+        } else if (posicion === 'La Situación') {
+          prefijo = `Respecto a la situación que vives, `;
+        } else if (posicion === 'Consejo') {
+          prefijo = `El consejo del Oráculo Prisma es: `;
+        }
+      }
 
       if (pregunta && pregunta.trim().length > 5) {
-        // Interpretación personalizada con la pregunta
         const plantillas = [
           `Respecto a tu pregunta "${pregunta}", la carta de <strong>${nombre}</strong> te muestra que `,
           `El Oráculo Prisma responde directamente a tu consulta sobre "${pregunta}" a través de <strong>${nombre}</strong>: `,
@@ -388,10 +411,9 @@
           `Tu pregunta "${pregunta}" encuentra respuesta en la energía de <strong>${nombre}</strong>, que te dice: `
         ];
         const base = plantillas[Math.floor(Math.random() * plantillas.length)];
-        interpretacion = base + luz.toLowerCase();
+        interpretacion = prefijo + base + luz.toLowerCase();
       } else {
-        // Interpretación general
-        interpretacion = `<strong>${nombre}</strong> aparece para ti en este momento y te recuerda que ` + luz.toLowerCase();
+        interpretacion = prefijo + `<strong>${nombre}</strong> aparece para ti en este momento y te recuerda que ` + luz.toLowerCase();
       }
 
       return {
@@ -428,7 +450,7 @@
       mostrarModal(cartasSeleccionadas, preguntaInput);
     }
 
-    // Mostrar el modal con las cartas + animación de revelación (versión corregida)
+    // Mostrar el modal con las cartas + animación de revelación
     function mostrarModal(cartas, pregunta) {
       const modal = document.getElementById('modal-oraculo');
       const contenedor = document.getElementById('modal-cartas');
@@ -440,16 +462,28 @@
       modal.style.display = 'block';
       document.body.style.overflow = 'hidden';
 
-      // Construir todo el HTML de una sola vez (evita bug de innerHTML += en loop)
-      let htmlCompleto = '';
-      const cartaData = []; // Guardamos los datos para después
+      // Definir posiciones según cantidad de cartas
+      let posiciones = [];
+      if (cartas.length === 3) {
+        posiciones = ['Estado Mental', 'La Situación', 'Consejo'];
+      }
 
-      cartas.forEach((carta) => {
-        const datos = generarInterpretacion(carta, pregunta);
-        cartaData.push(datos);
+      // Construir todo el HTML de una sola vez
+      let htmlCompleto = '';
+      const cartaData = [];
+
+      cartas.forEach((carta, index) => {
+        const posicion = posiciones[index] || null;
+        const datos = generarInterpretacion(carta, pregunta, posicion);
+        cartaData.push({ ...datos, posicion });
+
+        const labelHTML = posicion 
+          ? `<div class="posicion-label">${posicion}</div>` 
+          : '';
 
         const cartaHTML = `
           <div class="carta-revelada">
+            ${labelHTML}
             <div class="carta-header">
               ${carta["Imagen URL"] ? 
                 `<img src="${carta["Imagen URL"]}" alt="${datos.nombre}" class="carta-imagen">` : 
@@ -479,13 +513,14 @@
             </div>` : ''}
           </div>
         `;
+        
         htmlCompleto += cartaHTML;
       });
 
       // Insertar todo de una vez
       contenedor.innerHTML = htmlCompleto;
 
-      // Obtener las cartas ya insertadas (referencias frescas)
+      // Obtener las cartas ya insertadas
       const cartaElements = contenedor.querySelectorAll('.carta-revelada');
 
       // Ocultar mensaje de revelación
@@ -493,7 +528,7 @@
         revelando.style.display = 'none';
       }, 550);
 
-      // Revelar las cartas con stagger (una por una)
+      // Revelar las cartas con stagger
       cartaElements.forEach((cartaEl, i) => {
         setTimeout(() => {
           cartaEl.classList.add('reveal');
