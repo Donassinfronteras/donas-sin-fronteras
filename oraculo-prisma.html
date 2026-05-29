@@ -428,7 +428,7 @@
       mostrarModal(cartasSeleccionadas, preguntaInput);
     }
 
-    // Mostrar el modal con las cartas + animación de revelación
+    // Mostrar el modal con las cartas + animación de revelación (versión corregida)
     function mostrarModal(cartas, pregunta) {
       const modal = document.getElementById('modal-oraculo');
       const contenedor = document.getElementById('modal-cartas');
@@ -440,12 +440,14 @@
       modal.style.display = 'block';
       document.body.style.overflow = 'hidden';
 
-      // Crear las cartas (inicialmente ocultas)
-      const cartaElements = [];
+      // Construir todo el HTML de una sola vez (evita bug de innerHTML += en loop)
+      let htmlCompleto = '';
+      const cartaData = []; // Guardamos los datos para después
 
-      cartas.forEach((carta, index) => {
+      cartas.forEach((carta) => {
         const datos = generarInterpretacion(carta, pregunta);
-        
+        cartaData.push(datos);
+
         const cartaHTML = `
           <div class="carta-revelada">
             <div class="carta-header">
@@ -477,22 +479,25 @@
             </div>` : ''}
           </div>
         `;
-        
-        contenedor.innerHTML += cartaHTML;
-        const nuevaCarta = contenedor.lastElementChild;
-        cartaElements.push(nuevaCarta);
+        htmlCompleto += cartaHTML;
       });
 
-      // Ocultar mensaje de "revelando"
+      // Insertar todo de una vez
+      contenedor.innerHTML = htmlCompleto;
+
+      // Obtener las cartas ya insertadas (referencias frescas)
+      const cartaElements = contenedor.querySelectorAll('.carta-revelada');
+
+      // Ocultar mensaje de revelación
       setTimeout(() => {
         revelando.style.display = 'none';
-      }, 600);
+      }, 550);
 
       // Revelar las cartas con stagger (una por una)
       cartaElements.forEach((cartaEl, i) => {
         setTimeout(() => {
           cartaEl.classList.add('reveal');
-        }, 650 + (i * 420)); // Delay progresivo bonito
+        }, 700 + (i * 380));
       });
     }
 
