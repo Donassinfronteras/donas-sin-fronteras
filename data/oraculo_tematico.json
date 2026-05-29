@@ -21,7 +21,20 @@
             "Tu patrón más repetido es encenderte y luego apagar tu luz cuando sientes que el otro no puede sostener tu intensidad. Esto genera ciclos de acercamiento y retirada que confunden tanto a los demás como a ti misma."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás apagando tu creatividad y tu poder profesional por miedo a no ser suficiente o a 'quedarte sin ideas'. Esta carta te recuerda que tu magia no se agota; se renueva cuando dejas de controlarla.",
+            "Tu valor profesional está directamente ligado a tu capacidad de crear desde tu esencia y no desde lo que crees que 'se espera' de ti. Bruxa Tarot te invita a recuperar tu voz creativa en el trabajo.",
+            "Has estado adaptando tu forma de trabajar para encajar en estructuras que no respetan tu ritmo ni tu profundidad. Esta carta te da permiso para hacer las cosas a tu manera.",
+            "El éxito que buscas requiere que dejes de negociar tu intensidad creativa. Mientras sigas suavizándote, seguirás atrayendo oportunidades que no pueden sostener tu verdadero potencial."
+          ],
+          "sombra": [
+            "Tu sombra principal en el trabajo es el miedo a que te vean como 'demasiado' (intensa, exigente, creativa). Esta creencia te está llevando a minimizar tu aporte y a no cobrar lo que realmente vales.",
+            "Estás usando tu creatividad como forma de control y perfeccionismo, lo que te genera agotamiento y bloqueos. Estás produciendo desde el miedo en vez de desde la confianza.",
+            "Tu patrón más repetido es encenderte con un proyecto y luego apagarte cuando sientes que no estás a la altura o que no va a ser reconocido. Esto genera ciclos de procrastinación y frustración.",
+            "Hay una parte de ti que sigue creyendo que 'si lo hago fácil, no tiene valor'. Esta creencia te está haciendo trabajar el doble y disfrutar la mitad."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -43,7 +56,20 @@
             "Estás repitiendo el patrón de 'probar' al otro constantemente. Esta necesidad de evidencia continua de seguridad impide que se desarrolle una confianza orgánica."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Tus miedos profesionales (miedo a fracasar, a no ser suficiente, a que te critiquen) están activando tu sistema nervioso de forma desproporcionada. Nabi te invita a distinguir entre la amenaza real y la herida antigua.",
+            "Estás en un proceso donde tu intuición profesional es fuerte, pero el miedo está interfiriendo con tu capacidad de actuar. Esta carta te da permiso para confiar en lo que percibes.",
+            "Tu hipervigilancia en el trabajo (revisar todo mil veces, anticipar problemas, no delegar) te está agotando. Nabi te recuerda que no todas las batallas merecen tu energía.",
+            "El éxito profesional que buscas requiere que bajes la guardia defensiva y empieces a operar desde la confianza en lugar de desde la alerta constante."
+          ],
+          "sombra": [
+            "Estás creando problemas donde no los hay como forma de sentir que 'tienes el control'. Esta tendencia al drama profesional te mantiene en un estado de estrés innecesario.",
+            "Tu sombra aquí es la dificultad para delegar y confiar en otros. Crees que si no lo haces tú, se va a hacer mal, lo que te genera sobrecarga y resentimiento.",
+            "Estás usando el perfeccionismo como mecanismo de defensa para evitar la crítica. Esta posición te está impidiendo avanzar y compartir tu trabajo antes de que esté 'perfecto'.",
+            "Hay una parte de ti que sigue reaccionando de forma exagerada ante feedback o posibles rechazos. Esta hiper-sensibilidad te está limitando profesionalmente."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -65,7 +91,20 @@
             "Hay una parte de ti que sigue usando el sufrimiento como identidad. 'Yo siempre termino sufriendo por amor' se ha convertido en una narrativa que, aunque dolorosa, te resulta familiar y segura."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás en un proceso de sanación profesional donde el agotamiento y el burnout ya no pueden ser ignorados. Marta te acompaña a reconocer que tu forma de trabajar necesita cambiar.",
+            "Has estado sosteniendo cargas emocionales y responsabilidades que no te corresponden en el trabajo. Esta carta te da permiso para soltar lo que no es tuyo.",
+            "Tu sanación profesional está conectada con tu capacidad de regularte emocionalmente en entornos de alta exigencia. Marta te está enseñando a cuidarte mientras produces.",
+            "El trabajo que viene hacia ti ya no va a requerir que sacrifiques tu bienestar. Esta carta te acompaña a redefinir tu relación con el esfuerzo."
+          ],
+          "sombra": [
+            "Estás usando el rol de 'la que siempre resiste y aguanta' como forma de evitar sentir tu propio agotamiento. Esta identificación con la resiliencia te está enfermando.",
+            "Tu sombra principal en el trabajo es la evasión del descanso. Has internalizado que parar es perder o que 'no te lo mereces' hasta que termines todo.",
+            "Estás proyectando en tu trabajo actual las heridas de entornos laborales anteriores (explotación, falta de reconocimiento, abuso de poder). Esto te hace reaccionar de forma desproporcionada.",
+            "Hay una parte de ti que sigue usando el trabajo como forma de evitar sentir vacío o soledad. Esta compulsión productiva te está impidiendo construir una vida más equilibrada."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -76,18 +115,31 @@
         "amor": {
           "derecho": [
             "Estás frente a un espejo kármico en tus relaciones. Lo que estás recibiendo es, en gran medida, el reflejo de los patrones que has repetido (dar demasiado, tolerar poco, elegir desde la herida). Jade te invita a mirar con honestidad.",
-            "Hay un desequilibrio energético en tus relaciones que necesita ser visto. Esta carta te pide que observes sin juicio dónde has estado sosteniendo dinámicas que no te corresponden.",
-            "Estás en un momento donde puedes cerrar ciclos desde la responsabilidad y no desde la culpa. Jade te da la claridad para entender tu parte sin caer en autodesvalorización.",
-            "El amor maduro requiere que dejes de repetir patrones desde la inconsciencia. Esta carta te acompaña a tomar responsabilidad de forma compasiva."
+            "Hay un desequilibrio energético en tus relaciones que necesita ser visto. Esta carta te pide que observes si estás en un ciclo de dar demasiado o recibir muy poco.",
+            "Estás en un momento donde puedes cerrar ciclos amorosos antiguos con más conciencia. Jade te da la claridad para entender por qué ciertas relaciones se repiten.",
+            "El amor maduro que buscas requiere que asumas responsabilidad por la energía que pones en tus relaciones. Jade te recuerda que el karma no castiga, sino que equilibra."
           ],
           "sombra": [
-            "Tu patrón más repetido es dar en exceso y luego resentirte. Jade te confronta con tu dificultad para poner límites claros y para reconocer cuándo estás sobre-dar desde la herida de no ser suficiente.",
-            "Estás proyectando la responsabilidad de tus elecciones en el otro o en el destino. Esta posición te mantiene en el rol de víctima y te impide ver dónde sí tienes poder de cambio.",
-            "Tu sombra aquí es la dificultad para recibir. Has construido una identidad alrededor de ser quien da, y ahora te cuesta permitir que alguien te sostenga sin sentirte en deuda o vulnerable.",
-            "Estás repitiendo relaciones donde el desequilibrio es similar, pero con diferentes personas. Jade te invita a mirar el patrón común en vez de seguir culpando a cada nuevo vínculo."
+            "Estás repitiendo patrones donde das más de lo que recibes y luego te sientes víctima. Jade te confronta con tu parte de responsabilidad en estos desequilibrios.",
+            "Hay una tendencia a culpar al otro (o al destino) de lo que te pasa en el amor, sin mirar tus propias elecciones repetidas. Esta posición te mantiene estancada.",
+            "Tu sombra en el amor se llama 'evitar la responsabilidad'. Prefieres creer que 'te pasan cosas' antes que reconocer los patrones que sigues eligiendo.",
+            "Estás cargando culpas que no te corresponden o, por el contrario, negándote a ver dónde sí has herido. Jade te pide equilibrio y honestidad."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás frente a un espejo kármico en tu carrera. Lo que estás recibiendo (oportunidades, dinero, reconocimiento o su ausencia) es reflejo de los patrones que has repetido profesionalmente. Jade te invita a mirar con honestidad.",
+            "Hay un desequilibrio entre lo que das y lo que recibes en tu trabajo. Esta carta te pide que observes si estás sobre-dando o sub-valorando tu aporte.",
+            "Estás en un momento donde puedes cerrar ciclos profesionales desde la responsabilidad y no desde la culpa. Jade te da claridad para entender tu parte en los resultados que estás obteniendo.",
+            "El éxito profesional maduro requiere que dejes de repetir patrones de autosabotaje o de victimismo. Esta carta te acompaña a tomar responsabilidad de forma compasiva."
+          ],
+          "sombra": [
+            "Tu patrón más repetido es dar mucho más de lo que cobras (en tiempo, energía, ideas) y luego resentirte. Jade te confronta con tu dificultad para poner límites y cobrar lo que vales.",
+            "Estás proyectando la responsabilidad de tu situación profesional en 'el mercado', 'los clientes' o 'la mala suerte', sin mirar dónde sí tienes poder de cambio.",
+            "Tu sombra aquí es la dificultad para recibir dinero y reconocimiento. Has construido una identidad alrededor del esfuerzo y el sacrificio, y ahora te cuesta permitir que te vaya bien con más facilidad.",
+            "Estás repitiendo situaciones laborales donde el desequilibrio es similar. Jade te invita a mirar el patrón común en vez de seguir culpando a cada nuevo trabajo o cliente."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -97,19 +149,32 @@
       "temas": {
         "amor": {
           "derecho": [
-            "Hay una decisión que tu corazón ya tomó, pero tu mente y tus heridas siguen retrasando. Elena te invita a alinear tu acción con lo que ya sabes internamente.",
-            "Estás en un cruce donde elegir desde el miedo al abandono o al conflicto te está costando tu autenticidad. Esta carta te da fuerza para priorizar tu verdad aunque sea incómoda.",
-            "Tu proceso actual en el amor está pidiendo que dejes de postergar lo inevitable. Elena aparece como recordatorio de que posponer una decisión dolorosa suele generar más dolor a largo plazo.",
-            "Estás lista para elegir desde tu centro y no desde tus heridas de apego. Esta carta te acompaña a tomar decisiones más alineadas con quien estás convirtiéndote."
+            "Hay una decisión importante en el amor que tu corazón ya sabe, aunque tu mente siga dudando. Elena te invita a confiar en esa voz interna que ya conoce el camino.",
+            "El amor que realmente quieres puede requerir que tomes una decisión valiente (aunque incómoda). Esta carta te recuerda que elegir desde el corazón siempre termina siendo lo correcto.",
+            "Estás en un cruce de caminos amoroso. Elena aparece para recordarte que el camino más fácil no siempre es el que te lleva a la conexión que tu alma necesita.",
+            "Tu verdad en el amor está pidiendo ser escuchada. Ya sea una conversación pendiente o una decisión interna, Elena te da fuerza para actuar con autenticidad."
           ],
           "sombra": [
-            "Estás eligiendo desde el miedo al abandono más que desde lo que realmente deseas. Esta posición te mantiene en relaciones y dinámicas que ya no te nutren.",
-            "Tu sombra principal aquí es la evasión de la confrontación. Sabes lo que necesitas hacer o decir, pero sigues postergándolo para no generar conflicto o pérdida.",
-            "Estás aferrándote a una relación (o idea de relación) porque el duelo te parece más amenazante que seguir en una situación que te va erosionando. Elena te confronta con este autoengaño.",
-            "Hay una parte de ti que sigue priorizando 'no lastimar al otro' por encima de no lastimarte a ti misma. Esta inversión de prioridades es uno de tus patrones más repetidos."
+            "Estás eligiendo desde el miedo al cambio o al abandono en vez de desde lo que realmente deseas. Esta posición te está manteniendo en situaciones que ya no te nutren.",
+            "Hay una tendencia a posponer decisiones importantes en el amor por comodidad o por miedo a lastimar. Elena te confronta con el costo de no elegir.",
+            "Tu sombra en el amor se llama 'evitar la verdad'. Sabes lo que necesitas hacer o decir, pero sigues postergándolo por miedo a las consecuencias.",
+            "Estás aferrándote a una relación o a una idea de amor que ya no te representa, solo porque el cambio da miedo. Elena te recuerda que la verdad duele menos que la mentira prolongada."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Hay una decisión profesional importante que tu interior ya sabe, pero tu miedo al cambio o al fracaso sigue retrasando. Elena te invita a alinear tu acción con lo que ya percibes.",
+            "Estás en un cruce de caminos laboral donde elegir desde el miedo (seguridad, estabilidad, 'qué dirán') te está costando tu propósito real. Esta carta te da fuerza para priorizar tu verdad.",
+            "Tu proceso actual en el trabajo está pidiendo que dejes de postergar lo inevitable (un cambio de rumbo, una renuncia, una nueva dirección). Elena te acompaña a actuar.",
+            "Estás lista para tomar decisiones profesionales más alineadas con quien estás convirtiéndote, aunque impliquen incomodidad o pérdida temporal."
+          ],
+          "sombra": [
+            "Estás eligiendo desde el miedo al fracaso o al abandono profesional más que desde lo que realmente deseas. Esta posición te mantiene en trabajos o proyectos que ya no te representan.",
+            "Tu sombra aquí es la evasión de la confrontación profesional. Sabes que necesitas tener conversaciones difíciles (pedir aumento, renegociar condiciones, decir que no) pero sigues postergándolas.",
+            "Estás aferrándote a una situación laboral que ya no te nutre porque el miedo al vacío es más grande que el dolor de quedarte. Elena te confronta con este autoengaño.",
+            "Hay una parte de ti que sigue priorizando 'no generar problemas' o 'no quedar mal' por encima de honrar tu propio bienestar y propósito. Esta inversión de prioridades es uno de tus patrones más repetidos."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -131,7 +196,20 @@
             "Hay una parte de ti que sigue creyendo que si das más, eventualmente recibirás lo mismo. Esta creencia te está manteniendo en ciclos de agotamiento emocional."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás entregando demasiado de ti misma en el trabajo esperando reconocimiento, ascenso o validación que no llega. Mia te recuerda que tu valor no se negocia.",
+            "Es momento de poner límites claros en tu vida profesional. Mia aparece para decirte que ya no necesitas sobre-dar para sentirte valiosa o merecedora de oportunidades.",
+            "Tu bienestar profesional y personal está pidiendo que dejes de priorizar el trabajo por encima de ti. Esta carta te invita a redefinir tu relación con el esfuerzo.",
+            "El éxito que buscas ya no requiere que te sacrifiques tanto. Mia te recuerda que cuando te cuidas primero, tu trabajo también mejora."
+          ],
+          "sombra": [
+            "Estás descuidando tu propio valor profesional al permitir dinámicas de explotación o de dar mucho más de lo que recibes. Esta posición te invita a revisar tu autoestima laboral.",
+            "Tu sombra aquí es el miedo a poner límites por temor a que te vean como 'difícil' o 'poco comprometida'. Este miedo te está manteniendo en situaciones que te agotan.",
+            "Estás usando el trabajo como forma de validación externa. Mia te confronta con la necesidad de reconocer tu valor sin depender de que el trabajo te lo confirme constantemente.",
+            "Hay una parte de ti que sigue creyendo que 'si no doy todo, no merezco tener éxito'. Esta creencia te está llevando a un agotamiento crónico."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -153,7 +231,20 @@
             "Existe una parte de ti que sigue aferrada a 'lo que podría ser' en vez de aceptar lo que realmente es. Esta ilusión te está impidiendo avanzar."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Has estado postergando decisiones importantes en tu carrera (cambio de rumbo, pedir lo que mereces, cerrar proyectos que ya no tienen sentido). Tony te recuerda que el tiempo que pierdes postergando no se recupera.",
+            "Estás invirtiendo energía en dinámicas laborales que no te están devolviendo valor proporcional. Esta carta llega como un llamado urgente a revisar dónde estás malgastando tu tiempo y tu talento.",
+            "Tu propósito profesional está pidiendo que dejes de esperar el momento perfecto y empieces a actuar desde la verdad, aunque implique incomodidad o pérdida temporal.",
+            "El éxito que buscas requiere que dejes de postergar tu propio desarrollo. Tony te da el impulso para dejar de aplazar lo que ya sabes que necesitas hacer."
+          ],
+          "sombra": [
+            "Estás atrapada en el patrón de 'mañana empiezo' o 'cuando tenga más claridad'. Esta procrastinación crónica suele esconder miedo al fracaso o a tener éxito y no saber gestionarlo.",
+            "Tu sombra aquí es la evasión del duelo profesional. Prefieres quedarte en lo que ya no funciona antes que enfrentar el dolor de soltar un proyecto, un rol o una identidad laboral.",
+            "Estás perdiendo oportunidades reales mientras sigues invirtiendo en situaciones que ya sabes que no tienen futuro. Tony te confronta con el costo real de esa elección.",
+            "Hay una parte de ti que sigue aferrada a 'lo que podría ser' en tu carrera, usando eso como excusa para no tomar decisiones concretas en el presente."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -175,7 +266,20 @@
             "Estás repitiendo el patrón de quedarte en situaciones dolorosas porque crees que no mereces algo mejor. Dante te recuerda que sí lo mereces."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás atravesando un momento profesional difícil (rechazos, bloqueos, pérdida de motivación o resultados que no llegan). Dante te recuerda que tienes dentro de ti la fuerza para transformarlo.",
+            "El dolor o la frustración que sientes ahora en tu trabajo puede convertirse en una de tus mayores fuentes de poder si decides no rendirte ni identificarte con él.",
+            "Hay una adversidad profesional que está poniendo a prueba tu resiliencia y tu propósito. Esta carta te invita a abrazar tus 'cicatrices' laborales como parte de tu autoridad.",
+            "Tu capacidad de renacer profesionalmente después de una caída es uno de tus mayores activos. Dante te acompaña a convertir esta experiencia en una versión más fuerte de ti."
+          ],
+          "sombra": [
+            "Estás permitiendo que los rechazos o fracasos profesionales te definan. Dante te confronta con la necesidad de dejar de identificarte con lo que no has logrado todavía.",
+            "Tu sombra aquí es el uso del sufrimiento como identidad profesional ('yo siempre tengo que luchar más que los demás'). Esta narrativa te está manteniendo pequeña.",
+            "Estás dudando de tu propia capacidad después de una herida laboral (despido, crítica fuerte, proyecto fallido). Esta posición te está impidiendo volver a intentarlo con confianza.",
+            "Hay una parte de ti que sigue repitiendo el patrón de quedarte en entornos laborales tóxicos o agotadores porque crees que 'no mereces algo mejor'."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -197,7 +301,20 @@
             "Estás permitiendo que el miedo bloquee tu garganta. La Voz Clara te recuerda que callar lo que eres no te protege, solo te aleja de ti misma."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Es tiempo de usar tu voz en el trabajo. Hay cosas que necesitas decir (pedir aumento, poner límites, expresar tu visión, negarte a algo) y que ya no puedes seguir callando.",
+            "Has estado minimizando tu opinión, tu expertise o tus necesidades profesionales por miedo a generar conflicto o a 'quedar mal'. Esta carta te da fuerza para expresarte.",
+            "Tu verdad profesional está pidiendo salir. Ya sea una conversación pendiente con un jefe, un cliente o contigo misma, La Voz Clara te impulsa a hablar.",
+            "Estás lista para recuperar tu autoridad y tu narrativa en tu carrera. Esta carta te recuerda que callar tu valor no te protege, solo te invisibiliza."
+          ],
+          "sombra": [
+            "Estás autocensurándote profesionalmente por miedo a la confrontación o al rechazo. Esta posición te está costando oportunidades, dinero y reconocimiento.",
+            "Tu sombra aquí es la dificultad para pedir lo que mereces. Prefieres callar antes que arriesgarte a que te digan que no o que te vean como 'exigente'.",
+            "Has estado hablando mucho en el trabajo pero no desde tu verdad profunda (estás siendo 'correcta' en vez de auténtica). Esta carta te invita a decir lo que realmente piensas.",
+            "Hay una parte de ti que sigue priorizando 'no generar problemas' por encima de honrar tu propio valor y tus límites. Esta inversión te está pasando factura."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -219,7 +336,20 @@
             "Estás resistiéndote a escuchar lo que tu corazón realmente quiere porque implica soltar o cambiar. El llamado volverá… cada vez más fuerte."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Sientes una inquietud o un vacío en tu trabajo actual que no sabes explicar del todo. Esta carta aparece para recordarte que tu propósito está pidiendo algo más profundo.",
+            "Hay un deseo profesional que va más allá de lo que has logrado hasta ahora. El Llamado del Alma te invita a escuchar esa voz que pide más sentido y menos solo 'hacer'.",
+            "Estás en un punto donde ya diste pasos importantes en tu carrera y necesitas confirmación de que vas en la dirección correcta. Esta carta te la da.",
+            "Tu alma está guiándote hacia un trabajo o una forma de trabajar que aún no conoces del todo. Confía en esa inquietud: es tu brújula profesional."
+          ],
+          "sombra": [
+            "Estás ignorando los susurros de tu propósito por miedo al cambio o a perder la estabilidad que tienes. Esta negación te está generando un vacío cada vez más grande.",
+            "Tu sombra aquí es el miedo a lo desconocido profesional. Prefieres quedarte en lo que ya conoces (aunque te esté apagando) antes que seguir el llamado hacia algo más alineado.",
+            "Has estado llenando tu vida laboral con actividad y logros externos mientras evitas la pregunta más importante: ¿esto realmente me llena?",
+            "Estás resistiéndote a escuchar lo que tu interior realmente quiere porque implica soltar seguridad, identidad o ingresos actuales. El llamado volverá… cada vez más fuerte."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -241,7 +371,20 @@
             "Estás buscando fuera lo que solo puedes encontrar dentro. El Regreso a Casa te recuerda que la paz que buscas comienza cuando dejas de huir de ti."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás cerrando un ciclo profesional importante. Aunque el mundo laboral siga en caos, dentro de ti está naciendo una nueva forma de relacionarte con tu trabajo. Esta carta celebra ese regreso a ti.",
+            "El éxito que buscas ya no está fuera, sino en la reconexión con tu propósito real y con la forma en que realmente quieres trabajar. El Regreso a Casa te recuerda que ya no estás perdida.",
+            "Has llegado a un punto donde puedes soltar roles, proyectos o identidades laborales que ya no te representan. Esta carta es un abrazo de bienvenida a tu nueva versión profesional.",
+            "Estás recordando que tu verdadero 'hogar' profesional está en la relación que tienes contigo misma y con tu propósito, no en un título o en la aprobación externa."
+          ],
+          "sombra": [
+            "Estás anhelando un cambio profesional, pero aún no has cerrado el ciclo anterior (un trabajo, un rol, una forma de trabajar). Hay nostalgia o miedo a soltar lo que ya no existe.",
+            "Tu sombra aquí es la idealización del pasado laboral. Estás aferrándote a una versión romantizada de cómo 'solía ser' en vez de crear lo que puede ser ahora.",
+            "Te estás negando el regreso a ti misma profesionalmente por miedo a estar 'sin rumbo' o sin la identidad que te daba tu trabajo anterior. Esta posición te mantiene estancada.",
+            "Estás buscando fuera (en un nuevo trabajo, un nuevo título, más dinero) lo que solo puedes encontrar dentro: una forma de trabajar que realmente te represente."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -263,7 +406,20 @@
             "Estás atrapada en una dinámica donde nadie gana. Esta posición te invita a cortar la red, aunque duela."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Hay dinámicas de poder o manipulación en tu entorno laboral que tu intuición ya detectó. Alvaro te recuerda que tu percepción es precisa y que ya no puedes seguir minimizando lo que ves.",
+            "Estás percibiendo que alguien está jugando con información, reconocimiento o poder de forma poco ética. Esta carta te da fuerza para ver con claridad y protegerte.",
+            "El éxito profesional que buscas no se construye con juegos de poder ni con manipulación. Alvaro aparece para recordarte que la claridad y la integridad son tu mejor estrategia a largo plazo.",
+            "Hay una relación laboral donde sientes que te están tejiendo una red. Esta carta te invita a cortar con honestidad antes de que sea más difícil."
+          ],
+          "sombra": [
+            "Estás permitiendo que alguien en tu trabajo controle información, reconocimiento o decisiones de forma que te afecta. Tu sombra aquí es seguir justificando esa dinámica por miedo al conflicto.",
+            "Hay una parte de ti que está usando tácticas de manipulación o de 'jugar el juego' para avanzar profesionalmente. Alvaro te confronta con esa elección.",
+            "Tu sombra en el trabajo se llama miedo a confrontar el abuso de poder. Prefieres adaptarte o callar antes que poner límites claros.",
+            "Estás atrapada en una dinámica laboral donde el poder se ejerce de forma deshonesta. Esta posición te invita a decidir si sigues participando o sales de esa red."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -285,7 +441,20 @@
             "Hay una parte de ti que prefiere el 'casi' doloroso antes que el riesgo de buscar algo que sí te corresponda."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás esperando que 'algo o alguien' elija por ti en tu carrera (un ascenso, una oportunidad, un cliente grande) y esa espera te está generando frustración y estancamiento. Emmanuel te recuerda que el éxito profesional no es tibio: o lo eliges con decisión o te quedas esperando.",
+            "Hay una situación laboral de 'casi' (un proyecto que no termina de cerrar, un ascenso que se posterga, un cliente que no se decide) que te está drenando más energía que un 'no' claro. Esta carta te invita a dejar de sostener lo que no te sostiene.",
+            "Estás dudando de lo que realmente quieres profesionalmente por miedo a lo que implica conseguirlo (más responsabilidad, más visibilidad, más riesgo). Emmanuel te da fuerza para elegir con claridad.",
+            "El trabajo que realmente deseas no va a llegar mientras sigas sosteniendo espacios profesionales que ya no te nutren. Es momento de soltar con decisión."
+          ],
+          "sombra": [
+            "Estás reviviendo una y otra vez escenarios laborales pasados ('si hubiera dicho…', 'si hubiera pedido…', 'si me hubieran valorado'). Esta rumiación te mantiene atrapada en el pasado y te impide actuar en el presente.",
+            "Tu sombra aquí es aferrarte a lo que no te elige profesionalmente. Mientras sigas esperando que un jefe, un cliente o una empresa te 'escoja', te estás negando la posibilidad de elegirte tú.",
+            "Estás usando la esperanza como forma de no cerrar ciclos laborales que ya sabes que no tienen futuro. Emmanuel te confronta con la necesidad de tomar una decisión clara.",
+            "Hay una parte de ti que prefiere quedarse en la zona de 'casi' porque es menos amenazante que tomar una decisión definitiva (renunciar, pedir lo que mereces, cambiar de rumbo)."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -307,7 +476,20 @@
             "Hay una parte de ti que está usando la seducción o la culpa para conseguir lo que quieres. Valeria te pide que elijas la autenticidad sobre el control."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás percibiendo que detrás de ciertas dinámicas laborales hay intenciones ocultas (competencia desleal, apropiación de ideas, manipulación de información). Valeria te recuerda que tu intuición es precisa.",
+            "Hay alguien en tu entorno profesional usando tu trabajo, tu esfuerzo o tu ambición para su propio beneficio. Esta carta te invita a poner límites claros y proteger tu energía.",
+            "Estás justificando comportamientos tóxicos en el trabajo (tanto propios como ajenos) en nombre de 'la carrera' o 'las oportunidades'. Valeria aparece para recordarte que la integridad no se negocia.",
+            "El éxito profesional que buscas no se construye con manipulación ni con segundas intenciones. Esta carta te da fuerza para elegir la autenticidad y la transparencia."
+          ],
+          "sombra": [
+            "Estás adoptando tácticas de manipulación o de 'jugar sucio' en el trabajo sin darte cuenta (apropiarte de ideas, usar información a tu favor, generar competencia desleal). Valeria te confronta con tu propio reflejo oscuro.",
+            "Tu sombra aquí es usar el poder o la información para controlar situaciones laborales. Estás repitiendo patrones que te han herido, pero ahora desde el otro lado.",
+            "Estás justificando comportamientos poco éticos (tuyos o de otros) porque 'así funciona el mundo laboral'. Esta creencia te está alejando de tu propia integridad.",
+            "Hay una parte de ti que está usando la seducción profesional, la culpa o la información como herramientas de poder. Valeria te pide que elijas la autenticidad sobre el control."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -318,7 +500,7 @@
         "amor": {
           "derecho": [
             "Estás sintiendo resentimiento o envidia ante el éxito o la felicidad amorosa de alguien más. Karina te invita a mirar hacia dentro en vez de comparar.",
-            "Hay una tendencia a sabotear (consciente o inconscientemente) las conexiones o logros de otros por miedo a perder tu lugar. Esta carta te pide honestidad.",
+            "Hay una tendencia a sabotear (consciente o inconscientemente) las conexiones o logros de otros por miedo a perder tu lugar o tu influencia. Esta carta te pide honestidad.",
             "Estás midiendo tu camino amoroso con la vara de los demás. Karina aparece para recordarte que tu historia es única.",
             "El amor propio incluye celebrar el amor ajeno sin que te reste. Esta carta te ayuda a soltar la comparación tóxica."
           ],
@@ -329,7 +511,20 @@
             "Hay una parte de ti que siente alivio cuando otros fallan en el amor. Karina te invita a sanar esa herida de escasez."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás sintiendo resentimiento o envidia ante el éxito, reconocimiento o ascenso de alguien en tu entorno laboral. Karina te invita a mirar hacia dentro en vez de comparar.",
+            "Hay una tendencia a sabotear (consciente o inconscientemente) las oportunidades o el reconocimiento de otros por miedo a perder tu lugar o tu estatus. Esta carta te pide honestidad.",
+            "Estás midiendo tu progreso profesional con la vara de los demás. Karina aparece para recordarte que tu camino es único y que la comparación te está robando energía.",
+            "El éxito profesional maduro incluye la capacidad de celebrar el logro ajeno sin que te reste. Esta carta te ayuda a soltar la envidia tóxica."
+          ],
+          "sombra": [
+            "Tu envidia profesional se está volviendo contra ti: te niegas el reconocimiento propio y te comparas constantemente. Karina te confronta con el veneno que estás bebiendo.",
+            "Estás desmereciendo tus propios logros y avances porque estás demasiado enfocada en lo que otros han logrado. Esta posición te mantiene en escasez y desmotivación.",
+            "Tu sombra aquí es la competencia disfrazada. Estás midiendo tu valor profesional contra el de otros de forma constante, lo que genera estrés y relaciones laborales tóxicas.",
+            "Hay una parte de ti que siente alivio o satisfacción cuando otros fallan o no logran lo que tú tampoco has logrado. Karina te invita a sanar esa herida de escasez profesional."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -351,7 +546,20 @@
             "Hay una parte de ti que sigue repitiendo lo mismo esperando resultados diferentes. Tatiana te recuerda que el cambio empieza con una decisión."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás repitiendo patrones laborales que solo te dejan estancada (mismos tipos de clientes, mismos problemas, mismos bloqueos). Tatiana te recuerda que el miedo al cambio es más costoso a largo plazo que el riesgo de soltar.",
+            "Tu zona de confort profesional se ha convertido en una jaula. Esta carta te invita a atreverte a crear una forma de trabajar que sea realmente tuya.",
+            "Hay un patrón repetitivo en tu carrera (procrastinación, autosabotaje, elegir proyectos que no te llenan) que ya no te sirve. Tatiana aparece para darte fuerza para romperlo.",
+            "El trabajo que mereces requiere que dejes de elegir desde el miedo a lo desconocido. Esta carta te acompaña a soltar lo familiar aunque duela."
+          ],
+          "sombra": [
+            "Estás idealizando un pasado profesional ('antes me iba mejor', 'antes tenía más claridad') para no tener que enfrentar el presente. Tatiana te confronta con esa nostalgia tóxica.",
+            "Tu sombra aquí es el miedo al cambio profesional. Prefieres quedarte en lo conocido (aunque te esté agotando) antes que arriesgarte a construir algo nuevo.",
+            "Estás justificando patrones repetitivos con frases como 'así soy yo', 'siempre me pasa lo mismo' o 'en este rubro es normal'. Esta posición te mantiene estancada.",
+            "Hay una parte de ti que sigue repitiendo los mismos errores laborales esperando resultados diferentes. Tatiana te recuerda que el cambio empieza con una decisión consciente."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -373,7 +581,20 @@
             "Hay una parte de ti que prefiere no involucrarse aunque vea injusticia. Alberto te recuerda que el amor también es acción."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás sintiendo el impulso de apoyar, defender o interceder por alguien en tu entorno laboral que está siendo tratado injustamente. Alberto te recuerda que un acto de respaldo puede cambiar el rumbo de una situación.",
+            "Hay alguien en tu trabajo que necesita apoyo y tú tienes la capacidad (y la responsabilidad) de dárselo. Esta carta te invita a actuar con integridad.",
+            "El liderazgo maduro también incluye proteger y sostener a quienes están en una posición más vulnerable. Alberto aparece para recordarte el poder de ser un aliado.",
+            "Tu sentido de justicia profesional está activado. Esta carta te da fuerza para interceder cuando sea necesario, aunque no te dé beneficio directo."
+          ],
+          "sombra": [
+            "Estás ignorando situaciones de injusticia o abuso de poder en tu trabajo por miedo, conveniencia o para no 'meterte en problemas'. Alberto te confronta con tu inacción.",
+            "Tu sombra aquí es la evasión de la responsabilidad ética. Sabes que algo no está bien y estás eligiendo mirar hacia otro lado para proteger tu propia comodidad.",
+            "Estás priorizando tu seguridad o tu imagen profesional antes que defender lo correcto. Esta posición te está alejando de tu propia integridad.",
+            "Hay una parte de ti que prefiere no involucrarse aunque vea comportamientos tóxicos o injustos. Alberto te recuerda que el silencio también es una forma de participación."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -395,7 +616,20 @@
             "Hay una parte de ti que sigue usando el recuerdo de esa persona como refugio emocional. Oracio te confronta con la necesidad de volver a habitar tu presente."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Hay un trabajo, un proyecto o una etapa profesional que sigue habitando en ti aunque ya haya terminado. Oracio te invita a honrar lo que significó sin necesidad de mantenerlo activo.",
+            "Estás en un proceso de integrar una experiencia laboral que te marcó (positiva o negativa). Esta carta te recuerda que el cierre profesional no siempre se resuelve con distancia; a veces se resuelve con reconocimiento interno.",
+            "Hay una parte de ti que sigue sosteniendo emocionalmente un rol o una identidad laboral que ya no te corresponde. Oracio te da permiso para seguir valorando esa etapa sin tener que seguir viviéndola.",
+            "El trabajo maduro también incluye la capacidad de honrar lo que fue sin convertirlo en una carga. Esta carta te acompaña a cerrar ciclos profesionales con dignidad."
+          ],
+          "sombra": [
+            "Estás negándote el derecho a extrañar o a seguir sintiendo por una etapa profesional que ya terminó. Esta negación te está impidiendo procesar el duelo laboral real.",
+            "Tu sombra aquí es el orgullo disfrazado de cierre profesional. Estás rechazando el apoyo o el consuelo porque crees que deberías 'ya haber superado' esa etapa.",
+            "Estás manteniendo viva una conexión emocional con un trabajo o rol anterior como forma de no enfrentar la incertidumbre del presente.",
+            "Hay una parte de ti que sigue usando el recuerdo de 'cómo era antes' como refugio emocional. Oracio te confronta con la necesidad de volver a habitar tu presente profesional."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -417,7 +651,20 @@
             "Hay una parte de ti que sigue buscando validación o claridad fuera porque no confías en tu propia percepción emocional. Esta carta te invita a volver a tu centro."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás necesitando un espacio de silencio y observación interna respecto a tu situación laboral. Rosario te invita a dejar de buscar respuestas afuera y mirar lo que ya está ocurriendo dentro de ti.",
+            "Hay una verdad profesional que ya conoces, pero que requiere tu permiso para emerger. Esta carta te da ese permiso para sentir sin juicio lo que realmente está pasando con tu trabajo.",
+            "Tu proceso actual pide que dejes de intelectualizar tanto tu carrera y vuelvas a sentir lo que realmente te mueve. Rosario aparece como un refugio donde puedes estar con lo que sientes.",
+            "Estás en un momento donde el silencio interior es más poderoso que cualquier plan de acción externo. Esta carta te invita a crear ese espacio."
+          ],
+          "sombra": [
+            "Estás evitando mirar lo que realmente sientes sobre tu trabajo por miedo a lo que puedas descubrir. Esta evasión te mantiene en una confusión que, aunque incómoda, te resulta más segura que la claridad.",
+            "Tu sombra aquí es la dificultad para estar contigo misma sin distracciones laborales. Has externalizado tanto tu regulación emocional en el trabajo que ahora te cuesta sostenerte en silencio.",
+            "Estás usando el ruido externo (reuniones, emails, redes, multitarea) para no tener que escuchar lo que tu interior ya sabe sobre tu situación laboral. Rosario te confronta con esa huida.",
+            "Hay una parte de ti que sigue buscando opiniones y consejos externos sobre su carrera porque no confías en su propia percepción. Esta carta te invita a volver a tu centro."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -439,7 +686,20 @@
             "Hay una parte de ti que sigue creyendo que 'molestas' o que 'deberías poder sola'. Esta creencia te está impidiendo construir una red real de apoyo."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás necesitando recordar quiénes realmente te sostienen en tu camino profesional. Esta carta aparece cuando has estado invirtiendo energía en relaciones laborales que no te devuelven lo mismo que das.",
+            "Hay una red de apoyo (aunque sea pequeña) que está disponible para ti. Las Tres Aliadas te recuerdan que no tienes que cargar todo sola en tu carrera.",
+            "Tu proceso actual profesional requiere que dejes de aislarte. Esta carta te invita a reconocer y recibir el sostén que ya existe en tu vida laboral y personal.",
+            "Estás en un momento donde ser aliada de ti misma también significa permitir que otros te acompañen. Esta carta te da permiso para necesitar apoyo."
+          ],
+          "sombra": [
+            "Estás aislándote profesionalmente por orgullo, miedo o decepción pasada. Esta posición te está privando del sostén y las oportunidades que podrías recibir.",
+            "Tu sombra aquí es la dificultad para pedir y recibir ayuda en el trabajo. Has construido una identidad de autosuficiencia que ahora te está dejando sola cuando más necesitas conexión o apoyo.",
+            "Estás rodeada de relaciones laborales superficiales mientras descuidas (o no reconoces) a las pocas personas que realmente podrían abrirte puertas o sostenerte. Esta carta te invita a priorizar calidad sobre cantidad.",
+            "Hay una parte de ti que sigue creyendo que 'molestas' o que 'deberías poder sola'. Esta creencia te está impidiendo construir una red real de apoyo profesional."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -461,7 +721,20 @@
             "Hay una parte de ti que está tejiendo historias y futuros antes de que la conexión tenga tiempo de desarrollarse naturalmente. Esta carta te invita a soltar el control del desenlace."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás sintiendo una atracción o una oportunidad profesional que te genera expectativa y también miedo. Jazmín te recuerda que las mejores oportunidades a veces aparecen cuando no las estás forzando.",
+            "Hay una posibilidad nueva (proyecto, cliente, colaboración) que está surgiendo. Esta carta te invita a no proyectar demasiado rápido ni a cerrar por miedo antes de tiempo.",
+            "Tu intuición profesional está respondiendo a algo antes de que tu mente pueda explicarlo completamente. Jazmín te da permiso para sentir la oportunidad sin tener que definirla inmediatamente.",
+            "Estás en un proceso donde el trabajo puede aparecer de formas que no esperabas. Esta carta te acompaña a mantener la receptividad sin perder el centro."
+          ],
+          "sombra": [
+            "Estás forzando oportunidades o creando expectativas prematuras porque tienes miedo de que 'se escape' lo bueno. Esta ansiedad está nublando tu percepción real de lo que está llegando.",
+            "Tu sombra aquí es la idealización temprana de oportunidades. Estás proyectando en un proyecto o cliente todo lo que has estado esperando, sin ver realmente qué es lo que está frente a ti.",
+            "Estás aferrándote a una chispa profesional porque tienes miedo de volver a la incertidumbre o al estancamiento. Jazmín te confronta con la necesidad de no usar una oportunidad como salvavidas.",
+            "Hay una parte de ti que está tejiendo escenarios y futuros profesionales antes de que la oportunidad tenga tiempo de desarrollarse naturalmente. Esta carta te invita a soltar el control del desenlace."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -483,7 +756,20 @@
             "Hay una parte de ti que sigue midiendo su valor según la respuesta del otro. Daniela te confronta con esta dependencia emocional de la aprobación externa."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás dudando de tu propio valor profesional. Daniela te recuerda que tu merecimiento no depende de que alguien te lo confirme externamente. Es momento de convertirte en tu propia fuente de reconocimiento.",
+            "Has estado minimizando tus logros, tu expertise y tu aporte por miedo a parecer arrogante o a 'quedar mal'. Esta carta te invita a celebrar tu propio camino sin esperar aplausos.",
+            "Tu motivación y tu autoestima profesional están conectadas. Daniela aparece para recordarte que mereces oportunidades donde no tengas que probar constantemente tu valía.",
+            "Estás en un proceso de dejar de buscar validación externa y empezar a reconocerte desde dentro. Esta carta te da fuerza para eso."
+          ],
+          "sombra": [
+            "Estás esperando que alguien (jefe, cliente, colega) te dé el permiso para sentirte suficiente profesionalmente. Esta dependencia externa de validación te está manteniendo en una posición de inferioridad.",
+            "Tu sombra aquí es la dificultad para celebrar tus propios logros. Has internalizado que 'brillar' es peligroso o que te hace menos querible o colaborativa.",
+            "Estás desestimando tus avances y tu expertise porque crees que 'no son suficientes'. Esta autodesvalorización constante te está impidiendo atraer oportunidades acordes a tu real nivel.",
+            "Hay una parte de ti que sigue midiendo su valor profesional según la respuesta o el reconocimiento del otro. Daniela te confronta con esta dependencia emocional de la aprobación externa."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -505,7 +791,20 @@
             "Hay una parte de ti que sigue esperando que el amor llegue de forma 'segura' y predecible. Heimdall te confronta con esa ilusión."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Hay una puerta pequeña (una conversación casual, una coincidencia, una idea fugaz, una conexión inesperada) que se está abriendo en tu camino profesional. Heimdall te invita a no ignorarla por parecer 'poco importante'.",
+            "Estás en un momento donde las oportunidades pueden llegar a través de caminos que no esperabas. Esta carta te recuerda que la magia profesional a veces se esconde en lo cotidiano.",
+            "Tu resistencia a explorar lo desconocido está limitando tus posibilidades de crecimiento. Heimdall te da permiso para abrir esa puerta aunque no sepas qué hay del otro lado.",
+            "Estás necesitando soltar la rigidez de 'cómo debería llegar mi próximo paso profesional' para permitir que llegue de formas inesperadas."
+          ],
+          "sombra": [
+            "Estás ignorando señales y oportunidades profesionales por miedo al caos o a lo desconocido. Esta posición te mantiene estancada en lo conocido aunque ya no te nutra.",
+            "Tu sombra aquí es la necesidad de control y previsibilidad. Prefieres no abrir ciertas puertas antes que arriesgarte a algo que no puedas manejar completamente.",
+            "Estás rechazando oportunidades porque no encajan con la imagen que tenías de 'cómo debería ser mi carrera'. Esta rigidez te está cerrando caminos reales.",
+            "Hay una parte de ti que sigue esperando que el siguiente paso profesional llegue de forma 'segura' y predecible. Heimdall te confronta con esa ilusión."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -521,13 +820,26 @@
             "Estás en un momento donde la revelación viene del silencio y no de más información. Esta carta te da permiso para apagar el ruido."
           ],
           "sombra": [
-            "Estás bloqueando tu voz interna con exceso de estímulos, análisis y distracciones. Esta posición te mantiene confundida a propósito.",
+            "Estás evitando mirar lo que realmente sientes por miedo a lo que puedas descubrir. Esta evasión te mantiene en una confusión que, aunque incómoda, te resulta más segura que la claridad.",
             "Tu sombra aquí es el miedo a ver lo que ya sabes. Prefieres mantener la confusión antes que enfrentar una verdad que te obligaría a actuar.",
             "Estás usando el ruido externo como forma de no tener que tomar decisiones que ya sabes que necesitas tomar. Erebus te confronta con esa huida.",
-            "Hay una parte de ti que sigue recolectando opiniones y consejos externos porque no confías en tu propia percepción. Esta carta te invita a volver a tu centro."
+            "Hay una parte de ti que sigue buscando validación o claridad fuera porque no confías en tu propia percepción emocional. Esta carta te invita a volver a tu centro."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás necesitando ver con más claridad una situación profesional que has estado evitando mirar de frente. Erebus te invita a entrar en la penumbra interna donde está la verdad.",
+            "Hay algo que sabes sobre tu trabajo pero que no quieres ver. Esta carta te acompaña a bajar el ruido externo para escuchar lo que tu interior ya está diciendo.",
+            "Tu proceso actual requiere que dejes de buscar respuestas en todas partes menos dentro de ti. Erebus te invita a la oscuridad fértil donde nace la claridad profesional real.",
+            "Estás en un momento donde la revelación viene del silencio y no de más información o más acción. Esta carta te da permiso para apagar el ruido."
+          ],
+          "sombra": [
+            "Estás bloqueando tu voz interna con exceso de estímulos, análisis, reuniones y distracciones laborales. Esta posición te mantiene confundida a propósito.",
+            "Tu sombra aquí es el miedo a ver lo que ya sabes sobre tu situación profesional. Prefieres mantener la confusión antes que enfrentar una verdad que te obligaría a actuar.",
+            "Estás usando el ruido externo como forma de no tener que tomar decisiones laborales que ya sabes que necesitas tomar. Erebus te confronta con esa huida.",
+            "Hay una parte de ti que sigue recolectando opiniones, consejos y validación externa sobre su carrera porque no confía en su propia percepción. Esta carta te invita a volver a tu centro."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -549,7 +861,20 @@
             "Hay una parte de ti que sigue buscando 'señales' y 'guías' externas porque tiene miedo de tomar decisiones desde su propia autoridad interna."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás sintiendo un llamado hacia algo más profundo en tu propósito profesional, algo que va más allá de lo que has construido hasta ahora. Aetherius te acompaña a confiar en esa búsqueda aunque no sepas exactamente qué es.",
+            "Hay una dimensión de tu ser que está pidiendo ser integrada en tu trabajo. Esta carta te invita a conectar con esa parte más misteriosa y profunda de tu propósito.",
+            "Estás en un proceso donde las respuestas profesionales no van a venir solo de la lógica o la estrategia, sino de la conexión con algo más grande que tú. Aetherius te da permiso para soltar el control.",
+            "Tu alma está guiándote hacia una forma de trabajo o un propósito que aún no conoces del todo. Esta carta te acompaña a confiar en ese camino aunque sea incierto."
+          ],
+          "sombra": [
+            "Estás perdiéndote en laberintos mentales, proyecciones y búsquedas externas sin guía interna. Aetherius te confronta con la necesidad de soltar cargas ajenas y volver a tu propio centro profesional.",
+            "Tu sombra aquí es la evasión espiritualizada del trabajo real. Estás usando conceptos elevados sobre 'propósito' y 'misión' para no tener que hacer el trabajo concreto y a veces aburrido que tu camino realmente requiere.",
+            "Estás recolectando mucha información espiritual y de desarrollo personal sobre el trabajo mientras evitas hacer el trabajo emocional y práctico que esas enseñanzas te piden.",
+            "Hay una parte de ti que sigue buscando 'señales' y guías externas sobre su propósito porque tiene miedo de tomar decisiones desde su propia autoridad interna."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -571,7 +896,20 @@
             "Hay una parte de ti que prefiere quedarse en el umbral antes que dar el paso hacia lo desconocido. Esta carta te invita a cruzar."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás en un proceso donde algo dentro de ti necesita morir profesionalmente para que algo nuevo nazca (una identidad laboral, un rol, una forma de trabajar, un proyecto). Esta carta te acompaña a soltar con conciencia.",
+            "Hay un ciclo profesional que está cerrándose de forma definitiva. El Umbral te invita a no resistir la muerte de lo viejo, porque de ahí nace tu renacimiento laboral.",
+            "Estás siendo llamada a atravesar una transformación profunda en tu forma de trabajar y de entender tu propósito. Esta carta te da fuerza para no quedarte en la orilla.",
+            "El trabajo que viene hacia ti requiere que dejes atrás una versión anterior de ti misma. Esta carta te acompaña en ese tránsito."
+          ],
+          "sombra": [
+            "Estás resistiendo la transformación profesional porque tienes miedo de quién serás después de soltar. Esta resistencia te está manteniendo en un estado de limbo doloroso y estancamiento.",
+            "Tu sombra aquí es el apego a una identidad profesional que ya no te representa. Has construido tanto alrededor de 'quién soy en mi trabajo' que te cuesta soltar esa historia.",
+            "Estás aferrándote a una versión de tu carrera que ya no existe (un rol, un estatus, una forma de trabajar). El Umbral te confronta con la necesidad de dejar morir lo que ya murió.",
+            "Hay una parte de ti que prefiere quedarse en el umbral profesional antes que dar el paso hacia lo desconocido. Esta carta te invita a cruzar."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -593,7 +931,20 @@
             "Hay una parte de ti que sigue eligiendo la soledad como forma de protección. El Concilio te confronta con el costo de esa elección."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás necesitando recordar que no estás sola en tu camino profesional. Hay personas y también fuerzas internas que te sostienen aunque no siempre las veas.",
+            "Hay un espacio de pertenencia y conexión profesional que está disponible para ti. Esta carta te invita a volver a la mesa donde eres recibida por quienes realmente valoran tu trabajo.",
+            "Tu propósito está anhelando una tribu o una red donde puedas ser vulnerable y auténtica sin miedo. El Concilio te recuerda que esa red existe o puede construirse.",
+            "Estás en un momento donde recibir apoyo y reconocimiento también es un acto de profesionalismo maduro. Esta carta te da permiso para necesitar y ser sostenida."
+          ],
+          "sombra": [
+            "Estás descuidando tus conexiones profesionales más profundas por prisa, orgullo o decepción pasada. Esta posición te está dejando emocional y profesionalmente empobrecida.",
+            "Tu sombra aquí es la dificultad para crear y mantener relaciones profesionales profundas. Has aprendido a funcionar en superficie y ahora te cuesta bajar a niveles más íntimos y de confianza real.",
+            "Estás dando por sentada la presencia de quienes te apoyan o, por el contrario, alejándote de ellos por miedo a necesitarlos.",
+            "Hay una parte de ti que sigue eligiendo la soledad profesional como forma de protección. El Concilio te confronta con el costo real de esa elección."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -603,19 +954,32 @@
       "temas": {
         "amor": {
           "derecho": [
-            "Estás sintiendo que el estancamiento en tu vida amorosa ya no es sostenible. Esta carta te invita a generar un cambio radical aunque implique soltar mucho.",
-            "Hay una acumulación de patrones, expectativas y cargas que necesita ser liberada para que algo nuevo pueda entrar. El Portal del Caos te acompaña en esa limpieza.",
+            "Estás sintiendo que el estancamiento te asfixia y necesitas un impulso radical. El Portal del Caos te acompaña a soltar cargas acumuladas.",
+            "Hay una acumulación de patrones, expectativas y cargas que necesita ser liberada para que algo nuevo pueda entrar. Esta carta te acompaña en esa limpieza.",
             "Tu proceso actual requiere que dejes de hacer 'más de lo mismo' y te atrevas a un cambio estructural en cómo te relacionas.",
-            "Estás lista para un renacimiento en tu forma de amar. Esta carta te da fuerza para soltar lo viejo aunque duela."
+            "Estás lista para un renacimiento. Esta carta te da fuerza para soltar lo viejo aunque duela."
           ],
           "sombra": [
             "Estás paralizada por el miedo a soltar. Esta parálisis te está manteniendo en un caos interno que es más familiar que el cambio.",
-            "Tu sombra aquí es el apego acumulador (de relaciones, de historias, de identidades). Sigues cargando cosas que ya no te sirven por miedo al vacío.",
+            "Tu sombra aquí es el apego acumulador. Sigues cargando cosas que ya no te sirven por miedo al vacío.",
             "Estás saboteando tu propio proceso de renovación porque el caos controlado te resulta más seguro que el orden que vendría después de soltar.",
             "Hay una parte de ti que sigue repitiendo patrones destructivos porque cambiar implica enfrentar el duelo de todo lo que has invertido en ellos."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás sintiendo que el estancamiento en tu vida profesional ya no es sostenible. Esta carta te invita a generar un cambio radical aunque implique soltar mucho de lo que has construido.",
+            "Hay una acumulación de patrones, creencias y cargas laborales que necesita ser liberada para que algo nuevo pueda entrar. El Portal del Caos te acompaña en esa limpieza profunda.",
+            "Tu proceso actual requiere que dejes de hacer 'más de lo mismo' y te atrevas a un cambio estructural en cómo trabajas y cómo te valoras.",
+            "Estás lista para un renacimiento profesional. Esta carta te da fuerza para soltar lo viejo aunque duela."
+          ],
+          "sombra": [
+            "Estás paralizada por el miedo a soltar estructuras laborales que ya no te sirven. Esta parálisis te está manteniendo en un caos interno que es más familiar que el cambio.",
+            "Tu sombra aquí es el apego acumulador profesional (de roles, de proyectos, de identidades, de 'lo que debería ser'). Sigues cargando cosas que ya no te sirven por miedo al vacío.",
+            "Estás saboteando tu propio proceso de renovación profesional porque el caos controlado te resulta más seguro que el orden que vendría después de soltar.",
+            "Hay una parte de ti que sigue repitiendo patrones destructivos en el trabajo porque cambiar implica enfrentar el duelo de todo lo que has invertido en ellos."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -625,19 +989,32 @@
       "temas": {
         "amor": {
           "derecho": [
-            "Estás queriendo resultados rápidos en tu proceso amoroso y esto te está impidiendo madurar emocionalmente. Esta carta te recuerda que el amor profundo requiere tiempo y cocción lenta.",
-            "Hay un proceso interno que necesita ser cocido a fuego lento. El Inframundo de las Pociones te invita a bajar el ritmo y permitir que las cosas se transformen a su tiempo.",
-            "Estás intentando 'arreglar' tu vida amorosa desde la urgencia. Esta carta te pide que confíes en los tiempos de maduración emocional.",
+            "Estás impaciente por ver cambios y olvidas que el cambio profundo lleva su tiempo. Esta carta te recuerda que el amor y la paciencia son los mejores condimentos para tu proceso.",
+            "Hay un proceso interno que necesita ser cocido a fuego lento. Esta carta te invita a bajar el ritmo y permitir que las cosas se transformen a su tiempo.",
+            "Estás intentando 'arreglar' todo de golpe, sin dar espacio a la maduración emocional. Esta carta te pide que confíes en los tiempos de maduración.",
             "Tu crecimiento en el amor está pidiendo paciencia y presencia, no soluciones rápidas. Esta carta te acompaña a honrar ese ritmo."
           ],
           "sombra": [
-            "Estás saltando pasos emocionales importantes porque quieres llegar rápido a un resultado. Esta prisa te está impidiendo integrar lo que necesitas aprender.",
-            "Tu sombra aquí es la impaciencia disfrazada de progreso. Estás avanzando superficialmente sin darte tiempo a que los cambios se asienten en tu sistema nervioso y en tu psique.",
+            "Estás buscando soluciones rápidas o 'parchear' sin profundizar. Esta posición te invita a regresar a la olla, bajar el fuego y permitir que el tiempo haga su magia.",
+            "Tu sombra aquí es la impaciencia disfrazada de progreso. Estás avanzando superficialmente sin darte tiempo a que los cambios se asienten.",
             "Estás buscando atajos emocionales que te permitan evitar el trabajo profundo. Esta carta te confronta con el costo de esa estrategia.",
             "Hay una parte de ti que sigue creyendo que 'si no pasa rápido, no va a pasar'. Esta creencia te está generando ansiedad y decisiones precipitadas."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás queriendo resultados rápidos en tu desarrollo profesional y esto te está impidiendo madurar de verdad. Esta carta te recuerda que el trabajo profundo requiere tiempo y cocción lenta.",
+            "Hay un proceso interno profesional que necesita ser cocido a fuego lento. El Inframundo de las Pociones te invita a bajar el ritmo y permitir que las cosas se transformen a su tiempo.",
+            "Estás intentando 'arreglar' tu carrera desde la urgencia y la impaciencia. Esta carta te pide que confíes en los tiempos de maduración profesional y personal.",
+            "Tu crecimiento laboral está pidiendo paciencia y presencia, no soluciones rápidas ni atajos. Esta carta te acompaña a honrar ese ritmo."
+          ],
+          "sombra": [
+            "Estás saltando pasos importantes en tu desarrollo profesional porque quieres llegar rápido a un resultado. Esta prisa te está impidiendo integrar lo que realmente necesitas aprender.",
+            "Tu sombra aquí es la impaciencia disfrazada de ambición. Estás avanzando superficialmente sin darte tiempo a que los cambios se asienten en tu sistema y en tu identidad.",
+            "Estás buscando atajos profesionales que te permitan evitar el trabajo profundo de transformación. Esta carta te confronta con el costo de esa estrategia.",
+            "Hay una parte de ti que sigue creyendo que 'si no pasa rápido, no va a pasar'. Esta creencia te está generando ansiedad y decisiones precipitadas que luego lamentas."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     },
@@ -659,7 +1036,20 @@
             "Hay una parte de ti que tiene miedo de recibir una verdad que te obligue a cambiar. El Portal te confronta con esa resistencia al conocimiento transformador."
           ]
         },
-        "trabajo": { "derecho": [], "sombra": [] },
+        "trabajo": {
+          "derecho": [
+            "Estás recibiendo insights y revelaciones importantes sobre tu patrón profesional y tu propósito. Este Portal te invita a prestar atención a las señales, sueños y comprensiones que están llegando.",
+            "Hay una respuesta profesional que tu mente no puede alcanzar pero que tu ser ya está recibiendo. Esta carta te da permiso para confiar en esa sabiduría que viene de otro lugar.",
+            "Estás en un momento donde una idea, una imagen o una comprensión puede cambiar radicalmente tu forma de trabajar y de entender tu camino. El Portal te acompaña a recibirla.",
+            "Tu proceso profesional actual está siendo guiado por algo más grande que tu voluntad consciente. Esta carta te invita a estar receptiva a esa guía."
+          ],
+          "sombra": [
+            "Estás bloqueando la revelación profesional con exceso de análisis, control mental y saturación de información. Esta posición te mantiene en la superficie de lo que podrías entender.",
+            "Tu sombra aquí es el rechazo de tu propia sabiduría interna. Sigues buscando respuestas afuera cuando la comprensión más importante ya está llegando desde dentro.",
+            "Estás saturándote de información, cursos, libros y consejos sobre desarrollo profesional mientras evitas integrar lo que ya has recibido. Esta carta te invita a digerir.",
+            "Hay una parte de ti que tiene miedo de recibir una verdad profesional que te obligue a cambiar de forma significativa. El Portal te confronta con esa resistencia al conocimiento transformador."
+          ]
+        },
         "carta-del-dia": { "derecho": [], "sombra": [] }
       }
     }
