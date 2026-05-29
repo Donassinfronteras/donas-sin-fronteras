@@ -1,0 +1,88 @@
+{
+  "version": "2.0",
+  "descripcion": "Oráculo Prisma - Versiones temáticas con 4 variaciones por carta (derecho y sombra)",
+  "temas": ["amor", "trabajo", "carta-del-dia"],
+  "cartas": [
+    {
+      "id": 1,
+      "nombre": "Bruxa Tarot",
+      "temas": {
+        "amor": {
+          "derecho": [],
+          "sombra": []
+        },
+        "trabajo": {
+          "derecho": [],
+          "sombra": []
+        },
+        "carta-del-dia": {
+          "derecho": [],
+          "sombra": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Nabi",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Marta",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Jade",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Elena",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Mia",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Tony",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Dante",
+      "temas": {
+        "amor": { "derecho": [], "sombra": [] },
+        "trabajo": { "derecho": [], "sombra": [] },
+        "carta-del-dia": { "derecho": [], "sombra": [] }
+      }
+    }
+  ]
+}
