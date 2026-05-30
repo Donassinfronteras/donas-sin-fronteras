@@ -432,12 +432,12 @@
       }
     }
 
-    // Generar interpretación - versión robusta
+    // Generar interpretación con saludo personal
     function generarInterpretacion(carta, posicion = null) {
       try {
         if (!carta) {
           return {
-            interpretacion: 'No se pudo cargar la carta.',
+            interpretacion: 'Hola Alma Brillante, no se pudo cargar la carta en este momento.',
             luz: null,
             sombra: null,
             ritual: '',
@@ -450,16 +450,18 @@
         const derecho = obtenerVersionAleatoria(carta, 'derecho');
         const sombra = obtenerVersionAleatoria(carta, 'sombra');
 
-        let interpretacion = derecho || `La energía de <strong>${nombre}</strong> está presente para ti en este momento.`;
+        // Saludo personal + mensaje
+        let mensajeBase = derecho || `la energía de esta carta está presente para acompañarte.`;
+        let interpretacion = `Hola Alma Brillante, ${mensajeBase}`;
 
         // Prefijo de posición (solo en tirada de 3)
         if (posicion) {
           if (posicion === 'Estado Mental') {
-            interpretacion = `En tu estado mental actual, ${interpretacion.toLowerCase()}`;
+            interpretacion = `Hola Alma Brillante, en tu estado mental actual, ${mensajeBase}`;
           } else if (posicion === 'La Situación') {
-            interpretacion = `Respecto a la situación que vives, ${interpretacion.toLowerCase()}`;
+            interpretacion = `Hola Alma Brillante, respecto a la situación que vives, ${mensajeBase}`;
           } else if (posicion === 'Consejo') {
-            interpretacion = `El consejo del Oráculo es: ${interpretacion.toLowerCase()}`;
+            interpretacion = `Hola Alma Brillante, el consejo del Oráculo es: ${mensajeBase}`;
           }
         }
 
@@ -474,7 +476,7 @@
       } catch (e) {
         console.error('Error en generarInterpretacion:', e);
         return {
-          interpretacion: 'Hubo un problema al generar la interpretación.',
+          interpretacion: 'Hola Alma Brillante, hubo un problema al generar la interpretación.',
           luz: null,
           sombra: null,
           ritual: '',
@@ -573,7 +575,6 @@
           htmlCompleto += cartaHTML;
         } catch (e) {
           console.error('Error renderizando carta:', e, carta);
-          // Renderizar carta de fallback
           htmlCompleto += `
             <div class="carta-revelada">
               <div class="carta-header">
@@ -584,7 +585,7 @@
                   <h3>Carta del Oráculo</h3>
                 </div>
               </div>
-              <div class="interpretacion">La energía de esta carta está presente para ti.</div>
+              <div class="interpretacion">Hola Alma Brillante, la energía de esta carta está presente para acompañarte.</div>
             </div>
           `;
         }
@@ -650,7 +651,7 @@
         canvas.height = window.innerHeight;
       }
 
-      // Seleccionar "Carta del Día" por defecto (pero advertir que está vacío)
+      // Seleccionar "Carta del Día" por defecto
       setTimeout(() => {
         const defaultBtn = document.querySelector('.btn-tema[data-tema="carta-del-dia"]');
         if (defaultBtn) {
