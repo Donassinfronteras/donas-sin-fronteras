@@ -265,17 +265,33 @@
       50% { opacity: 1; }
     }
 
-    /* Etiqueta de posición en tirada de 3 cartas */
+    /* Etiqueta de posición + estado (derecho/sombra) */
     .posicion-label {
       display: inline-block;
       background: linear-gradient(135deg, #2FCED1, #B28DFF);
       color: #0D1B2A;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: bold;
-      padding: 0.25rem 0.9rem;
+      padding: 0.2rem 0.85rem;
       border-radius: 20px;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
       letter-spacing: 0.5px;
+    }
+    .estado-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 12px;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
+    .estado-derecho {
+      background: #2FCED1;
+      color: #0D1B2A;
+    }
+    .estado-sombra {
+      background: #F784AD;
+      color: #0D1B2A;
     }
   </style>
 </head>
@@ -413,36 +429,32 @@
       temaSeleccionado = tema;
     }
 
-    // Obtener versión aleatoria según tema y tipo (derecho/sombra) - versión robusta
+    // Obtener versión aleatoria según tema y tipo
     function obtenerVersionAleatoria(carta, tipo = 'derecho') {
       try {
-        if (!temaSeleccionado || !carta || !carta.temas) {
-          return null;
-        }
+        if (!temaSeleccionado || !carta || !carta.temas) return null;
         const temaData = carta.temas[temaSeleccionado];
         if (!temaData) return null;
-        
         const versiones = temaData[tipo] || [];
         if (!Array.isArray(versiones) || versiones.length === 0) return null;
-        
         return versiones[Math.floor(Math.random() * versiones.length)];
       } catch (e) {
-        console.error('Error en obtenerVersionAleatoria:', e);
         return null;
       }
     }
 
-    // Generar interpretación con saludo personal
-    function generarInterpretacion(carta, posicion = null) {
+    // Generar interpretación (ahora soporta cartas en Sombra)
+    function generarInterpretacion(carta, posicion = null, esSombra = false) {
       try {
         if (!carta) {
           return {
-            interpretacion: 'Hola Alma Brillante, no se pudo cargar la carta en este momento.',
+            interpretacion: 'Hola Alma Brillante, no se pudo cargar la carta.',
             luz: null,
             sombra: null,
             ritual: '',
             nombre: 'Carta',
-            categoria: 'Oráculo Prisma'
+            categoria: 'Oráculo Prisma',
+            esSombra: false
           };
         }
 
@@ -450,18 +462,28 @@
         const derecho = obtenerVersionAleatoria(carta, 'derecho');
         const sombra = obtenerVersionAleatoria(carta, 'sombra');
 
-        // Saludo personal + mensaje
-        let mensajeBase = derecho || `la energía de esta carta está presente para acompañarte.`;
-        let interpretacion = `Hola Alma Brillante, ${mensajeBase}`;
+        let mensaje;
 
-        // Prefijo de posición (solo en tirada de 3)
+        if (esSombra && sombra) {
+          // Sale en Sombra
+          mensaje = sombra;
+        } else if (derecho) {
+          // Sale Derecha
+          mensaje = derecho;
+        } else {
+          mensaje = `la energía de esta carta está presente para acompañarte.`;
+        }
+
+        let interpretacion = `Hola Alma Brillante, ${mensaje}`;
+
+        // Prefijo según posición
         if (posicion) {
           if (posicion === 'Estado Mental') {
-            interpretacion = `Hola Alma Brillante, en tu estado mental actual, ${mensajeBase}`;
+            interpretacion = `Hola Alma Brillante, en tu estado mental actual, ${mensaje}`;
           } else if (posicion === 'La Situación') {
-            interpretacion = `Hola Alma Brillante, respecto a la situación que vives, ${mensajeBase}`;
+            interpretacion = `Hola Alma Brillante, respecto a la situación que vives, ${mensaje}`;
           } else if (posicion === 'Consejo') {
-            interpretacion = `Hola Alma Brillante, el consejo del Oráculo es: ${mensajeBase}`;
+            interpretacion = `Hola Alma Brillante, el consejo del Oráculo es: ${mensaje}`;
           }
         }
 
@@ -471,22 +493,23 @@
           sombra: sombra,
           ritual: '',
           nombre,
-          categoria: 'Oráculo Prisma'
+          categoria: 'Oráculo Prisma',
+          esSombra: esSombra
         };
       } catch (e) {
-        console.error('Error en generarInterpretacion:', e);
         return {
           interpretacion: 'Hola Alma Brillante, hubo un problema al generar la interpretación.',
           luz: null,
           sombra: null,
           ritual: '',
           nombre: carta?.nombre || 'Carta',
-          categoria: 'Oráculo Prisma'
+          categoria: 'Oráculo Prisma',
+          esSombra: false
         };
       }
     }
 
-    // Realizar tirada
+    // Realizar tirada (ahora decide aleatoriamente si sale en Sombra)
     async function realizarTirada(cantidad) {
       if (!temaSeleccionado) {
         alert('Por favor selecciona un tema antes de tirar las cartas.');
@@ -503,23 +526,29 @@
       for (let i = 0; i < cantidad; i++) {
         if (deckCopia.length === 0) break;
         const indice = Math.floor(Math.random() * deckCopia.length);
-        cartasSeleccionadas.push(deckCopia[indice]);
+        const carta = deckCopia[indice];
+        
+        // 50% de probabilidad de salir en Sombra
+        const esSombra = Math.random() < 0.5;
+        
+        cartasSeleccionadas.push({
+          ...carta,
+          _esSombra: esSombra   // guardamos el estado
+        });
+        
         deckCopia.splice(indice, 1);
       }
 
       mostrarModal(cartasSeleccionadas);
     }
 
-    // Mostrar el modal - versión robusta
+    // Mostrar el modal
     function mostrarModal(cartas) {
       const modal = document.getElementById('modal-oraculo');
       const contenedor = document.getElementById('modal-cartas');
       const revelando = document.getElementById('revelando-msg');
 
-      if (!contenedor || !modal) {
-        console.error('No se encontraron los elementos del modal');
-        return;
-      }
+      if (!contenedor || !modal) return;
 
       contenedor.innerHTML = '';
       revelando.style.display = 'block';
@@ -537,17 +566,30 @@
       cartas.forEach((carta, index) => {
         try {
           const posicion = posiciones[index] || null;
-          const datos = generarInterpretacion(carta, posicion);
+          const esSombra = carta._esSombra || false;
+          
+          const datos = generarInterpretacion(carta, posicion, esSombra);
 
           const labelHTML = posicion 
             ? `<div class="posicion-label">${posicion}</div>` 
             : '';
 
-          const tieneSombra = datos.sombra && datos.sombra.length > 10;
+          // Etiqueta de estado (Derecho / Sombra)
+          const estadoHTML = esSombra 
+            ? `<span class="estado-label estado-sombra">SOMBRA</span>` 
+            : `<span class="estado-label estado-derecho">DERECHO</span>`;
+
+          // Solo mostramos el botón de alternar si la carta salió en Sombra
+          // y tenemos la versión en luz disponible
+          const tieneAlternativa = esSombra && datos.luz;
 
           const cartaHTML = `
             <div class="carta-revelada">
-              ${labelHTML}
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+                ${labelHTML}
+                ${estadoHTML}
+              </div>
+              
               <div class="carta-header">
                 <div class="carta-imagen" style="background: linear-gradient(135deg, #2FCED1, #B28DFF); display:flex; align-items:center; justify-content:center; color:#0D1B2A; font-weight:bold; font-size:1.05rem; text-align:center; padding:0.5rem;">
                   ${datos.nombre}
@@ -562,11 +604,11 @@
                 ${datos.interpretacion}
               </div>
 
-              ${tieneSombra ? `
+              ${tieneAlternativa ? `
               <div>
-                <button class="sombra-toggle" onclick="toggleSombra(this)">▼ Ver mensaje de Sombra</button>
+                <button class="sombra-toggle" onclick="toggleAlternativa(this)">▼ Ver significado en Derecho</button>
                 <div class="sombra-content">
-                  ${datos.sombra}
+                  ${datos.luz}
                 </div>
               </div>` : ''}
             </div>
@@ -574,20 +616,7 @@
           
           htmlCompleto += cartaHTML;
         } catch (e) {
-          console.error('Error renderizando carta:', e, carta);
-          htmlCompleto += `
-            <div class="carta-revelada">
-              <div class="carta-header">
-                <div class="carta-imagen" style="background:#1A1A2E; display:flex; align-items:center; justify-content:center; color:#FEEABF;">
-                  Carta
-                </div>
-                <div class="carta-info">
-                  <h3>Carta del Oráculo</h3>
-                </div>
-              </div>
-              <div class="interpretacion">Hola Alma Brillante, la energía de esta carta está presente para acompañarte.</div>
-            </div>
-          `;
+          console.error('Error renderizando carta:', e);
         }
       });
 
@@ -606,14 +635,14 @@
       });
     }
 
-    function toggleSombra(btn) {
+    function toggleAlternativa(btn) {
       const content = btn.nextElementSibling;
       if (content.style.display === 'block') {
         content.style.display = 'none';
-        btn.innerHTML = '▼ Ver mensaje de Sombra';
+        btn.innerHTML = '▼ Ver significado en Derecho';
       } else {
         content.style.display = 'block';
-        btn.innerHTML = '▲ Ocultar mensaje de Sombra';
+        btn.innerHTML = '▲ Ocultar significado en Derecho';
       }
     }
 
@@ -651,7 +680,6 @@
         canvas.height = window.innerHeight;
       }
 
-      // Seleccionar "Carta del Día" por defecto
       setTimeout(() => {
         const defaultBtn = document.querySelector('.btn-tema[data-tema="carta-del-dia"]');
         if (defaultBtn) {
