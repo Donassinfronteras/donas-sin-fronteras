@@ -311,6 +311,24 @@
       color: #0D1B2A;
       transform: translateY(-2px);
     }
+
+    /* Placeholder de imagen si falla la carga */
+    .carta-placeholder {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(135deg, #2FCED1, #B28DFF);
+      border-radius: 15px;
+      border: 3px solid var(--c-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0D1B2A;
+      font-weight: bold;
+      font-size: 1.05rem;
+      text-align: center;
+      padding: 0.5rem;
+      box-shadow: 0 0 20px rgba(254, 234, 191, 0.4);
+    }
   </style>
 </head>
 <body class="oraculo-prisma-body">
@@ -357,7 +375,7 @@
     </div>
   </main>
 
-  <!-- Botón para volver al inicio (ruta absoluta) -->
+  <!-- Botón para volver al inicio -->
   <div class="return" style="text-align:center; margin: 2rem 0;">
     <a href="/index.html" class="btn-return">← Volver al Inicio</a>
   </div>
@@ -438,6 +456,26 @@
         console.error('Error cargando el mazo temático:', error);
         alert('No se pudo cargar el Oráculo. Por favor recarga la página.');
       }
+    }
+
+    // Normalizar nombre para generar nombre de archivo de imagen
+    function normalizarNombreParaImagen(nombre) {
+      if (!nombre) return 'default';
+      
+      return nombre
+        .toLowerCase()
+        .normalize('NFD')                    // Quitar acentos
+        .replace(/[\u0300-\u036f]/g, '')   // Quitar diacríticos
+        .replace(/[^a-z0-9\s-]/g, '')       // Quitar caracteres especiales
+        .trim()
+        .replace(/\s+/g, '-')               // Espacios a guiones
+        .replace(/-+/g, '-');               // Múltiples guiones a uno
+    }
+
+    // Obtener URL de imagen de la carta
+    function obtenerUrlImagen(carta) {
+      const nombreNormalizado = normalizarNombreParaImagen(carta.nombre);
+      return `https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/assets/cartas-oraculo/${nombreNormalizado}.png`;
     }
 
     // Seleccionar tema
@@ -583,6 +621,7 @@
           const esSombra = carta._esSombra || false;
           
           const datos = generarInterpretacion(carta, posicion, esSombra);
+          const urlImagen = obtenerUrlImagen(carta);
 
           const labelHTML = posicion 
             ? `<div class="posicion-label">${posicion}</div>` 
@@ -602,9 +641,12 @@
               </div>
               
               <div class="carta-header">
-                <div class="carta-imagen" style="background: linear-gradient(135deg, #2FCED1, #B28DFF); display:flex; align-items:center; justify-content:center; color:#0D1B2A; font-weight:bold; font-size:1.05rem; text-align:center; padding:0.5rem;">
-                  ${datos.nombre}
-                </div>
+                <img 
+                  src="${urlImagen}" 
+                  class="carta-imagen" 
+                  alt="${datos.nombre}"
+                  onerror="this.style.display='none'; this.outerHTML='<div class=\'carta-placeholder\'>${datos.nombre}</div>'"
+                >
                 <div class="carta-info">
                   <h3>${datos.nombre}</h3>
                   <div class="carta-categoria">${datos.categoria}</div>
