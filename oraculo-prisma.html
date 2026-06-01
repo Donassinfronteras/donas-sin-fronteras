@@ -312,7 +312,7 @@
       transform: translateY(-2px);
     }
 
-    /* Placeholder de imagen si falla la carga */
+    /* Placeholder bonito si falla la imagen */
     .carta-placeholder {
       width: 140px;
       height: 140px;
@@ -445,6 +445,41 @@
     let deck = [];
     let temaSeleccionado = null;
 
+    // MAPA EXACTO DE IMÁGENES (usando los nombres reales de archivo)
+    const imagenesCartas = {
+      1: "bruxa.png",
+      2: "nabi.png",
+      3: "marta.png",
+      4: "jade.png",
+      5: "elena.png",
+      6: "mia.png",
+      7: "tony.png",
+      8: "dante.png",
+      9: "la-voz-clara.png",
+      10: "llama.png",
+      11: "regreso.png",
+      12: "alvaro.png",
+      13: "emmanuel.png",
+      14: "valeria.png",
+      15: "karina.png",
+      16: "tatiana.png",
+      17: "lucia-samuel.png",
+      18: "alberto.png",
+      19: "oracio.png",
+      20: "rosario.png",
+      21: "lastres.png",
+      22: "jazmin.png",
+      23: "daniela.png",
+      24: "heimdall.png",
+      25: "erebus.png",
+      26: "aetherius.png",
+      27: "umbral.png",
+      28: "concilio.png",
+      29: "caos.png",
+      30: "pociones.png",
+      31: "conocimiento.png"
+    };
+
     // Cargar el nuevo mazo temático
     async function cargarMazo() {
       try {
@@ -458,24 +493,14 @@
       }
     }
 
-    // Normalizar nombre para generar nombre de archivo de imagen
-    function normalizarNombreParaImagen(nombre) {
-      if (!nombre) return 'default';
-      
-      return nombre
-        .toLowerCase()
-        .normalize('NFD')                    // Quitar acentos
-        .replace(/[\u0300-\u036f]/g, '')   // Quitar diacríticos
-        .replace(/[^a-z0-9\s-]/g, '')       // Quitar caracteres especiales
-        .trim()
-        .replace(/\s+/g, '-')               // Espacios a guiones
-        .replace(/-+/g, '-');               // Múltiples guiones a uno
-    }
-
-    // Obtener URL de imagen de la carta
+    // Obtener URL de imagen usando el mapa exacto
     function obtenerUrlImagen(carta) {
-      const nombreNormalizado = normalizarNombreParaImagen(carta.nombre);
-      return `https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/assets/cartas-oraculo/${nombreNormalizado}.png`;
+      const filename = imagenesCartas[carta.id];
+      if (filename) {
+        return `https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/assets/cartas-oraculo/${filename}`;
+      }
+      // Fallback si no encuentra el ID
+      return `https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/assets/cartas-oraculo/default.png`;
     }
 
     // Seleccionar tema
