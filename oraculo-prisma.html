@@ -375,9 +375,9 @@
     </div>
   </main>
 
-  <!-- Botón para volver al inicio -->
+  <!-- Botón para volver al inicio (ruta relativa simple) -->
   <div class="return" style="text-align:center; margin: 2rem 0;">
-    <a href="/index.html" class="btn-return">← Volver al Inicio</a>
+    <a href="index.html" class="btn-return">← Volver al Inicio</a>
   </div>
 
   <!-- Footer completo -->
@@ -391,10 +391,10 @@
       <div class="footer-section">
         <h3>Enlaces rápidos</h3>
         <ul>
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="/podcast.html">Podcast</a></li>
-          <li><a href="/portal-magico.html">Portal Mágico</a></li>
-          <li><a href="/contacto.html">Contacto</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="portal-magico.html">Portal Mágico</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
 
@@ -445,7 +445,7 @@
     let deck = [];
     let temaSeleccionado = null;
 
-    // MAPA EXACTO DE IMÁGENES (usando los nombres reales de archivo)
+    // MAPA EXACTO DE IMÁGENES
     const imagenesCartas = {
       1: "bruxa.png",
       2: "nabi.png",
@@ -499,7 +499,6 @@
       if (filename) {
         return `https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/assets/cartas-oraculo/${filename}`;
       }
-      // Fallback si no encuentra el ID
       return `https://raw.githubusercontent.com/Donassinfronteras/donas-sin-fronteras/main/assets/cartas-oraculo/default.png`;
     }
 
