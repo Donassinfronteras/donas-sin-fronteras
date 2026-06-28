@@ -3,196 +3,1175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doñas sin Fronteras - Inicio</title>
+  <title>Doñas sin Fronteras</title>
+  <meta name="description" content="Tres voces, tres mundos, una conexión sin fronteras. Podcast sobre lo que duele, lo que inspira y lo que nunca decimos en voz alta." />
 
-  <!-- Fuente Caveat -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/social-icons.css">
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rose:        #b85570;
+      --rose-light:  #fce8ee;
+      --rose-mid:    #ebb8c6;
+      --gold:        #b8893a;
+      --gold-light:  #fdf3e2;
+      --sky:         #3d82a8;
+      --sky-light:   #e4f1f8;
+      --cream:       #faf8f5;
+      --text-main:   #1e1c1a;
+      --text-sub:    #5a5652;
+      --text-muted:  #9a9490;
+      --border:      rgba(0,0,0,0.09);
+      --border-mid:  rgba(0,0,0,0.14);
+      --white:       #ffffff;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Inter', system-ui, sans-serif;
+      --radius-card:  14px;
+      --radius-sm:    8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--text-main);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,248,245,0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 58px; gap: 16px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 17px; font-weight: 400;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex; gap: 24px;
+      font-size: 13px; font-weight: 500;
+      color: var(--text-sub);
+    }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-social {
+      display: flex; gap: 14px; align-items: center;
+      flex-shrink: 0;
+    }
+    .nav-social a {
+      color: var(--text-muted);
+      transition: color 0.15s;
+    }
+    .nav-social a:hover { color: var(--rose); }
+    .nav-social svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* hamburger mobile */
+    .nav-menu-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      color: var(--text-sub); padding: 4px;
+    }
+    .nav-menu-btn svg { width: 22px; height: 22px; fill: currentColor; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; width: 100%;
+      height: 420px; overflow: hidden;
+    }
+    .hero-img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(15,10,8,0.15) 0%,
+        rgba(15,10,8,0.25) 40%,
+        rgba(15,10,8,0.72) 100%
+      );
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.5rem 2rem;
+    }
+    .hero-eyebrow {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.12em; font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 8px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 400; color: #fff;
+      line-height: 1.15; margin-bottom: 10px;
+    }
+    .hero-sub {
+      font-size: 14px; color: rgba(255,255,255,0.78);
+      line-height: 1.7; max-width: 460px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--rose); color: #fff;
+      border: none; border-radius: var(--radius-sm);
+      padding: 10px 20px; font-size: 13px; font-weight: 500;
+      cursor: pointer; transition: background 0.15s;
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: #a3496a; color: #fff; }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff; border-radius: var(--radius-sm);
+      padding: 10px 20px; font-size: 13px; font-weight: 500;
+      cursor: pointer; transition: background 0.15s;
+      text-decoration: none; backdrop-filter: blur(4px);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.25); color: #fff; }
+    .btn-icon { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── SHOW EMBED (player del show completo) ── */
+    .show-embed-wrap {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex; align-items: center; gap: 16px;
+      flex-wrap: wrap;
+    }
+    .show-embed-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+      font-weight: 500; color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .show-embed-wrap iframe {
+      border-radius: 10px; border: none;
+      flex: 1; min-width: 260px; height: 80px;
+    }
+
+    /* ── SECTION HEADING ── */
+    .section-head {
+      padding: 2rem 24px 1rem;
+    }
+    .section-eyebrow {
+      font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em;
+      font-weight: 500; color: var(--rose);
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 400;
+      color: var(--text-main);
+    }
+
+    /* ── CO-HOSTS GRID ── */
+    .hosts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 0 24px 2rem;
+    }
+    .host-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+    .host-photo-wrap {
+      width: 100%; aspect-ratio: 3/3.5;
+      overflow: hidden; background: #f0ece6;
+      position: relative;
+    }
+    .host-photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top;
+      transition: transform 0.4s ease;
+    }
+    .host-card:hover .host-photo-wrap img { transform: scale(1.03); }
+    .host-stripe { height: 4px; }
+    .stripe-gold { background: linear-gradient(90deg, var(--gold), #e0b060); }
+    .stripe-rose { background: linear-gradient(90deg, var(--rose), var(--rose-mid)); }
+    .stripe-sky  { background: linear-gradient(90deg, var(--sky), #7bbad8); }
+    .host-info { padding: 14px 15px 16px; }
+    .host-name {
+      font-family: var(--font-display);
+      font-size: 16px; font-weight: 500;
+      color: var(--text-main); margin-bottom: 3px;
+    }
+    .host-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 10px; font-weight: 500; padding: 3px 9px;
+      border-radius: 20px; margin-bottom: 9px;
+    }
+    .tag-gold { background: var(--gold-light); color: var(--gold); }
+    .tag-rose { background: var(--rose-light); color: var(--rose); }
+    .tag-sky  { background: var(--sky-light);  color: var(--sky); }
+    .host-bio { font-size: 12.5px; color: var(--text-sub); line-height: 1.65; }
+
+    /* ── EPISODIOS ── */
+    .episodes-section { padding: 0 24px 2rem; }
+    .ep-intro {
+      font-size: 13.5px; color: var(--text-sub);
+      line-height: 1.7; margin-bottom: 1.25rem;
+      max-width: 560px;
+    }
+
+    .ep-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .ep-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      transition: box-shadow 0.15s;
+    }
+    .ep-item.open {
+      border-color: var(--rose-mid);
+      box-shadow: 0 2px 12px rgba(184,85,112,0.08);
+    }
+
+    .ep-toggle {
+      width: 100%; background: none; border: none;
+      padding: 14px 16px;
+      display: flex; align-items: center; gap: 12px;
+      cursor: pointer; text-align: left;
+    }
+    .ep-toggle:hover { background: #fdf8f9; }
+    .ep-item.open .ep-toggle { background: #fdf8f9; }
+
+    .ep-num {
+      width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+      background: var(--rose-light); color: var(--rose);
+      font-size: 11px; font-weight: 500;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ep-badge {
+      font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.07em;
+      font-weight: 500; padding: 2px 8px; border-radius: 20px; flex-shrink: 0;
+    }
+    .badge-t2 { background: var(--sky-light); color: var(--sky); }
+    .badge-t1 { background: var(--gold-light); color: var(--gold); }
+
+    .ep-text { flex: 1; min-width: 0; }
+    .ep-name {
+      font-size: 13.5px; font-weight: 500;
+      color: var(--text-main); line-height: 1.3;
+      margin-bottom: 3px;
+    }
+    .ep-meta { font-size: 11.5px; color: var(--text-muted); }
+
+    .ep-chevron {
+      flex-shrink: 0;
+      width: 18px; height: 18px; color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+    .ep-item.open .ep-chevron { transform: rotate(180deg); }
+
+    .ep-body {
+      display: none;
+      padding: 0 16px 16px; border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+    .ep-item.open .ep-body { display: block; }
+
+    .ep-desc {
+      font-size: 13px; color: var(--text-sub);
+      line-height: 1.7; margin-bottom: 14px;
+    }
+    .ep-embed-wrap {
+      border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--border); margin-bottom: 10px;
+    }
+    .ep-embed-wrap iframe {
+      display: block; width: 100%;
+      border: none;
+    }
+    .ep-spotify-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 500;
+      color: var(--sky); background: var(--sky-light);
+      border: 1px solid #b8d8ee;
+      border-radius: var(--radius-sm);
+      padding: 6px 12px; text-decoration: none;
+      transition: background 0.15s;
+    }
+    .ep-spotify-btn:hover { background: #d4eaf5; color: var(--sky); }
+    .ep-spotify-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ── SOBRE EL PODCAST ── */
+    .about-section { padding: 0 24px 2rem; }
+    .about-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem; align-items: center;
+    }
+    .about-quote {
+      font-family: var(--font-display);
+      font-size: 17px; font-style: italic;
+      color: var(--text-sub); line-height: 1.75;
+      border-left: 3px solid var(--rose-mid);
+      padding-left: 18px; margin-bottom: 14px;
+    }
+    .about-text { font-size: 13.5px; color: var(--text-sub); line-height: 1.75; }
+    .about-links { margin-top: 1.25rem; display: flex; gap: 8px; flex-wrap: wrap; }
+    .about-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; font-weight: 500; padding: 8px 15px;
+      border-radius: var(--radius-sm); transition: background 0.15s;
+      text-decoration: none;
+    }
+    .about-btn svg { width: 15px; height: 15px; fill: currentColor; }
+    .about-btn-primary { background: var(--rose); color: #fff; }
+    .about-btn-primary:hover { background: #a3496a; color: #fff; }
+    .about-btn-outline {
+      background: var(--white); color: var(--text-sub);
+      border: 1px solid var(--border-mid);
+    }
+    .about-btn-outline:hover { background: #f5f3f0; color: var(--text-sub); }
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .stat-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 28px; font-weight: 500;
+      color: var(--rose); line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label { font-size: 11.5px; color: var(--text-muted); }
+
+    /* ── CONTACTO ── */
+    .contact-section { padding: 0 24px 2.5rem; }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 20px;
+    }
+    .contact-info {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-card); padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .contact-title {
+      font-family: var(--font-display);
+      font-size: 18px; font-weight: 400; color: var(--text-main);
+    }
+    .contact-desc { font-size: 13px; color: var(--text-sub); line-height: 1.7; }
+    .contact-email {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--rose); font-weight: 500;
+    }
+    .contact-email svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+    .social-list { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+    .social-item {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 12.5px; color: var(--text-sub);
+      padding: 8px 11px;
+      background: var(--cream); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .social-item:hover { border-color: var(--rose-mid); color: var(--text-sub); }
+    .social-item svg { width: 16px; height: 16px; fill: currentColor; color: var(--text-muted); }
+
+    /* form */
+    .contact-form {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-card); padding: 1.5rem;
+    }
+    .form-note {
+      display: flex; align-items: flex-start; gap: 8px;
+      background: var(--gold-light); border: 1px solid #e8d090;
+      border-radius: var(--radius-sm); padding: 10px 13px;
+      font-size: 12px; color: #7a5a20; line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .form-note svg { width: 15px; height: 15px; fill: #b8893a; flex-shrink: 0; margin-top: 1px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+    .field:last-of-type { margin-bottom: 0; }
+    label {
+      font-size: 12px; font-weight: 500; color: var(--text-sub);
+    }
+    input, select, textarea {
+      width: 100%; font-family: var(--font-body);
+      font-size: 13.5px; color: var(--text-main);
+      background: var(--cream); border: 1px solid var(--border-mid);
+      border-radius: var(--radius-sm); padding: 9px 12px;
+      outline: none; transition: border-color 0.15s;
+      appearance: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--rose-mid);
+      background: var(--white);
+    }
+    textarea { resize: vertical; min-height: 90px; }
+    .form-submit-row {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-top: 14px;
+    }
+    .form-privacy { font-size: 11.5px; color: var(--text-muted); }
+    .submit-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--rose); color: #fff; border: none;
+      border-radius: var(--radius-sm); padding: 10px 22px;
+      font-size: 13.5px; font-weight: 500; cursor: pointer;
+      transition: background 0.15s;
+    }
+    .submit-btn:hover { background: #a3496a; }
+    .submit-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+    /* ── INTRO AUDIO ── */
+    .intro-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff; border-radius: 30px;
+      padding: 9px 18px 9px 12px;
+      font-size: 13px; font-weight: 500;
+      cursor: pointer; backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: background 0.2s;
+      margin-top: 10px;
+    }
+    .intro-btn:hover { background: rgba(255,255,255,0.22); }
+    .intro-btn-icon {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--rose);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: background 0.2s;
+    }
+    .intro-btn.playing .intro-btn-icon { background: #a3496a; }
+    .intro-btn-icon svg { width: 14px; height: 14px; fill: #fff; }
+    .intro-btn-label { line-height: 1.2; }
+    .intro-btn-label span {
+      display: block; font-size: 10px;
+      color: rgba(255,255,255,0.6); font-weight: 400;
+    }
+    .intro-waves {
+      display: flex; align-items: center; gap: 2px; margin-left: 2px;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .intro-btn.playing .intro-waves { opacity: 1; }
+    .intro-waves i {
+      width: 3px; background: rgba(255,255,255,0.7); border-radius: 2px;
+      animation: wave 0.8s ease-in-out infinite;
+    }
+    .intro-waves i:nth-child(1) { height: 8px;  animation-delay: 0s; }
+    .intro-waves i:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+    .intro-waves i:nth-child(3) { height: 10px; animation-delay: 0.3s; }
+    .intro-waves i:nth-child(4) { height: 16px; animation-delay: 0.1s; }
+    .intro-waves i:nth-child(5) { height: 8px;  animation-delay: 0.25s; }
+    @keyframes wave {
+      0%, 100% { transform: scaleY(1); }
+      50%       { transform: scaleY(0.4); }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--white); border-top: 1px solid var(--border);
+      padding: 1.5rem 24px;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 15px; color: var(--text-main);
+    }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    .footer-social { display: flex; gap: 14px; }
+    .footer-social a { color: var(--text-muted); transition: color 0.15s; }
+    .footer-social a:hover { color: var(--rose); }
+    .footer-social svg { width: 17px; height: 17px; fill: currentColor; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .nav-menu-btn { display: flex; }
+      .hero { height: 320px; }
+      .hosts-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .host-bio { display: none; }
+      .about-card { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: repeat(4, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .show-embed-wrap { padding: 14px 16px; }
+      .section-head, .episodes-section, .about-section,
+      .contact-section { padding-left: 16px; padding-right: 16px; }
+      .hosts-grid { padding-left: 16px; padding-right: 16px; }
+    }
+    @media (max-width: 480px) {
+      .hosts-grid { grid-template-columns: 1fr; }
+      .host-bio { display: block; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-<body class="solo-index">
+<body>
 
-  <!-- Fondo para index -->
-  <div class="donas-fondo"></div>
+<!-- ── NAV ── -->
+<nav class="nav" aria-label="Navegación principal">
+  <a href="#" class="nav-logo">Doñas sin Fronteras</a>
 
-  <header>
-    <h1>Doñas sin Fronteras</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-      
-      </ul>
-    </nav>
-  </header>
+  <div class="nav-links">
+    <a href="#nosotras">Nosotras</a>
+    <a href="#episodios">Episodios</a>
+    <a href="#sobre">El podcast</a>
+    <a href="#contacto">Contacto</a>
+  </div>
 
-  <main>
-    <section class="quienes-somos">
-      <div class="intro-text">
-        <p>Nos conocimos por Myspace, pero el destino nos tenía reservada una conversación más larga. Somos tres voces, tres mundos, tres formas de ver la vida... Chaly, la que nos recuerda que el alma también necesita alimento. Lessi, la que con su risa y experiencia nos guía entre cámaras y emociones. Y yo... la que escribe entre suspiros, hilando recuerdos, sueños y verdades.
-Desde distintos rincones, nos reunimos para hablar de lo que duele, lo que inspira y lo que nunca decimos en voz alta. Este no es solo un podcast. Es un espacio sagrado entre amigas, entre historias... Entre lo que fuimos y lo que todavía estamos descubriendo.
-Bienvenidos a este rincón donde el corazón siempre tiene la última palabra.
-</p>
-        <p>Somos tres voces, tres mundos, tres formas de ver la vida:</p>
+  <div class="nav-social">
+    <a href="https://www.instagram.com/donassinfronteras1" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/donassinfronteras1/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    </a>
+  </div>
+
+  <button class="nav-menu-btn" aria-label="Menú">
+    <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="inicio">
+  <img
+    src="assets/microfono.jpg"
+    alt="Doñas sin Fronteras — micrófono con glitter"
+    class="hero-img"
+  />
+  <div class="hero-overlay">
+    <p class="hero-eyebrow">Podcast · Desde 2024</p>
+    <h1 class="hero-title">Doñas sin Fronteras</h1>
+    <p class="hero-sub">Nos conocimos por Myspace, pero el destino nos tenía reservada una conversación más larga. Hablamos de lo que duele, lo que inspira y lo que nunca decimos en voz alta.</p>
+    <div class="hero-btns">
+      <a href="#episodios" class="btn-primary">
+        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        Escuchar ahora
+      </a>
+      <a href="#nosotras" class="btn-ghost">Conocer las doñas</a>
+    </div>
+
+    <!-- INTRO AUDIO -->
+    <button class="intro-btn" id="introBtn" onclick="toggleIntro()" aria-label="Escuchar intro del podcast">
+      <div class="intro-btn-icon">
+        <svg id="introIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
       </div>
+      <div class="intro-btn-label">
+        ¡Bienvenidos, Comencemos!
+        <span>Escucha nuestra intro</span>
+      </div>
+      <div class="intro-waves" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </button>
 
-      <div class="doñas-grid">
-        <!-- Chaly -->
-        <div class="doña-card" onclick="toggleBio(this)">
-          <img src="assets/chaly.png" alt="Chaly" />
-          <h3>Chaly</h3>
-          <div class="bio">
-            <p>La voz serena entre el ruido. Amante de los libros y creyente profunda, Chaly es la guía espiritual del trío. Desde su rincón fuera de Venezuela, conecta las historias del día a día con pasajes bíblicos y fragmentos literarios que invitan a la reflexión. Su tono es calmo, su presencia firme y su palabra siempre llega como una pausa necesaria. Fue el puente entre Lessi y Bruxa, y hoy es parte del hilo invisible que sostiene este podcast.</p>
+  </div>
+</section>
+
+<!-- Audio oculto -->
+<audio id="introAudio" src="assets/intro.mp3" preload="none"></audio>
+
+<!-- ── SHOW EMBED ── -->
+<div class="show-embed-wrap">
+  <span class="show-embed-label">Todo el show</span>
+  <iframe
+    src="https://open.spotify.com/embed/show/2pjuDHPTJRlMgFmjDhOGa4?utm_source=generator&theme=0"
+    allowfullscreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+    title="Doñas sin Fronteras en Spotify"
+  ></iframe>
+</div>
+
+<!-- ── CO-HOSTS ── -->
+<section id="nosotras">
+  <div class="section-head">
+    <p class="section-eyebrow">Las co-hosts</p>
+    <h2 class="section-title">Tres voces. Tres mundos.</h2>
+  </div>
+
+  <div class="hosts-grid">
+
+    <!-- CHALY -->
+    <article class="host-card">
+      <div class="host-photo-wrap">
+        <img src="assets/chaly.png" alt="Chaly" loading="lazy" />
+      </div>
+      <div class="host-stripe stripe-gold"></div>
+      <div class="host-info">
+        <h3 class="host-name">Chaly</h3>
+        <span class="host-tag tag-gold">📚 Bookworm del trío</span>
+        <p class="host-bio">La voz serena entre el ruido. Amante de los libros y creyente profunda, conecta las historias del día a día con reflexiones que invitan a pausar. Fue el puente que nos unió a todas.</p>
+      </div>
+    </article>
+
+    <!-- LESSI -->
+    <article class="host-card">
+      <div class="host-photo-wrap">
+        <img src="assets/lessi.png" alt="Lessi" loading="lazy" />
+      </div>
+      <div class="host-stripe stripe-rose"></div>
+      <div class="host-info">
+        <h3 class="host-name">Lessi</h3>
+        <span class="host-tag tag-rose">🎙️ La que lleva el timón</span>
+        <p class="host-bio">Actriz, conductora de espíritu y alma extrovertida. Lleva el show con carisma natural, consejos de belleza y una risa que siempre levanta el ánimo. Desde Venezuela, brillando incluso en medio de las tormentas.</p>
+      </div>
+    </article>
+
+    <!-- BRUXA -->
+    <article class="host-card">
+      <div class="host-photo-wrap">
+        <img src="assets/bruxa.png" alt="Bruxa Tarot" loading="lazy" />
+      </div>
+      <div class="host-stripe stripe-sky"></div>
+      <div class="host-info">
+        <h3 class="host-name">Bruxa Tarot</h3>
+        <span class="host-tag tag-sky">✨ La brujita del grupo</span>
+        <p class="host-bio">Creativa, intensa y profundamente sensible. Trae las preguntas que remueven, los temas que duelen o inspiran. Lee el tarot como quien abre una ventana al alma y cierra cada episodio con un mensaje del oráculo.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── EPISODIOS DESTACADOS ── -->
+<section id="episodios">
+  <div class="section-head">
+    <p class="section-eyebrow">Para empezar por aquí</p>
+    <h2 class="section-title">Episodios que no te puedes perder</h2>
+  </div>
+
+  <div class="episodes-section">
+    <p class="ep-intro">Seleccionados con cariño — episodios que la comunidad más ha amado. Escúchalos directo aquí o ábrelos en Spotify.</p>
+
+    <div class="ep-list" role="list">
+
+      <!-- EP 1 — último T2 -->
+      <div class="ep-item open" id="ep-1" role="listitem">
+        <button class="ep-toggle" onclick="toggleEp('ep-1')" aria-expanded="true">
+          <div class="ep-num" aria-hidden="true">1</div>
+          <span class="ep-badge badge-t2">Temp. 2 · Último episodio</span>
+          <div class="ep-text">
+            <div class="ep-name">El arroz se quemó… ¡Olvidos de terror!</div>
+            <div class="ep-meta">Temporada 2 · Episodio más reciente</div>
           </div>
-        </div>
-
-        <!-- Lessi -->
-        <div class="doña-card" onclick="toggleBio(this)">
-          <img src="assets/lessi.png" alt="Lessi" />
-          <h3>Lessi</h3>
-          <div class="bio">
-            <p>La Carmen Julia del trío. Actriz, conductora de espíritu y alma extrovertida, Lessi es quien lleva el timón del podcast con su carisma natural. Desde Venezuela, nos recuerda que se puede brillar incluso en medio de las tormentas. Tiene experiencia frente a cámaras, pero también el don de hacer que quienes no la tienen se sientan cómodas. Comparte historias de vida con honestidad, consejos de belleza y estética con pasión, y una risa que siempre levanta el ánimo. Lessi no solo lidera el show… lo llena de vida.</p>
+          <svg class="ep-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="ep-body">
+          <p class="ep-desc">¿Te has dejado el gas abierto? ¿Se te olvidó algo verdaderamente importante en el peor momento? Las doñas confiesan sus olvidos más épicos con la honestidad y las risas que las caracterizan.</p>
+          <div class="ep-embed-wrap">
+            <iframe
+              src="https://open.spotify.com/embed/episode/36CypxqYPKfyrRf3Zrckdm?utm_source=generator&theme=0"
+              width="100%" height="152"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="El arroz se quemó — Doñas sin Fronteras"
+            ></iframe>
           </div>
+          <a class="ep-spotify-btn" href="https://open.spotify.com/episode/36CypxqYPKfyrRf3Zrckdm" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Abrir en Spotify
+          </a>
         </div>
+      </div>
 
-        <!-- Bruxa -->
-        <div class="doña-card" onclick="toggleBio(this)">
-          <img src="assets/bruxa.png" alt="Bruxa Tarot" />
-          <h3>Bruxa Tarot</h3>
-          <div class="bio">
-            <p>La voz que une los hilos. Creativa, intensa y profundamente sensible, es el alma soñadora del trío. Desde escenarios visuales llenos de magia y poesía, trae preguntas que remueven, temas que duelen o inspiran, y una forma de mirar que lo vuelve todo más humano. Se mueve entre la fantasía y la verdad con una máscara que no es para ocultar, sino para proteger lo más sagrado. Cada episodio lo cierra con un mensaje del oráculo. Lee el tarot como quien abre una ventana al alma. En cada episodio abre un portal para que las tres brillen —cada una a su manera— desde el corazón.</p>
+      <!-- EP 2 — T2 destacado -->
+      <div class="ep-item" id="ep-2" role="listitem">
+        <button class="ep-toggle" onclick="toggleEp('ep-2')" aria-expanded="false">
+          <div class="ep-num" aria-hidden="true">2</div>
+          <span class="ep-badge badge-t2">Temp. 2 · Favorito</span>
+          <div class="ep-text">
+            <div class="ep-name">Tipos de amiga que tenemos… ¡y si no la tienes, es porque la eres!</div>
+            <div class="ep-meta">Temporada 2</div>
           </div>
-        </div>
-      </div>
-
-      <button id="welcomeBtn" class="glow-button">¡Bienvenidos!!! Comencemos!</button>
-      <audio id="podcastIntro" src="assets/intro.mp3" preload="auto"></audio>
-
-      <div class="navigation-buttons">
-        <a href="podcast.html" class="glow-button">Podcast</a>
-        
-      </div>
-    </section>
-
-    <!-- Comentarios -->
-    <section id="comentarios">
-      <h2>Comparte tu opinión</h2>
-      <div class="comentarios-container">
-        
-        <div class="comentarios-form">
-          <h3>Deja tu comentario</h3>
-          <form id="form-comentarios">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="comentario">Tu mensaje</label>
-              <textarea id="comentario" name="comentario" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="glow-button">Enviar comentario</button>
-          </form>
-        </div>
-
-        <div class="comentarios-recientes">
-          <h3>Comentarios recientes</h3>
-          <!-- Aquí se mostrarán los comentarios desde Firebase -->
-          <div id="comentarios-lista">
-            <!-- Los comentarios se generarán dinámicamente aquí -->
+          <svg class="ep-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="ep-body">
+          <p class="ep-desc">Las doñas identifican esos arquetipos de amigas que todas tenemos en nuestra vida — y al final se dan cuenta que cada una de ellas es uno. Risas garantizadas.</p>
+          <div class="ep-embed-wrap">
+            <iframe
+              src="https://open.spotify.com/embed/episode/3wmY7h4KiKqPChFdIylpq6/video?utm_source=generator&theme=0&si=7f31cc7c902c4ea6"
+              width="100%" height="279"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Tipos de amiga — Doñas sin Fronteras"
+            ></iframe>
           </div>
+          <a class="ep-spotify-btn" href="https://open.spotify.com/episode/3wmY7h4KiKqPChFdIylpq6" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Abrir en Spotify
+          </a>
         </div>
-
       </div>
 
-      <div style="text-align: center; margin-top: 2rem;">
-        <button id="verMasBtn" class="glow-button">Ver más comentarios</button>
+      <!-- EP 3 — T2 con video -->
+      <div class="ep-item" id="ep-3" role="listitem">
+        <button class="ep-toggle" onclick="toggleEp('ep-3')" aria-expanded="false">
+          <div class="ep-num" aria-hidden="true">3</div>
+          <span class="ep-badge badge-t2">Temp. 2 · Con video</span>
+          <div class="ep-text">
+            <div class="ep-name">Impertinencias: ¿No has pensado en bajar unos kilos?</div>
+            <div class="ep-meta">Temporada 2 · Historias reales de personas sin filtros</div>
+          </div>
+          <svg class="ep-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="ep-body">
+          <p class="ep-desc">Ese episodio que todas necesitábamos. Historias reales de comentarios que nunca debieron ser dichos — y las doñas los analizan con honestidad, humor y mucha verdad.</p>
+          <div class="ep-embed-wrap">
+            <iframe
+              src="https://open.spotify.com/embed/episode/28jawzo5LbHcNoBibIO3is/video?utm_source=generator&si=d02f7f21b41742e1"
+              width="100%" height="279"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Impertinencias — Doñas sin Fronteras"
+            ></iframe>
+          </div>
+          <a class="ep-spotify-btn" href="https://open.spotify.com/episode/28jawzo5LbHcNoBibIO3is" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Abrir en Spotify
+          </a>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Doñas sin Fronteras</h3>
-        <p>Un podcast donde el corazón siempre tiene la última palabra.</p>
+      <!-- EP 4 — T1 clásico -->
+      <div class="ep-item" id="ep-4" role="listitem">
+        <button class="ep-toggle" onclick="toggleEp('ep-4')" aria-expanded="false">
+          <div class="ep-num" aria-hidden="true">4</div>
+          <span class="ep-badge badge-t1">Temp. 1 · Clásico</span>
+          <div class="ep-text">
+            <div class="ep-name">Salud mental: confesiones de coraje</div>
+            <div class="ep-meta">Temporada 1 · Uno de los más escuchados</div>
+          </div>
+          <svg class="ep-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="ep-body">
+          <p class="ep-desc">Las tres se abren con honestidad y valentía sobre salud mental. Ese episodio que sientes que lo grabaron exactamente para ti. Crudo, real y necesario.</p>
+          <div class="ep-embed-wrap">
+            <iframe
+              src="https://open.spotify.com/embed/episode/7Dg9DicxC7v0XzA5v3tzkK?utm_source=generator&theme=0"
+              width="100%" height="152"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Salud mental — Doñas sin Fronteras"
+            ></iframe>
+          </div>
+          <a class="ep-spotify-btn" href="https://open.spotify.com/episode/7Dg9DicxC7v0XzA5v3tzkK" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Abrir en Spotify
+          </a>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Enlaces rápidos</h3>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="podcast.html">Podcast</a></li>
-          
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+
+      <!-- EP 5 — T1 clásico -->
+      <div class="ep-item" id="ep-5" role="listitem">
+        <button class="ep-toggle" onclick="toggleEp('ep-5')" aria-expanded="false">
+          <div class="ep-num" aria-hidden="true">5</div>
+          <span class="ep-badge badge-t1">Temp. 1 · Clásico</span>
+          <div class="ep-text">
+            <div class="ep-name">Cómo nos conocimos</div>
+            <div class="ep-meta">Temporada 1 · El episodio que lo empezó todo</div>
+          </div>
+          <svg class="ep-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="ep-body">
+          <p class="ep-desc">El origen de todo. Chaly, Lessi y Bruxa cuentan cómo una amistad que nació en Myspace se convirtió en algo mucho más real, profundo y duradero. El primero que deberías escuchar.</p>
+          <div class="ep-embed-wrap">
+            <iframe
+              src="https://open.spotify.com/embed/episode/5KuJQK8vHnjlI2gueIpqdj?utm_source=generator&theme=0"
+              width="100%" height="152"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Cómo nos conocimos — Doñas sin Fronteras"
+            ></iframe>
+          </div>
+          <a class="ep-spotify-btn" href="https://open.spotify.com/episode/5KuJQK8vHnjlI2gueIpqdj" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Abrir en Spotify
+          </a>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Síguenos</h3>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/donassinfronteras1/" target="_blank" class="social-icon square">
-            <img src="assets/icons/facebook.png" alt="Facebook" />
-            <span class="social-icon-label">Facebook</span>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SOBRE EL PODCAST ── -->
+<section id="sobre">
+  <div class="section-head">
+    <p class="section-eyebrow">El proyecto</p>
+    <h2 class="section-title">Un espacio sagrado entre amigas</h2>
+  </div>
+  <div class="about-section">
+    <div class="about-card">
+      <div>
+        <blockquote class="about-quote">
+          "Un podcast donde el corazón siempre tiene la última palabra."
+        </blockquote>
+        <p class="about-text">Desde distintos rincones del mundo nos reunimos para hablar de lo que duele, lo que inspira y lo que nunca decimos en voz alta. Este no es solo un podcast — es un espacio sagrado entre amigas, entre historias, entre lo que fuimos y lo que todavía estamos descubriendo.</p>
+        <div class="about-links">
+          <a class="about-btn about-btn-primary" href="https://open.spotify.com/show/2pjuDHPTJRlMgFmjDhOGa4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Escuchar en Spotify
           </a>
-          <a href="https://www.instagram.com/donassinfronteras1" target="_blank" class="social-icon square">
-            <img src="assets/icons/instagram.png" alt="Instagram" />
-            <span class="social-icon-label">Instagram</span>
+          <a class="about-btn about-btn-outline" href="https://www.youtube.com/@DonasSinfronteras" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            Ver en YouTube
           </a>
-          <a href="https://www.threads.net/@donassinfronteras1" target="_blank" class="social-icon square">
-            <img src="assets/icons/threads.png" alt="Threads" />
-            <span class="social-icon-label">Threads</span>
-          </a>
-          <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" class="social-icon square">
-            <img src="assets/icons/tiktok.png" alt="TikTok" />
-            <span class="social-icon-label">TikTok</span>
-          </a>
-          <a href="https://x.com/donasinfrontera" target="_blank" class="social-icon square">
-            <img src="assets/icons/twitter.png" alt="X" />
-            <span class="social-icon-label">X</span>
-          </a>
-          <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" class="social-icon square">
-            <img src="assets/icons/youtube.png" alt="YouTube" />
-            <span class="social-icon-label">YouTube</span>
-          </a>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Temporadas</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">43+</div>
+          <div class="stat-label">Episodios</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Co-hosts</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Redes sociales</div>
         </div>
       </div>
     </div>
-    <p class="copyright">&copy; 2025 Doñas sin Fronteras. Todos los derechos reservados.</p>
-  </footer>
+  </div>
+</section>
 
-  <!-- Scripts -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/firebase-comentarios-legacy.js"></script>
-  <script>
-    function toggleBio(card) {
-      card.classList.toggle("active");
+<!-- ── CONTACTO ── -->
+<section id="contacto">
+  <div class="section-head">
+    <p class="section-eyebrow">Escríbenos</p>
+    <h2 class="section-title">¿Tienes algo que decirnos?</h2>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div>
+          <h3 class="contact-title">Nos encanta escucharlas</h3>
+          <p class="contact-desc">¿Tienes un tema que quieres que hablemos? ¿Quieres contarnos tu historia? ¿Una colaboración? Escríbenos — solo nosotras leemos estos mensajes.</p>
+        </div>
+        <div class="contact-email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          donassinfronteras@gmail.com
+        </div>
+        <div>
+          <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;">Síguenos en</p>
+          <div class="social-list">
+            <a class="social-item" href="https://www.instagram.com/donassinfronteras1" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              @donassinfronteras1
+            </a>
+            <a class="social-item" href="https://www.facebook.com/donassinfronteras1/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Doñas sin Fronteras
+            </a>
+            <a class="social-item" href="https://www.tiktok.com/@donassinfronteras1" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              @donassinfronteras1
+            </a>
+            <a class="social-item" href="https://www.youtube.com/@DonasSinfronteras" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+              @DonasSinfronteras
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM con Firebase Firestore -->
+      <div class="contact-form" id="contactFormWrap">
+
+        <!-- Formulario -->
+        <div id="formView">
+          <div class="form-row">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="tu@email.com" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="tema">¿Sobre qué nos escribes?</label>
+            <select id="tema">
+              <option value="">Elige una opción…</option>
+              <option>Propuesta de tema para el podcast</option>
+              <option>Quiero contar mi historia</option>
+              <option>Colaboración o patrocinio</option>
+              <option>Solo quería decirles algo bonito</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Cuéntanos…" required></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <span class="form-privacy">Solo nosotras leemos esto 🤍</span>
+            <button class="submit-btn" id="submitBtn" onclick="enviarMensaje()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              <span id="submitLabel">Enviar mensaje</span>
+            </button>
+          </div>
+          <p id="formError" style="display:none;margin-top:10px;font-size:12px;color:var(--rose);"></p>
+        </div>
+
+        <!-- Estado de éxito -->
+        <div id="formSuccess" style="display:none;text-align:center;padding:2rem 1rem;">
+          <div style="font-size:36px;margin-bottom:12px;">🤍</div>
+          <p style="font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:6px;">¡Mensaje recibido!</p>
+          <p style="font-size:13px;color:var(--text-sub);line-height:1.6;">Gracias por escribirnos. Lo leemos con mucho amor y te respondemos pronto.</p>
+          <button onclick="resetForm()" style="margin-top:16px;background:none;border:1px solid var(--border-mid);border-radius:var(--radius-sm);padding:8px 16px;font-size:13px;color:var(--text-sub);cursor:pointer;">Enviar otro mensaje</button>
+        </div>
+
+      </div>
+
+      <!-- Comentarios recientes -->
+      <div id="comentariosWrap" style="display:none;margin-top:1rem;">
+        <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;font-weight:500;color:var(--text-muted);margin-bottom:10px;">Mensajes recientes</p>
+        <div id="comentariosList" style="display:flex;flex-direction:column;gap:8px;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="footer-logo">Doñas sin Fronteras</span>
+  <span class="footer-copy">© 2025 · Hecho con amor desde tres rincones del mundo</span>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/donassinfronteras1" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/donassinfronteras1/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@donassinfronteras1" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@DonasSinfronteras" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, orderBy, query, limit, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey:            "AIzaSyB5C6vZj-t2ReXDdYU3HRjDtRT5cTzcRBM",
+    authDomain:        "donas-sin-fronteras.firebaseapp.com",
+    projectId:         "donas-sin-fronteras",
+    storageBucket:     "donas-sin-fronteras.firebasestorage.app",
+    messagingSenderId: "363905129542",
+    appId:             "1:363905129542:web:47ccf952597f951b827e47",
+    measurementId:     "G-E1QGHCJ945"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+
+  /* ── ENVIAR MENSAJE ── */
+  window.enviarMensaje = async function () {
+    const nombre  = document.getElementById('nombre').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const tema    = document.getElementById('tema').value;
+    const mensaje = document.getElementById('mensaje').value.trim();
+    const errEl   = document.getElementById('formError');
+    const btnLbl  = document.getElementById('submitLabel');
+    const btn     = document.getElementById('submitBtn');
+
+    // validación básica
+    if (!nombre || !email || !mensaje) {
+      errEl.textContent = 'Por favor completa tu nombre, email y mensaje.';
+      errEl.style.display = 'block';
+      return;
     }
-  </script>
-  
-<!-- Formspree: botón de sugerencias -->
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
-  window.formbutton = window.formbutton || function(){ (formbutton.q = formbutton.q || []).push(arguments) };
-  formbutton("create", {
-    action: "https://formspree.io/f/mvgknqzn",
-    title: "¿Dejanos Tus Sugerencias",
-    fields: [
-      { type: "email", label: "Tu correo", name: "email", required: true, placeholder: "tucorreo@email.com" },
-      { type: "textarea", label: "Mensaje", name: "message", placeholder: "Cuéntanos tu idea o sugerencia" },
-      { type: "submit" }
-    ],
-    styles: {
-      title:   { backgroundColor: "#800020" },
-      button:  { backgroundColor: "#800020" }
+    errEl.style.display = 'none';
+
+    btn.disabled = true;
+    btnLbl.textContent = 'Enviando…';
+
+    try {
+      await addDoc(collection(db, 'comentarios'), {
+        nombre,
+        email,
+        tema,
+        mensaje,
+        fecha: serverTimestamp()
+      });
+
+      // muestra pantalla de éxito
+      document.getElementById('formView').style.display    = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+
+      // recarga comentarios para que aparezca el nuevo
+      cargarComentarios();
+
+    } catch (err) {
+      console.error(err);
+      errEl.textContent = 'Hubo un error al enviar. Intenta de nuevo o escríbenos a donassinfronteras@gmail.com';
+      errEl.style.display = 'block';
+      btn.disabled = false;
+      btnLbl.textContent = 'Enviar mensaje';
     }
-  });
+  };
+
+  /* ── RESET FORMULARIO ── */
+  window.resetForm = function () {
+    ['nombre','email','mensaje'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('tema').value = '';
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitLabel').textContent = 'Enviar mensaje';
+    document.getElementById('formView').style.display    = 'block';
+    document.getElementById('formSuccess').style.display = 'none';
+  };
+
+  /* ── CARGAR COMENTARIOS RECIENTES ── */
+  async function cargarComentarios() {
+    try {
+      const q    = query(collection(db, 'comentarios'), orderBy('fecha', 'desc'), limit(5));
+      const snap = await getDocs(q);
+
+      if (snap.empty) return;
+
+      const lista = document.getElementById('comentariosList');
+      const wrap  = document.getElementById('comentariosWrap');
+      lista.innerHTML = '';
+
+      snap.forEach(doc => {
+        const d = doc.data();
+        const fecha = d.fecha?.toDate
+          ? d.fecha.toDate().toLocaleDateString('es-ES', { day:'numeric', month:'short', year:'numeric' })
+          : '';
+
+        const card = document.createElement('div');
+        card.style.cssText = `
+          background: var(--cream); border: 1px solid var(--border);
+          border-radius: var(--radius-sm); padding: 12px 14px;
+        `;
+        card.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;">
+            <span style="font-size:13px;font-weight:500;color:var(--text-main);">${escHtml(d.nombre)}</span>
+            <span style="font-size:11px;color:var(--text-muted);">${fecha}</span>
+          </div>
+          ${d.tema ? `<span style="font-size:10px;background:var(--rose-light);color:var(--rose);border-radius:20px;padding:2px 8px;display:inline-block;margin-bottom:6px;">${escHtml(d.tema)}</span>` : ''}
+          <p style="font-size:12.5px;color:var(--text-sub);line-height:1.6;">${escHtml(d.mensaje)}</p>
+        `;
+        lista.appendChild(card);
+      });
+
+      wrap.style.display = 'block';
+    } catch (err) {
+      console.error('Error cargando comentarios:', err);
+    }
+  }
+
+  function escHtml(str) {
+    return String(str ?? '')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // carga comentarios al arrancar
+  cargarComentarios();
 </script>
+
+<script>
+  /* ── INTRO AUDIO ── */
+  function toggleIntro() {
+    const audio = document.getElementById('introAudio');
+    const btn   = document.getElementById('introBtn');
+    const icon  = document.getElementById('introIcon');
+
+    if (audio.paused) {
+      audio.play();
+      btn.classList.add('playing');
+      icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+    } else {
+      audio.pause();
+      btn.classList.remove('playing');
+      icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+    }
+
+    audio.onended = () => {
+      btn.classList.remove('playing');
+      icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+    };
+  }
+
+  /* ── ACORDEÓN EPISODIOS ── */
+  function toggleEp(id) {
+    const item   = document.getElementById(id);
+    const btn    = item.querySelector('.ep-toggle');
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.ep-item').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.ep-toggle').setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+</script>
+
 </body>
 </html>
